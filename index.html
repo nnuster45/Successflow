@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Tags สำหรับสาย Data & Automation -->
+    <title>รับทำ Power BI Dashboard & ระบบ Automation (RPA/VBA) | [ชื่อคุณ]</title>
+    <meta name="description" content="ที่ปรึกษา Digital Transformation รับทำ Power BI Dashboard, Excel VBA และ RPA ช่วยองค์กรลดงาน Manual ลดต้นทุน และเพิ่มประสิทธิภาพการทำงาน ปรึกษาฟรี">
+    <meta name="keywords" content="Digital Transformation, Process Improvement, Automation, RPA, Excel VBA, Power BI Dashboard, รับทำ Dashboard, ลดเวลาทำงาน">
+    
+    <!-- เรียกใช้ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ฟอนต์ภาษาไทยจาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- 1. STICKY HEADER (เวอร์ชันปรับความสมูท ลื่นไหล 100%) -->
+    <!-- ลบ data-aos ออก เพื่อไม่ให้แถบเมนูกระตุกตอนเลื่อนจอ และเพิ่ม backdrop-blur ให้ดูพรีเมียม -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-6 h-16 md:h-24 flex justify-between items-center">
+            
+            <!-- โลโก้: ใช้วิธีปรับความสูงปกติ แต่ดึงขอบซ้ายที่ว่างๆ ออกไปแทน (-ml-6) ภาพจะไม่แตก -->
+            <a href="#" class="relative flex items-center h-full w-32 md:w-64">
+                <img src="assets/images/successflow.PNG" alt="SuccessFlow Logo" 
+                     class="absolute top-1/2 -translate-y-1/2 -left-2 md:-left-8 w-[145%] max-w-none md:w-[100%] object-contain">
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#services" class="text-slate-700 hover:text-blue-600 transition duration-300">บริการ</a>
+                <a href="#portfolio" class="text-slate-700 hover:text-blue-600 transition duration-300">ผลงาน (Case Studies)</a>
+                <a href="#faq" class="text-slate-700 hover:text-blue-600 transition duration-300">FAQ</a>
+                <a href="#contact" class="bg-orange-500 text-white px-6 py-2.5 rounded-md hover:bg-orange-600 transition duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">ปรึกษาปัญหาองค์กรฟรี</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION (Tech & Corporate Vibe) -->
+    <section class="pt-24 md:pt-32 pb-16 md:pb-20 bg-slate-900 text-white text-center px-4 md:px-6 min-h-[85vh] flex items-center relative overflow-hidden">
+        <!-- ฉากหลังตกแต่งให้ดูเป็นเทคโนโลยี -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-aos="fade-down" data-aos-delay="100">
+                เปลี่ยนงาน Manual ที่น่าเบื่อ <br class="hidden md:block"> ให้เป็นระบบ <span class="text-blue-400">Automation อัจฉริยะ</span>
+            </h1>
+            <p class="text-base md:text-xl text-gray-300 mb-8 md:mb-10 font-light" data-aos="fade-up" data-aos-delay="300">
+                ยกระดับองค์กรสู่ยุค Digital Transformation ด้วย Power BI, Excel VBA และ RPA <br class="hidden md:block">ลดเวลาทำงาน ลดข้อผิดพลาด (Human Error) และมองเห็นภาพรวมธุรกิจแบบ Real-time
+            </p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4" data-aos="zoom-in" data-aos-delay="500">
+                <a href="#contact" class="bg-blue-600 text-white px-6 md:px-8 py-3.5 rounded-md text-base md:text-lg font-semibold hover:bg-blue-500 transition duration-300 shadow-lg shadow-blue-500/30">🚀 นัดหมายพูดคุยโปรเจกต์</a>
+                <a href="#portfolio" class="bg-slate-800 text-white border border-slate-600 px-6 md:px-8 py-3.5 rounded-md text-base md:text-lg font-semibold hover:bg-slate-700 transition duration-300">📊 ดูผลงานการลดต้นทุน</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROBLEM & AGITATION (ขยี้ปัญหาคนทำเอกสาร/Data) -->
+    <section class="py-14 md:py-16 bg-blue-50 px-4 md:px-6 text-center">
+        <div class="container mx-auto max-w-4xl" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">ธุรกิจของคุณกำลังเสียเวลาและต้นทุนไปกับสิ่งเหล่านี้อยู่หรือไม่?</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-6 text-slate-600">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1">❌ ทีมงานหมดเวลาไปครึ่งวันเพื่อทำ Report ซ้ำๆ ทุกสัปดาห์</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1">❌ ข้อมูลกระจัดกระจายหลายไฟล์ Excel ดูภาพรวมธุรกิจไม่เห็น</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1">❌ คีย์ข้อมูลผิดพลาด (Human Error) จนเกิดความเสียหายทางการเงิน</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MY SERVICES -->
+    <section id="services" class="py-16 md:py-24 px-4 md:px-6 bg-white">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900" data-aos="fade-up">บริการ Digital Transformation ของเรา</h2>
+            <p class="text-slate-500 mb-10 md:mb-16 text-base md:text-lg" data-aos="fade-up" data-aos-delay="100">เปลี่ยนกระบวนการทำงาน (Process Improvement) ให้รวดเร็วและแม่นยำด้วยเทคโนโลยี</p>
+            
+            <div id="services-slider" class="services-scrollbar-hidden flex gap-4 md:gap-6 overflow-x-auto pb-4 text-left snap-x snap-mandatory scroll-smooth">
+                <!-- Service 1: RPA & Automation -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl mb-6 transform group-hover:-translate-y-2 transition duration-300">🤖</div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">RPA & Process Automation</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">สร้างหุ่นยนต์ซอฟต์แวร์ (Bot) ทำงานหน้าจอคอมพิวเตอร์แทนคน ดึงข้อมูล กรอกฟอร์ม ข้ามระบบ ERP/Web อัตโนมัติ 24 ชม.</p>
+                    <span class="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">ทำงานไวขึ้น 80%</span>
+                    <a href="services/service-rpa.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                </div>
+                <!-- Service 2: Power BI -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0" data-aos="fade-up" data-aos-delay="250">
+                    <div class="text-5xl mb-6 transform group-hover:-translate-y-2 transition duration-300">📊</div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Power BI Dashboard</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">เชื่อมต่อข้อมูลดิบจากทุกแหล่ง สร้าง Interactive Dashboard ดูยอดขาย สต็อก หรือ KPI ได้แบบ Real-time บนมือถือและคอม</p>
+                    <span class="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">ตัดสินใจแม่นยำด้วย Data</span>
+                    <a href="services/service-powerbi.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                </div>
+                <!-- Service 3: Excel VBA -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-5xl mb-6 transform group-hover:-translate-y-2 transition duration-300">⚡</div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Excel VBA & Macro</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">อัปเกรดไฟล์ Excel เดิมขององค์กร เขียนโค้ด VBA เพื่อรวมไฟล์ จัดฟอร์แมต และคำนวณสูตรซับซ้อนให้เสร็จใน "1 คลิก"</p>
+                    <span class="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">ลดงาน Manual ทันที</span>
+                    <a href="services/service-excel-vba.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                </div>
+                <!-- Service 4: Line chat Bot -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-5xl mb-6 transform group-hover:-translate-y-2 transition duration-300">🤖</div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Line Chat Bot</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">สร้าง Chat Bot บน Line OA เพื่อตอบคำถามลูกค้า แนะนำสินค้า และบริการต่างๆ ตลอด 24 ชม.</p>
+                    <span class="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">บริการลูกค้าได้ตลอดเวลา</span>
+                    <a href="services/service-line-chatbot.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="150">
+                <button type="button" id="services-prev" class="w-11 h-11 rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-900 hover:text-white hover:border-slate-900 transition duration-300" aria-label="เลื่อนบริการไปทางซ้าย">
+                    <span class="text-xl leading-none">‹</span>
+                </button>
+                <button type="button" id="services-next" class="w-11 h-11 rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-900 hover:text-white hover:border-slate-900 transition duration-300" aria-label="เลื่อนบริการไปทางขวา">
+                    <span class="text-xl leading-none">›</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PORTFOLIO (เน้น Case Study การลดต้นทุน) -->
+    <section id="portfolio" class="py-16 md:py-24 bg-slate-900 px-4 md:px-6 text-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">ผลงานที่ผ่านมา (Success Cases)</h2>
+                <p class="text-slate-400 mt-3 text-base md:text-lg">ตัวอย่างโปรเจกต์ที่ช่วยลูกค้าประหยัดเวลาและเพิ่มกำไร</p>
+            </div>
+            
+            <div id="portfolio-slider" class="services-scrollbar-hidden flex gap-5 md:gap-8 overflow-x-auto pb-4 text-slate-800 snap-x snap-mandatory scroll-smooth">
+                <!-- Case Study 1: Dashboard -->
+                <div class="min-w-[280px] md:min-w-[520px] max-w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-right">
+                    <div class="overflow-hidden relative h-52 md:h-64 bg-slate-100">
+                        <!-- เปลี่ยนเป็นรูป Dashboard -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Power BI Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded">เพิ่มยอดขาย 20%</div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Sales & KPI Dashboard (FMCG Company)</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed"><strong>ปัญหา:</strong> ผู้บริหารต้องรอสรุปยอดขายจากทีมเซลส์ทุกสิ้นเดือน ตัดสินใจปรับกลยุทธ์ไม่ทัน<br><strong>Solution:</strong> สร้าง Power BI ดึงข้อมูลจาก ERP อัตโนมัติทุกวัน ผู้บริหารดูยอดได้แบบ Real-time</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#PowerBI</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#DataVisualization</span>
+                        </div>
+                        <a href="portfolio/portfolio-sales-kpi.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2: RPA/VBA -->
+                <div class="min-w-[280px] md:min-w-[520px] max-w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="overflow-hidden relative h-52 md:h-64 bg-slate-100">
+                        <!-- เปลี่ยนเป็นรูประบบ/โค้ด -->
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Excel VBA Automation" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded">ลดเวลาจาก 3 วัน เหลือ 10 นาที</div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed"><strong>ปัญหา:</strong> พนักงานบัญชีต้องโหลดไฟล์ธนาคาร 10 แบงก์มาจับคู่กับอินวอยซ์ (Reconcile) ด้วยมือ<br><strong>Solution:</strong> เขียน Excel VBA + Macro ดึงไฟล์และจับคู่ข้อมูลอัตโนมัติ สรุปรายการผิดปกติให้ทันที</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#ExcelVBA</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#ProcessImprovement</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#RPA</span>
+                        </div>
+                        <a href="portfolio/portfolio-accounting-automation.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="150">
+                <button type="button" id="portfolio-prev" class="w-11 h-11 rounded-full border border-slate-700 bg-slate-800 text-white shadow-sm hover:bg-white hover:text-slate-900 hover:border-white transition duration-300" aria-label="เลื่อนผลงานไปทางซ้าย">
+                    <span class="text-xl leading-none">‹</span>
+                </button>
+                <button type="button" id="portfolio-next" class="w-11 h-11 rounded-full border border-slate-700 bg-slate-800 text-white shadow-sm hover:bg-white hover:text-slate-900 hover:border-white transition duration-300" aria-label="เลื่อนผลงานไปทางขวา">
+                    <span class="text-xl leading-none">›</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ (คำถามที่ลูกค้าองค์กรมักจะถาม) -->
+    <section id="faq" class="py-16 md:py-24 px-4 md:px-6 bg-slate-50">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12" data-aos="zoom-in">คำถามที่พบบ่อย (FAQ)</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-lg shadow-sm border border-slate-200 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <summary class="font-semibold text-lg list-none flex justify-between items-center text-slate-800">
+                        บริษัทขนาดเล็ก-กลาง (SME) จำเป็นต้องทำ Automation หรือไม่?
+                        <span class="text-blue-600 group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4">จำเป็นมากครับ เพราะ SME มักมีคนจำกัด การเอาคนไปทำงาน Manual ซ้ำซ้อนเป็นการเสียทรัพยากร เราสามารถเริ่มจากจุดเล็กๆ (Quick Win) เช่น ปรับปรุงไฟล์ Excel ด้วย VBA ก่อน ไม่จำเป็นต้องลงทุนระบบใหญ่ๆ หลักล้านครับ</p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-lg shadow-sm border border-slate-200 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <summary class="font-semibold text-lg list-none flex justify-between items-center text-slate-800">
+                        อยากทำ Power BI Dashboard ต้องเตรียมข้อมูลอย่างไรบ้าง?
+                        <span class="text-blue-600 group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4">ทางลูกค้าควรมีแหล่งเก็บข้อมูล (Data Source) ที่ชัดเจนครับ เช่น ไฟล์ Excel ที่มีการคีย์อัปเดตสม่ำเสมอ, ข้อมูลจากโปรแกรมบัญชี, หรือฐานข้อมูล (Database/ERP) โดยผมจะเข้าไปช่วยประเมินและจัดระเบียบข้อมูล (Data Cleaning) ให้พร้อมสำหรับการทำ Dashboard ครับ</p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-lg shadow-sm border border-slate-200 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <summary class="font-semibold text-lg list-none flex justify-between items-center text-slate-800">
+                        ข้อมูลความลับของบริษัทจะปลอดภัยไหม?
+                        <span class="text-blue-600 group-open:rotate-180 transition duration-300">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4">ปลอดภัย 100% ครับ ผมยินดีเซ็นสัญญาปกปิดความลับ (NDA - Non-Disclosure Agreement) ก่อนเริ่มดูข้อมูลทุกโปรเจกต์ และสามารถตั้งค่าสิทธิ์การเข้าถึง (Row-Level Security) ใน Power BI เพื่อให้พนักงานแต่ละแผนกเห็นข้อมูลเฉพาะส่วนของตัวเองได้ครับ</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT & FOOTER -->
+    <section id="contact" class="py-16 md:py-24 bg-white text-slate-900 px-4 md:px-6 overflow-hidden border-t border-slate-200">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+                
+                <!-- Contact Info: สไลด์จากซ้าย -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">เปลี่ยนองค์กรของคุณ <br><span class="text-blue-600">ให้ขับเคลื่อนด้วย Data</span></h2>
+                    <p class="text-slate-600 mb-8 md:mb-10 text-base md:text-lg">หากคุณกำลังปวดหัวกับรายงานประจำเดือนที่ทำไม่ทัน หรือพนักงานคีย์ข้อมูลผิดพลาดบ่อย ทักมาปรึกษาเพื่อหาแนวทางปรับปรุง (Process Improvement) ได้ฟรีครับ</p>
+                    
+                    <div class="space-y-4">
+                        <a href="tel:08XXXXXXXX" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">📞</div>
+                            <div>
+                                <p class="text-sm text-slate-500">โทรศัพท์</p>
+                                <p class="text-lg md:text-xl font-medium">08X-XXX-XXXX</p>
+                            </div>
+                        </a>
+                        <a href="https://line.me/R/ti/p/@yourdata_expert" target="_blank" rel="noopener noreferrer" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">📱</div>
+                            <div>
+                                <p class="text-sm text-slate-500">Line</p>
+                                <p class="text-lg md:text-xl font-medium">Line ID: @yourdata_expert</p>
+                            </div>
+                        </a>
+                        <a href="mailto:contact@yourdomain.com" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">📧</div>
+                            <div>
+                                <p class="text-sm text-slate-500">Email</p>
+                                <p class="text-lg md:text-xl font-medium break-all">contact@yourdomain.com</p>
+                            </div>
+                        </a>
+                        <a href="https://fastwork.co/user/your-profile" target="_blank" rel="noopener noreferrer" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">💼</div>
+                            <div>
+                                <p class="text-sm text-slate-500">Fastwork</p>
+                                <p class="text-lg md:text-xl font-medium">ดูโปรไฟล์บน Fastwork</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form: สไลด์จากขวา -->
+                <div class="bg-slate-50 border border-slate-200 p-6 md:p-10 rounded-xl shadow-lg relative" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800">นัดหมายประเมินระบบฟรี</h3>
+                    <form action="#" method="POST" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-slate-700">ชื่อบริษัท / ผู้ติดต่อ</label>
+                            <input type="text" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="ระบุชื่อบริษัทของคุณ">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-slate-700">เบอร์โทรติดต่อ</label>
+                            <input type="text" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="08X-XXX-XXXX">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-slate-700">ปัญหาที่ต้องการให้เราช่วยแก้</label>
+                            <textarea rows="4" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="เช่น ทีมเซลส์ทำรีพอร์ทช้า, อยากเอาข้อมูล Excel มาทำ Dashboard..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-blue-700 text-white font-bold py-4 rounded-md hover:bg-blue-800 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">ส่งข้อมูลเพื่อรับคำปรึกษา</button>
+                    </form>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-slate-200 mt-20 pt-8 text-center text-slate-500 text-sm">
+                &copy; 2024 YourDataExpert. All rights reserved. | Digital Transformation & Automation Services
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
