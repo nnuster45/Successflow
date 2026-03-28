@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
     <!-- SEO Tags สำหรับสาย Data & Automation -->
     <title>รับทำ Power BI Dashboard & ระบบ Automation (RPA/VBA) | [ชื่อคุณ]</title>
     <meta name="description" content="ที่ปรึกษา Digital Transformation รับทำ Power BI Dashboard, Excel VBA และ RPA ช่วยองค์กรลดงาน Manual ลดต้นทุน และเพิ่มประสิทธิภาพการทำงาน ปรึกษาฟรี">
@@ -19,7 +26,7 @@
     
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800" data-lang-scope="index">
 
 <!-- 1. STICKY HEADER (เวอร์ชันปรับความสมูท ลื่นไหล 100%) -->
     <!-- ลบ data-aos ออก เพื่อไม่ให้แถบเมนูกระตุกตอนเลื่อนจอ และเพิ่ม backdrop-blur ให้ดูพรีเมียม -->
@@ -33,11 +40,19 @@
             </a>
 
             <nav class="hidden md:flex space-x-8 items-center font-medium">
-                <a href="#services" class="text-slate-700 hover:text-blue-600 transition duration-300">บริการ</a>
-                <a href="#portfolio" class="text-slate-700 hover:text-blue-600 transition duration-300">ผลงาน (Case Studies)</a>
+                <a href="#services" class="text-slate-700 hover:text-blue-600 transition duration-300" data-i18n="nav_services">บริการ</a>
+                <a href="#portfolio" class="text-slate-700 hover:text-blue-600 transition duration-300" data-i18n="nav_portfolio">ผลงาน</a>
                 <a href="#faq" class="text-slate-700 hover:text-blue-600 transition duration-300">FAQ</a>
-                <a href="#contact" class="bg-orange-500 text-white px-6 py-2.5 rounded-md hover:bg-orange-600 transition duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">ปรึกษาปัญหาองค์กรฟรี</a>
+                <a href="#contact" class="bg-orange-500 text-white px-6 py-2.5 rounded-md hover:bg-orange-600 transition duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5" data-i18n="nav_contact">ปรึกษาปัญหาองค์กรฟรี</a>
+                <div class="lang-switch">
+                    <button type="button" data-lang-toggle="th">TH</button>
+                    <button type="button" data-lang-toggle="en">EN</button>
+                </div>
             </nav>
+            <div class="md:hidden lang-switch">
+                <button type="button" data-lang-toggle="th">TH</button>
+                <button type="button" data-lang-toggle="en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -47,15 +62,15 @@
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="container mx-auto max-w-4xl relative z-10">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-aos="fade-down" data-aos-delay="100">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-aos="fade-down" data-aos-delay="100" data-i18n="hero_title" data-i18n-html>
                 เปลี่ยนงาน Manual ที่น่าเบื่อ <br class="hidden md:block"> ให้เป็นระบบ <span class="text-blue-400">Automation อัจฉริยะ</span>
             </h1>
-            <p class="text-base md:text-xl text-gray-300 mb-8 md:mb-10 font-light" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-base md:text-xl text-gray-300 mb-8 md:mb-10 font-light" data-aos="fade-up" data-aos-delay="300" data-i18n="hero_desc" data-i18n-html>
                 ยกระดับองค์กรสู่ยุค Digital Transformation ด้วย Power BI, Excel VBA และ RPA <br class="hidden md:block">ลดเวลาทำงาน ลดข้อผิดพลาด (Human Error) และมองเห็นภาพรวมธุรกิจแบบ Real-time
             </p>
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4" data-aos="zoom-in" data-aos-delay="500">
-                <a href="#contact" class="bg-blue-600 text-white px-6 md:px-8 py-3.5 rounded-md text-base md:text-lg font-semibold hover:bg-blue-500 transition duration-300 shadow-lg shadow-blue-500/30">🚀 นัดหมายพูดคุยโปรเจกต์</a>
-                <a href="#portfolio" class="bg-slate-800 text-white border border-slate-600 px-6 md:px-8 py-3.5 rounded-md text-base md:text-lg font-semibold hover:bg-slate-700 transition duration-300">📊 ดูผลงานการลดต้นทุน</a>
+                <a href="#contact" class="bg-blue-600 text-white px-6 md:px-8 py-3.5 rounded-md text-base md:text-lg font-semibold hover:bg-blue-500 transition duration-300 shadow-lg shadow-blue-500/30" data-i18n="hero_cta_primary">นัดหมายพูดคุยโปรเจกต์</a>
+                <a href="#portfolio" class="bg-slate-800 text-white border border-slate-600 px-6 md:px-8 py-3.5 rounded-md text-base md:text-lg font-semibold hover:bg-slate-700 transition duration-300" data-i18n="hero_cta_secondary">ดูผลงานการลดต้นทุน</a>
             </div>
         </div>
     </section>
@@ -63,11 +78,97 @@
     <!-- 3. PROBLEM & AGITATION (ขยี้ปัญหาคนทำเอกสาร/Data) -->
     <section class="py-14 md:py-16 bg-blue-50 px-4 md:px-6 text-center">
         <div class="container mx-auto max-w-4xl" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6">ธุรกิจของคุณกำลังเสียเวลาและต้นทุนไปกับสิ่งเหล่านี้อยู่หรือไม่?</h2>
+            <h2 class="text-2xl font-bold text-slate-800 mb-6" data-i18n="problem_title">ธุรกิจของคุณกำลังเสียเวลาและต้นทุนไปกับสิ่งเหล่านี้อยู่หรือไม่?</h2>
             <div class="flex flex-col md:flex-row justify-center gap-6 text-slate-600">
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1">❌ ทีมงานหมดเวลาไปครึ่งวันเพื่อทำ Report ซ้ำๆ ทุกสัปดาห์</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1">❌ ข้อมูลกระจัดกระจายหลายไฟล์ Excel ดูภาพรวมธุรกิจไม่เห็น</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1">❌ คีย์ข้อมูลผิดพลาด (Human Error) จนเกิดความเสียหายทางการเงิน</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1" data-i18n="problem_1">❌ ทีมงานหมดเวลาไปครึ่งวันเพื่อทำ Report ซ้ำๆ ทุกสัปดาห์</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1" data-i18n="problem_2">❌ ข้อมูลกระจัดกระจายหลายไฟล์ Excel ดูภาพรวมธุรกิจไม่เห็น</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1" data-i18n="problem_3">❌ คีย์ข้อมูลผิดพลาด (Human Error) จนเกิดความเสียหายทางการเงิน</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 md:py-10 px-4 md:px-6 bg-white overflow-hidden">
+        <div class="container mx-auto max-w-6xl">
+            <p class="text-center text-sm md:text-base font-semibold tracking-[0.2em] text-slate-400 uppercase mb-6" data-i18n="tools_title">Tools We Work With</p>
+            <div class="logo-marquee">
+                <div class="logo-marquee-track">
+                    <div class="logo-chip"><img src="assets/images/services/excel.png" alt="Excel Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/powerbi.png" alt="Power BI Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/power-automate.png" alt="Power Automate Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-app-script.png" alt="Google Apps Script Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/python.png" alt="Python Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/pytorch.svg" alt="PyTorch Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/n8n-color.png" alt="n8n Logo"></div>
+                    <div class="logo-chip logo-chip-large"><img src="assets/images/services/uipath.png" alt="UiPath Logo" class="logo-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/make.png" alt="Make Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/zapier.png" alt="Zapier Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/ocr.png" alt="OCR Logo"></div>
+                    <div class="logo-chip logo-chip-large"><img src="assets/images/services/nintex.avif" alt="Nintex Logo" class="logo-large"></div>
+
+                    <div class="logo-chip"><img src="assets/images/services/excel.png" alt="Excel Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/powerbi.png" alt="Power BI Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/power-automate.png" alt="Power Automate Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-app-script.png" alt="Google Apps Script Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/python.png" alt="Python Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/pytorch.svg" alt="PyTorch Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/n8n-color.png" alt="n8n Logo"></div>
+                    <div class="logo-chip logo-chip-large"><img src="assets/images/services/uipath.png" alt="UiPath Logo" class="logo-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/make.png" alt="Make Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/zapier.png" alt="Zapier Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/ocr.png" alt="OCR Logo"></div>
+                    <div class="logo-chip logo-chip-large"><img src="assets/images/services/nintex.avif" alt="Nintex Logo" class="logo-large"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-8 md:pb-10 px-4 md:px-6 bg-white overflow-hidden">
+        <div class="container mx-auto max-w-6xl">
+            <p class="text-center text-sm md:text-base font-semibold tracking-[0.2em] text-slate-400 uppercase mb-6" data-i18n="platforms_title">Platforms We Integrate</p>
+            <div class="logo-marquee">
+                <div class="logo-marquee-track logo-marquee-track-reverse">
+                    <div class="logo-chip"><img src="assets/images/services/google-calendar.png" alt="Google Calendar Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-docs.png" alt="Google Docs Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-sheets.png" alt="Google Sheets Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/discord.png" alt="Discord Logo" class="logo-discord-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/telegram.webp" alt="Telegram Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/sap.png" alt="SAP Logo" class="logo-platform-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-cloud.webp" alt="Google Cloud Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/sharepoint.png" alt="SharePoint Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/outlook.png" alt="Outlook Logo"></div>
+                    <div class="logo-chip logo-chip-medium"><img src="assets/images/services/shopee.png" alt="Shopee Logo" class="logo-shopee"></div>
+                    <div class="logo-chip logo-chip-medium"><img src="assets/images/services/lazada.webp" alt="Lazada Logo" class="logo-medium"></div>
+                    <div class="logo-chip"><img src="assets/images/services/facebook.webp" alt="Facebook Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/line.png" alt="LINE Logo"></div>
+
+                    <div class="logo-chip"><img src="assets/images/services/google-calendar.png" alt="Google Calendar Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-docs.png" alt="Google Docs Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-sheets.png" alt="Google Sheets Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/discord.png" alt="Discord Logo" class="logo-discord-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/telegram.webp" alt="Telegram Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/sap.png" alt="SAP Logo" class="logo-platform-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-cloud.webp" alt="Google Cloud Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/sharepoint.png" alt="SharePoint Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/outlook.png" alt="Outlook Logo"></div>
+                    <div class="logo-chip logo-chip-medium"><img src="assets/images/services/shopee.png" alt="Shopee Logo" class="logo-shopee"></div>
+                    <div class="logo-chip logo-chip-medium"><img src="assets/images/services/lazada.webp" alt="Lazada Logo" class="logo-medium"></div>
+                    <div class="logo-chip"><img src="assets/images/services/facebook.webp" alt="Facebook Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/line.png" alt="LINE Logo"></div>
+
+                    <div class="logo-chip"><img src="assets/images/services/google-calendar.png" alt="Google Calendar Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-docs.png" alt="Google Docs Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-sheets.png" alt="Google Sheets Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/discord.png" alt="Discord Logo" class="logo-discord-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/telegram.webp" alt="Telegram Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/sap.png" alt="SAP Logo" class="logo-platform-large"></div>
+                    <div class="logo-chip"><img src="assets/images/services/google-cloud.webp" alt="Google Cloud Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/sharepoint.png" alt="SharePoint Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/outlook.png" alt="Outlook Logo"></div>
+                    <div class="logo-chip logo-chip-medium"><img src="assets/images/services/shopee.png" alt="Shopee Logo" class="logo-shopee"></div>
+                    <div class="logo-chip logo-chip-medium"><img src="assets/images/services/lazada.webp" alt="Lazada Logo" class="logo-medium"></div>
+                    <div class="logo-chip"><img src="assets/images/services/facebook.webp" alt="Facebook Logo"></div>
+                    <div class="logo-chip"><img src="assets/images/services/line.png" alt="LINE Logo"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -75,18 +176,36 @@
     <!-- 4. MY SERVICES -->
     <section id="services" class="py-16 md:py-24 px-4 md:px-6 bg-white">
         <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900" data-aos="fade-up">บริการ Digital Transformation ของเรา</h2>
-            <p class="text-slate-500 mb-10 md:mb-16 text-base md:text-lg" data-aos="fade-up" data-aos-delay="100">เปลี่ยนกระบวนการทำงาน (Process Improvement) ให้รวดเร็วและแม่นยำด้วยเทคโนโลยี</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900" data-aos="fade-up" data-i18n="services_title">บริการ Digital Transformation ของเรา</h2>
+            <p class="text-slate-500 mb-10 md:mb-16 text-base md:text-lg" data-aos="fade-up" data-aos-delay="100" data-i18n="services_desc">เปลี่ยนกระบวนการทำงาน (Process Improvement) ให้รวดเร็วและแม่นยำด้วยเทคโนโลยี</p>
             
             <div id="services-slider" class="services-scrollbar-hidden flex gap-4 md:gap-6 overflow-x-auto pb-4 text-left snap-x snap-mandatory scroll-smooth">
                 <!-- Service 1: RPA & Automation -->
                 <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-5xl mb-6 transform group-hover:-translate-y-2 transition duration-300">🤖</div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-800">RPA & Process Automation</h3>
-                    <p class="text-slate-600 leading-relaxed">สร้างหุ่นยนต์ซอฟต์แวร์ (Bot) ทำงานหน้าจอคอมพิวเตอร์แทนคน ดึงข้อมูล กรอกฟอร์ม ข้ามระบบ ERP/Web อัตโนมัติ 24 ชม.</p>
+                    <div class="mb-6 transform group-hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-700">
+                            <svg class="w-10 h-10" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <rect x="12" y="12" width="24" height="20" rx="6" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M20 20H28M20 25H24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M24 12V8M18 37L16 40M30 37L32 40M12 22H8M40 22H36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="19" cy="18" r="1.5" fill="currentColor"/>
+                                <circle cx="29" cy="18" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_rpa_title">RPA & Process Automation</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_rpa_desc">สร้างหุ่นยนต์ซอฟต์แวร์ (Bot) ทำงานหน้าจอคอมพิวเตอร์แทนคน ดึงข้อมูล กรอกฟอร์ม ข้ามระบบ ERP/Web อัตโนมัติ 24 ชม.</p>
+                    <div class="flex items-center gap-3 mt-5 opacity-90 flex-wrap">
+                        <img src="assets/images/services/uipath.png" alt="UiPath Logo" class="w-6 h-6 object-contain">
+                        <img src="assets/images/services/power-automate.png" alt="Power Automate Logo" class="w-6 h-6 object-contain">
+                        <img src="assets/images/services/nintex.avif" alt="Nintex Logo" class="w-10 h-10 object-contain">
+                        <img src="assets/images/services/python.png" alt="Python Logo" class="w-6 h-6 object-contain">
+                        <img src="assets/images/services/make.png" alt="Make Logo" class="w-6 h-6 object-contain">
+                        <img src="assets/images/services/zapier.png" alt="Zapier Logo" class="w-6 h-6 object-contain">
+                    </div>
                     <div class="mt-auto pt-6 border-t border-slate-200">
-                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full">ทำงานไวขึ้น 80%</span>
-                        <a href="services/service-rpa.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียดเพิ่มเติม</a>
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_rpa_result">ทำงานไวขึ้น 80%</span>
+                        <a href="services/service-rpa.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
                 <!-- Service 2: Power BI -->
@@ -96,11 +215,11 @@
                             <img src="assets/images/services/powerbi.png" alt="Power BI Logo" class="w-10 h-10 object-contain">
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-800">Power BI Dashboard</h3>
-                    <p class="text-slate-600 leading-relaxed">เชื่อมต่อข้อมูลดิบจากทุกแหล่ง สร้าง Interactive Dashboard ดูยอดขาย สต็อก หรือ KPI ได้แบบ Real-time บนมือถือและคอม</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_powerbi_title">Power BI Dashboard</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_powerbi_desc">เชื่อมต่อข้อมูลดิบจากทุกแหล่ง สร้าง Interactive Dashboard ดูยอดขาย สต็อก หรือ KPI ได้แบบ Real-time บนมือถือและคอม</p>
                     <div class="mt-auto pt-6 border-t border-slate-200">
-                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full">ตัดสินใจแม่นยำด้วย Data</span>
-                        <a href="services/service-powerbi.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียดเพิ่มเติม</a>
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_powerbi_result">ตัดสินใจแม่นยำด้วย Data</span>
+                        <a href="services/service-powerbi.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
                 <!-- Service 3: Excel VBA -->
@@ -110,21 +229,65 @@
                             <img src="assets/images/services/excel.png" alt="Excel Logo" class="w-10 h-10 object-contain">
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-800">Excel VBA & Macro</h3>
-                    <p class="text-slate-600 leading-relaxed">อัปเกรดไฟล์ Excel เดิมขององค์กร เขียนโค้ด VBA เพื่อรวมไฟล์ จัดฟอร์แมต และคำนวณสูตรซับซ้อนให้เสร็จใน "1 คลิก"</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_excel_title">Excel VBA & Macro</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_excel_desc">อัปเกรดไฟล์ Excel เดิมขององค์กร เขียนโค้ด VBA เพื่อรวมไฟล์ จัดฟอร์แมต และคำนวณสูตรซับซ้อนให้เสร็จใน "1 คลิก"</p>
                     <div class="mt-auto pt-6 border-t border-slate-200">
-                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full">ลดงาน Manual ทันที</span>
-                        <a href="services/service-excel-vba.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียดเพิ่มเติม</a>
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_excel_result">ลดงาน Manual ทันที</span>
+                        <a href="services/service-excel-vba.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
-                <!-- Service 4: Line chat Bot -->
-                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-5xl mb-6 transform group-hover:-translate-y-2 transition duration-300">🤖</div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-800">Line Chat Bot</h3>
-                    <p class="text-slate-600 leading-relaxed">สร้าง Chat Bot บน Line OA เพื่อตอบคำถามลูกค้า แนะนำสินค้า และบริการต่างๆ ตลอด 24 ชม.</p>
+                <!-- Service 4: Excel Fast Solve -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="450">
+                    <div class="mb-6 transform group-hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center">
+                            <img src="assets/images/services/excel.png" alt="Excel Logo" class="w-10 h-10 object-contain">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_fastsolve_title">Excel Fast Solve</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_fastsolve_desc">ช่วยแก้สูตร Excel, logic ซับซ้อน, lookup ผิด, pivot เพี้ยน หรือไฟล์ที่ค้างงานด่วน ให้กลับมาใช้ได้เร็วโดยไม่ต้องรื้อระบบใหม่ทั้งก้อน</p>
                     <div class="mt-auto pt-6 border-t border-slate-200">
-                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full">บริการลูกค้าได้ตลอดเวลา</span>
-                        <a href="services/service-line-chatbot.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียดเพิ่มเติม</a>
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_fastsolve_result">แก้ไฟล์ด่วนได้ไว</span>
+                        <a href="services/service-excel-fast-solve.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
+                    </div>
+                </div>
+                <!-- Service 5: Excel UserForm -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-6 transform group-hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center">
+                            <img src="assets/images/services/excel.png" alt="Excel Logo" class="w-10 h-10 object-contain">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_userform_title">Excel UserForm</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_userform_desc">สร้างหน้ากรอกข้อมูลใน Excel ให้ใช้ง่ายขึ้น ลดการพิมพ์ลง sheet ตรง ๆ และช่วยควบคุมรูปแบบข้อมูลก่อนบันทึกเข้าระบบ</p>
+                    <div class="mt-auto pt-6 border-t border-slate-200">
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_userform_result">กรอกข้อมูลง่ายและแม่นขึ้น</span>
+                        <a href="services/service-excel-userform.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
+                    </div>
+                </div>
+                <!-- Service 6: Chatbot -->
+                <div class="min-w-[260px] md:min-w-[340px] max-w-[340px] bg-slate-50 p-6 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group snap-start shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="550">
+                    <div class="mb-6 transform group-hover:-translate-y-2 transition duration-300">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-100 shadow-sm flex items-center justify-center text-blue-600">
+                            <svg class="w-11 h-11" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <path d="M14 16.5C14 12.9101 16.9101 10 20.5 10H27.5C31.0899 10 34 12.9101 34 16.5V21.5C34 25.0899 31.0899 28 27.5 28H23L17 33V28.9426C15.2751 27.8654 14 26.0134 14 23.8333V16.5Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                                <circle cx="20" cy="19" r="1.75" fill="currentColor"/>
+                                <circle cx="24" cy="19" r="1.75" fill="currentColor"/>
+                                <circle cx="28" cy="19" r="1.75" fill="currentColor"/>
+                                <path d="M34 15L38 12M35.5 22.5H40M34 29L38 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_line_title">Chatbot</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_line_desc">พัฒนา Chatbot สำหรับ LINE, Telegram, Discord, Facebook และช่องทางอื่น ๆ เพื่อช่วยตอบคำถามลูกค้า เก็บ lead และเชื่อม workflow ได้อัตโนมัติ</p>
+                    <div class="flex items-center gap-3 mt-5 opacity-90 flex-wrap">
+                        <img src="assets/images/services/line.png" alt="LINE Logo" class="w-6 h-6 object-contain">
+                        <img src="assets/images/services/telegram.webp" alt="Telegram Logo" class="w-6 h-6 object-contain">
+                        <img src="assets/images/services/discord.png" alt="Discord Logo" class="w-8 h-8 object-contain">
+                        <img src="assets/images/services/facebook.webp" alt="Facebook Logo" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-slate-200">
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_line_result">บริการลูกค้าได้ตลอดเวลา</span>
+                        <a href="services/service-line-chatbot.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -144,45 +307,183 @@
     <section id="portfolio" class="py-16 md:py-24 bg-slate-900 px-4 md:px-6 text-white">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-10 md:mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">ผลงานที่ผ่านมา (Success Cases)</h2>
-                <p class="text-slate-400 mt-3 text-base md:text-lg">ตัวอย่างโปรเจกต์ที่ช่วยลูกค้าประหยัดเวลาและเพิ่มกำไร</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white" data-i18n="portfolio_title">ผลงานที่ผ่านมา (Success Cases)</h2>
+                <p class="text-slate-400 mt-3 text-base md:text-lg" data-i18n="portfolio_desc">ตัวอย่างโปรเจกต์ที่ช่วยลูกค้าประหยัดเวลาและเพิ่มกำไร</p>
             </div>
             
-            <div id="portfolio-slider" class="services-scrollbar-hidden flex gap-5 md:gap-8 overflow-x-auto pb-4 text-slate-800 snap-x snap-mandatory scroll-smooth">
+            <div id="portfolio-slider" class="services-scrollbar-hidden flex gap-4 md:gap-8 overflow-x-auto pb-4 text-slate-800 snap-x snap-mandatory scroll-smooth">
                 <!-- Case Study 1: Dashboard -->
-                <div class="min-w-[280px] md:min-w-[520px] max-w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-right">
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-right">
                     <div class="overflow-hidden relative h-52 md:h-64 bg-slate-100">
                         <!-- เปลี่ยนเป็นรูป Dashboard -->
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Power BI Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded">เพิ่มยอดขาย 20%</div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded" data-i18n="case1_badge">เพิ่มยอดขาย 20%</div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Sales & KPI Dashboard (FMCG Company)</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed"><strong>ปัญหา:</strong> ผู้บริหารต้องรอสรุปยอดขายจากทีมเซลส์ทุกสิ้นเดือน ตัดสินใจปรับกลยุทธ์ไม่ทัน<br><strong>Solution:</strong> สร้าง Power BI ดึงข้อมูลจาก ERP อัตโนมัติทุกวัน ผู้บริหารดูยอดได้แบบ Real-time</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case1_title">Sales & KPI Dashboard (FMCG Company)</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case1_body" data-i18n-html><strong>ปัญหา:</strong> ผู้บริหารต้องรอสรุปยอดขายจากทีมเซลส์ทุกสิ้นเดือน ตัดสินใจปรับกลยุทธ์ไม่ทัน<br><strong>Solution:</strong> สร้าง Power BI ดึงข้อมูลจาก ERP อัตโนมัติทุกวัน ผู้บริหารดูยอดได้แบบ Real-time</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#PowerBI</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#DataVisualization</span>
                         </div>
-                        <a href="portfolio/portfolio-sales-kpi.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                        <a href="portfolio/portfolio-sales-kpi.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">ดูรายละเอียด</a>
                     </div>
                 </div>
 
                 <!-- Case Study 2: RPA/VBA -->
-                <div class="min-w-[280px] md:min-w-[520px] max-w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
                     <div class="overflow-hidden relative h-52 md:h-64 bg-slate-100">
                         <!-- เปลี่ยนเป็นรูประบบ/โค้ด -->
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Excel VBA Automation" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded">ลดเวลาจาก 3 วัน เหลือ 10 นาที</div>
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded" data-i18n="case2_badge">ลดเวลาจาก 3 วัน เหลือ 10 นาที</div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed"><strong>ปัญหา:</strong> พนักงานบัญชีต้องโหลดไฟล์ธนาคาร 10 แบงก์มาจับคู่กับอินวอยซ์ (Reconcile) ด้วยมือ<br><strong>Solution:</strong> เขียน Excel VBA + Macro ดึงไฟล์และจับคู่ข้อมูลอัตโนมัติ สรุปรายการผิดปกติให้ทันที</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case2_title">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case2_body" data-i18n-html><strong>ปัญหา:</strong> พนักงานบัญชีต้องโหลดไฟล์ธนาคาร 10 แบงก์มาจับคู่กับอินวอยซ์ (Reconcile) ด้วยมือ<br><strong>Solution:</strong> เขียน Excel VBA + Macro ดึงไฟล์และจับคู่ข้อมูลอัตโนมัติ สรุปรายการผิดปกติให้ทันที</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#ExcelVBA</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#ProcessImprovement</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#RPA</span>
                         </div>
-                        <a href="portfolio/portfolio-accounting-automation.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                        <a href="portfolio/portfolio-accounting-automation.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 3: AI Chatbot Mockup -->
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 overflow-hidden">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
+                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case3_badge">Mockup Show</div>
+                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                            <p class="text-blue-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Mockup / GIF</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight" data-i18n="case3_visual_title">AI แชตตอบลูกค้าและเก็บ Lead อัตโนมัติ</h3>
+                            <p class="text-slate-300 mt-3 max-w-md" data-i18n="case3_visual_desc">ตัวอย่างหน้า mockup สำหรับโชว์บทสนทนา, การคัดกรอง intent, การเก็บ lead และส่งต่อทีมขาย</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case3_title">AI แชตตอบลูกค้าและเก็บ Lead อัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case3_body">mockup case สำหรับโชว์การตอบคำถามอัตโนมัติ รับข้อมูลผู้สนใจ และ handoff ไปยังแอดมินหรือทีมขาย โดยไม่ใช้ข้อมูลลูกค้าจริง</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#AIChatbot</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Mockup</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#GIF</span>
+                        </div>
+                        <a href="portfolio/portfolio-chatbot-mockup.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 4: Excel Fast Solve Mockup -->
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 32px 32px;"></div>
+                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case4_badge">Mockup Show</div>
+                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                            <p class="text-emerald-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Formula / Fix</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight" data-i18n="case4_visual_title">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h3>
+                            <p class="text-slate-300 mt-3 max-w-md" data-i18n="case4_visual_desc">ตัวอย่างเคสแก้สูตร, lookup และ pivot ที่ผิดพลาดในไฟล์รายงานสำคัญแบบเร่งด่วน</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case4_title">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case4_body">mockup case สำหรับเล่าการกู้ไฟล์ Excel ที่สูตรเพี้ยน lookup ผิด และรายงานพร้อมส่งไม่ทัน ให้กลับมาใช้งานได้ในรอบเดียว</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Excel</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#FastSolve</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Mockup</span>
+                        </div>
+                        <a href="portfolio/portfolio-excel-fast-solve-mockup.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 5: Excel UserForm Mockup -->
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 26px 26px;"></div>
+                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case5_badge">Mockup Show</div>
+                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                            <p class="text-cyan-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Form / Input</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight" data-i18n="case5_visual_title">ฟอร์มบันทึกคำสั่งซื้อใน Excel แบบไม่ต้องพิมพ์ลงชีต</h3>
+                            <p class="text-slate-300 mt-3 max-w-md" data-i18n="case5_visual_desc">ตัวอย่างหน้า mockup สำหรับโชว์การกรอกข้อมูลผ่าน user form และการบันทึกลงตารางอัตโนมัติ</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case5_title">ฟอร์มบันทึกคำสั่งซื้อใน Excel แบบไม่ต้องพิมพ์ลงชีต</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case5_body">mockup case สำหรับเล่าการทำ user form รับข้อมูลคำสั่งซื้อ ตรวจความครบถ้วน และบันทึกข้อมูลเข้าสู่ตารางอย่างเป็นระบบ</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#UserForm</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Excel</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Mockup</span>
+                        </div>
+                        <a href="portfolio/portfolio-excel-userform-mockup.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 6: RPA Web Portal Mockup -->
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-700 overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 28px 28px;"></div>
+                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">Mockup Show</div>
+                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                            <p class="text-indigo-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Portal / Report</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h3>
+                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานที่ต้อง login, export, รวมไฟล์ และส่งรายงานซ้ำทุกวันโดยไม่อยากให้ทีมมานั่งทำเอง</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed">mockup case สำหรับโชว์ bot เข้า web portal, ดาวน์โหลดข้อมูล, รวมไฟล์ และจัดรูปแบบรายงานพร้อมส่งให้ทีมทุกเช้า</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#RPA</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#WebPortal</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Mockup</span>
+                        </div>
+                        <a href="portfolio/portfolio-rpa-web-portal-mockup.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 7: Power BI Stock Mockup -->
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-amber-700 via-orange-700 to-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">Mockup Show</div>
+                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                            <p class="text-amber-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Dashboard / Insight</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Dashboard ติดตามสต๊อกและยอดขายหลายช่องทางแบบวันต่อวัน</h3>
+                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานที่ต้องรวมข้อมูลจาก marketplace, ERP หรือไฟล์ Excel ให้ผู้บริหารดูภาพรวมได้ทันที</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Dashboard ติดตามสต๊อกและยอดขายหลายช่องทางแบบวันต่อวัน</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed">mockup case สำหรับเล่าการรวมข้อมูลขาย สต๊อก และสินค้าค้างเตือนจากหลายช่องทางขึ้นหน้า dashboard เดียว</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#PowerBI</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Stock</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Mockup</span>
+                        </div>
+                        <a href="portfolio/portfolio-stock-dashboard-mockup.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- Case Study 8: Chatbot Ticket Mockup -->
+                <div class="w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left">
+                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-sky-900 via-cyan-800 to-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 26px 26px;"></div>
+                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">Mockup Show</div>
+                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                            <p class="text-cyan-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Chat / Ticket</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Chatbot รับแจ้งปัญหาและเปิด Ticket อัตโนมัติ</h3>
+                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงาน support ภายในหรือบริการลูกค้าที่อยากรับเรื่อง, จัดหมวดหมู่ และส่งต่อทีมงานให้เร็วขึ้น</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Chatbot รับแจ้งปัญหาและเปิด Ticket อัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed">mockup case สำหรับโชว์ chatbot คุยกับผู้ใช้, เก็บข้อมูลปัญหา, แยกประเภท และส่งเข้า sheet หรือระบบ ticketing โดยอัตโนมัติ</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Chatbot</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Ticketing</span>
+                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">#Mockup</span>
+                        </div>
+                        <a href="portfolio/portfolio-chatbot-ticket-mockup.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูรายละเอียด</a>
                     </div>
                 </div>
             </div>
@@ -201,31 +502,31 @@
     <!-- 6. FAQ (คำถามที่ลูกค้าองค์กรมักจะถาม) -->
     <section id="faq" class="py-16 md:py-24 px-4 md:px-6 bg-slate-50">
         <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12" data-aos="zoom-in">คำถามที่พบบ่อย (FAQ)</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12" data-aos="zoom-in" data-i18n="faq_title">คำถามที่พบบ่อย (FAQ)</h2>
             
             <div class="space-y-4">
                 <details class="group bg-white p-6 rounded-lg shadow-sm border border-slate-200 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                     <summary class="font-semibold text-lg list-none flex justify-between items-center text-slate-800">
-                        บริษัทขนาดเล็ก-กลาง (SME) จำเป็นต้องทำ Automation หรือไม่?
+                        <span data-i18n="faq_q1">บริษัทขนาดเล็ก-กลาง (SME) จำเป็นต้องทำ Automation หรือไม่?</span>
                         <span class="text-blue-600 group-open:rotate-180 transition duration-300">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4">จำเป็นมากครับ เพราะ SME มักมีคนจำกัด การเอาคนไปทำงาน Manual ซ้ำซ้อนเป็นการเสียทรัพยากร เราสามารถเริ่มจากจุดเล็กๆ (Quick Win) เช่น ปรับปรุงไฟล์ Excel ด้วย VBA ก่อน ไม่จำเป็นต้องลงทุนระบบใหญ่ๆ หลักล้านครับ</p>
+                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq_a1">จำเป็นมากครับ เพราะ SME มักมีคนจำกัด การเอาคนไปทำงาน Manual ซ้ำซ้อนเป็นการเสียทรัพยากร เราสามารถเริ่มจากจุดเล็กๆ (Quick Win) เช่น ปรับปรุงไฟล์ Excel ด้วย VBA ก่อน ไม่จำเป็นต้องลงทุนระบบใหญ่ๆ หลักล้านครับ</p>
                 </details>
 
                 <details class="group bg-white p-6 rounded-lg shadow-sm border border-slate-200 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                     <summary class="font-semibold text-lg list-none flex justify-between items-center text-slate-800">
-                        อยากทำ Power BI Dashboard ต้องเตรียมข้อมูลอย่างไรบ้าง?
+                        <span data-i18n="faq_q2">อยากทำ Power BI Dashboard ต้องเตรียมข้อมูลอย่างไรบ้าง?</span>
                         <span class="text-blue-600 group-open:rotate-180 transition duration-300">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4">ทางลูกค้าควรมีแหล่งเก็บข้อมูล (Data Source) ที่ชัดเจนครับ เช่น ไฟล์ Excel ที่มีการคีย์อัปเดตสม่ำเสมอ, ข้อมูลจากโปรแกรมบัญชี, หรือฐานข้อมูล (Database/ERP) โดยผมจะเข้าไปช่วยประเมินและจัดระเบียบข้อมูล (Data Cleaning) ให้พร้อมสำหรับการทำ Dashboard ครับ</p>
+                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq_a2">ทางลูกค้าควรมีแหล่งเก็บข้อมูล (Data Source) ที่ชัดเจนครับ เช่น ไฟล์ Excel ที่มีการคีย์อัปเดตสม่ำเสมอ, ข้อมูลจากโปรแกรมบัญชี, หรือฐานข้อมูล (Database/ERP) โดยผมจะเข้าไปช่วยประเมินและจัดระเบียบข้อมูล (Data Cleaning) ให้พร้อมสำหรับการทำ Dashboard ครับ</p>
                 </details>
 
                 <details class="group bg-white p-6 rounded-lg shadow-sm border border-slate-200 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
                     <summary class="font-semibold text-lg list-none flex justify-between items-center text-slate-800">
-                        ข้อมูลความลับของบริษัทจะปลอดภัยไหม?
+                        <span data-i18n="faq_q3">ข้อมูลความลับของบริษัทจะปลอดภัยไหม?</span>
                         <span class="text-blue-600 group-open:rotate-180 transition duration-300">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4">ปลอดภัย 100% ครับ ผมยินดีเซ็นสัญญาปกปิดความลับ (NDA - Non-Disclosure Agreement) ก่อนเริ่มดูข้อมูลทุกโปรเจกต์ และสามารถตั้งค่าสิทธิ์การเข้าถึง (Row-Level Security) ใน Power BI เพื่อให้พนักงานแต่ละแผนกเห็นข้อมูลเฉพาะส่วนของตัวเองได้ครับ</p>
+                    <p class="text-slate-600 mt-4 leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq_a3">ปลอดภัย 100% ครับ ผมยินดีเซ็นสัญญาปกปิดความลับ (NDA - Non-Disclosure Agreement) ก่อนเริ่มดูข้อมูลทุกโปรเจกต์ และสามารถตั้งค่าสิทธิ์การเข้าถึง (Row-Level Security) ใน Power BI เพื่อให้พนักงานแต่ละแผนกเห็นข้อมูลเฉพาะส่วนของตัวเองได้ครับ</p>
                 </details>
             </div>
         </div>
@@ -238,36 +539,42 @@
                 
                 <!-- Contact Info: สไลด์จากซ้าย -->
                 <div data-aos="fade-right">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">เปลี่ยนองค์กรของคุณ <br><span class="text-blue-600">ให้ขับเคลื่อนด้วย Data</span></h2>
-                    <p class="text-slate-600 mb-8 md:mb-10 text-base md:text-lg">หากคุณกำลังปวดหัวกับรายงานประจำเดือนที่ทำไม่ทัน หรือพนักงานคีย์ข้อมูลผิดพลาดบ่อย ทักมาปรึกษาเพื่อหาแนวทางปรับปรุง (Process Improvement) ได้ฟรีครับ</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight" data-i18n="contact_title" data-i18n-html>เปลี่ยนองค์กรของคุณ <br><span class="text-blue-600">ให้ขับเคลื่อนด้วย Data</span></h2>
+                    <p class="text-slate-600 mb-8 md:mb-10 text-base md:text-lg" data-i18n="contact_desc">หากคุณกำลังปวดหัวกับรายงานประจำเดือนที่ทำไม่ทัน หรือพนักงานคีย์ข้อมูลผิดพลาดบ่อย ทักมาปรึกษาเพื่อหาแนวทางปรับปรุง (Process Improvement) ได้ฟรีครับ</p>
                     
                     <div class="space-y-4">
                         <a href="tel:0804170453" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
                             <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">📞</div>
                             <div>
-                                <p class="text-sm text-slate-500">โทรศัพท์</p>
+                                <p class="text-sm text-slate-500" data-i18n="phone_label">โทรศัพท์</p>
                                 <p class="text-lg md:text-xl font-medium">080-417-0453</p>
                             </div>
                         </a>
                         <a href="https://line.me/R/ti/p/@yourdata_expert" target="_blank" rel="noopener noreferrer" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
-                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">📱</div>
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-4 border border-blue-100">
+                                <img src="assets/images/services/line.png" alt="LINE Logo" class="w-7 h-7 object-contain">
+                            </div>
                             <div>
-                                <p class="text-sm text-slate-500">Line</p>
+                                <p class="text-sm text-slate-500" data-i18n="line_label">Line</p>
                                 <p class="text-lg md:text-xl font-medium">Line ID: @yourdata_expert</p>
                             </div>
                         </a>
                         <a href="mailto:successflow@gmail.com" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
-                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">📧</div>
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-4 border border-blue-100">
+                                <img src="assets/images/services/outlook.png" alt="Email Logo" class="w-7 h-7 object-contain">
+                            </div>
                             <div>
-                                <p class="text-sm text-slate-500">Email</p>
+                                <p class="text-sm text-slate-500" data-i18n="email_label">Email</p>
                                 <p class="text-lg md:text-xl font-medium break-all">successflow@gmail.com</p>
                             </div>
                         </a>
                         <a href="https://fastwork.co/user/successflow/rpa-25300126?source=seller-center_my-service_share-link" target="_blank" rel="noopener noreferrer" class="flex items-center group rounded-xl border border-slate-200 bg-white px-4 py-4 hover:border-blue-200 hover:shadow-md transition duration-300">
-                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition">💼</div>
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-4 border border-blue-100">
+                                <img src="assets/images/services/fastwork2.jpeg" alt="Fastwork Logo" class="w-8 h-8 object-contain">
+                            </div>
                             <div>
-                                <p class="text-sm text-slate-500">Fastwork</p>
-                                <p class="text-lg md:text-xl font-medium">ดูโปรไฟล์บน Fastwork</p>
+                                <p class="text-sm text-slate-500" data-i18n="fastwork_label">Fastwork</p>
+                                <p class="text-lg md:text-xl font-medium" data-i18n="fastwork_text">ดูโปรไฟล์บน Fastwork</p>
                             </div>
                         </a>
                     </div>
@@ -275,34 +582,43 @@
 
                 <!-- Contact Form: สไลด์จากขวา -->
                 <div class="bg-slate-50 border border-slate-200 p-6 md:p-10 rounded-xl shadow-lg relative" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-6 text-slate-800">นัดหมายประเมินระบบฟรี</h3>
-                    <form action="#" method="POST" class="space-y-5">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800" data-i18n="form_title">นัดหมายประเมินระบบฟรี</h3>
+                    <form id="contact-form" class="space-y-5">
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-slate-700">ชื่อบริษัท / ผู้ติดต่อ</label>
-                            <input type="text" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="ระบุชื่อบริษัทของคุณ">
+                            <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="form_company_label">ชื่อบริษัท / ผู้ติดต่อ</label>
+                            <input type="text" name="company_or_contact" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="ระบุชื่อบริษัทของคุณ" data-i18n-placeholder="form_company_placeholder">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-slate-700">เบอร์โทรติดต่อ</label>
-                            <input type="text" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="08X-XXX-XXXX">
+                            <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="form_phone_label">เบอร์โทรติดต่อ</label>
+                            <input type="text" name="phone" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="08X-XXX-XXXX" data-i18n-placeholder="form_phone_placeholder">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-slate-700">ปัญหาที่ต้องการให้เราช่วยแก้</label>
-                            <textarea rows="4" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="เช่น ทีมเซลส์ทำรีพอร์ทช้า, อยากเอาข้อมูล Excel มาทำ Dashboard..."></textarea>
+                            <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="form_problem_label">ปัญหาที่ต้องการให้เราช่วยแก้</label>
+                            <textarea rows="4" name="project_problem" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="เช่น ทีมเซลส์ทำรีพอร์ทช้า, อยากเอาข้อมูล Excel มาทำ Dashboard..." data-i18n-placeholder="form_problem_placeholder"></textarea>
                         </div>
-                        <button type="button" class="w-full bg-blue-700 text-white font-bold py-4 rounded-md hover:bg-blue-800 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">ส่งข้อมูลเพื่อรับคำปรึกษา</button>
+                        <button type="submit" id="contact-submit" class="w-full bg-blue-700 text-white font-bold py-4 rounded-md hover:bg-blue-800 hover:shadow-lg transition duration-300 transform hover:-translate-y-1" data-i18n="form_submit">ส่งข้อมูลเพื่อรับคำปรึกษา</button>
                     </form>
                 </div>
 
             </div>
             
-            <div class="border-t border-slate-200 mt-20 pt-8 text-center text-slate-500 text-sm">
-                &copy; 2024 successflow. All rights reserved. | Digital Transformation & Automation Services
-            </div>
+            <div class="border-t border-slate-200 mt-20 pt-8 text-center text-slate-500 text-sm" data-i18n="footer_copy">&copy; 2024 successflow. All rights reserved. | Digital Transformation & Automation Services</div>
         </div>
     </section>
 
+    <div id="contact-modal" class="contact-modal hidden">
+        <div class="contact-modal-backdrop" data-close-modal></div>
+        <div class="contact-modal-card" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+            <div id="contact-modal-icon" class="contact-modal-icon">✓</div>
+            <h3 id="contact-modal-title" class="text-2xl font-bold text-slate-900" data-i18n="form_success_title">ส่งข้อมูลเรียบร้อย</h3>
+            <p id="contact-modal-message" class="mt-3 text-slate-600 leading-relaxed" data-i18n="form_success_message">เราได้รับข้อมูลของคุณแล้ว และจะติดต่อกลับโดยเร็วที่สุด</p>
+            <button type="button" id="contact-modal-close" class="mt-6 inline-flex items-center justify-center rounded-md bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition duration-300" data-i18n="form_modal_close">ปิดหน้าต่าง</button>
+        </div>
+    </div>
+
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -3,6 +3,47 @@ body {
     overflow-x: hidden;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    display: inline-flex;
+    padding: 3px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 9999px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.2);
+}
+
+.lang-switch button {
+    border: 0;
+    background: transparent;
+    color: rgba(226, 232, 240, 0.8);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 6px 10px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.lang-switch button.is-active {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+@media (max-width: 768px) {
+    .lang-switch {
+        transform: scale(0.96);
+        transform-origin: center;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -27,4 +68,182 @@ body {
 
 .services-scrollbar-hidden::-webkit-scrollbar {
     display: none;
+}
+
+.logo-marquee {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-marquee::before,
+.logo-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 72px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.logo-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.logo-marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: logo-marquee-scroll 26s linear infinite;
+}
+
+.logo-marquee-track-reverse {
+    animation: logo-marquee-scroll-reverse 26s linear infinite;
+}
+
+.logo-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 64px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.logo-chip.logo-chip-large {
+    width: 104px;
+}
+
+.logo-chip.logo-chip-medium {
+    width: 96px;
+}
+
+.logo-chip img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.logo-chip img.logo-large {
+    width: 76px;
+    height: 76px;
+}
+
+.logo-chip img.logo-medium {
+    width: 62px;
+    height: 62px;
+}
+
+.logo-chip img.logo-shopee {
+    width: 56px;
+    height: 56px;
+}
+
+.logo-chip img.logo-platform-large {
+    width: 64px;
+    height: 64px;
+}
+
+.logo-chip img.logo-discord-large {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-chip-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+@keyframes logo-marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes logo-marquee-scroll-reverse {
+    from {
+        transform: translateX(-33.3333%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo-marquee {
+        padding: 0;
+    }
+
+    .logo-marquee-track {
+        gap: 0;
+    }
+}
+
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.contact-modal.hidden {
+    display: none;
+}
+
+.contact-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(4px);
+}
+
+.contact-modal-card {
+    position: relative;
+    width: min(100%, 480px);
+    border-radius: 1.25rem;
+    background: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.25);
+    text-align: center;
+}
+
+.contact-modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 1.75rem;
+    font-weight: 700;
 }

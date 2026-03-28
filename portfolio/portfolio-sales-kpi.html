@@ -3,28 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
     <title>Sales & KPI Dashboard | SuccessFlow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800" data-lang-scope="portfolio-sales-kpi">
     <section class="px-4 md:px-6 py-12 md:py-20">
         <div class="max-w-4xl mx-auto">
-            <a href="../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
+            <div class="flex items-center justify-between gap-4">
+                <a href="../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="back">กลับไปหน้าหลัก</a>
+                <div class="lang-switch">
+                    <button type="button" data-lang-toggle="th">TH</button>
+                    <button type="button" data-lang-toggle="en">EN</button>
+                </div>
+            </div>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sales KPI Dashboard" class="w-full h-56 md:h-72 object-cover">
                 <div class="p-6 md:p-12">
-                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Sales & KPI Dashboard</h1>
-                    <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed">โปรเจกต์นี้ช่วยให้ผู้บริหารเห็นยอดขายและ KPI รายวันจากข้อมูล ERP โดยไม่ต้องรอทีมรวบรวมข้อมูลสิ้นเดือน ทำให้วิเคราะห์สถานการณ์และปรับแผนได้เร็วขึ้น</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Sales & KPI Dashboard</h1>
+                    <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">โปรเจกต์นี้ช่วยให้ผู้บริหารเห็นยอดขายและ KPI รายวันจากข้อมูล ERP โดยไม่ต้องรอทีมรวบรวมข้อมูลสิ้นเดือน ทำให้วิเคราะห์สถานการณ์และปรับแผนได้เร็วขึ้น</p>
                     <div class="mt-8 grid md:grid-cols-3 gap-6">
-                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">รายงานช้า ข้อมูลหลายแหล่ง และมองแนวโน้มรายวันไม่ชัด</p></div>
-                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">เชื่อมข้อมูลอัตโนมัติ สร้างโมเดล KPI และออกแบบ dashboard ตามมุมมองผู้บริหาร</p></div>
-                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ตัดสินใจเร็วขึ้น และใช้ข้อมูลชุดเดียวกันทั้งทีม</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2" data-i18n="problem_title">ปัญหา</h2><p class="text-slate-600" data-i18n="problem_desc">รายงานช้า ข้อมูลหลายแหล่ง และมองแนวโน้มรายวันไม่ชัด</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2" data-i18n="approach_title">แนวทาง</h2><p class="text-slate-600" data-i18n="approach_desc">เชื่อมข้อมูลอัตโนมัติ สร้างโมเดล KPI และออกแบบ dashboard ตามมุมมองผู้บริหาร</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2" data-i18n="result_title">ผลลัพธ์</h2><p class="text-slate-600" data-i18n="result_desc">ตัดสินใจเร็วขึ้น และใช้ข้อมูลชุดเดียวกันทั้งทีม</p></div>
+                    </div>
+                    <div class="mt-8 border-t border-slate-200 pt-8">
+                        <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
+                            <div>
+                                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2" data-i18n="related_service_title">Related Service</p>
+                                <p class="text-slate-600" data-i18n="related_service_desc">บริการที่เกี่ยวข้องกับผลงานชิ้นนี้</p>
+                            </div>
+                            <a href="../index.html#services" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="related_service_cta">ดูบริการทั้งหมด</a>
+                        </div>
+                        <a href="../services/service-powerbi.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">#PowerBI #Dashboard #KPI</p>
+                            <h2 class="text-xl font-bold text-slate-900" data-i18n="related_service_case_title">Power BI Dashboard</h2>
+                            <p class="mt-2 text-slate-600" data-i18n="related_service_case_desc">เหมาะกับงานเชื่อมข้อมูลหลายแหล่ง สร้าง KPI แบบ real-time และออกแบบ dashboard สำหรับผู้บริหาร</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="../assets/js/i18n.js"></script>
 </body>
 </html>

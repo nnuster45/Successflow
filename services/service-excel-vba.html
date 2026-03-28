@@ -3,31 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
     <title>Excel VBA & Macro | SuccessFlow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800" data-lang-scope="service-excel-vba">
     <section class="px-4 md:px-6 py-12 md:py-20">
         <div class="max-w-4xl mx-auto">
-            <a href="../index.html#services" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
+            <div class="flex items-center justify-between gap-4">
+                <a href="../index.html#services" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="back">กลับไปหน้าหลัก</a>
+                <div class="lang-switch">
+                    <button type="button" data-lang-toggle="th">TH</button>
+                    <button type="button" data-lang-toggle="en">EN</button>
+                </div>
+            </div>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 p-6 md:p-12">
-                <div class="text-5xl mb-6">⚡</div>
-                <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Excel VBA & Macro</h1>
-                <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed">ต่อยอดไฟล์ Excel เดิมขององค์กรให้ทำงานอัตโนมัติ เช่น รวมไฟล์ จัดรูปแบบ สรุปรายงาน ตรวจสอบข้อมูล หรือสร้างปุ่มคำสั่งสำหรับงานประจำวัน</p>
+                <div class="mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/services/excel.png" alt="Excel Logo" class="w-10 h-10 object-contain">
+                    </div>
+                </div>
+                <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Excel VBA & Macro</h1>
+                <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">ต่อยอดไฟล์ Excel เดิมขององค์กรให้ทำงานอัตโนมัติ เช่น รวมไฟล์ จัดรูปแบบ สรุปรายงาน ตรวจสอบข้อมูล หรือสร้างปุ่มคำสั่งสำหรับงานประจำวัน</p>
                 <div class="mt-8 grid md:grid-cols-2 gap-6">
                     <div class="bg-slate-50 rounded-xl p-6">
-                        <h2 class="font-bold text-xl mb-3">เหมาะกับใคร</h2>
-                        <p class="text-slate-600">ทีมบัญชี การเงิน ฝ่ายปฏิบัติการ หรือทีมที่ยังใช้ Excel เป็นเครื่องมือหลักและต้องการลดงานซ้ำ</p>
+                        <h2 class="font-bold text-xl mb-3" data-i18n="card1_title">เหมาะกับใคร</h2>
+                        <p class="text-slate-600" data-i18n="card1_desc">ทีมบัญชี การเงิน ฝ่ายปฏิบัติการ หรือทีมที่ยังใช้ Excel เป็นเครื่องมือหลักและต้องการลดงานซ้ำ</p>
                     </div>
                     <div class="bg-slate-50 rounded-xl p-6">
-                        <h2 class="font-bold text-xl mb-3">ผลลัพธ์ที่ได้</h2>
-                        <p class="text-slate-600">ทำงานได้เร็วขึ้น ลดความผิดพลาดจากสูตรหรือการคัดลอกข้อมูล และลดขั้นตอนที่ต้องทำด้วยมือ</p>
+                        <h2 class="font-bold text-xl mb-3" data-i18n="card2_title">ผลลัพธ์ที่ได้</h2>
+                        <p class="text-slate-600" data-i18n="card2_desc">ทำงานได้เร็วขึ้น ลดความผิดพลาดจากสูตรหรือการคัดลอกข้อมูล และลดขั้นตอนที่ต้องทำด้วยมือ</p>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-slate-200 pt-8">
+                    <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2" data-i18n="related_title">Related Portfolio</p>
+                            <p class="text-slate-600" data-i18n="related_desc">ตัวอย่างงานที่ใกล้เคียงกับบริการนี้</p>
+                        </div>
+                        <a href="../index.html#portfolio" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="related_cta">ดูผลงานทั้งหมด</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="../portfolio/portfolio-accounting-automation.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">#ExcelVBA #Automation #Operations</p>
+                            <h2 class="text-xl font-bold text-slate-900" data-i18n="related_case_title">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h2>
+                            <p class="mt-2 text-slate-600" data-i18n="related_case_desc">ตัวอย่างงานที่ใช้ Excel VBA และ macro ในการรวมไฟล์ ตรวจสอบข้อมูล และสรุป exception อัตโนมัติ</p>
+                        </a>
+                        <a href="../portfolio/portfolio-excel-fast-solve-mockup.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">#Excel #FormulaFix #Reporting</p>
+                            <h2 class="text-xl font-bold text-slate-900" data-i18n="related_case_title_2">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h2>
+                            <p class="mt-2 text-slate-600" data-i18n="related_case_desc_2">mockup case สำหรับงานแก้สูตร, lookup และ logic ในไฟล์รายงานที่ต้องกลับมาใช้งานได้เร็ว</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="../assets/js/i18n.js"></script>
 </body>
 </html>

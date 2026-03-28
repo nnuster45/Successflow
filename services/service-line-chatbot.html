@@ -3,31 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Chat Bot | SuccessFlow</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
+    <title>Chatbot | SuccessFlow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800" data-lang-scope="service-line-chatbot">
     <section class="px-4 md:px-6 py-12 md:py-20">
         <div class="max-w-4xl mx-auto">
-            <a href="../index.html#services" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
+            <div class="flex items-center justify-between gap-4">
+                <a href="../index.html#services" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="back">กลับไปหน้าหลัก</a>
+                <div class="lang-switch">
+                    <button type="button" data-lang-toggle="th">TH</button>
+                    <button type="button" data-lang-toggle="en">EN</button>
+                </div>
+            </div>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 p-6 md:p-12">
-                <div class="text-5xl mb-6">🤖</div>
-                <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Line Chat Bot</h1>
-                <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed">พัฒนา Chat Bot บน Line OA เพื่อช่วยตอบคำถามอัตโนมัติ เก็บข้อมูลลูกค้า แนะนำสินค้า และเชื่อมต่อ workflow ภายใน เช่น แจ้งเตือนหรือส่งข้อมูลต่อให้ทีมงาน</p>
+                <div class="mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-100 shadow-sm flex items-center justify-center text-blue-600">
+                        <svg class="w-11 h-11" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                            <path d="M14 16.5C14 12.9101 16.9101 10 20.5 10H27.5C31.0899 10 34 12.9101 34 16.5V21.5C34 25.0899 31.0899 28 27.5 28H23L17 33V28.9426C15.2751 27.8654 14 26.0134 14 23.8333V16.5Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                            <circle cx="20" cy="19" r="1.75" fill="currentColor"/>
+                            <circle cx="24" cy="19" r="1.75" fill="currentColor"/>
+                            <circle cx="28" cy="19" r="1.75" fill="currentColor"/>
+                            <path d="M34 15L38 12M35.5 22.5H40M34 29L38 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Chatbot</h1>
+                <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">พัฒนา AI Chatbot และ AI Agent สำหรับ LINE, Telegram, Discord, Facebook และช่องทางอื่น ๆ เพื่อช่วยตอบคำถามอัตโนมัติ เก็บข้อมูลลูกค้า แนะนำสินค้า และเชื่อมต่อ workflow ภายในได้แบบอัจฉริยะ</p>
+                <div class="mt-6">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4" data-i18n="tools_title">Tools Used</p>
+                    <div class="flex items-center gap-3 flex-wrap">
+                        <img src="../assets/images/services/google-app-script.png" alt="Google Apps Script Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/make.png" alt="Make Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/zapier.png" alt="Zapier Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/python.png" alt="Python Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/n8n-color.png" alt="n8n Logo" class="w-8 h-8 object-contain">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4" data-i18n="integrations_title">Integrate With</p>
+                    <div class="flex items-center gap-3 flex-wrap">
+                        <img src="../assets/images/services/line.png" alt="LINE Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/facebook.webp" alt="Facebook Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/telegram.webp" alt="Telegram Logo" class="w-8 h-8 object-contain">
+                        <img src="../assets/images/services/discord.png" alt="Discord Logo" class="w-12 h-12 object-contain">
+                    </div>
+                </div>
                 <div class="mt-8 grid md:grid-cols-2 gap-6">
                     <div class="bg-slate-50 rounded-xl p-6">
-                        <h2 class="font-bold text-xl mb-3">ฟีเจอร์ที่นิยม</h2>
-                        <p class="text-slate-600">ตอบ FAQ, เก็บ leads, เมนูบริการ, แจ้งเตือนสถานะงาน และเชื่อม API กับระบบภายใน</p>
+                        <h2 class="font-bold text-xl mb-3" data-i18n="card1_title">ฟีเจอร์ที่นิยม</h2>
+                        <p class="text-slate-600" data-i18n="card1_desc">AI chatbot, AI agent, FAQ automation, lead capture, เมนูบริการ, แจ้งเตือนสถานะงาน และเชื่อม API กับระบบภายใน</p>
                     </div>
                     <div class="bg-slate-50 rounded-xl p-6">
-                        <h2 class="font-bold text-xl mb-3">ผลลัพธ์ที่ได้</h2>
-                        <p class="text-slate-600">ตอบลูกค้าได้ไวขึ้น ลดภาระทีมแอดมิน และยกระดับประสบการณ์การติดต่อของลูกค้า</p>
+                        <h2 class="font-bold text-xl mb-3" data-i18n="card2_title">ผลลัพธ์ที่ได้</h2>
+                        <p class="text-slate-600" data-i18n="card2_desc">ตอบลูกค้าได้ไวขึ้น ลดภาระทีมแอดมิน และยกระดับประสบการณ์การติดต่อของลูกค้า</p>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-slate-200 pt-8">
+                    <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2" data-i18n="related_title">Related Portfolio</p>
+                            <p class="text-slate-600" data-i18n="related_desc">ตัวอย่างงานที่ใกล้เคียงกับบริการนี้</p>
+                        </div>
+                        <a href="../index.html#portfolio" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="related_cta">ดูผลงานทั้งหมด</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="../portfolio/portfolio-chatbot-mockup.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">#AIChatbot #AIAgent #LeadCapture</p>
+                            <h2 class="text-xl font-bold text-slate-900" data-i18n="related_empty_title">AI แชตตอบลูกค้าและเก็บ Lead อัตโนมัติ</h2>
+                            <p class="mt-2 text-slate-600" data-i18n="related_empty_desc">mockup case สำหรับโชว์ flow บทสนทนา, การคัดกรอง intent, การเก็บ lead และการ handoff ไปยังแอดมินหรือทีมขาย</p>
+                        </a>
+                        <a href="../portfolio/portfolio-chatbot-ticket-mockup.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">#Chatbot #Ticketing #Support</p>
+                            <h2 class="text-xl font-bold text-slate-900" data-i18n="related_empty_title_2">Chatbot รับแจ้งปัญหาและเปิด Ticket อัตโนมัติ</h2>
+                            <p class="mt-2 text-slate-600" data-i18n="related_empty_desc_2">mockup case สำหรับรับแจ้งปัญหา จัดหมวดหมู่ และส่งต่อเข้า workflow หรืองาน support แบบอัตโนมัติ</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="../assets/js/i18n.js"></script>
 </body>
 </html>
