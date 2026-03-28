@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SuccessFlow GitHub Site
 
 Static website for the SuccessFlow marketing pages.
@@ -35,3 +36,6 @@ Edit these placeholders in `index.html`:
 - line: `@yourdata_expert`
 - email: `contact@yourdomain.com`
 - fastwork: `https://fastwork.co/user/your-profile`
+=======
+# Successflow
+>>>>>>> 979654ae369e852e8b9c5411053cfbb32362f9d8
