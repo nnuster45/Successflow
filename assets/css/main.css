@@ -70,6 +70,12 @@ body.modal-open {
     display: none;
 }
 
+.service-card {
+    width: min(340px, calc(100vw - 2rem));
+    min-width: min(340px, calc(100vw - 2rem));
+    max-width: 340px;
+}
+
 .logo-marquee {
     position: relative;
     overflow: hidden;
