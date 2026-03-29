@@ -70,6 +70,51 @@ body.modal-open {
     display: none;
 }
 
+.problem-card {
+    width: min(320px, calc(100vw - 2.5rem));
+    min-width: min(320px, calc(100vw - 2.5rem));
+    max-width: 320px;
+    color: #475569;
+    line-height: 1.6;
+    min-height: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .problem-card {
+        width: 352px;
+        min-width: 352px;
+        max-width: 352px;
+    }
+}
+
+.problem-card-footer {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: none;
+}
+
+.problem-card-meta {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.problem-card-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.85rem;
+    color: #2563eb;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.problem-card-link:hover {
+    color: #1d4ed8;
+}
+
 .service-card {
     width: min(340px, calc(100vw - 2rem));
     min-width: min(340px, calc(100vw - 2rem));

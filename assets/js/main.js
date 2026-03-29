@@ -14,7 +14,7 @@ const setupSliderControls = (sliderId, prevId, nextId, gap = 24, fallbackWidth =
     if (!slider || !prevButton || !nextButton) return;
 
     const scrollSlider = (direction) => {
-        const firstCard = slider.firstElementChild;
+        const firstCard = slider.querySelector('.snap-start');
         const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : fallbackWidth;
 
         slider.scrollBy({
@@ -27,6 +27,7 @@ const setupSliderControls = (sliderId, prevId, nextId, gap = 24, fallbackWidth =
     nextButton.addEventListener('click', () => scrollSlider(1));
 };
 
+setupSliderControls('problem-slider', 'problem-prev', 'problem-next', 20, 320);
 setupSliderControls('services-slider', 'services-prev', 'services-next', 24, 320);
 setupSliderControls('portfolio-slider', 'portfolio-prev', 'portfolio-next', 32, 520);
 

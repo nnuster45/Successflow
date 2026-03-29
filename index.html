@@ -77,12 +77,75 @@
 
     <!-- 3. PROBLEM & AGITATION (ขยี้ปัญหาคนทำเอกสาร/Data) -->
     <section class="py-14 md:py-16 bg-blue-50 px-4 md:px-6 text-center">
-        <div class="container mx-auto max-w-4xl" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6" data-i18n="problem_title">ธุรกิจของคุณกำลังเสียเวลาและต้นทุนไปกับสิ่งเหล่านี้อยู่หรือไม่?</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-6 text-slate-600">
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1" data-i18n="problem_1">ทีมงานหมดเวลาไปครึ่งวันเพื่อทำ Report ซ้ำๆ ทุกสัปดาห์</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1" data-i18n="problem_2">ข้อมูลกระจัดกระจายหลายไฟล์ Excel ดูภาพรวมธุรกิจไม่เห็น</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 flex-1" data-i18n="problem_3">คีย์ข้อมูลผิดพลาด (Human Error) จนเกิดความเสียหายทางการเงิน</div>
+        <div class="container mx-auto max-w-6xl" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-3" data-i18n="problem_title">ธุรกิจของคุณกำลังเสียเวลาและต้นทุนไปกับสิ่งเหล่านี้อยู่หรือไม่?</h2>
+            <p class="text-sm md:text-base text-slate-500 mb-6" data-i18n="problem_hint">เลื่อนดูปัญหาที่พบบ่อย และกดดูแนวทางที่เหมาะกับงานของคุณได้ทันที</p>
+            <div id="problem-slider" class="problem-scroll services-scrollbar-hidden overflow-x-auto pb-4 text-left snap-x snap-mandatory scroll-smooth">
+                <div class="flex items-stretch gap-4 md:gap-5">
+
+                    <div class="problem-card bg-white p-4 md:p-5 rounded-xl shadow-sm snap-start w-[260px] sm:w-[280px] md:w-[320px] h-auto">
+                        <p class="text-slate-600 leading-snug" data-i18n="problem_1">
+                            ทีมงานหมดเวลาไปครึ่งวันเพื่อทำ Report ซ้ำๆ ทุกสัปดาห์
+                        </p>
+                        <div class="problem-card-footer">
+                            <a href="services/power-bi-dashboard/index.html" class="problem-card-link" data-i18n="problem_cta">แนวทาง</a>
+                        </div>
+                    </div>
+
+                    <div class="problem-card bg-white p-4 md:p-5 rounded-xl shadow-sm snap-start w-[260px] sm:w-[280px] md:w-[320px] h-auto">
+                        <p class="text-slate-600 leading-snug" data-i18n="problem_2">
+                            ข้อมูลกระจัดกระจายหลายไฟล์ Excel ดูภาพรวมธุรกิจไม่เห็น
+                        </p>
+                        <div class="problem-card-footer">
+                            <a href="services/power-bi-dashboard/index.html" class="problem-card-link" data-i18n="problem_cta">แนวทาง</a>
+                        </div>
+                    </div>
+
+                    <div class="problem-card bg-white p-4 md:p-5 rounded-xl shadow-sm snap-start w-[260px] sm:w-[280px] md:w-[320px] h-auto">
+                        <p class="text-slate-600 leading-snug" data-i18n="problem_3">
+                            คีย์ข้อมูลผิดพลาด (Human Error) จนเกิดความเสียหายทางการเงิน
+                        </p>
+                        <div class="problem-card-footer">
+                            <a href="services/excel-data-entry-form-design/index.html" class="problem-card-link" data-i18n="problem_cta">แนวทาง</a>
+                        </div>
+                    </div>
+
+                    <div class="problem-card bg-white p-4 md:p-5 rounded-xl shadow-sm snap-start w-[260px] sm:w-[280px] md:w-[320px] h-auto">
+                        <p class="text-slate-600 leading-snug" data-i18n="problem_4">
+                            ต้องสรุปยอดบัญชีและกระทบ Statement แต่ตัวเลขไม่ตรงกัน เสียเวลาทั้งวันและบางครั้งปิดงบไม่ทัน
+                        </p>
+                        <div class="problem-card-footer">
+                            <a href="portfolio/automated-accounting-document-workflow/index.html" class="problem-card-link" data-i18n="problem_cta_case">แนวทาง</a>
+                        </div>
+                    </div>
+
+                    <div class="problem-card bg-white p-4 md:p-5 rounded-xl shadow-sm snap-start w-[260px] sm:w-[280px] md:w-[320px] h-auto">
+                        <p class="text-slate-600 leading-snug" data-i18n="problem_5">
+                            ต้องดึงข้อมูลจากหลายแหล่งหลายระบบมารวมเองทุกวัน กว่าจะได้ไฟล์พร้อมใช้ก็หมดเวลาไปครึ่งค่อนวัน
+                        </p>
+                        <div class="problem-card-footer">
+                            <a href="services/robotic-process-automation/index.html" class="problem-card-link" data-i18n="problem_cta">แนวทาง</a>
+                        </div>
+                    </div>
+
+                    <div class="problem-card bg-white p-4 md:p-5 rounded-xl shadow-sm snap-start w-[260px] sm:w-[280px] md:w-[320px] h-auto">
+                        <p class="text-slate-600 leading-snug" data-i18n="problem_6">
+                            รับออเดอร์จากหลายช่องทาง พอหลังตัดรอบต้องรีบมาสรุปรายการส่งสินค้า ทำให้ทีมทำงานแข่งกับเวลาอยู่ตลอด
+                        </p>
+                        <div class="problem-card-footer">
+                            <a href="portfolio/multi-channel-stock-dashboard/index.html" class="problem-card-link" data-i18n="problem_cta_case">แนวทาง</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="100">
+                <button type="button" id="problem-prev" class="w-11 h-11 rounded-full border border-blue-200 bg-white text-slate-700 shadow-sm hover:bg-slate-900 hover:text-white hover:border-slate-900 transition duration-300" aria-label="เลื่อนปัญหาไปทางซ้าย">
+                    <span class="text-xl leading-none">‹</span>
+                </button>
+                <button type="button" id="problem-next" class="w-11 h-11 rounded-full border border-blue-200 bg-white text-slate-700 shadow-sm hover:bg-slate-900 hover:text-white hover:border-slate-900 transition duration-300" aria-label="เลื่อนปัญหาไปทางขวา">
+                    <span class="text-xl leading-none">›</span>
+                </button>
             </div>
         </div>
     </section>
@@ -257,10 +320,10 @@
                             <img src="assets/images/services/excel.png" alt="Excel Logo" class="w-10 h-10 object-contain">
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_userform_title">Excel UserForm</h3>
-                    <p class="text-slate-600 leading-relaxed" data-i18n="service_userform_desc">สร้างหน้ากรอกข้อมูลใน Excel ให้ใช้ง่ายขึ้น ลดการพิมพ์ลง sheet ตรง ๆ และช่วยควบคุมรูปแบบข้อมูลก่อนบันทึกเข้าระบบ</p>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800" data-i18n="service_userform_title">Excel UserForm Application</h3>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="service_userform_desc">พัฒนาแอปพลิเคชันบน Excel ด้วย UserForm สำหรับจัดการข้อมูล รับรายการ ควบคุมขั้นตอนการทำงาน และเชื่อมกับ macro หรือ workflow ภายในได้อย่างเป็นระบบ</p>
                     <div class="mt-auto pt-6 border-t border-slate-200">
-                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_userform_result">กรอกข้อมูลง่ายและแม่นขึ้น</span>
+                        <span class="inline-flex text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-2 rounded-full" data-i18n="service_userform_result">จัดการข้อมูลได้เป็นระบบมากขึ้น</span>
                         <a href="services/excel-data-entry-form-design/index.html" class="block mt-4 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="service_more">ดูรายละเอียดเพิ่มเติม</a>
                     </div>
                 </div>
