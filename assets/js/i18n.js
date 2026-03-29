@@ -57,7 +57,7 @@ const translations = {
     service_line_desc: { th: 'พัฒนา AI Chatbot สำหรับ LINE, Telegram, Discord, Facebook และช่องทางอื่น ๆ เพื่อช่วยตอบคำถามลูกค้า เก็บข้อมูลผู้สนใจ และเชื่อม workflow ได้อย่างเป็นระบบ', en: 'Build AI chatbots for LINE, Telegram, Discord, Facebook, and other channels to answer questions, capture leads, and automate workflows in a structured way.' },
     service_line_result: { th: 'บริการลูกค้าได้ตลอดเวลา', en: 'Serve Customers 24/7' },
     service_more: { th: 'ดูรายละเอียดเพิ่มเติม', en: 'View Details' },
-    portfolio_title: { th: 'ผลงานและกรณีศึกษา', en: 'Selected Projects and Case Studies' },
+    portfolio_title: { th: 'ตัวอย่างผลงานที่ผ่านมา', en: 'Selected Projects and Case Studies' },
     portfolio_desc: { th: 'ตัวอย่างโครงการที่สะท้อนแนวทางการออกแบบระบบ การลดงานซ้ำซ้อน และการปรับปรุงประสิทธิภาพการทำงาน', en: 'Selected projects that reflect our approach to automation, process improvement, and operational efficiency.' },
     case1_badge: { th: 'เพิ่มยอดขาย 20%', en: 'Sales Up 20%' },
     case1_title: { th: 'Sales & KPI Dashboard (FMCG Company)', en: 'Sales & KPI Dashboard (FMCG Company)' },
