@@ -91,7 +91,7 @@ const translations = {
     faq_q3: { th: 'ข้อมูลความลับของบริษัทจะปลอดภัยไหม?', en: 'Will confidential company data remain secure?' },
     faq_a3: { th: 'ปลอดภัย 100% ครับ ผมยินดีเซ็นสัญญาปกปิดความลับ (NDA - Non-Disclosure Agreement) ก่อนเริ่มดูข้อมูลทุกโปรเจกต์ และสามารถตั้งค่าสิทธิ์การเข้าถึง (Row-Level Security) ใน Power BI เพื่อให้พนักงานแต่ละแผนกเห็นข้อมูลเฉพาะส่วนของตัวเองได้ครับ', en: 'Yes. We can sign an NDA before any project starts, and where needed we can configure access controls such as Row-Level Security in Power BI so each team only sees the data they are permitted to access.' },
     contact_title: { th: 'เปลี่ยนองค์กรของคุณ <br><span class="text-blue-600">ให้ขับเคลื่อนด้วย Data</span>', en: 'Transform your organization <br><span class="text-blue-600">with data-driven operations</span>' },
-    contact_desc: { th: 'หากคุณกำลังปวดหัวกับรายงานประจำเดือนที่ทำไม่ทัน หรือพนักงานคีย์ข้อมูลผิดพลาดบ่อย ทักมาปรึกษาเพื่อหาแนวทางปรับปรุง (Process Improvement) ได้ฟรี', en: 'If monthly reporting is too slow or manual entry errors happen too often, get in touch for a free consultation on process improvement.' },
+    contact_desc: { th: 'ทักมาปรึกษาเพื่อหาแนวทางปรับปรุง (Process Improvement) ได้ฟรี', en: 'If manual entry errors happen too often, get in touch for a free consultation on process improvement.' },
     phone_label: { th: 'โทรศัพท์', en: 'Phone' },
     line_label: { th: 'Line', en: 'LINE' },
     email_label: { th: 'Email', en: 'Email' },
