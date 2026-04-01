@@ -239,6 +239,7 @@ const contactModalTitle = document.getElementById('contact-modal-title');
 const contactModalMessage = document.getElementById('contact-modal-message');
 const contactModalIcon = document.getElementById('contact-modal-icon');
 const contactModalClose = document.getElementById('contact-modal-close');
+const contactFormError = document.getElementById('contact-form-error');
 
 const modalText = {
     success: {
@@ -307,6 +308,23 @@ if (mobileMenuToggle && mobileMenu) {
 if (contactForm && contactSubmitButton) {
     contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();
+
+        const phoneInput = contactForm.querySelector('input[name="phone"]');
+        const emailInput = contactForm.querySelector('input[name="email"]');
+        const hasPhone = Boolean(phoneInput?.value.trim());
+        const hasEmail = Boolean(emailInput?.value.trim());
+
+        if (!hasPhone && !hasEmail) {
+            if (contactFormError) {
+                contactFormError.classList.remove('hidden');
+            }
+            phoneInput?.focus();
+            return;
+        }
+
+        if (contactFormError) {
+            contactFormError.classList.add('hidden');
+        }
 
         const originalText = contactSubmitButton.textContent;
         contactSubmitButton.disabled = true;

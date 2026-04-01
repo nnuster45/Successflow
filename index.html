@@ -812,13 +812,18 @@
                             <input type="text" name="company_or_contact" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="ระบุชื่อบริษัทของคุณ" data-i18n-placeholder="form_company_placeholder">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="form_phone_label">เบอร์โทรติดต่อ</label>
-                            <input type="text" name="phone" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="08X-XXX-XXXX" data-i18n-placeholder="form_phone_placeholder">
+                            <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="form_contact_label">ช่องทางติดต่อกลับ</label>
+                            <p class="text-sm text-slate-500 mb-3" data-i18n="form_contact_hint">กรอกเบอร์โทรหรืออีเมลอย่างใดอย่างหนึ่งตามที่สะดวก</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <input type="text" name="phone" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="เบอร์โทร 08X-XXX-XXXX" data-i18n-placeholder="form_phone_placeholder">
+                                <input type="email" name="email" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="อีเมลสำหรับติดต่อกลับ" data-i18n-placeholder="form_email_placeholder">
+                            </div>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold mb-2 text-slate-700" data-i18n="form_problem_label">ปัญหาที่ต้องการให้เราช่วยแก้</label>
                             <textarea rows="4" name="project_problem" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="เช่น ทีมเซลส์ทำรีพอร์ทช้า, อยากเอาข้อมูล Excel มาทำ Dashboard..." data-i18n-placeholder="form_problem_placeholder"></textarea>
                         </div>
+                        <p id="contact-form-error" class="hidden text-sm font-medium text-red-600" data-i18n="form_contact_error">กรุณากรอกเบอร์โทรหรืออีเมลอย่างน้อย 1 ช่อง</p>
                         <button type="submit" id="contact-submit" class="w-full bg-blue-700 text-white font-bold py-4 rounded-md hover:bg-blue-800 hover:shadow-lg transition duration-300 transform hover:-translate-y-1" data-i18n="form_submit">ส่งข้อมูลเพื่อรับคำปรึกษา</button>
                     </form>
                 </div>
