@@ -1107,3 +1107,434 @@ body.modal-open {
         width: 9.5rem;
     }
 }
+
+@media (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .pt-24.md\:pt-32.pb-16.md\:pb-20.bg-slate-900.text-white.text-center.px-4.md\:px-6.min-h-\[85vh\].flex.items-center.relative.overflow-hidden {
+        min-height: auto;
+        padding-top: 5.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .pt-24.md\:pt-32.pb-16.md\:pb-20.bg-slate-900.text-white.text-center.px-4.md\:px-6.min-h-\[85vh\].flex.items-center.relative.overflow-hidden h1.text-3xl.md\:text-5xl.lg\:text-6xl.font-bold.leading-tight.mb-6 {
+        font-size: 2.2rem;
+        line-height: 1.08;
+        margin-bottom: 1rem;
+    }
+
+    .pt-24.md\:pt-32.pb-16.md\:pb-20.bg-slate-900.text-white.text-center.px-4.md\:px-6.min-h-\[85vh\].flex.items-center.relative.overflow-hidden p.text-base.md\:text-xl.text-gray-300.mb-8.md\:mb-10.font-light {
+        font-size: 0.98rem;
+        line-height: 1.65;
+        margin-bottom: 1.5rem;
+    }
+
+    .py-16.md\:py-20.px-4.md\:px-6.bg-slate-50.border-y.border-slate-200 .rounded-\[2rem\].border.border-slate-200.bg-white.p-6.md\:p-8.lg\:p-10.shadow-sm {
+        padding: 1.25rem;
+        border-radius: 1.25rem;
+    }
+
+    .py-16.md\:py-20.px-4.md\:px-6.bg-slate-50.border-y.border-slate-200 h2.mt-3.text-3xl.md\:text-4xl.font-bold.text-slate-900.leading-tight {
+        font-size: 1.75rem;
+        line-height: 1.14;
+    }
+
+    .py-16.md\:py-20.px-4.md\:px-6.bg-slate-50.border-y.border-slate-200 .mt-8.grid.grid-cols-1.sm\:grid-cols-2.xl\:grid-cols-4.gap-4.md\:gap-5 {
+        margin-top: 1.25rem;
+        gap: 0.85rem;
+    }
+
+    .filter-bar {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 0.25rem;
+        margin-bottom: 1.15rem;
+        scrollbar-width: none;
+    }
+
+    .filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-chip {
+        white-space: nowrap;
+        padding: 0.58rem 0.88rem;
+        font-size: 0.8rem;
+    }
+
+    .problem-card {
+        width: min(280px, calc(100vw - 1.75rem));
+        min-width: min(280px, calc(100vw - 1.75rem));
+        max-width: 280px;
+        padding: 1rem;
+    }
+
+    .problem-card-link {
+        margin-top: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .service-card {
+        width: min(300px, calc(100vw - 1.5rem));
+        min-width: min(300px, calc(100vw - 1.5rem));
+        max-width: 300px;
+        padding: 1.15rem;
+    }
+
+    .portfolio-card {
+        width: min(360px, calc(100vw - 1.5rem));
+        min-width: min(360px, calc(100vw - 1.5rem));
+        border-radius: 1rem;
+    }
+
+    .service-card h3,
+    .portfolio-card h3 {
+        line-height: 1.28;
+    }
+
+    .service-card p,
+    .portfolio-card p {
+        font-size: 0.93rem;
+        line-height: 1.62;
+    }
+
+    .logo-chip {
+        width: 72px;
+        height: 54px;
+    }
+
+    .logo-chip.logo-chip-large {
+        width: 88px;
+    }
+
+    .logo-chip.logo-chip-medium {
+        width: 82px;
+    }
+
+    .logo-chip img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-chip img.logo-large {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-chip img.logo-medium {
+        width: 54px;
+        height: 54px;
+    }
+
+    .logo-chip img.logo-platform-large,
+    .logo-chip img.logo-discord-large {
+        width: 58px;
+        height: 58px;
+    }
+
+    #services,
+    #portfolio,
+    #faq,
+    #contact {
+        padding-top: 3.5rem;
+        padding-bottom: 3.75rem;
+    }
+
+    #services h2,
+    #portfolio h2,
+    #faq h2,
+    #contact h2 {
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+    }
+
+    #services .container > p,
+    #portfolio .container > div:first-child p,
+    #faq .max-w-3xl p,
+    #contact .space-y-6 > p {
+        font-size: 0.94rem;
+        line-height: 1.62;
+    }
+
+    #portfolio .container > div:nth-child(2) {
+        margin-bottom: 1.75rem;
+    }
+
+    #portfolio .container > div:nth-child(2) > div:first-child {
+        margin-bottom: 0.85rem;
+    }
+
+    #portfolio .container > div:nth-child(2) > div:first-child a {
+        width: 100%;
+    }
+
+    #portfolio .container > div:nth-child(2) > div:last-child {
+        gap: 0.85rem;
+    }
+
+    #portfolio .container > div:nth-child(2) > div:last-child > a {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    #portfolio .portfolio-card .h-52.md\:h-64,
+    #portfolio .portfolio-card .relative.h-52.md\:h-64 {
+        height: 11rem;
+    }
+
+    #portfolio .portfolio-card .p-6.md\:p-8 {
+        padding: 1.1rem;
+    }
+
+    #portfolio .portfolio-card .text-xl.md\:text-2xl {
+        font-size: 1.12rem;
+        line-height: 1.3;
+    }
+
+    #portfolio .portfolio-card .text-slate-600 {
+        font-size: 0.92rem;
+        line-height: 1.58;
+    }
+
+    #faq summary {
+        padding: 1rem 1.1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    #faq details p {
+        padding: 0.9rem 1.1rem 1.1rem;
+        font-size: 0.93rem;
+        line-height: 1.65;
+    }
+
+    #contact .grid.grid-cols-1.lg\:grid-cols-\[1\.08fr_0\.92fr\] {
+        gap: 1.6rem;
+    }
+
+    #contact h2.text-3xl.md\:text-4xl.font-bold.mb-6.leading-tight {
+        font-size: 1.9rem;
+        margin-bottom: 0.9rem;
+    }
+
+    #contact .rounded-2xl.border.border-slate-200.bg-slate-50.p-5.md\:p-6,
+    #contact .bg-gradient-to-br.from-slate-50.to-white.border.border-slate-200.p-6.md\:p-8.rounded-2xl.shadow-lg.relative {
+        border-radius: 1rem;
+    }
+
+    #contact .rounded-2xl.border.border-slate-200.bg-slate-50.p-5.md\:p-6 {
+        padding: 1rem;
+    }
+
+    #contact .bg-gradient-to-br.from-slate-50.to-white.border.border-slate-200.p-6.md\:p-8.rounded-2xl.shadow-lg.relative {
+        padding: 1.15rem;
+    }
+
+    #contact .text-2xl.font-bold.mb-6.text-slate-800 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-inline-list {
+        gap: 0.65rem;
+    }
+
+    .contact-inline-item {
+        gap: 0.65rem;
+        padding: 0.8rem 0.9rem;
+        border-radius: 0.9rem;
+    }
+
+    .contact-inline-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .contact-inline-label {
+        font-size: 0.72rem;
+    }
+
+    .contact-inline-value {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+    }
+
+    .contact-modal-card {
+        padding: 1.5rem 1.15rem;
+        border-radius: 1rem;
+    }
+
+    body.bg-slate-50 section.px-4.md\:px-6.py-12.md\:py-20 {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    body.bg-slate-50 section.px-4.md\:px-6.py-12.md\:py-20 > .max-w-4xl.mx-auto > .flex.items-center.justify-between.gap-4 {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    body.bg-slate-50 section.px-4.md\:px-6.py-12.md\:py-20 > .max-w-4xl.mx-auto > .flex.items-center.justify-between.gap-4 .lang-switch {
+        margin-left: auto;
+    }
+
+    body.bg-slate-50 .bg-white.rounded-2xl.shadow-lg.border.border-slate-200.p-6.md\:p-12 {
+        padding: 1.25rem;
+        border-radius: 1.15rem;
+    }
+
+    body.bg-slate-50 .bg-white.rounded-2xl.shadow-lg.border.border-slate-200.overflow-hidden {
+        border-radius: 1.15rem;
+    }
+
+    body.bg-slate-50 .bg-white.rounded-2xl.shadow-lg.border.border-slate-200.overflow-hidden > .p-6.md\:p-12 {
+        padding: 1.25rem;
+    }
+
+    body.bg-slate-50 .bg-white.rounded-2xl.shadow-lg.border.border-slate-200.overflow-hidden > .h-56.md\:h-72,
+    body.bg-slate-50 .bg-white.rounded-2xl.shadow-lg.border.border-slate-200.overflow-hidden > img.h-56.md\:h-72 {
+        height: 12.25rem;
+    }
+
+    body.bg-slate-50 .relative.z-10.h-full.flex.items-end.p-6.md\:p-10 {
+        padding: 1.15rem;
+    }
+
+    body.bg-slate-50 h1.text-2xl.md\:text-4xl.font-bold {
+        font-size: 1.65rem;
+        line-height: 1.16;
+        letter-spacing: -0.02em;
+    }
+
+    body.bg-slate-50 h2.text-xl,
+    body.bg-slate-50 h2.font-bold.text-xl {
+        font-size: 1.08rem;
+        line-height: 1.32;
+    }
+
+    body.bg-slate-50 .text-base.md\:text-lg.text-slate-600.leading-relaxed,
+    body.bg-slate-50 p.text-base.md\:text-lg.text-slate-600.leading-relaxed {
+        font-size: 0.95rem;
+        line-height: 1.68;
+    }
+
+    body.bg-slate-50 .mt-8.grid.md\:grid-cols-2.gap-6,
+    body.bg-slate-50 .mt-8.grid.md\:grid-cols-3.gap-6,
+    body.bg-slate-50 .mt-10.grid.md\:grid-cols-2.gap-6,
+    body.bg-slate-50 .mt-8.grid.md\:grid-cols-2.gap-6 {
+        gap: 0.85rem;
+    }
+
+    body.bg-slate-50 .rounded-2xl.border.border-slate-200.bg-slate-50.p-6,
+    body.bg-slate-50 .rounded-2xl.border.border-red-100.bg-red-50.p-6,
+    body.bg-slate-50 .rounded-2xl.border.border-emerald-100.bg-emerald-50.p-6 {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    body.bg-slate-50 .block.rounded-2xl.border.border-slate-200.bg-slate-50.p-5 {
+        padding: 0.95rem;
+        border-radius: 1rem;
+    }
+
+    .project-carousel-shell {
+        margin-top: 1.4rem;
+    }
+
+    .project-carousel-stage {
+        border-radius: 1.2rem;
+    }
+
+    .project-carousel-stage .px-6.py-7.md\:px-8.md\:py-9 {
+        padding: 1rem 1rem 1.1rem;
+    }
+
+    .project-carousel-stage .mt-8.md\:mt-10.grid {
+        margin-top: 2.2rem;
+        gap: 0.95rem;
+    }
+
+    .project-carousel-stage h2.text-2xl.md\:text-3xl.font-bold {
+        font-size: 1.35rem;
+        line-height: 1.2;
+    }
+
+    .project-carousel-stage p {
+        line-height: 1.58;
+    }
+
+    .project-carousel-stage [data-project-slide] .mt-5.flex.flex-wrap.gap-3 a {
+        flex: 1 1 100%;
+        justify-content: center;
+        padding: 0.78rem 1rem;
+    }
+
+    .project-carousel-stage [data-project-slide] .grid.gap-3 {
+        gap: 0.7rem;
+    }
+
+    .project-carousel-stage [data-project-slide] .rounded-2xl {
+        border-radius: 1rem;
+    }
+
+    .project-carousel-stage [data-project-slide] .p-4 {
+        padding: 0.9rem;
+    }
+
+    .project-carousel-stage [data-project-slide] .text-xs.font-semibold.uppercase.tracking-\[0\.18em\] {
+        font-size: 0.68rem;
+    }
+
+    details.group.rounded-xl.border.border-slate-200.bg-slate-50\/80.p-4.md\:p-5 {
+        padding: 0.95rem;
+        border-radius: 1rem;
+    }
+
+    details.group.rounded-xl.border.border-slate-200.bg-slate-50\/80.p-4.md\:p-5 summary {
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    details.group.rounded-xl.border.border-slate-200.bg-slate-50\/80.p-4.md\:p-5 summary p.text-sm {
+        font-size: 0.86rem;
+        line-height: 1.5;
+    }
+
+    details.group.rounded-xl.border.border-slate-200.bg-slate-50\/80.p-4.md\:p-5 .rounded-xl.border.border-dashed.border-slate-300.bg-white.px-5.py-10.text-center.text-slate-400 {
+        padding: 1rem;
+    }
+
+    .order-showcase {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .order-showcase-copy h2 {
+        font-size: 1.3rem;
+        line-height: 1.18;
+    }
+
+    .order-showcase-copy p {
+        font-size: 0.93rem;
+        line-height: 1.62;
+    }
+
+    .order-showcase-step {
+        gap: 0.6rem;
+        padding: 0.75rem 0.85rem;
+        border-radius: 0.95rem;
+    }
+
+    .order-showcase-step span {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .order-showcase-image-wrap {
+        align-items: stretch;
+    }
+}
