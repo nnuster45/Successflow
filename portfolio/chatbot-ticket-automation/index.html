@@ -10,10 +10,25 @@
         gtag('js', new Date());
         gtag('config', 'G-QSH9W5X729');
     </script>
-    <title>Chatbot รับแจ้งปัญหาและเปิด Ticket อัตโนมัติ | SuccessFlow</title>
+    <title>RAG Chatbot ตอบคำถามจากฐานข้อมูลความรู้ | SuccessFlow</title>
+    <meta name="description" content="Case study for a RAG chatbot that retrieves answers from a knowledge base and responds to users with grounded, source-based information.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.successflow.it.com/portfolio/chatbot-ticket-automation/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="RAG Chatbot For Answers From A Knowledge Base | SuccessFlow">
+    <meta property="og:description" content="A case study for a RAG chatbot that searches a knowledge base or document set and answers user questions with grounded results.">
+    <meta property="og:url" content="https://www.successflow.it.com/portfolio/chatbot-ticket-automation/">
+    <meta property="og:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RAG Chatbot For Answers From A Knowledge Base | SuccessFlow">
+    <meta name="twitter:description" content="A case study for a RAG chatbot that searches a knowledge base or document set and answers user questions with grounded results.">
+    <meta name="twitter:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"RAG Chatbot For Answers From A Knowledge Base","url":"https://www.successflow.it.com/portfolio/chatbot-ticket-automation/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for a RAG chatbot that retrieves answers from a knowledge base and responds to users with grounded, source-based information."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"RAG Chatbot For Answers From A Knowledge Base","item":"https://www.successflow.it.com/portfolio/chatbot-ticket-automation/"}]}]}
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-800">
     <section class="px-4 md:px-6 py-12 md:py-20">
@@ -25,33 +40,33 @@
                     <div class="relative z-10 h-full flex items-end p-6 md:p-10">
                         <div>
                             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Chatbot รับแจ้งปัญหาและเปิด Ticket อัตโนมัติ</h1>
+                            <h1 class="text-2xl md:text-4xl font-bold text-white">RAG Chatbot ตอบคำถามจากฐานข้อมูลความรู้</h1>
                         </div>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
                     <p class="text-base md:text-lg text-slate-600 leading-relaxed">
-                        กรณีศึกษาจำลองสำหรับงาน chatbot รับแจ้งปัญหาจากพนักงานหรือผู้ใช้งาน เก็บข้อมูลให้ครบ, จัดหมวดหมู่ และสร้าง ticket ต่อเข้า workflow โดยไม่ต้องนั่งคุยเองทุกเคส
+                        กรณีศึกษาจำลองสำหรับงาน RAG chatbot ที่ค้นคำตอบจาก knowledge base, คู่มือ, FAQ หรือชุดเอกสารภายใน แล้วตอบผู้ใช้ด้วยข้อมูลที่อิงจากแหล่งความรู้จริงแทนการตอบแบบเดา
                     </p>
                     <div class="mt-8 grid md:grid-cols-3 gap-6">
-                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">การรับแจ้งปัญหาผ่านแชตไม่มีโครงสร้าง ข้อมูลไม่ครบ ต้องไล่ถามซ้ำ และส่งต่อทีมงานล่าช้า</p></div>
-                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ออกแบบ conversation flow ให้ chatbot ถามข้อมูลที่จำเป็น, จัดประเภทเคส และส่งเข้า sheet หรือระบบ ticketing อัตโนมัติ</p></div>
-                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">รับเรื่องได้เร็วขึ้น ข้อมูลครบขึ้น และทีม support เห็นลำดับความสำคัญหรือหมวดปัญหาได้ทันที</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ผู้ใช้ถามคำถามซ้ำจากคู่มือหรือข้อมูลภายใน แต่ทีมต้องคอยตอบเอง และตอบไม่สม่ำเสมอเมื่อข้อมูลกระจายหลายเอกสาร</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ใช้ RAG chatbot ดึงข้อมูลจากชุดเอกสารหรือ knowledge base แล้วสรุปคำตอบกลับให้ผู้ใช้ พร้อมอ้างอิงแหล่งข้อมูลที่ใช้ตอบ</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ตอบได้เร็วขึ้น ลดภาระทีม และทำให้คำตอบสอดคล้องกับข้อมูลอ้างอิงมากขึ้นกว่าการตอบจากความจำ</p></div>
                     </div>
                     <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
                         <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF ได้ตรงนี้ เช่น chatbot ถามหมวดปัญหา, ขอภาพประกอบ, บันทึกรายการลง sheet และแจ้งหมายเลข ticket กลับให้ผู้ใช้</p>
+                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือ flow ตรงนี้ได้ เช่น ผู้ใช้ถาม > ระบบค้นจากฐานข้อมูลความรู้ > สรุปคำตอบ > แสดงอ้างอิงหรือปุ่มดูข้อมูลเพิ่มเติม</p>
                         </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
                             <h2 class="font-bold text-slate-900 mb-3">Before</h2>
-                            <p class="text-slate-600 leading-relaxed">แชตเข้ามาแบบไม่ครบข้อมูล ทีมต้องไล่ถามกลับหลายรอบ และบางเคสตกหล่นเพราะไม่มีระบบติดตามกลาง</p>
+                            <p class="text-slate-600 leading-relaxed">ผู้ใช้ต้องรอคนตอบ ค้นข้อมูลจากหลายเอกสารเอง และคำตอบอาจไม่ตรงกันเพราะแต่ละคนอิงข้อมูลคนละชุด</p>
                         </div>
                         <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
                             <h2 class="font-bold text-slate-900 mb-3">After</h2>
-                            <p class="text-slate-600 leading-relaxed">ผู้ใช้กรอกข้อมูลตาม flow เดียวกันทุกเคส ทีมได้ ticket พร้อมรายละเอียด และตอบกลับได้มีโครงสร้างมากขึ้น</p>
+                            <p class="text-slate-600 leading-relaxed">ผู้ใช้ถามแล้วได้คำตอบเร็วขึ้น ทีมลดงานตอบซ้ำ และยังคุมคุณภาพคำตอบได้ด้วยแหล่งข้อมูลกลางชุดเดียวกัน</p>
                         </div>
                     </div>
                     <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
@@ -67,9 +82,9 @@
                             <a href="../../index.html#services" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูบริการทั้งหมด</a>
                         </div>
                         <a href="../../services/ai-chatbot-conversational-automation/index.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
-                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">Chatbot Ticketing #AI</p>
-                            <h2 class="text-xl font-bold text-slate-900">Chatbot</h2>
-                            <p class="mt-2 text-slate-600">เหมาะกับงานตอบคำถาม รับเรื่อง เก็บ lead และเชื่อม workflow ไปยังทีมขายหรือทีม support อัตโนมัติ</p>
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">RAG KnowledgeBase #AI</p>
+                            <h2 class="text-xl font-bold text-slate-900">AI Chatbot &amp; Conversational Automation</h2>
+                            <p class="mt-2 text-slate-600">เหมาะกับงานตอบคำถามจากฐานความรู้ คู่มือ หรือเอกสารภายในให้ผู้ใช้เข้าถึงข้อมูลได้เร็วขึ้น</p>
                         </a>
                     </div>
                 </div>

@@ -11,9 +11,24 @@
         gtag('config', 'G-QSH9W5X729');
     </script>
     <title>RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ | SuccessFlow</title>
+    <meta name="description" content="Case study for using RPA to log in to web portals, export files, combine reports, and deliver daily reporting automatically.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.successflow.it.com/portfolio/rpa-web-portal-reporting/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="RPA Web Portal Reporting | SuccessFlow">
+    <meta property="og:description" content="A case study for portal login automation, file exports, report consolidation, and scheduled delivery.">
+    <meta property="og:url" content="https://www.successflow.it.com/portfolio/rpa-web-portal-reporting/">
+    <meta property="og:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RPA Web Portal Reporting | SuccessFlow">
+    <meta name="twitter:description" content="A case study for portal login automation, file exports, report consolidation, and scheduled delivery.">
+    <meta name="twitter:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"RPA Web Portal Reporting","url":"https://www.successflow.it.com/portfolio/rpa-web-portal-reporting/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for using RPA to log in to web portals, export files, combine reports, and deliver daily reporting automatically."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"RPA Web Portal Reporting","item":"https://www.successflow.it.com/portfolio/rpa-web-portal-reporting/"}]}]}
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-800">
     <section class="px-4 md:px-6 py-12 md:py-20">
@@ -38,12 +53,43 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ใช้ RPA login, ดึงข้อมูล, รวมไฟล์, rename, ตรวจ format และส่งรายงานหรือไฟล์เข้า shared folder อัตโนมัติ</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ลดงาน routine ตอนเช้า ลดความเสี่ยงโหลดไฟล์ผิดช่วงเวลา และทำให้ทีมเริ่มวิเคราะห์หรือทำงานต่อได้เร็วขึ้น</p></div>
                     </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF workflow ได้ตรงนี้ เช่น bot login, click export, download file, รวมข้อมูล และส่งรายงานทาง email หรือ shared drive</p>
+            <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">
+                    Process Demonstration
+                </p>
+
+                <div data-gif-carousel class="relative bg-white">
+
+                    <div class="overflow-hidden min-h-[360px] md:min-h-[420px]">
+                        <div data-gif-track class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+
+                            <div class="min-w-full snap-start flex justify-center items-center h-[420px] md:h-[520px]">
+                                <img src="../../assets/gif/ShopeeRPA.gif"
+                                    class="cursor-pointer max-h-[420px] md:max-h-[520px] object-contain"
+                                    onclick="openGifModal(this.src)">
+                            </div>
+
+                            <div class="min-w-full snap-start flex justify-center items-center h-[420px] md:h-[520px]">
+                                <img src="../../assets/gif/RPATest.gif"
+                                    class="cursor-pointer max-h-[420px] md:max-h-[520px] object-contain"
+                                    onclick="openGifModal(this.src)">
+                            </div>
+
                         </div>
                     </div>
+
+                    <button data-gif-prev
+                        class="absolute -left-5 md:-left-8 top-1/2 -translate-y-1/2 
+                                bg-white/90 backdrop-blur shadow rounded-full w-9 h-9 flex items-center justify-center">‹
+                    </button>
+
+                    <button data-gif-next
+                        class="absolute -right-5 md:-right-8 top-1/2 -translate-y-1/2 
+                            bg-white/90 backdrop-blur shadow rounded-full w-9 h-9 flex items-center justify-center">›
+                    </button>
+
+                </div>
+            </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
                             <h2 class="font-bold text-slate-900 mb-3">Before</h2>
@@ -76,5 +122,18 @@
             </div>
         </div>
     </section>
+<div id="gif-modal"
+     class="fixed inset-0 bg-black/90 hidden z-50"
+     onclick="closeGifModal()">
+
+    <div class="absolute inset-0 flex items-center justify-center p-6 overflow-auto">
+        <img id="gif-modal-img"
+             class="max-w-[95vw] max-h-[95vh] w-auto h-auto rounded-xl shadow-2xl"
+             onclick="event.stopPropagation()">
+    </div>
+
+</div>
+
+<script src="../../assets/js/main.js"></script>
 </body>
 </html>
