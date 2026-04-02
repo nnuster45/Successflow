@@ -1268,26 +1268,60 @@ body.modal-open {
 
 @media (max-width: 767px) {
     .order-showcase {
-        gap: 1.25rem;
-        padding: 1.2rem;
+        gap: 1rem;
+        padding: 1rem;
         border-radius: 1.4rem;
+    }
+
+    .order-showcase-chip {
+        padding: 0.42rem 0.72rem;
+        font-size: 0.68rem;
+    }
+
+    .order-showcase-copy h2 {
+        margin-top: 0.85rem;
+        font-size: 1.7rem;
+        line-height: 1.12;
+    }
+
+    .order-showcase-copy p {
+        margin-top: 0.85rem;
+        font-size: 0.98rem;
+        line-height: 1.62;
+    }
+
+    .order-showcase-steps {
+        margin-top: 1rem;
+        gap: 0.65rem;
+    }
+
+    .order-showcase-step {
+        gap: 0.65rem;
+        padding: 0.8rem 0.85rem;
+        border-radius: 0.95rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .order-showcase-step strong {
+        font-size: 0.95rem;
     }
 
     .order-image-stage {
         width: 100%;
-        padding: 0.75rem;
+        padding: 0.7rem;
         border-radius: 1.4rem;
     }
 
     .order-image-stage-viewport {
         border-radius: 1.4rem;
-        width: min(100%, 30rem);
-        padding-left: 0.06rem;
-        padding-right: 0.06rem;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .order-showcase-image {
-        width: min(100%, 26.3rem);
+        width: min(100%, 28rem);
     }
 
     .order-showcase-nav {
@@ -1300,41 +1334,46 @@ body.modal-open {
     }
 
     .order-showcase-nav-prev {
-        left: 0.15rem;
+        left: -0.2rem;
     }
 
     .order-showcase-image-wrap {
-        padding-left: 1.35rem;
-        padding-right: 1.35rem;
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
     }
 
     .order-showcase-nav-next {
-        right: 0.15rem;
+        right: -0.2rem;
     }
 
     .order-showcase-placeholder {
-        padding: 1rem;
-        border-radius: 1rem;
+        width: 100%;
+        max-width: none;
+        min-height: 30rem;
+        padding: 1.2rem;
+        border-radius: 1.1rem;
     }
 
     .order-showcase-placeholder strong {
-        font-size: 0.98rem;
+        font-size: 1.08rem;
+        line-height: 1.4;
     }
 
     .order-showcase-placeholder p {
-        font-size: 0.88rem;
-        line-height: 1.58;
+        font-size: 0.95rem;
+        line-height: 1.62;
     }
 
     .order-showcase-image-wrap {
-        padding: 0 1rem;
+        padding: 0 0.65rem;
         align-items: center;
     }
 
     .order-showcase-remark {
-        margin-top: 0.72rem;
-        font-size: 0.76rem;
-        line-height: 1.48;
+        margin-top: 0.8rem;
+        font-size: 0.8rem;
+        line-height: 1.52;
+        max-width: 22rem;
     }
 
     .order-phone {
