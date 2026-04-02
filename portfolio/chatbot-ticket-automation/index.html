@@ -53,10 +53,54 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ใช้ RAG chatbot ดึงข้อมูลจากชุดเอกสารหรือ knowledge base แล้วสรุปคำตอบกลับให้ผู้ใช้ พร้อมอ้างอิงแหล่งข้อมูลที่ใช้ตอบ</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ตอบได้เร็วขึ้น ลดภาระทีม และทำให้คำตอบสอดคล้องกับข้อมูลอ้างอิงมากขึ้นกว่าการตอบจากความจำ</p></div>
                     </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือ flow ตรงนี้ได้ เช่น ผู้ใช้ถาม > ระบบค้นจากฐานข้อมูลความรู้ > สรุปคำตอบ > แสดงอ้างอิงหรือปุ่มดูข้อมูลเพิ่มเติม</p>
+                    <div class="mt-10">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Knowledge Flow Showcase</p>
+                        <div class="order-showcase order-showcase-rag">
+                            <div class="order-showcase-copy">
+                                <span class="order-showcase-chip">RAG / Knowledge Retrieval</span>
+                                <h2>RAG Chatbot ที่ค้นจากฐานความรู้และสรุปคำตอบให้ผู้ใช้ได้อัตโนมัติ</h2>
+                                <p>เหมาะกับงานที่ต้องตอบคำถามจาก FAQ, คู่มือ, policy หรือเอกสารภายใน โดยให้ระบบค้นข้อมูลที่เกี่ยวข้องจาก knowledge base แล้วสรุปคำตอบกลับอย่างมีบริบทและอ้างอิงแหล่งข้อมูลได้</p>
+                                <div class="order-showcase-steps">
+                                    <div class="order-showcase-step">
+                                        <strong>1.</strong>
+                                        <span>ผู้ใช้ถามคำถามในแชตหรือช่องทาง support ได้ตามธรรมชาติ โดยไม่ต้องรู้ว่าข้อมูลอยู่เอกสารไหน</span>
+                                    </div>
+                                    <div class="order-showcase-step">
+                                        <strong>2.</strong>
+                                        <span>ระบบค้นข้อมูลจากชุดเอกสารหรือฐานความรู้ที่เกี่ยวข้อง แล้วสรุปคำตอบกลับอย่างรวดเร็ว</span>
+                                    </div>
+                                    <div class="order-showcase-step">
+                                        <strong>3.</strong>
+                                        <span>ทีมงานได้ flow การตอบที่สม่ำเสมอขึ้น และต่อยอดสู่ handoff หรือ workflow หลังบ้านได้ง่าย</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-showcase-image-wrap" data-gif-carousel>
+                                <div class="order-showcase-glow"></div>
+                                <button type="button" class="order-showcase-nav order-showcase-nav-prev" data-gif-prev aria-label="Previous mockup">
+                                    <span>‹</span>
+                                </button>
+                                <button type="button" class="order-showcase-nav order-showcase-nav-next" data-gif-next aria-label="Next mockup">
+                                    <span>›</span>
+                                </button>
+                                <div class="order-image-stage-viewport">
+                                    <div class="order-image-stage">
+                                        <div class="order-image-stage-slider" data-gif-track>
+                                            <div class="order-showcase-slide">
+                                                <img src="../../assets/images/services/line-chatbot-showcase.webp" alt="RAG chatbot knowledge retrieval mockup placeholder" class="order-showcase-image">
+                                            </div>
+                                            <div class="order-showcase-slide">
+                                                <div class="order-showcase-placeholder">
+                                                    <span class="order-showcase-placeholder-chip">Knowledge Demo</span>
+                                                    <strong>พื้นที่สำหรับใส่การจำลองการถามตอบจากฐานข้อมูลความรู้</strong>
+                                                    <p>ใช้วางภาพจำลองหรือ mockup เพิ่มเติมเพื่อให้เห็น flow การถามคำถาม ค้นข้อมูลจากฐานความรู้ สรุปคำตอบ และส่งต่อเมื่อจำเป็น</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="order-showcase-remark">เลื่อนไปอีกสไลด์เพื่อดูการจำลองการค้นข้อมูลและการตอบคำถามจากฐานความรู้</p>
+                            </div>
                         </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
@@ -91,5 +135,6 @@
             </div>
         </div>
     </section>
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>

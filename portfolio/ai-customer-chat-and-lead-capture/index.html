@@ -53,7 +53,7 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ให้ chatbot รับออเดอร์ สรุปรายการ ยืนยันยอด รับสลิป และส่งข้อมูลต่อเข้า workflow หรือฐานข้อมูลคำสั่งซื้ออัตโนมัติ</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ลดงานแอดมิน ลดการตกหล่นของออเดอร์ และทำให้ข้อมูลพร้อมส่งต่อไปจัดส่งหรือกระทบยอดได้เร็วขึ้น</p></div>
                     </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                    <div class="mt-10">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Sales Flow Showcase</p>
                         <div class="order-showcase">
                             <div class="order-showcase-copy">
@@ -75,11 +75,31 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="order-showcase-image-wrap">
+                            <div class="order-showcase-image-wrap" data-gif-carousel>
                                 <div class="order-showcase-glow"></div>
-                                <div class="order-image-stage">
-                                    <img src="../../assets/images/services/line-chatbot-showcase.webp" alt="LINE chatbot order-taking mockup" class="order-showcase-image">
+                                <button type="button" class="order-showcase-nav order-showcase-nav-prev" data-gif-prev aria-label="Previous mockup">
+                                    <span>‹</span>
+                                </button>
+                                <button type="button" class="order-showcase-nav order-showcase-nav-next" data-gif-next aria-label="Next mockup">
+                                    <span>›</span>
+                                </button>
+                                <div class="order-image-stage-viewport">
+                                    <div class="order-image-stage">
+                                        <div class="order-image-stage-slider" data-gif-track>
+                                            <div class="order-showcase-slide">
+                                                <img src="../../assets/images/services/line-chatbot-showcase.webp" alt="LINE chatbot order-taking mockup" class="order-showcase-image">
+                                            </div>
+                                            <div class="order-showcase-slide">
+                                                <div class="order-showcase-placeholder">
+                                                    <span class="order-showcase-placeholder-chip">Interaction Demo</span>
+                                                    <strong>พื้นที่สำหรับใส่การจำลองบทสนทนาและการตอบโต้เพิ่มเติม</strong>
+                                                    <p>ใช้วางภาพเคลื่อนไหวหรือ mockup เพิ่มเติม เพื่อให้เห็น flow การตอบคำถาม รับออเดอร์ สรุปรายการ และการส่งข้อมูลต่อเข้าระบบ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <p class="order-showcase-remark">เลื่อนไปอีกสไลด์เพื่อดูการจำลองบทสนทนาและการตอบโต้ของ chatbot</p>
                             </div>
                         </div>
                     </div>
@@ -115,5 +135,6 @@
             </div>
         </div>
     </section>
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>
