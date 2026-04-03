@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
+    <title>Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ | SuccessFlow</title>
+    <meta name="description" content="Case study for an Excel pricing and margin control workbook used to calculate quotations and review margins before approval.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.successflow.it.com/portfolio/excel-pricing-margin-control/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Excel Pricing & Margin Control | SuccessFlow">
+    <meta property="og:description" content="A case study for quotation calculation, margin checks, and approval-ready pricing workbooks in Excel.">
+    <meta property="og:url" content="https://www.successflow.it.com/portfolio/excel-pricing-margin-control/">
+    <meta property="og:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Excel Pricing & Margin Control | SuccessFlow">
+    <meta name="twitter:description" content="A case study for quotation calculation, margin checks, and approval-ready pricing workbooks in Excel.">
+    <meta name="twitter:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CreativeWork",
+                    "name": "Excel Pricing And Margin Control",
+                    "url": "https://www.successflow.it.com/portfolio/excel-pricing-margin-control/",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "SuccessFlow"
+                    },
+                    "description": "Case study for an Excel pricing and margin control workbook used to calculate quotations and review margins before approval."
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://www.successflow.it.com/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Portfolio",
+                            "item": "https://www.successflow.it.com/#portfolio"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Excel Pricing And Margin Control",
+                            "item": "https://www.successflow.it.com/portfolio/excel-pricing-margin-control/"
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <section class="px-4 md:px-6 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+            <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
+            <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200 mb-3">Project Overview</p>
+                            <h1 class="text-2xl md:text-4xl font-bold text-white">Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-12">
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed">โปรเจกต์นี้เหมาะกับทีมขายหรือทีมเสนอราคาที่ต้องคำนวณต้นทุน ราคาเสนอขาย ส่วนลด และ margin หลายชั้นในไฟล์เดียว โดยต้องคุม logic ให้ตรวจสอบได้ก่อนส่งอนุมัติหรือส่งลูกค้า</p>
+                    <div class="mt-8 grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">สูตรกระจายหลายชีต คนใช้แต่ละคนแก้ไฟล์คนละแบบ ทำให้ราคาคลาดเคลื่อนและเช็ก margin ก่อนอนุมัติได้ยาก</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ออกแบบ workbook พร้อม VBA/Macro สำหรับคำนวณราคา ตรวจ margin และจัดชุดข้อมูลให้พร้อมส่งต่อหรือพิมพ์ใบเสนอราคา</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ทีมเสนอราคาเร็วขึ้น ลดสูตรเพี้ยน และมี logic กลางที่ใช้ร่วมกันได้ก่อนส่งผู้อนุมัติ</p></div>
+                    </div>
+                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
+                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
+                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือ mockup ของ pricing workbook ได้ตรงนี้ เช่น หน้า input cost, margin check, approval summary และ quotation output view</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 grid md:grid-cols-2 gap-6">
+                        <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
+                            <h2 class="font-bold text-slate-900 mb-3">Before</h2>
+                            <p class="text-slate-600 leading-relaxed">ทีมต้องแก้สูตรหลายจุดเอง ใช้ไฟล์หลายเวอร์ชัน และเสียเวลาตรวจว่า margin ผ่านเกณฑ์ก่อนส่งอนุมัติหรือไม่</p>
+                        </div>
+                        <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
+                            <h2 class="font-bold text-slate-900 mb-3">After</h2>
+                            <p class="text-slate-600 leading-relaxed">คำนวณราคาและ margin ได้ใน flow เดียว ใช้ logic กลางชุดเดียว และลดความเสี่ยงเรื่องสูตรผิดก่อนส่งต่อให้ผู้อนุมัติ</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-3">Confidentiality Note</p>
+                        <p class="text-slate-600 leading-relaxed">ผลงานชิ้นนี้เป็น mockup ที่อ้างอิงจากรูปแบบการเสนอราคาจริง โดยมีการเปลี่ยนโครงสร้างข้อมูล ราคา และสูตรบางส่วนเพื่อรักษาความลับของลูกค้า</p>
+                    </div>
+                    <div class="mt-8 border-t border-slate-200 pt-8">
+                        <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
+                            <div>
+                                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Related Service</p>
+                                <p class="text-slate-600">บริการที่เกี่ยวข้องกับผลงานชิ้นนี้</p>
+                            </div>
+                            <a href="../../index.html#services" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูบริการทั้งหมด</a>
+                        </div>
+                        <a href="../../services/excel-vba-macro/index.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">Excel VBA #Pricing</p>
+                            <h2 class="text-xl font-bold text-slate-900">Excel VBA & Macro</h2>
+                            <p class="mt-2 text-slate-600">เหมาะกับงานคำนวณราคา ตรวจ logic และทำ workbook ที่ทีมใช้งานต่อได้จริงใน flow เดิม</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

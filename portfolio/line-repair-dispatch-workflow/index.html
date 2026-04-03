@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
+    <title>LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม | SuccessFlow</title>
+    <meta name="description" content="Case study for a LINE chatbot that receives repair requests, routes them for approval, and assigns onsite jobs to supervisors or technicians automatically.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.successflow.it.com/portfolio/line-repair-dispatch-workflow/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="LINE Repair Request And Field Dispatch Workflow | SuccessFlow">
+    <meta property="og:description" content="A case study for a LINE-based repair intake flow with approval routing and onsite technician assignment.">
+    <meta property="og:url" content="https://www.successflow.it.com/portfolio/line-repair-dispatch-workflow/">
+    <meta property="og:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LINE Repair Request And Field Dispatch Workflow | SuccessFlow">
+    <meta name="twitter:description" content="A case study for a LINE-based repair intake flow with approval routing and onsite technician assignment.">
+    <meta name="twitter:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"LINE Repair Request And Field Dispatch Workflow","url":"https://www.successflow.it.com/portfolio/line-repair-dispatch-workflow/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for a LINE chatbot that receives repair requests, routes them for approval, and assigns onsite jobs to supervisors or technicians automatically."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"LINE Repair Request And Field Dispatch Workflow","item":"https://www.successflow.it.com/portfolio/line-repair-dispatch-workflow/"}]}]}
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <section class="px-4 md:px-6 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+            <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
+            <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-900 relative overflow-hidden">
+                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200 mb-3">Project Overview</p>
+                            <h1 class="text-2xl md:text-4xl font-bold text-white">LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-12">
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+                        กรณีศึกษาจำลองสำหรับงานแจ้งซ่อมผ่าน LINE ที่ต้องรับรายละเอียดหน้างาน ส่งให้ผู้ประสานงานหรือผู้อนุมัติตรวจสอบก่อน แล้วจึง assign งานให้หัวหน้าช่างหรือช่างที่รับผิดชอบในพื้นที่แบบเป็น flow เดียว
+                    </p>
+                    <div class="mt-8 grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">งานแจ้งซ่อมเข้ามาทางแชตกระจัดกระจาย รายละเอียดไม่ครบ และต้องมีคนคอยส่งต่อ/ตามสถานะให้ช่างด้วยมือ</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ให้ chatbot รับข้อมูลจุดเกิดเหตุ ปัญหา รูปประกอบ และเวลานัดหมาย จากนั้นส่งต่อให้คนกลางอนุมัติและกระจายงานต่ออัตโนมัติ</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">รายละเอียดหน้างานครบขึ้น ลดงานตกหล่น และทำให้หัวหน้าช่างเห็นงานที่ต้องรับผิดชอบได้เร็วขึ้น</p></div>
+                    </div>
+                    <div class="mt-10">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Field Dispatch Showcase</p>
+                        <div class="order-showcase order-showcase-rag">
+                            <div class="order-showcase-copy">
+                                <span class="order-showcase-chip">LINE / Field Service</span>
+                                <h2>แจ้งซ่อมผ่าน LINE แล้วปล่อยงานต่อให้คนอนุมัติและทีมช่างได้แบบมีลำดับ</h2>
+                                <p>เหมาะกับธุรกิจที่มีทีมช่างออก onsite ตามบ้าน ตามโครงการ หรือหลายพื้นที่ โดยต้องให้ข้อมูลไหลจากผู้แจ้ง &gt; คนกลาง approve &gt; หัวหน้าช่าง/ช่างผู้รับผิดชอบ อย่างไม่ตกหล่น</p>
+                                <div class="order-showcase-steps">
+                                    <div class="order-showcase-step">
+                                        <strong>1.</strong>
+                                        <span>ลูกค้าแจ้งปัญหาผ่าน LINE พร้อมสถานที่ ประเภทงาน รูปประกอบ และช่วงเวลาที่สะดวก</span>
+                                    </div>
+                                    <div class="order-showcase-step">
+                                        <strong>2.</strong>
+                                        <span>ระบบส่งรายละเอียดให้ผู้ประสานงานหรือผู้อนุมัติตรวจสอบก่อนปล่อยงาน</span>
+                                    </div>
+                                    <div class="order-showcase-step">
+                                        <strong>3.</strong>
+                                        <span>เมื่ออนุมัติแล้ว งานถูก assign ต่อให้หัวหน้าช่างหรือช่างพื้นที่นั้น พร้อมข้อมูลครบสำหรับเข้าหน้างาน</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-showcase-image-wrap" data-gif-carousel>
+                                <div class="order-showcase-glow"></div>
+                                <button type="button" class="order-showcase-nav order-showcase-nav-prev" data-gif-prev aria-label="Previous mockup">
+                                    <span>‹</span>
+                                </button>
+                                <button type="button" class="order-showcase-nav order-showcase-nav-next" data-gif-next aria-label="Next mockup">
+                                    <span>›</span>
+                                </button>
+                                <div class="order-image-stage-viewport">
+                                    <div class="order-image-stage">
+                                        <div class="order-image-stage-slider" data-gif-track>
+                                            <div class="order-showcase-slide">
+                                                <img src="../../assets/images/services/line-chatbot-showcase.webp" alt="LINE repair request chatbot mockup placeholder" class="order-showcase-image">
+                                            </div>
+                                            <div class="order-showcase-slide">
+                                                <div class="order-showcase-placeholder">
+                                                    <span class="order-showcase-placeholder-chip">Dispatch Simulation</span>
+                                                    <strong>พื้นที่สำหรับใส่การจำลองขั้นตอน approve และ assign งานช่าง</strong>
+                                                    <p>ใช้วางภาพจำลองการแจ้งซ่อม, approve โดยคนกลาง, และการ assign ไปยังหัวหน้าช่างหรือช่าง onsite พร้อมสถานะติดตามงาน</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="order-showcase-remark">เลื่อนไปอีกสไลด์เพื่อดูการจำลอง flow การอนุมัติและกระจายงานช่างภาคสนาม</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 grid md:grid-cols-2 gap-6">
+                        <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
+                            <h2 class="font-bold text-slate-900 mb-3">Before</h2>
+                            <p class="text-slate-600 leading-relaxed">งานแจ้งซ่อมอยู่ในแชตหลายห้อง รายละเอียดหน้างานไม่ครบ และต้องมีคนตามคิวช่างกับการอนุมัติด้วยมือทุกครั้ง</p>
+                        </div>
+                        <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
+                            <h2 class="font-bold text-slate-900 mb-3">After</h2>
+                            <p class="text-slate-600 leading-relaxed">ข้อมูลแจ้งซ่อมถูกรวบรวมเป็นระบบเดียว มีขั้นอนุมัติชัดเจน และส่งต่อให้ทีมช่างภาคสนามได้พร้อมข้อมูลครบถ้วนกว่าเดิม</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-3">Confidentiality Note</p>
+                        <p class="text-slate-600 leading-relaxed">ผลงานชิ้นนี้เป็น mockup ที่อ้างอิงจาก use case งานบริการภาคสนามจริง โดยมีการเปลี่ยนรายละเอียดการแจ้งซ่อม ชื่อทีม และสถานะงานทั้งหมดเพื่อรักษาความลับของลูกค้า</p>
+                    </div>
+                    <div class="mt-8 border-t border-slate-200 pt-8">
+                        <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
+                            <div>
+                                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Related Service</p>
+                                <p class="text-slate-600">บริการที่เกี่ยวข้องกับผลงานชิ้นนี้</p>
+                            </div>
+                            <a href="../../index.html#services" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูบริการทั้งหมด</a>
+                        </div>
+                        <a href="../../services/ai-chatbot-conversational-automation/index.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">Chatbot Dispatch #Approval</p>
+                            <h2 class="text-xl font-bold text-slate-900">AI Chatbot &amp; Conversational Automation</h2>
+                            <p class="mt-2 text-slate-600">เหมาะกับงานรับแจ้งเคสผ่านแชต เก็บข้อมูลหน้างาน ส่งให้คนอนุมัติ และกระจายงานต่อให้ทีมปฏิบัติการ</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

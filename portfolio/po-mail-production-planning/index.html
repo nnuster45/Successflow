@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSH9W5X729"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QSH9W5X729');
+    </script>
+    <title>ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ | SuccessFlow</title>
+    <meta name="description" content="Case study for automating purchase order intake from email, matching against databases and ERP, and preparing production planning data in Excel.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.successflow.it.com/portfolio/po-mail-production-planning/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PO Mail Intake & Production Planning Automation | SuccessFlow">
+    <meta property="og:description" content="A case study for extracting PO files from email, mapping them against databases and ERP, and generating production planning data automatically.">
+    <meta property="og:url" content="https://www.successflow.it.com/portfolio/po-mail-production-planning/">
+    <meta property="og:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PO Mail Intake & Production Planning Automation | SuccessFlow">
+    <meta name="twitter:description" content="A case study for extracting PO files from email, mapping them against databases and ERP, and generating production planning data automatically.">
+    <meta name="twitter:image" content="https://www.successflow.it.com/assets/images/successflow.PNG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CreativeWork",
+                    "name": "PO Mail Intake And Production Planning Automation",
+                    "url": "https://www.successflow.it.com/portfolio/po-mail-production-planning/",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "SuccessFlow"
+                    },
+                    "description": "Case study for automating purchase order intake from email, matching against databases and ERP, and preparing production planning data in Excel."
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://www.successflow.it.com/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Portfolio",
+                            "item": "https://www.successflow.it.com/#portfolio"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "PO Mail Intake And Production Planning Automation",
+                            "item": "https://www.successflow.it.com/portfolio/po-mail-production-planning/"
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <section class="px-4 md:px-6 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+            <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
+            <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 28px 28px;"></div>
+                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-200 mb-3">Project Overview</p>
+                            <h1 class="text-2xl md:text-4xl font-bold text-white">ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-12">
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed">กรณีศึกษาจำลองสำหรับงานที่ต้องรับ PO จากลูกค้าทางอีเมลทุกวัน จากนั้นดึงข้อมูลเข้า flow กลาง จับคู่กับฐานข้อมูลและ ERP ภายใน เขียน SQL เพื่อดึงข้อมูลที่เกี่ยวข้อง และ transform ออกมาเป็นไฟล์ Excel สำหรับทีมวางแผนการผลิต</p>
+                    <div class="mt-8 grid md:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ทีมต้องเปิดอีเมลเช็ก PO ทุกวัน คีย์ข้อมูลซ้ำหลายระบบ และเสียเวลารวมข้อมูลเพื่อทำ production planning file ก่อนเริ่มวางแผนจริง</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ดึงไฟล์ PO จากอีเมล, parse ข้อมูล, query ฐานข้อมูลด้วย SQL, map กับ ERP/internal master และ transform เป็นโครงข้อมูลสำหรับ Excel planning</p></div>
+                        <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ข้อมูลพร้อมใช้เร็วขึ้น ลดการคีย์ซ้ำ และทำให้ทีมผลิตใช้ planning file ที่สม่ำเสมอจากข้อมูลชุดเดียวกัน</p></div>
+                    </div>
+                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
+                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
+                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพ mockup หรือ GIF ของ flow ได้ตรงนี้ เช่น email intake, PO parsing, SQL mapping, ERP enrichment และ output ไฟล์ Excel สำหรับ production planning</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 grid md:grid-cols-2 gap-6">
+                        <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
+                            <h2 class="font-bold text-slate-900 mb-3">Before</h2>
+                            <p class="text-slate-600 leading-relaxed">ต้องเช็กเมลทีละฉบับ ดาวน์โหลดไฟล์ทีละชุด แล้วค่อยดึงข้อมูลจาก DB/ERP มาเทียบเองก่อนทำ planning file ทำให้ช้าและเสี่ยงตกหล่น</p>
+                        </div>
+                        <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
+                            <h2 class="font-bold text-slate-900 mb-3">After</h2>
+                            <p class="text-slate-600 leading-relaxed">PO ถูกดึงเข้า flow กลาง จับคู่ข้อมูลอัตโนมัติ และออก planning file ที่พร้อมให้ทีมผลิตใช้งานต่อได้เร็วขึ้นทุกวัน</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-3">Confidentiality Note</p>
+                        <p class="text-slate-600 leading-relaxed">ผลงานชิ้นนี้เป็น mockup ที่อ้างอิงจาก flow งานจริง โดยมีการเปลี่ยนรูปแบบ PO, master data, query structure และโครง planning file เพื่อหลีกเลี่ยงการเปิดเผยข้อมูลลูกค้า</p>
+                    </div>
+                    <div class="mt-8 border-t border-slate-200 pt-8">
+                        <div class="flex items-center justify-between gap-4 flex-wrap mb-5">
+                            <div>
+                                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Related Service</p>
+                                <p class="text-slate-600">บริการที่เกี่ยวข้องกับผลงานชิ้นนี้</p>
+                            </div>
+                            <a href="../../index.html#services" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-300">ดูบริการทั้งหมด</a>
+                        </div>
+                        <div class="grid gap-4">
+                            <a href="../../services/workflow-automation/index.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">Workflow #Email Intake</p>
+                                <h2 class="text-xl font-bold text-slate-900">Workflow Automation</h2>
+                                <p class="mt-2 text-slate-600">เหมาะกับงานรับไฟล์จากอีเมล จัด flow, query ข้อมูล และ transform ต่อไปยังทีม planning หรือทีมปฏิบัติการ</p>
+                            </a>
+                            <a href="../../services/robotic-process-automation/index.html" class="block rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:border-blue-200 hover:shadow-md transition duration-300">
+                                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 mb-2">RPA #Mail To ERP</p>
+                                <h2 class="text-xl font-bold text-slate-900">Robotic Process Automation</h2>
+                                <p class="mt-2 text-slate-600">เหมาะกับงานที่ต้องดึงไฟล์จากเมล อ่านข้อมูล จับคู่กับระบบเดิม และเตรียมข้อมูลสำหรับใช้งานต่ออย่างมีรอบเวลา</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
