@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/branch-profitability-dashboard.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -72,13 +74,185 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Executive Dashboard ติดตามกำไร รายได้ และกระแสเงินสดรายสาขา</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Executive Dashboard ติดตามกำไร รายได้ และกระแสเงินสดรายสาขา</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: revenue, P&L and cash live in separate files -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="ไฟล์รายได้รายสาขา งบกำไรขาดทุนที่ไม่แยกสาขา และไฟล์เงินสดแยกกันคนละไฟล์ มีช่อง error ขณะที่ประชุมผู้บริหารใกล้เข้ามา">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:40px;top:84px;width:290px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รายได้_สาขา_ก.ย.xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th></tr>
+                                                    <tr><th>1</th><td class="b">สาขา</td><td class="b">รายได้</td></tr>
+                                                    <tr><th>2</th><td>บางนา</td><td>4,820,000</td></tr>
+                                                    <tr><th>3</th><td class="warn">RS-01</td><td>4,100,000</td></tr>
+                                                    <tr><th>4</th><td>เชียงใหม่</td><td class="err">#N/A</td></tr>
+                                                    <tr><th>5</th><td>ขอนแก่น</td><td>3,080,000</td></tr>
+                                                    <tr><th>6</th><td>ภูเก็ต</td><td class="warn">??</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfx-doc sfx-float" style="left:350px;top:40px;width:172px;--d:.8s;--z:40px">
+                                                <div class="sfx-doc-tag" style="background:#ef4444">PDF</div>
+                                                <b class="sfx-doc-title">งบกำไรขาดทุน ก.ย.</b>
+                                                <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                <div class="sfx-doc-rows"><span></span><span></span><span></span></div>
+                                                <div class="sfx-doc-total"><span>กำไรขั้นต้น</span><b>฿6.36M</b></div>
+                                                <span class="sfp-flag">ไม่แยกสาขา</span>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win sfx-float" style="left:548px;top:118px;width:220px;--d:.4s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>เงินสด_ก.ย.xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><td class="b">ยกมา</td><td>5,180,000</td></tr>
+                                                    <tr><td class="b">เงินเข้า</td><td>19,240,000</td></tr>
+                                                    <tr><td class="b">เงินออก</td><td>17,020,000</td></tr>
+                                                    <tr><td class="b">คงเหลือ</td><td class="err">#VALUE!</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-meet" style="left:528px;top:332px">
+                                        <div class="sfp-meet-cal"><i>พรุ่งนี้</i><b>09:00</b></div>
+                                        <div><b>ประชุมผู้บริหาร</b><span>สรุปผลรายสาขา</span></div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:60px;top:360px">📂 3 ไฟล์ ต้องรวมเอง</div>
+                                </div>
+
+                                <!-- Scene 2: one click maps ERP, Excel and the financial report into one branch table -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="กดรวมข้อมูลครั้งเดียว ระบบดึงรายได้จาก ERP ต้นทุนจาก Excel และเงินสดจากงบการเงิน มาเรียงในตารางเดียวแยกตามสาขา" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <svg class="sfp-wires" viewBox="0 0 800 440" aria-hidden="true">
+                                        <path d="M212 106 C 272 106, 272 176, 336 176" stroke="#2563eb" style="--d:.8s"/>
+                                        <path d="M212 210 C 272 210, 272 214, 336 214" stroke="#16a34a" style="--d:1.3s"/>
+                                        <path d="M212 314 C 272 314, 272 254, 336 254" stroke="#8b5cf6" style="--d:1.8s"/>
+                                    </svg>
+                                    <div class="sfp-src" style="top:74px;--d:.1s"><span class="sfp-src-ico" style="background:#2563eb">ERP</span><div><b>ERP</b><span>รายได้</span></div><i class="sfp-src-ok" style="--d:1.2s">✓</i></div>
+                                    <div class="sfp-src" style="top:178px;--d:.2s"><span class="sfp-src-ico" style="background:#16a34a">XLSX</span><div><b>Excel</b><span>ต้นทุน · ค่าใช้จ่าย</span></div><i class="sfp-src-ok" style="--d:1.7s">✓</i></div>
+                                    <div class="sfp-src" style="top:282px;--d:.3s"><span class="sfp-src-ico" style="background:#8b5cf6">PDF</span><div><b>งบการเงิน</b><span>เงินสด</span></div><i class="sfp-src-ok" style="--d:2.2s">✓</i></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-tilt-c" style="left:322px;top:40px;width:440px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>SuccessFlow · ผลประกอบการรายสาขา</span></div>
+                                            <div class="sfp-toolbar">
+                                                <span class="sfp-filter">ทุกสาขา ▾</span><span class="sfp-filter">ก.ย. 2569 ▾</span>
+                                                <span class="sfp-btn">⟳ รวมข้อมูล</span>
+                                            </div>
+                                            <div class="sfp-tb">
+                                                <div class="sfp-tr head"><span>สาขา</span><span><i style="--c:#2563eb"></i>รายได้</span><span><i style="--c:#16a34a"></i>ต้นทุนรวม</span><span><i style="--c:#8b5cf6"></i>เงินสด</span></div>
+                                                <div class="sfp-tr"><span>บางนา</span><span class="sfp-c" style="--d:1s"><em></em><b>4.82</b></span><span class="sfp-c" style="--d:1.5s"><em></em><b>4.00</b></span><span class="sfp-c" style="--d:2s"><em></em><b>2.10</b></span></div>
+                                                <div class="sfp-tr"><span>รังสิต</span><span class="sfp-c" style="--d:1.08s"><em></em><b>4.10</b></span><span class="sfp-c" style="--d:1.58s"><em></em><b>3.46</b></span><span class="sfp-c" style="--d:2.08s"><em></em><b>1.80</b></span></div>
+                                                <div class="sfp-tr"><span>ภูเก็ต</span><span class="sfp-c" style="--d:1.16s"><em></em><b>3.65</b></span><span class="sfp-c" style="--d:1.66s"><em></em><b>3.14</b></span><span class="sfp-c" style="--d:2.16s"><em></em><b>1.70</b></span></div>
+                                                <div class="sfp-tr"><span>ขอนแก่น</span><span class="sfp-c" style="--d:1.24s"><em></em><b>3.08</b></span><span class="sfp-c" style="--d:1.74s"><em></em><b>2.75</b></span><span class="sfp-c" style="--d:2.24s"><em></em><b>1.20</b></span></div>
+                                                <div class="sfp-tr"><span>เชียงใหม่</span><span class="sfp-c" style="--d:1.32s"><em></em><b>2.95</b></span><span class="sfp-c" style="--d:1.82s"><em></em><b class="neg">3.07</b></span><span class="sfp-c" style="--d:2.32s"><em></em><b>0.60</b></span></div>
+                                                <div class="sfp-unit">หน่วย: ล้านบาท</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor sfp-cur" style="left:716px;top:96px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: drill down into one branch, profit builds step by step -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="เลือกสาขาบางนา ระบบแตกรายได้ 4.82 ล้าน หักต้นทุนขายและค่าใช้จ่าย จนเหลือกำไรสุทธิ 0.82 ล้าน เป็นกราฟน้ำตก" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-tilt-b" style="left:40px;top:36px;width:480px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>กำไรรายสาขา</span></div>
+                                            <div class="sfp-crumbs"><span class="sfp-crumb">ทุกสาขา</span>›<span class="sfp-crumb on" style="--d:.65s">บางนา</span>›<span class="sfp-crumb on" style="--d:.85s">ก.ย. 2569</span></div>
+                                            <div class="sfp-wf">
+                                                <div class="sfp-wf-base"></div>
+                                                <div class="sfp-wf-col" style="left:6px;--h:180px;--d:1s"><i class="sfp-wf-bar" style="--c:#2563eb"></i><b>4.82M</b><span>รายได้</span></div>
+                                                <div class="sfp-wf-col" style="left:92px;--b:69.5px;--h:110.5px;--d:1.3s"><i class="sfp-wf-bar down" style="--c:#f87171"></i><b class="neg">−2.96M</b><span>ต้นทุนขาย</span></div>
+                                                <div class="sfp-wf-col" style="left:178px;--h:69.5px;--d:1.6s"><i class="sfp-wf-bar" style="--c:#14b8a6"></i><b>1.86M</b><span>กำไรขั้นต้น</span></div>
+                                                <div class="sfp-wf-col" style="left:264px;--b:30.7px;--h:38.8px;--d:1.9s"><i class="sfp-wf-bar down" style="--c:#fbbf24"></i><b class="neg">−1.04M</b><span>ค่าใช้จ่าย</span></div>
+                                                <div class="sfp-wf-col" style="left:350px;--h:30.6px;--d:2.2s"><i class="sfp-wf-bar" style="--c:#16a34a"></i><b>0.82M</b><span>กำไรสุทธิ</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-pick sfx-float" style="--d:.2s">
+                                        <h4>สาขา<span>% กำไร</span></h4>
+                                        <div class="sfp-pick-row sel">บางนา<b>17.0%</b></div>
+                                        <div class="sfp-pick-row">รังสิต<b>15.6%</b></div>
+                                        <div class="sfp-pick-row">ภูเก็ต<b>14.0%</b></div>
+                                        <div class="sfp-pick-row">ขอนแก่น<b>10.7%</b></div>
+                                        <div class="sfp-pick-row">เชียงใหม่<b class="neg">−4.1%</b></div>
+                                    </div>
+                                    <svg class="sfx-cursor sfp-cur" style="left:648px;top:126px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 4: executive view, ready for the meeting -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="Executive dashboard แสดงรายได้รวม อัตรากำไรขั้นต้น เงินสดคงเหลือ กำไรสุทธิเรียงตามสาขา และแนวโน้มเงินสด 6 เดือน โดยสาขาเชียงใหม่ถูกไฮไลต์ให้จับตา" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win" style="left:34px;top:44px;width:536px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Executive Dashboard · ก.ย. 2569</span></div>
+                                                <div class="sfp-dash">
+                                                    <div class="sfp-tiles">
+                                                        <div class="sfp-tile" style="--d:.1s"><span>รายได้รวม 5 สาขา</span><b>฿18.6M</b><em>▲ 6.0%</em></div>
+                                                        <div class="sfp-tile" style="--d:.2s"><span>อัตรากำไรขั้นต้น</span><b>34.2%</b><em>▲ 1.2 จุด</em></div>
+                                                        <div class="sfp-tile" style="--d:.3s"><span>เงินสดคงเหลือ</span><b>฿7.4M</b><em>▲ ฿0.5M</em></div>
+                                                    </div>
+                                                    <div class="sfp-panels">
+                                                        <div class="sfp-panel">
+                                                            <h4>กำไรสุทธิรายสาขา<span>ล้านบาท</span></h4>
+                                                            <div class="sfp-rank">บางนา<i style="--w:100%;--d:.6s"></i><b>0.82</b></div>
+                                                            <div class="sfp-rank">รังสิต<i style="--w:78%;--d:.75s"></i><b>0.64</b></div>
+                                                            <div class="sfp-rank">ภูเก็ต<i style="--w:62%;--d:.9s"></i><b>0.51</b></div>
+                                                            <div class="sfp-rank">ขอนแก่น<i style="--w:40%;--d:1.05s"></i><b>0.33</b></div>
+                                                            <div class="sfp-rank watch">เชียงใหม่<i style="--w:15%;--d:1.2s;--c:#ef4444"></i><b>−0.12</b></div>
+                                                        </div>
+                                                        <div class="sfp-panel">
+                                                            <h4>เงินสด 6 เดือน</h4>
+                                                            <svg class="sfp-area" viewBox="0 0 200 118" preserveAspectRatio="none" aria-hidden="true">
+                                                                <line class="grid" x1="0" y1="40" x2="200" y2="40"/><line class="grid" x1="0" y1="96" x2="200" y2="96"/>
+                                                                <path class="fill" d="M14,81 L48,67 83,61 117,72 152,43 186,32 L186,96 L14,96 Z"/>
+                                                                <polyline class="stroke" points="14,81 48,67 83,61 117,72 152,43 186,32"/>
+                                                                <circle class="dot" cx="186" cy="32" r="4"/>
+                                                                <text class="v" x="186" y="20" text-anchor="end">฿7.4M</text>
+                                                                <text x="4" y="112">เม.ย.</text><text x="172" y="112">ก.ย.</text>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-exc" style="left:592px;right:auto;top:262px">
+                                        <div class="sfx-exc-ico">!</div>
+                                        <div><b>เชียงใหม่ ควรจับตา</b><span>กำไรติดลบ 2 เดือน</span></div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>พร้อมประชุม 09:00</b><span>ข้อมูลชุดเดียวทุกสาขา</span></div></div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>ข้อมูลแยกกัน 3 ไฟล์</h3><p>รายได้ · กำไร · เงินสด ต้องรวมเอง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>กดรวมข้อมูลครั้งเดียว</h3><p>ERP · Excel · งบการเงิน รวมให้เอง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เจาะลึกได้ทีละสาขา</h3><p>เห็นทันทีว่ากำไรหายไปตรงไหน</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เห็นสาขาที่ต้องจับตา</h3><p>กำไร · รายได้ · เงินสด ในหน้าเดียว</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">รวม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">เจาะลึก</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">
+                            <svg data-sfs-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                            <svg data-sfs-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -87,12 +261,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ข้อมูลรายได้ กำไร และกระแสเงินสดแยกกันคนละไฟล์ ทำให้วิเคราะห์รายสาขาได้ช้าและเห็นภาพรวมไม่ครบ</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">รวมข้อมูลจาก ERP, Excel และ financial report เข้าสู่ dashboard เดียว พร้อม drill down ตามสาขา ช่วงเวลา และหมวดรายได้</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ผู้บริหารเห็นสาขาที่ควรจับตาเร็วขึ้น และใช้ข้อมูลชุดเดียวกันในการติดตาม performance และ planning</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพ mockup หรือ GIF ของ executive dashboard ได้ตรงนี้ เช่น profitability by branch, revenue trend, cash summary และ branch comparison view</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -127,5 +295,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

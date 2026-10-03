@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/multi-channel-stock-dashboard.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Multi-Channel Stock Dashboard","url":"https://www.successflow.it.com/portfolio/multi-channel-stock-dashboard/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for a multi-channel stock and sales dashboard that combines order, stock, and movement data for faster operational decisions."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Multi-Channel Stock Dashboard","item":"https://www.successflow.it.com/portfolio/multi-channel-stock-dashboard/"}]}]}
     </script>
@@ -35,13 +37,199 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-amber-700 via-orange-700 to-slate-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-amber-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Dashboard ติดตามสต๊อกและยอดขายหลายช่องทางแบบวันต่อวัน</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Dashboard ติดตามสต๊อกและยอดขายหลายช่องทางแบบวันต่อวัน</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: three sources, three different stock numbers -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="ไฟล์ Excel สต๊อก หน้ารายงาน Marketplace และหน้าจอ ERP แสดงสต๊อกสินค้าตัวเดียวกันไม่ตรงกัน 3 ตัวเลข และสินค้าหมดโดยไม่มีใครรู้">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:28px;top:70px;width:282px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>stock_คลังกลาง(2).xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                    <tr><th>1</th><td class="b">SKU</td><td class="b">สินค้า</td><td class="b">คงเหลือ</td></tr>
+                                                    <tr><th>2</th><td>SKU-1042</td><td>เสื้อยืดคอกลม</td><td class="err">120</td></tr>
+                                                    <tr><th>3</th><td>SKU-2087</td><td>กางเกงยีนส์</td><td>64</td></tr>
+                                                    <tr><th>4</th><td>SKU-3015</td><td>หมวกแก๊ป</td><td class="warn">??</td></tr>
+                                                    <tr><th>5</th><td>SKU-4120</td><td>กระเป๋าผ้า</td><td>210</td></tr>
+                                                    <tr><th>6</th><td colspan="3" class="muted">อัปเดตล่าสุด: เมื่อวาน</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfx-win sfx-float" style="left:322px;top:182px;width:226px;--d:.7s;--z:50px">
+                                                <div class="sfx-bar sfp-bar-orange"><i></i><i></i><i></i><span>Marketplace · คำสั่งซื้อ</span></div>
+                                                <div class="sfp-list">
+                                                    <div class="hl"><span class="k">SKU-1042</span><span class="sfp-tag">หมดแล้ว</span><b class="err">0</b></div>
+                                                    <div><span class="k">SKU-2087</span><span>ขาย 18</span><b>41</b></div>
+                                                    <div><span class="k">SKU-3015</span><span>ขาย 9</span><b>12</b></div>
+                                                    <div><span class="k">SKU-4120</span><span>ขาย 6</span><b>88</b></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-win sfx-float" style="left:562px;top:44px;width:206px;--d:.35s;--z:20px">
+                                                <div class="sfx-bar sfp-bar-slate"><i></i><i></i><i></i><span>ERP · Stock on hand</span></div>
+                                                <div class="sfp-list">
+                                                    <div class="hl"><span class="k">SKU-1042</span><b class="warn">86</b></div>
+                                                    <div><span class="k">SKU-2087</span><b>59</b></div>
+                                                    <div><span class="k">SKU-3015</span><b>27</b></div>
+                                                    <div><span class="k">SKU-4120</span><b>196</b></div>
+                                                </div>
+                                            </div>
+                                            <i class="sfp-ask" style="left:526px;top:166px;--d:.9s">?</i>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:48px;top:356px">SKU-1042 · 3 แหล่ง 3 ตัวเลข</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:420px;top:380px;--d:.6s">⏱ รวมไฟล์เองทุกเช้า</div>
+                                </div>
+
+                                <!-- Scene 2: every source flows into one data model -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ข้อมูลจาก Marketplace ERP และไฟล์ Excel ไหลเข้า data model เดียว ที่เชื่อมตารางยอดขาย สินค้า ช่องทาง สต๊อก และวันที่ รีเฟรชอัตโนมัติทุกเช้า" hidden>
+                                    <div class="sfx-floor" style="left:280px;right:40px"></div>
+                                    <div class="sfp-refresh" style="left:34px;top:30px">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></svg>
+                                        <span>รีเฟรชอัตโนมัติ <em>07:00</em></span>
+                                    </div>
+                                    <div class="sfp-src" style="top:110px;--d:.2s"><span class="sfp-src-ico" style="background:#f97316">MKT</span><div><b>Marketplace</b><span>2,418 ออเดอร์</span></div><i class="sfp-src-ok" style="--d:1.2s">✓</i></div>
+                                    <div class="sfp-src" style="top:196px;--d:.35s"><span class="sfp-src-ico" style="background:#334155">ERP</span><div><b>ERP</b><span>1,120 SKU</span></div><i class="sfp-src-ok" style="--d:1.45s">✓</i></div>
+                                    <div class="sfp-src" style="top:282px;--d:.5s"><span class="sfp-src-ico" style="background:#16a34a">XLS</span><div><b>Excel</b><span>3 คลังสินค้า</span></div><i class="sfp-src-ok" style="--d:1.7s">✓</i></div>
+                                    <svg class="sfp-flow" viewBox="0 0 800 440" aria-hidden="true">
+                                        <path d="M232 136 C 280 136, 290 190, 340 196"/>
+                                        <path d="M232 222 L 340 222"/>
+                                        <path d="M232 308 C 280 308, 290 256, 340 250"/>
+                                    </svg>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win" style="left:330px;top:48px;width:436px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Data model · ขาย &amp; สต๊อก</span></div>
+                                                <div class="sfp-model">
+                                                    <svg viewBox="0 0 436 292" preserveAspectRatio="none" aria-hidden="true">
+                                                        <path pathLength="1" d="M152 146 L 136 70" style="--d:1.2s"/>
+                                                        <path pathLength="1" d="M152 150 L 136 222" style="--d:1.35s"/>
+                                                        <path pathLength="1" d="M284 146 L 300 70" style="--d:1.5s"/>
+                                                        <path pathLength="1" d="M284 150 L 300 222" style="--d:1.65s"/>
+                                                    </svg>
+                                                    <div class="sfp-tbl" style="left:18px;top:20px;--d:.5s"><div class="sfp-tbl-h" style="background:#64748b">สินค้า</div><div class="sfp-tbl-f"><span class="key">SKU</span><span>ชื่อสินค้า</span><span>หมวด</span></div></div>
+                                                    <div class="sfp-tbl" style="left:18px;top:178px;--d:.65s"><div class="sfp-tbl-h" style="background:#f97316">ช่องทาง</div><div class="sfp-tbl-f"><span class="key">Channel</span><span>Marketplace</span><span>หน้าร้าน</span></div></div>
+                                                    <div class="sfp-tbl fact" style="left:152px;top:96px;--d:.3s"><div class="sfp-tbl-h" style="background:#2563eb">ยอดขาย</div><div class="sfp-tbl-f"><span class="key">SKU</span><span class="key">Channel</span><span>จำนวน</span><span>ยอดเงิน</span></div></div>
+                                                    <div class="sfp-tbl" style="left:300px;top:20px;--d:.8s"><div class="sfp-tbl-h" style="background:#16a34a">สต๊อก</div><div class="sfp-tbl-f"><span class="key">SKU</span><span>คลัง</span><span>คงเหลือ</span></div></div>
+                                                    <div class="sfp-tbl" style="left:300px;top:178px;--d:.95s"><div class="sfp-tbl-h" style="background:#8b5cf6">วันที่</div><div class="sfp-tbl-f"><span class="key">Date</span><span>สัปดาห์</span><span>เดือน</span></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 3: days of cover, restock alerts and aging -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ระบบคำนวณจำนวนวันที่สต๊อกพอขาย ทีละ SKU แยกสินค้าที่ต้องเติม ใกล้หมด และค้างนาน พร้อมกราฟอายุสต๊อก และแจ้งเตือนให้เติมสินค้า" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:40px;top:44px;width:444px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Stock alert · วันที่สต๊อกพอขาย</span></div>
+                                                <div class="sfx-match">
+                                                    <div class="sfp-pills" style="padding:2px 4px 6px"><span class="sfp-pill on">ทุกช่องทาง ▾</span><span class="sfp-pill">คลัง: ทั้งหมด ▾</span></div>
+                                                    <div class="sfx-row head sfp-cover-row"><span>SKU</span><span>สินค้า</span><span>พอขายอีก</span><span>สถานะ</span></div>
+                                                    <div class="sfx-row sfp-cover-row" style="--d:.4s"><span>SKU-1042</span><span>เสื้อยืดคอกลม</span><span class="sfp-cov" style="--d:.4s"><i style="--w:7%;--c:#ef4444"></i>2 วัน</span><span class="sfx-st"><em>คำนวณ…</em><b class="red">ต้องเติม</b></span></div>
+                                                    <div class="sfx-row sfp-cover-row" style="--d:.85s"><span>SKU-2087</span><span>กางเกงยีนส์</span><span class="sfp-cov" style="--d:.85s"><i style="--w:60%"></i>18 วัน</span><span class="sfx-st"><em>คำนวณ…</em><b class="ok">✓ ปกติ</b></span></div>
+                                                    <div class="sfx-row sfp-cover-row" style="--d:1.3s"><span>SKU-3015</span><span>หมวกแก๊ป</span><span class="sfp-cov" style="--d:1.3s"><i style="--w:17%;--c:#f59e0b"></i>5 วัน</span><span class="sfx-st"><em>คำนวณ…</em><b class="bad">! ใกล้หมด</b></span></div>
+                                                    <div class="sfx-row sfp-cover-row" style="--d:1.75s"><span>SKU-4120</span><span>กระเป๋าผ้า</span><span class="sfp-cov" style="--d:1.75s"><i style="--w:86%"></i>26 วัน</span><span class="sfx-st"><em>คำนวณ…</em><b class="ok">✓ ปกติ</b></span></div>
+                                                    <div class="sfx-row sfp-cover-row" style="--d:2.2s"><span>SKU-5208</span><span>ผ้าพันคอ</span><span class="sfp-cov" style="--d:2.2s"><i style="--w:100%;--c:#a78bfa"></i>140 วัน</span><span class="sfx-st"><em>คำนวณ…</em><b class="old">ค้างนาน</b></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-win" style="left:512px;top:58px;width:248px;--z:30px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Stock aging</span></div>
+                                                <div class="sfp-pad">
+                                                    <div class="sfp-age">
+                                                        <div>62%<span style="--h:78%;--c:#34d399;--d:.6s"></span></div>
+                                                        <div>18%<span style="--h:30%;--c:#a3e635;--d:.8s"></span></div>
+                                                        <div>12%<span style="--h:22%;--c:#fbbf24;--d:1s"></span></div>
+                                                        <div>8%<span style="--h:16%;--c:#f87171;--d:1.2s"></span></div>
+                                                    </div>
+                                                    <div class="sfp-age-x"><span>0-30</span><span>31-60</span><span>61-90</span><span>90+ วัน</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-exc" style="right:36px;top:318px;border-left-color:#ef4444">
+                                        <div class="sfx-exc-ico" style="background:#fee2e2;color:#dc2626">!</div>
+                                        <div><b>SKU-1042 เหลือ 2 วัน</b><span>แนะนำเติม 240 ชิ้น · คลังบางนา</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: one daily dashboard -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="Dashboard รายวันหน้าเดียว แสดงยอดขายวันนี้ จำนวนออเดอร์ สินค้าที่ต้องเติม กราฟยอดขาย 14 วัน และสินค้าขายดี พร้อมรายการ SKU ที่ต้องเติม" hidden>
+                                    <div class="sfx-floor" style="left:60px;right:60px"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win" style="left:36px;top:40px;width:540px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Daily Stock &amp; Sales · 3 ต.ค.</span></div>
+                                                <div class="sfp-pad">
+                                                    <div class="sfp-pills"><span class="sfp-pill on">ทุกช่องทาง</span><span class="sfp-pill">Marketplace</span><span class="sfp-pill">หน้าร้าน</span><span class="sfp-pill">ขายส่ง</span><span class="sfp-spacer"></span><span class="sfp-pill">คลัง: ทั้งหมด ▾</span></div>
+                                                    <div class="sfp-kpis">
+                                                        <div class="sfp-kpi" style="--d:.2s"><span>ยอดขายวันนี้</span><b>฿482,350</b><em>▲ 12.4%</em></div>
+                                                        <div class="sfp-kpi" style="--d:.35s"><span>ออเดอร์</span><b>1,286</b><em>▲ 8.1%</em></div>
+                                                        <div class="sfp-kpi alert" style="--d:.5s"><span>ต้องเติมสต๊อก</span><b>7 SKU</b><em>● ด่วน 2</em></div>
+                                                    </div>
+                                                    <div class="sfp-dash-grid">
+                                                        <div class="sfp-panel">
+                                                            <div class="sfp-panel-t">ยอดขาย 14 วัน <span>฿ พัน</span></div>
+                                                            <svg class="sfp-area" viewBox="0 0 300 118" preserveAspectRatio="none" aria-hidden="true">
+                                                                <defs><linearGradient id="sfpAreaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity=".25"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>
+                                                                <line class="grid" x1="0" y1="30" x2="300" y2="30"/><line class="grid" x1="0" y1="62" x2="300" y2="62"/><line class="grid" x1="0" y1="94" x2="300" y2="94"/>
+                                                                <path class="fill" d="M4 88 L26 80 L49 84 L72 70 L95 74 L118 60 L141 66 L164 52 L187 58 L210 44 L233 48 L256 34 L279 30 L296 20 L296 118 L4 118 Z"/>
+                                                                <path class="line" pathLength="1" d="M4 88 L26 80 L49 84 L72 70 L95 74 L118 60 L141 66 L164 52 L187 58 L210 44 L233 48 L256 34 L279 30 L296 20"/>
+                                                                <circle class="dot" cx="296" cy="20" r="4.5"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="sfp-panel sfp-movers">
+                                                            <div class="sfp-panel-t">ขายดี <span>ชิ้น</span></div>
+                                                            <div><p>เสื้อยืดคอกลม<b>412</b></p><i style="--w:100%;--d:.7s"></i></div>
+                                                            <div><p>กางเกงยีนส์<b>286</b></p><i style="--w:69%;--d:.85s"></i></div>
+                                                            <div><p>หมวกแก๊ป<b>198</b></p><i style="--w:48%;--d:1s"></i></div>
+                                                            <div><p>กระเป๋าผ้า<b>154</b></p><i style="--w:37%;--d:1.15s"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-win sfp-restock" style="left:600px;top:120px;width:170px;--z:40px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>ต้องเติม</span></div>
+                                                <div class="sfp-list">
+                                                    <div><span class="k">SKU-1042</span><b class="err">+240</b></div>
+                                                    <div><span class="k">SKU-3015</span><b class="warn">+80</b></div>
+                                                    <div><span class="k">SKU-6033</span><b class="warn">+60</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>อัปเดตแล้ว 07:02</b><span>พร้อมก่อนประชุมเช้า</span></div></div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>สต๊อกตัวเดียว แต่ตัวเลขไม่ตรงกัน</h3><p>Marketplace · ERP · Excel ต่างคนต่างดู กว่าจะรู้ของก็หมด</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ทุกแหล่งไหลเข้าโมเดลเดียว</h3><p>รีเฟรชเองทุกเช้า ไม่ต้องรวมไฟล์มือ</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ระบบคำนวณและเตือนให้</h3><p>สต๊อกพอขายกี่วัน ตัวไหนต้องเติม ตัวไหนค้างนาน</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เห็นทุกอย่างในหน้าเดียว</h3><p>ยอดขาย · สต๊อก · สินค้าขายดี กรองตามช่องทางได้ทันที</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">รวม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">เตือน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">
+                            <svg data-sfs-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                            <svg data-sfs-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -52,12 +240,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ข้อมูลกระจายหลายแหล่ง ทำให้ทีมไม่เห็นสต๊อกคงเหลือ ยอดขายรายวัน หรือสินค้าที่ต้องเติมได้ทันเวลา</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">รวมข้อมูลเข้าสู่ data model เดียว แล้วทำ dashboard สรุปยอดขาย, stock aging, stock alert และ top movers</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ผู้บริหารเห็นตัวเลขเร็วขึ้น ทีมวางแผนเติมสินค้าได้ดีขึ้น และลดเวลารวมข้อมูลก่อนประชุม</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือ mockup screen ได้ตรงนี้ เช่น หน้า overview, stock alert, top-selling SKU, และ filter ตาม channel หรือ warehouse</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -92,5 +274,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>
