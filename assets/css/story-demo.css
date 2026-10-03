@@ -1,10 +1,16 @@
-/* Process Demonstration: layered 3D mockup story for the accounting workflow */
+/* Story demo: layered 3D mockup scenes shared by the portfolio case studies */
 
 .sfs {
     border-radius: 1.5rem;
     border: 1px solid #e2e8f0;
     background: #ffffff;
     overflow: hidden;
+}
+
+/* Used as the page cover: runs edge to edge inside the case-study card */
+.sfs-cover {
+    border-radius: 0;
+    border-width: 1px 0;
 }
 
 .sfs-stage {
