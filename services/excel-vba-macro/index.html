@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/service-excel-vba-macro.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -86,6 +88,202 @@
                 </div>
                 <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Excel VBA &amp; Macro</h1>
                 <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">ต่อยอดไฟล์ Excel เดิมขององค์กรให้ทำงานอัตโนมัติ เช่น รวมไฟล์ จัดรูปแบบ สรุปรายงาน ตรวจสอบข้อมูล หรือสร้างปุ่มคำสั่งสำหรับงานประจำวัน</p>
+                <div class="mt-8">
+                    <div class="sfs" data-sfs>
+                        <div class="sfs-stage" data-sfs-stage>
+                            <div class="sfs-frame" data-sfs-frame>
+                                <div class="sfs-canvas">
+
+                                    <!-- Scene 1: the same copy-paste routine every morning -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="ไฟล์ Excel ของแต่ละสาขาซ้อนกันหลายไฟล์ ต้องคัดลอกข้อมูลไปวางในไฟล์รวมยอดเองทุกเช้า ตัวเลขบางช่องเป็นข้อความจนสูตรขึ้น error และต้องกด Ctrl+C Ctrl+V ซ้ำหลายสิบครั้ง">
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-a">
+                                                <div class="sfx-win sfp-back" style="left:36px;top:30px;width:340px;--z:-50px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>สาขา_รังสิต.xlsx</span></div>
+                                                    <div class="sfp-gridlines"></div>
+                                                </div>
+                                                <div class="sfx-win sfp-back" style="left:58px;top:56px;width:340px;--z:-25px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>สาขา_บางนา.xlsx</span></div>
+                                                    <div class="sfp-gridlines"></div>
+                                                </div>
+                                                <div class="sfx-win sfx-float" style="left:80px;top:84px;width:350px;--z:0px;--d:.2s">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>สาขา_ลาดพร้าว.xlsx</span></div>
+                                                    <div class="sfp-wrap">
+                                                        <table class="sfx-sheet sfp-sheet">
+                                                            <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                            <tr><th>1</th><td class="b">วันที่</td><td class="b">สินค้า</td><td class="b">ชิ้น</td><td class="b">ยอด</td></tr>
+                                                            <tr class="sfp-copy"><th>2</th><td>1/10/69</td><td>น้ำดื่ม 600ml</td><td class="n">120</td><td class="n">840</td></tr>
+                                                            <tr class="sfp-copy"><th>3</th><td>2569-10-01</td><td>กาแฟกระป๋อง</td><td class="txt">48 </td><td class="txt">'1152</td></tr>
+                                                            <tr class="sfp-copy"><th>4</th><td>01.10.2569</td><td>ขนมปังกรอบ</td><td class="n">64</td><td class="n">1,280</td></tr>
+                                                            <tr><th>5</th><td>2/10/69</td><td>น้ำดื่ม 600ml</td><td class="n">96</td><td class="n">672</td></tr>
+                                                        </table>
+                                                        <div class="sfp-ants" style="left:22px;right:0;top:49px;height:90px"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfx-win sfx-float" style="left:478px;top:58px;width:286px;--d:.9s">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รวมยอด_ทุกสาขา (แก้ล่าสุด).xlsx</span></div>
+                                                    <table class="sfx-sheet sfp-sheet">
+                                                        <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                        <tr><th>1</th><td class="b">สาขา</td><td class="b">ชิ้น</td><td class="b">ยอดขาย</td></tr>
+                                                        <tr><th>2</th><td>ลาดพร้าว</td><td class="n">1,284</td><td class="err">#VALUE!</td></tr>
+                                                        <tr><th>3</th><td>บางนา</td><td class="n">962</td><td class="n">61,980</td></tr>
+                                                        <tr><th>4</th><td>รังสิต</td><td colspan="2" class="muted">ยังไม่ได้วาง…</td></tr>
+                                                        <tr><th>5</th><td>พระราม 9</td><td colspan="2" class="muted">ยังไม่ได้วาง…</td></tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfp-keys" style="left:76px;top:338px">
+                                            <span class="sfp-key wide">Ctrl</span><span class="sfp-plus">+</span><span class="sfp-key c">C</span>
+                                            <span class="sfp-gap"></span>
+                                            <span class="sfp-key wide">Ctrl</span><span class="sfp-plus">+</span><span class="sfp-key v" style="--d:.7s">V</span>
+                                            <span class="sfp-repeat">48 ครั้ง</span>
+                                        </div>
+                                        <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:500px;top:318px">🔁 ทำซ้ำทุกเช้า</div>
+                                        <div class="sfx-chip sfx-pulse" style="left:540px;top:372px;--d:.6s">⏱ 2 ชม. / วัน</div>
+                                    </div>
+
+                                    <!-- Scene 2: one button runs the whole routine -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ไฟล์ Excel เดิมมีปุ่มรันงานประจำวันหนึ่งปุ่ม ใต้ปุ่มคือขั้นตอนรวมไฟล์ จัดรูปแบบ ตรวจข้อมูล และสรุปรายงาน ด้านหลังเป็นโค้ด VBA ที่สั่งทุกขั้นตอน เคอร์เซอร์กดปุ่ม" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfx-win" style="left:478px;top:40px;width:296px;--z:-70px">
+                                                    <div class="sfx-bar sfp-vbe-bar"><i></i><i></i><i></i><span>VBA · Module1</span></div>
+                                                    <pre class="sfp-code"><span><b class="k">Sub</b> DailyReport()</span><span>  MergeFiles <b class="s">"สาขา\*.xlsx"</b></span><span>  FormatReport</span><span>  CheckData</span><span>  BuildSummary</span><span>  SendMail <b class="s">"ผู้บริหาร"</b></span><span><b class="k">End Sub</b></span></pre>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win" style="left:34px;top:58px;width:410px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รายงานประจำวัน.xlsm</span></div>
+                                                    <div class="sfp-ribbon"><span>หน้าแรก</span><span>แทรก</span><span>สูตร</span><b>Macro</b></div>
+                                                    <div class="sfp-panel">
+                                                        <div class="sfp-panel-head"><b>งานประจำวัน</b><span>03/10/2569</span></div>
+                                                        <div class="sfx-run sfx-press">▶ รันงานประจำวัน</div>
+                                                        <div class="sfp-steps">
+                                                            <div class="sfp-step" style="--d:.2s"><i style="background:#f0fdf4">📂</i>รวมไฟล์</div>
+                                                            <div class="sfp-step" style="--d:.3s"><i style="background:#fdf4ff">🎨</i>จัดรูปแบบ</div>
+                                                            <div class="sfp-step" style="--d:.4s"><i style="background:#fffbeb">🔍</i>ตรวจข้อมูล</div>
+                                                            <div class="sfp-step" style="--d:.5s"><i style="background:#eff6ff">📊</i>สรุปรายงาน</div>
+                                                        </div>
+                                                        <div class="sfx-progress"><span></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfp-badge" style="left:520px;top:330px">⚡ 1 ปุ่ม แทนทุกขั้นตอน</div>
+                                        <svg class="sfx-cursor" style="left:360px;top:186px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                    </div>
+
+                                    <!-- Scene 3: the macro merges, formats, checks and sums -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="Macro ทำงานทีละขั้น รวม 6 ไฟล์ จัดรูปแบบหัวตาราง ตรวจพบข้อมูลซ้ำหนึ่งแถวและไฮไลต์ไว้ แล้วสรุปยอดรวมห้าสาขาเป็น 368,350 บาท" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfp-runcard sfx-shadow" style="left:34px;top:84px;--z:40px">
+                                                    <div class="sfp-runcard-head"><i>▶</i>Macro กำลังทำงาน</div>
+                                                    <div class="sfp-task"><span>📂 รวม 6 ไฟล์</span><span class="sfx-st" style="--d:1.2s"><em>รอ…</em><b class="ok">✓ เสร็จ</b></span></div>
+                                                    <div class="sfp-task"><span>🎨 จัดรูปแบบ</span><span class="sfx-st" style="--d:1.6s"><em>รอ…</em><b class="ok">✓ เสร็จ</b></span></div>
+                                                    <div class="sfp-task"><span>🔍 ตรวจข้อมูล</span><span class="sfx-st" style="--d:2s"><em>รอ…</em><b class="bad">! ซ้ำ 1</b></span></div>
+                                                    <div class="sfp-task"><span>📊 สรุปยอด</span><span class="sfx-st" style="--d:2.35s"><em>รอ…</em><b class="ok">✓ เสร็จ</b></span></div>
+                                                    <div class="sfx-progress"><span></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfx-win" style="left:310px;top:40px;width:456px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รวมยอด_ทุกสาขา.xlsx</span></div>
+                                                    <table class="sfx-sheet sfp-sheet sfp-sheet3">
+                                                        <tr class="h"><td>สาขา</td><td>วันที่</td><td>ชิ้น</td><td>ยอดขาย (฿)</td></tr>
+                                                        <tr class="r" style="--d:.3s"><td>ลาดพร้าว</td><td>03/10/69</td><td class="n">1,284</td><td class="n">84,250</td></tr>
+                                                        <tr class="r" style="--d:.5s"><td>บางนา</td><td>03/10/69</td><td class="n">962</td><td class="n">61,980</td></tr>
+                                                        <tr class="r" style="--d:.7s"><td>รังสิต</td><td>03/10/69</td><td class="n">1,105</td><td class="n">72,400</td></tr>
+                                                        <tr class="r dup" style="--d:.9s"><td>บางนา<span class="sfp-flag">ซ้ำ</span></td><td>03/10/69</td><td class="n">962</td><td class="n">61,980</td></tr>
+                                                        <tr class="r" style="--d:1.1s"><td>พระราม 9</td><td>03/10/69</td><td class="n">1,460</td><td class="n">95,120</td></tr>
+                                                        <tr class="r" style="--d:1.3s"><td>บางแค</td><td>03/10/69</td><td class="n">870</td><td class="n">54,600</td></tr>
+                                                        <tr class="tot"><td>รวม 5 สาขา</td><td></td><td class="n">5,681</td><td class="n">368,350</td></tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-exc sfp-exc3" style="left:40px;right:auto;top:342px">
+                                            <div class="sfx-exc-ico">!</div>
+                                            <div><b>พบข้อมูลซ้ำ 1 แถว</b><span>ไฮไลต์ไว้ ไม่นับซ้ำในยอดรวม</span></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Scene 4: report, PDF and e-mail ready -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="ได้ไฟล์สรุปยอดขายพร้อมกราฟรายสาขา ยอดรวม 368,350 บาท รายงาน PDF และอีเมลที่ส่งถึงผู้บริหารพร้อมไฟล์แนบ จากเดิมสองชั่วโมงเหลือสามนาที" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-d">
+                                                <div class="sfx-out" style="left:40px;top:92px;--d:.5s;--r:-7deg">
+                                                    <div class="sfx-out-head" style="background:#dc2626">PDF</div>
+                                                    <b class="sfx-doc-title">รายงานประจำวัน</b>
+                                                    <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                    <div class="sfp-pdf-table">
+                                                        <div><span>ลาดพร้าว</span><b>84,250</b></div>
+                                                        <div><span>บางนา</span><b>61,980</b></div>
+                                                        <div><span>รังสิต</span><b>72,400</b></div>
+                                                        <div><span>พระราม 9</span><b>95,120</b></div>
+                                                    </div>
+                                                    <i class="sfx-stamp" style="--d:1.2s">✓</i>
+                                                </div>
+                                                <div class="sfx-win sfp-dash" style="left:226px;top:34px;width:356px;--z:30px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>สรุปยอดขาย_03-10-69.xlsx</span></div>
+                                                    <div class="sfp-kpis">
+                                                        <div class="sfp-kpi"><span>ยอดรวม</span><b>฿368,350</b></div>
+                                                        <div class="sfp-kpi"><span>สาขา</span><b>5 / 5</b></div>
+                                                        <div class="sfp-kpi"><span>เทียบเมื่อวาน</span><b class="up">+8.4%</b></div>
+                                                    </div>
+                                                    <div class="sfp-chart">
+                                                        <div><em>84K</em><span style="--h:78%;--d:.6s"></span></div>
+                                                        <div><em>62K</em><span style="--h:57%;--d:.7s"></span></div>
+                                                        <div><em>72K</em><span style="--h:67%;--d:.8s"></span></div>
+                                                        <div class="top"><em>95K</em><span style="--h:88%;--d:.9s"></span></div>
+                                                        <div><em>55K</em><span style="--h:50%;--d:1s"></span></div>
+                                                    </div>
+                                                    <div class="sfp-chart-x"><span>ลาดพร้าว</span><span>บางนา</span><span>รังสิต</span><span>พระราม 9</span><span>บางแค</span></div>
+                                                </div>
+                                                <div class="sfx-out sfp-mail" style="left:574px;top:100px;--d:.8s;--r:6deg">
+                                                    <div class="sfx-out-head" style="background:#2563eb">✉ อีเมล</div>
+                                                    <div class="sfp-mail-to">ถึง <b>ผู้บริหาร</b></div>
+                                                    <b class="sfp-mail-sub">ยอดขายประจำวัน 03/10</b>
+                                                    <div class="sfp-att"><i style="background:#dc2626">PDF</i>รายงาน.pdf</div>
+                                                    <div class="sfp-att"><i style="background:#16a34a">XLSX</i>สรุปยอด.xlsx</div>
+                                                    <div class="sfp-sent">✓ ส่งแล้ว 08:03</div>
+                                                    <i class="sfx-stamp" style="--d:1.5s">✓</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-chip sfx-chip-green sfp-time" style="left:304px;top:380px"><s>2 ชม.</s> → 3 นาที</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sfs-captions">
+                            <div class="sfs-caption" data-sfs-caption><h3>งานเดิมซ้ำ ๆ ทุกเช้า</h3><p>เปิดทีละไฟล์ · Copy-Paste · ตัวเลขเพี้ยนจนสูตรพัง</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>ไฟล์เดิม เพิ่มปุ่มเดียว</h3><p>VBA สั่งทุกขั้นตอนไว้ให้แล้ว</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>Macro ทำงานแทนทีละขั้น</h3><p>รวมไฟล์ · จัดรูปแบบ · ตรวจซ้ำ · สรุปยอด</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>รายงานพร้อมส่งในไม่กี่นาที</h3><p>สรุปยอด · PDF · อีเมลถึงผู้บริหาร</p></div>
+                        </div>
+
+                        <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">กดปุ่ม</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">ทำงาน</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">ผลลัพธ์</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">
+                                <svg data-sfs-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                                <svg data-sfs-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-carousel-shell" data-project-carousel>
                     <div class="project-carousel-label">โปรเจกต์ตัวอย่าง</div>
                     <button type="button" class="project-carousel-nav project-carousel-nav-prev" aria-label="Previous project" data-project-prev>&#8249;</button>
@@ -161,5 +359,6 @@
     </section>
     <script src="../../assets/js/i18n.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

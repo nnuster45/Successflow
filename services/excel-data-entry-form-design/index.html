@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/service-excel-data-entry-form-design.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -86,6 +88,199 @@
                 </div>
                 <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Excel UserForm Application</h1>
                 <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">พัฒนาแอปพลิเคชันบน Excel ด้วย UserForm เพื่อใช้จัดการข้อมูล สร้างหน้าจอสำหรับทำงานเฉพาะทาง ควบคุมลำดับการทำงาน และเชื่อมกับ macro หรือ workflow เดิมขององค์กรได้</p>
+                <div class="mt-8">
+                    <div class="sfs" data-sfs>
+                        <div class="sfs-stage" data-sfs-stage>
+                            <div class="sfs-frame" data-sfs-frame>
+                                <div class="sfs-canvas">
+
+                                    <!-- Scene 1: everyone types into the same master sheet -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="ชีตคลังสินค้าหลักที่ทุกคนพิมพ์ลงเอง สถานะเขียนไม่เหมือนกัน รหัสสินค้าพิมพ์ผิดรูปแบบ ยอดคงเหลือถูกพิมพ์ทับสูตร มีชีตสำเนาหลายแผ่น และกล่องแจ้งว่าไฟล์ถูกล็อกเพราะมีคนอื่นกำลังแก้">
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-a">
+                                                <div class="sfx-win sfx-float" style="left:44px;top:62px;width:452px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>คลังสินค้า_MASTER.xlsx</span></div>
+                                                    <table class="sfx-sheet sfp-sheet">
+                                                        <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+                                                        <tr><th>1</th><td class="b">วันที่</td><td class="b">รหัส</td><td class="b">รายการ</td><td class="b">จำนวน</td><td class="b">สถานะ</td></tr>
+                                                        <tr><th>2</th><td>01/10</td><td>B-210</td><td>ฟิล์มยืด</td><td class="n">20</td><td class="c"><span class="sfp-st g">เบิกแล้ว</span></td></tr>
+                                                        <tr><th>3</th><td>01/10</td><td class="warn">b210 </td><td>ฟิล์ม ยืด</td><td class="n">15</td><td class="c"><span class="sfp-st a">ok?</span></td></tr>
+                                                        <tr><th>4</th><td>02/10</td><td>A-105</td><td>เทปใส</td><td class="n">40</td><td class="c"><span class="sfp-st s">เสร็จ</span></td></tr>
+                                                        <tr><th>5</th><td>02/10</td><td>A-102</td><td>กล่อง L</td><td class="n">60</td><td class="c"><span class="sfp-st r">???</span></td></tr>
+                                                        <tr><th>6</th><td colspan="3" class="b">คงเหลือ ฟิล์มยืด</td><td class="n sfp-typed">120</td><td class="muted">พิมพ์ทับสูตร</td></tr>
+                                                    </table>
+                                                    <div class="sfp-tabs"><span class="on">MASTER</span><span>MASTER (2)</span><span>Copy of MASTER</span><span class="bad">ห้ามแก้!!</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfp-dialog sfx-shadow" style="left:520px;top:118px">
+                                            <div class="sfp-dialog-body">
+                                                <i class="sfp-dialog-ico">!</i>
+                                                <div><b>ไฟล์ถูกล็อกอยู่</b><span>มีผู้ใช้อื่นกำลังแก้ไข เปิดได้แบบอ่านอย่างเดียว</span></div>
+                                            </div>
+                                            <div class="sfp-dialog-btns"><span class="sfp-btn">รอก่อน</span><span class="sfp-btn p">อ่านอย่างเดียว</span></div>
+                                        </div>
+                                        <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:530px;top:290px">✏️ ใครก็พิมพ์ทับได้</div>
+                                        <div class="sfx-chip sfx-pulse" style="left:560px;top:346px;--d:.6s">❓ สถานะไม่ตรงกัน</div>
+                                    </div>
+
+                                    <!-- Scene 2: Excel opens as an app with a menu -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="เปิดไฟล์ Excel แล้วขึ้นหน้าแอประบบคลังสินค้า มีเมนูรับเข้า เบิกออก อัปเดตสถานะ และค้นหาแก้ไข ชีตหลักด้านหลังถูกล็อกไว้ เคอร์เซอร์เลือกเมนูเบิกออก" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win sfp-dim" style="left:36px;top:40px;width:330px;--z:-90px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>คลังสินค้า.xlsm</span></div>
+                                                    <table class="sfx-sheet sfp-sheet">
+                                                        <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                        <tr><th>1</th><td class="b">รหัส</td><td class="b">รายการ</td><td class="b">คงเหลือ</td></tr>
+                                                        <tr><th>2</th><td>A-102</td><td>กล่อง L</td><td class="n">340</td></tr>
+                                                        <tr><th>3</th><td>A-105</td><td>เทปใส</td><td class="n">1,200</td></tr>
+                                                        <tr><th>4</th><td>B-210</td><td>ฟิล์มยืด</td><td class="n">86</td></tr>
+                                                        <tr><th>5</th><td>C-031</td><td>พาเลทไม้</td><td class="n">24</td></tr>
+                                                    </table>
+                                                    <div class="sfp-tabs"><span class="on">🔒 MASTER</span><span>🔒 LOG</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfx-win" style="left:250px;top:34px;width:500px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>ระบบคลังสินค้า · UserForm</span></div>
+                                                    <div class="sfp-app">
+                                                        <div class="sfp-side">
+                                                            <div class="sfp-logo"><i>📦</i>คลังสินค้า</div>
+                                                            <span class="sfp-nav-i on">หน้าหลัก</span>
+                                                            <span class="sfp-nav-i">รายการวันนี้</span>
+                                                            <span class="sfp-nav-i">รายงาน</span>
+                                                            <span class="sfp-nav-i">ตั้งค่า</span>
+                                                            <div class="sfp-user"><i></i>ฝ่ายคลัง</div>
+                                                        </div>
+                                                        <div class="sfp-main">
+                                                            <div class="sfp-main-head"><b>เลือกงานที่จะทำ</b><span>03/10/2569</span></div>
+                                                            <div class="sfp-tiles">
+                                                                <div class="sfp-tile" style="--d:.15s"><i style="background:#f0fdf4">📥</i><div><b>รับเข้า</b><span>วันนี้ 8 รายการ</span></div></div>
+                                                                <div class="sfp-tile hit"><i style="background:#eff6ff">📤</i><div><b>เบิกออก</b><span>วันนี้ 12 รายการ</span></div></div>
+                                                                <div class="sfp-tile" style="--d:.45s"><i style="background:#fffbeb">🔄</i><div><b>อัปเดตสถานะ</b><span>รอ 3 รายการ</span></div></div>
+                                                                <div class="sfp-tile" style="--d:.6s"><i style="background:#fdf4ff">🔍</i><div><b>ค้นหา / แก้ไข</b><span>ตามเลขที่เอกสาร</span></div></div>
+                                                            </div>
+                                                            <div class="sfp-wide">📊 รายงานคงคลัง <em>อัปเดตอัตโนมัติ</em></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfp-lock" style="left:60px;top:322px">🔒 ชีตหลักถูกล็อก</div>
+                                        <svg class="sfx-cursor" style="left:640px;top:170px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                    </div>
+
+                                    <!-- Scene 3: the form leads step by step -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ฟอร์มเบิกสินค้าแบบทีละขั้น ขั้นที่หนึ่งเสร็จแล้ว ขั้นที่สองเลือกสินค้าฟิล์มยืดจากรายการ ระบบเติมยอดคงเหลือ 86 ม้วนให้เอง เบิก 20 ม้วน เหลือ 66 แล้วปุ่มถัดไปจึงกดได้ ข้างกันคือกฎที่ฟอร์มคุมให้" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win" style="left:56px;top:48px;width:446px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>เบิกสินค้า · ขั้นที่ 2 / 3</span></div>
+                                                    <div class="sfp-stepper">
+                                                        <span class="done"><i>✓</i>ผู้เบิก</span><hr class="done">
+                                                        <span class="now"><i>2</i>รายการ</span><hr>
+                                                        <span><i>3</i>ยืนยัน</span>
+                                                    </div>
+                                                    <div class="sfp-form">
+                                                        <div class="sfp-field"><span>แผนก</span><div class="sfp-input">ฝ่ายผลิต<span class="ok">✓</span></div></div>
+                                                        <div class="sfp-field"><span>สินค้า</span><div class="sfp-input focus">B-210 · ฟิล์มยืด<em>▾</em></div></div>
+                                                        <div class="sfp-field"><span>จำนวน</span>
+                                                            <div class="sfp-pair">
+                                                                <div class="sfp-input ro sfp-fill" style="--d:1.7s">คงเหลือ 86<em>ม้วน</em></div>
+                                                                <div class="sfp-input sfp-spin sfp-fill" style="--d:1.9s"><s>−</s><b>20</b><s>+</s></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sfp-meter sfp-fill" style="--d:2s"><span>หลังเบิก</span><div class="sfp-meter-track"><span></span></div><b>66 ม้วน</b></div>
+                                                        <div class="sfp-form-btns"><span class="sfp-btn">← ย้อนกลับ</span><span class="sfp-btn p sfp-next">ถัดไป →</span></div>
+                                                        <div class="sfp-drop">
+                                                            <div class="sfp-opt"><span><code>A-102</code>กล่อง L</span><em>340</em></div>
+                                                            <div class="sfp-opt"><span><code>A-105</code>เทปใส</span><em>1,200</em></div>
+                                                            <div class="sfp-opt pick"><span><code>B-210</code>ฟิล์มยืด</span><em>86</em></div>
+                                                            <div class="sfp-opt"><span><code>C-031</code>พาเลทไม้</span><em>24</em></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfp-rules sfx-shadow" style="left:544px;top:118px;--z:30px">
+                                                    <b class="sfp-rules-head">ฟอร์มคุมให้</b>
+                                                    <div class="sfp-rule" style="--d:.9s"><i>✓</i>เลือกจากรายการ</div>
+                                                    <div class="sfp-rule" style="--d:1.9s"><i>✓</i>ไม่เกินยอดคงเหลือ</div>
+                                                    <div class="sfp-rule" style="--d:2.5s"><i>✓</i>ทำครบทีละขั้น</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Scene 4: data, document and status all in order -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="รายการเบิก WD-0142 ถูกบันทึกเป็นแถวใหม่ในชีตฐานข้อมูลที่ล็อกไว้ ออกใบเบิกสินค้าพร้อมเครื่องหมายถูก และหน้าสถานะคำขอแสดงสถานะรูปแบบเดียวกันทุกรายการ" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-d">
+                                                <div class="sfx-win" style="left:22px;top:94px;width:306px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>🔒 DB_เบิกจ่าย</span></div>
+                                                    <table class="sfx-sheet sfp-sheet sfp-db">
+                                                        <tr><td class="b">เลขที่</td><td class="b">สินค้า</td><td class="b">จำนวน</td><td class="b">สถานะ</td></tr>
+                                                        <tr><td>WD-0139</td><td>เทปใส</td><td class="n">40</td><td class="c"><span class="sfp-st g">เสร็จ</span></td></tr>
+                                                        <tr><td>WD-0140</td><td>กล่อง L</td><td class="n">60</td><td class="c"><span class="sfp-st g">เสร็จ</span></td></tr>
+                                                        <tr><td>WD-0141</td><td>พาเลทไม้</td><td class="n">4</td><td class="c"><span class="sfp-st b">กำลังจัด</span></td></tr>
+                                                        <tr class="new"><td>WD-0142<span class="sfp-newpill">ใหม่</span></td><td>ฟิล์มยืด</td><td class="n">20</td><td class="c"><span class="sfp-st a">รออนุมัติ</span></td></tr>
+                                                    </table>
+                                                </div>
+                                                <div class="sfx-out" style="left:344px;top:84px;width:172px;--d:.35s;--r:3deg">
+                                                    <div class="sfx-out-head" style="background:#2563eb">WD-0142</div>
+                                                    <b class="sfx-doc-title">ใบเบิกสินค้า</b>
+                                                    <div class="sfp-slip-item"><span>แผนก</span><b>ฝ่ายผลิต</b></div>
+                                                    <div class="sfp-slip-item"><span>B-210 ฟิล์มยืด</span><b>20 ม้วน</b></div>
+                                                    <div class="sfp-slip-item"><span>คงเหลือ</span><b>66 ม้วน</b></div>
+                                                    <div class="sfp-sign"><span>ผู้เบิก</span><span>ผู้อนุมัติ</span></div>
+                                                    <i class="sfx-stamp" style="--d:1.1s">✓</i>
+                                                </div>
+                                                <div class="sfx-win" style="left:540px;top:122px;width:236px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>สถานะคำขอ</span></div>
+                                                    <div class="sfp-count">
+                                                        <div><b>1</b><span>รออนุมัติ</span></div>
+                                                        <div><b>1</b><span>กำลังจัด</span></div>
+                                                        <div><b>12</b><span>เสร็จ</span></div>
+                                                    </div>
+                                                    <div class="sfp-status">
+                                                        <div class="sfp-status-row new">WD-0142<span class="sfp-st a">รออนุมัติ</span></div>
+                                                        <div class="sfp-status-row">WD-0141<span class="sfp-st b">กำลังจัด</span></div>
+                                                        <div class="sfp-status-row">WD-0140<span class="sfp-st g">เสร็จ</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>บันทึกแล้ว · WD-0142</b><span>ไม่ต้องแตะชีตหลักเลย</span></div></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sfs-captions">
+                            <div class="sfs-caption" data-sfs-caption><h3>ทุกคนพิมพ์ลงชีตเดียวกัน</h3><p>สถานะไม่ตรงกัน · พิมพ์ทับสูตร · ไฟล์ถูกล็อก</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>เปิด Excel เจอหน้าแอปทันที</h3><p>เลือกงานจากเมนู ชีตหลักล็อกไว้</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>ฟอร์มพาทำทีละขั้น</h3><p>เลือกจากรายการ ระบบเติมและคุมเงื่อนไขให้</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>ข้อมูลเป็นระเบียบ ติดตามได้</h3><p>บันทึกเข้าฐานข้อมูล · ออกเอกสาร · เห็นสถานะ</p></div>
+                        </div>
+
+                        <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">เปิดแอป</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">กรอก</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">ผลลัพธ์</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">
+                                <svg data-sfs-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                                <svg data-sfs-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-carousel-shell" data-project-carousel>
                     <div class="project-carousel-label">โปรเจกต์ตัวอย่าง</div>
                     <button type="button" class="project-carousel-nav project-carousel-nav-prev" aria-label="Previous project" data-project-prev>&#8249;</button>
@@ -135,5 +330,6 @@
     </section>
     <script src="../../assets/js/i18n.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>
