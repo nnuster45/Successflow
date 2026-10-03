@@ -51,10 +51,15 @@
         timer = setTimeout(() => show(current + 1), SCENE_MS);
     }
 
+    function isEnglish() {
+        return document.documentElement.lang === 'en';
+    }
+
     function setPlaying(next) {
         playing = next;
         playButton.setAttribute('aria-pressed', playing ? 'true' : 'false');
-        playButton.setAttribute('aria-label', playing ? 'หยุด' : 'เล่นอัตโนมัติ');
+        if (isEnglish()) playButton.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+        else playButton.setAttribute('aria-label', playing ? 'หยุด' : 'เล่นอัตโนมัติ');
         iconPause.style.display = playing ? '' : 'none';
         iconPlay.style.display = playing ? 'none' : '';
         schedule();
@@ -89,6 +94,31 @@
 
     if (reduceMotion.addEventListener) {
         reduceMotion.addEventListener('change', () => setPlaying(!reduceMotion.matches));
+    }
+
+    // English: pages with a TH/EN switch ship a dictionary of the story's Thai strings,
+    // swapped in place whenever i18n.js sets <html lang>.
+    const dictionary = root.querySelector('script[data-sfs-en]');
+    if (dictionary) {
+        const en = JSON.parse(dictionary.textContent);
+        const texts = [];
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            const key = node.nodeValue.trim();
+            if (key && en[key]) texts.push({ node, th: node.nodeValue, en: node.nodeValue.replace(key, en[key]) });
+        }
+        const labels = Array.from(root.querySelectorAll('[aria-label]'))
+            .filter((el) => en[el.getAttribute('aria-label')])
+            .map((el) => ({ el, th: el.getAttribute('aria-label'), en: en[el.getAttribute('aria-label')] }));
+        const applyLanguage = () => {
+            const english = isEnglish();
+            texts.forEach((t) => { t.node.nodeValue = english ? t.en : t.th; });
+            labels.forEach((l) => l.el.setAttribute('aria-label', english ? l.en : l.th));
+            setPlaying(playing);
+        };
+        new MutationObserver(applyLanguage).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        applyLanguage();
     }
 
     // The illustration is drawn on a fixed 800px canvas; scale it to the card width.

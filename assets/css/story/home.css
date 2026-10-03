@@ -29,6 +29,7 @@
     pointer-events: none;
 }
 
+.home-hero h1 { text-wrap: balance; }
 .home-hero h1 .sf-nowrap { white-space: nowrap; }
 .home-hero h1 .text-blue-400 { color: #2563eb; }
 
