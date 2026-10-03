@@ -7,6 +7,13 @@
     overflow: hidden;
 }
 
+/* Single looping scene with no captions or chapter nav, set into a home-page section */
+.sfs-vignette {
+    border: 0;
+    border-radius: 1.25rem;
+    background: transparent;
+}
+
 /* Used as the page cover: runs edge to edge inside the case-study card */
 .sfs-cover {
     border-radius: 0;
@@ -23,7 +30,7 @@
 .sfs-frame {
     position: relative;
     width: 100%;
-    aspect-ratio: 800 / 440;
+    aspect-ratio: 800 / var(--sfs-h, 440);
     overflow: hidden;
 }
 
@@ -32,7 +39,7 @@
     left: 0;
     top: 0;
     width: 800px;
-    height: 440px;
+    height: calc(var(--sfs-h, 440) * 1px);
     transform: scale(var(--s, 1));
     transform-origin: 0 0;
     font-family: 'Prompt', sans-serif;
@@ -135,28 +142,9 @@
 .sfs-tab.is-active { color: #0f172a; }
 .sfs-tab.is-active .sfs-tab-num { background: #2563eb; color: #fff; }
 
-.sfs-play {
-    flex: none;
-    align-self: center;
-    display: grid;
-    place-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 9999px;
-    border: 1px solid #e2e8f0;
-    background: #fff;
-    color: #334155;
-    cursor: pointer;
-}
-
-.sfs-play:hover { border-color: #2563eb; color: #2563eb; }
-.sfs-play:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
-.sfs-play svg { width: 0.9rem; height: 0.9rem; }
-
 @media (max-width: 639px) {
     .sfs-nav { gap: 0.25rem; padding: 0.5rem; }
     .sfs-tab { font-size: 0.78rem; }
-    .sfs-play { width: 2.2rem; height: 2.2rem; }
 }
 
 /* ---------- Mockup building blocks ---------- */
