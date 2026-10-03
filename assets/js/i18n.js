@@ -9,7 +9,7 @@ const translations = {
     nav_faq: { th: 'FAQ', en: 'FAQ' },
     nav_contact: { th: 'ปรึกษาแนวทางงานฟรี', en: 'Free Consultation' },
     hero_title: {
-      th: 'เปลี่ยนงาน Manual ที่น่าเบื่อ <br class="hidden md:block"> ให้เป็นระบบ <span class="text-blue-400">Automation อัจฉริยะ</span>',
+      th: 'เปลี่ยนงาน Manual <span class="sf-nowrap">ที่น่าเบื่อ</span> <br class="hidden md:block"> ให้เป็นระบบ <span class="text-blue-400">Automation อัจฉริยะ</span>',
       en: 'Turn repetitive manual work <br class="hidden md:block"> into <span class="text-blue-400">smart automation systems</span>',
     },
     hero_desc: {
