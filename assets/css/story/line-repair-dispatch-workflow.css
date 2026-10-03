@@ -1,0 +1,653 @@
+/* Story demo pieces for: LINE repair request & field technician dispatch */
+
+@property --sfp-n {
+    syntax: '<integer>';
+    inherits: false;
+    initial-value: 0;
+}
+
+.sfp-rooms,
+.sfp-wait,
+.sfp-phone,
+.sfp-flex {
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.06),
+        0 8px 16px -6px rgba(15, 23, 42, 0.12),
+        0 30px 60px -18px rgba(15, 23, 42, 0.28);
+}
+
+.sfp-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-style: normal; }
+
+/* LINE-style official account badge */
+.sfp-oa,
+.sfp-oa-dot {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    background: #06c755;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.sfp-oa-dot { width: 20px; height: 20px; border-radius: 50%; }
+
+/* Technician initial dot */
+.sfp-ini {
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    border-radius: 50%;
+    color: #fff;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+/* ---------- Scene 1: scattered chat rooms ---------- */
+.sfp-rooms {
+    position: absolute;
+    width: 168px;
+    padding: 10px 10px 6px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    transform: translateZ(var(--z, 0));
+}
+
+.sfp-rooms-head { font-size: 12px; font-weight: 700; color: #0f172a; margin: 0 0 6px 2px; }
+
+.sfp-room {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 2px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.sfp-room-ico { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; font-size: 13px; }
+.sfp-room b { display: block; font-size: 11px; font-weight: 600; color: #334155; white-space: nowrap; }
+.sfp-room div i { display: block; height: 5px; width: 80%; margin-top: 4px; border-radius: 3px; background: #eef2f6; }
+
+.sfp-room em {
+    min-width: 22px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #fff;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sfp-bubble-hot { background: #fee2e2; color: #b91c1c; font-weight: 600; }
+
+.sfp-wait {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 16px 7px 8px;
+    border-radius: 999px;
+    background: #fff;
+    white-space: nowrap;
+}
+
+.sfp-wait-ico { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #fff7ed; font-size: 13px; }
+.sfp-wait b { font-size: 13px; color: #0f172a; }
+.sfp-wait em { font-style: normal; font-size: 12px; font-weight: 600; color: #dc2626; background: #fee2e2; padding: 2px 8px; border-radius: 999px; }
+
+/* ---------- Phone (LINE chat) ---------- */
+.sfp-phone {
+    position: absolute;
+    width: 216px;
+    height: 352px;
+    border-radius: 30px;
+    border: 7px solid #0f172a;
+    background: #e8eef6;
+    overflow: hidden;
+    transform: translateZ(var(--z, 0));
+}
+
+.sfp-phone::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    width: 54px;
+    height: 13px;
+    margin-left: -27px;
+    border-radius: 10px;
+    background: #0f172a;
+    z-index: 2;
+}
+
+.sfp-ph-head {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 50px;
+    padding: 18px 12px 0;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.sfp-ph-body { display: flex; flex-direction: column; gap: 7px; padding: 10px 10px; }
+
+.sfp-b,
+.sfp-u {
+    max-width: 84%;
+    padding: 6px 10px;
+    font-size: 10.5px;
+    color: #334155;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-b { align-self: flex-start; background: #fff; border-radius: 12px 12px 12px 4px; }
+.sfp-u { align-self: flex-end; background: #c5efa6; border-radius: 12px 12px 4px 12px; }
+
+.sfp-qr { display: flex; gap: 4px; flex-wrap: nowrap; }
+.sfp-qr span {
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    font-size: 9.5px;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sfp-qr span.on { background: #06c755; border-color: #06c755; color: #fff; font-weight: 600; }
+
+.sfp-loc { width: 138px; padding: 5px; }
+.sfp-loc b { display: block; padding: 4px 3px 1px; font-size: 10px; font-weight: 600; color: #14532d; white-space: nowrap; }
+
+.sfp-loc-map {
+    position: relative;
+    display: block;
+    height: 46px;
+    border-radius: 8px;
+    background:
+        linear-gradient(90deg, transparent 46%, #fff 46%, #fff 52%, transparent 52%),
+        linear-gradient(0deg, transparent 54%, #fff 54%, #fff 62%, transparent 62%),
+        linear-gradient(135deg, #dbeafe, #e0e7ff 60%, #fef3c7);
+}
+
+.sfp-loc-map i {
+    position: absolute;
+    left: 60%;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50% 50% 50% 0;
+    background: #ef4444;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 6px -2px rgba(15, 23, 42, 0.4);
+}
+
+.sfp-loc-map i::after { content: ""; position: absolute; left: 5px; top: 5px; width: 6px; height: 6px; border-radius: 50%; background: #fff; }
+
+/* Photo thumbnails drawn with CSS: an AC indoor unit and a water drip */
+.sfp-photos { display: flex; gap: 5px; align-self: flex-end; }
+
+.sfp-shot {
+    position: relative;
+    width: 58px;
+    height: 46px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px -1px rgba(15, 23, 42, 0.25);
+    overflow: hidden;
+}
+
+.sfp-shot-ac { background: linear-gradient(#e7e5e4, #d6d3d1); }
+.sfp-shot-ac::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    top: 9px;
+    height: 17px;
+    border-radius: 4px 4px 6px 6px;
+    background: linear-gradient(#ffffff 0 62%, #e2e8f0 62% 66%, #f8fafc 66%);
+    box-shadow: 0 2px 3px rgba(15, 23, 42, 0.18);
+}
+
+.sfp-shot-ac::after {
+    content: "";
+    position: absolute;
+    right: 11px;
+    top: 13px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+.sfp-shot-drip { background: linear-gradient(#cbd5e1, #94a3b8); }
+.sfp-shot-drip::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 12px;
+    background: #f1f5f9;
+    box-shadow: 0 2px 0 #e2e8f0;
+}
+
+.sfp-shot-drip::after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 0 50% 50% 50%;
+    background: #3b82f6;
+    transform: rotate(45deg);
+}
+
+.sfp-photos-sm .sfp-shot { width: 46px; height: 36px; }
+.sfp-photos-sm .sfp-shot-ac::before { left: 5px; right: 5px; top: 7px; height: 13px; }
+.sfp-photos-sm .sfp-shot-ac::after { right: 8px; top: 10px; }
+.sfp-photos-sm .sfp-shot-drip::before { height: 9px; }
+.sfp-photos-sm .sfp-shot-drip::after { left: 18px; top: 14px; width: 8px; height: 8px; }
+
+.sfp-send {
+    margin-top: 3px;
+    padding: 8px;
+    border-radius: 10px;
+    background: linear-gradient(#22c55e, #06c755);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 3px 0 #15803d, 0 8px 14px -6px rgba(6, 199, 85, 0.6);
+}
+
+/* Cursor targets (canvas coordinates) */
+.sfp-cursor-send { left: 262px; top: 362px; }
+.sfp-cursor-ok { left: 196px; top: 296px; }
+
+/* ---------- Scene 2: ticket filling itself ---------- */
+.sfp-tk-body { padding: 12px 16px 14px; }
+
+.sfp-tk-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.sfp-tk-head b { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; color: #0f172a; }
+
+.sfp-pill { padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+.sfp-pill-new { background: #dbeafe; color: #1d4ed8; }
+
+.sfp-field {
+    display: grid;
+    grid-template-columns: 28px 1fr 20px;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 0;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.sfp-fi { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; font-size: 13px; }
+.sfp-field em { display: block; font-style: normal; font-size: 10px; color: #94a3b8; }
+.sfp-field b { display: block; font-size: 12.5px; font-weight: 600; color: #0f172a; white-space: nowrap; }
+
+.sfp-ok {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #16a34a;
+    color: #fff;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sfp-meter {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px solid #eef2f6;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.sfp-meter div { height: 8px; border-radius: 999px; background: #e2e8f0; overflow: hidden; }
+.sfp-meter i { display: block; height: 100%; width: 100%; border-radius: inherit; background: linear-gradient(90deg, #3b82f6, #10b981); transform-origin: left; }
+.sfp-meter b { color: #15803d; font-size: 12px; }
+
+.sfp-link { position: absolute; width: 90px; height: 40px; }
+
+/* ---------- Scene 3: approval card ---------- */
+.sfp-flex {
+    position: absolute;
+    width: 220px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    transform: translateZ(var(--z, 0));
+}
+
+.sfp-flex-head { position: relative; height: 32px; border-radius: 16px 16px 0 0; overflow: hidden; }
+
+.sfp-fh-wait,
+.sfp-fh-ok {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.sfp-fh-wait { background: #fef3c7; color: #b45309; }
+.sfp-fh-ok { background: #dcfce7; color: #15803d; }
+
+.sfp-flex-body { padding: 10px 14px 14px; }
+.sfp-flex-body > .sfp-mono { display: block; font-size: 10.5px; color: #94a3b8; }
+.sfp-flex-title { display: block; font-size: 15px; font-weight: 700; color: #0f172a; margin: 1px 0 6px; }
+
+.sfp-kv { display: flex; gap: 6px; padding: 3px 0; font-size: 11.5px; color: #475569; }
+.sfp-flex .sfp-photos { align-self: auto; margin: 6px 0 2px; }
+
+.sfp-btns { display: grid; grid-template-columns: 1fr 1.3fr; gap: 7px; margin-top: 10px; }
+
+.sfp-btn {
+    padding: 7px 4px;
+    border-radius: 9px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #64748b;
+    font-size: 11.5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sfp-btn-ok {
+    border-color: #16a34a;
+    background: linear-gradient(#22c55e, #16a34a);
+    color: #fff;
+    box-shadow: 0 3px 0 #15803d, 0 8px 14px -6px rgba(22, 163, 74, 0.6);
+}
+
+/* Dispatch console */
+.sfp-dispatch {
+    display: grid;
+    grid-template-columns: 196px 1fr;
+    gap: 14px;
+    padding: 12px 14px 14px;
+}
+
+.sfp-mapsvg {
+    display: block;
+    width: 196px;
+    height: 236px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.sfp-zl { font-family: 'Prompt', sans-serif; font-size: 9.5px; font-weight: 600; fill: #64748b; }
+.sfp-zl-on { fill: #1d4ed8; }
+.sfp-zone-on { stroke: #2563eb; stroke-width: 1.5; stroke-dasharray: 4 3; }
+.sfp-tech text { font-family: 'Prompt', sans-serif; font-size: 10px; font-weight: 700; fill: #fff; text-anchor: middle; }
+.sfp-eta text { font-family: 'Prompt', sans-serif; font-size: 8.5px; font-weight: 700; fill: #fff; }
+
+.sfp-techs { position: relative; min-width: 0; }
+.sfp-techs .sfx-row { grid-template-columns: 1.15fr .9fr 1.05fr; padding: 9px 4px; }
+.sfp-techs .sfx-row span:first-child { font-family: inherit; font-size: 12px; white-space: nowrap; }
+.sfx-st b.sfp-off { background: #f1f5f9; color: #64748b; }
+.sfp-pick { border-radius: 8px; }
+
+.sfp-notify {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 14px;
+    padding: 9px 12px;
+    border-radius: 12px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.sfp-notify b { display: block; font-size: 12px; color: #14532d; }
+.sfp-notify em { display: block; font-style: normal; font-size: 10.5px; color: #64748b; }
+
+/* ---------- Scene 4: field status board ---------- */
+.sfp-board-body { padding: 14px 16px 12px; }
+
+.sfp-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px; }
+
+.sfp-kpi {
+    padding: 8px 11px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #eef2f6;
+}
+
+.sfp-kpi span { display: block; font-size: 10.5px; color: #64748b; white-space: nowrap; }
+.sfp-kpi b { display: block; font-size: 24px; line-height: 1.2; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
+.sfp-kpi-ok { background: #f0fdf4; border-color: #dcfce7; }
+.sfp-kpi-ok b { color: #15803d; }
+
+.sfp-count { --sfp-n: var(--to); counter-reset: sfp var(--sfp-n); }
+.sfp-count::after { content: counter(sfp); }
+
+.sfp-trow {
+    display: grid;
+    grid-template-columns: 66px 1.2fr 1fr 112px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 2px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 11.5px;
+    color: #334155;
+    white-space: nowrap;
+}
+
+.sfp-trow > b { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #0f172a; }
+
+.sfp-s {
+    justify-self: start;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.sfp-s-done { background: #dcfce7; color: #15803d; }
+.sfp-s-fix { background: #fef3c7; color: #b45309; }
+.sfp-s-go { background: #dbeafe; color: #1d4ed8; }
+.sfp-s-plan { background: #f1f5f9; color: #475569; }
+
+/* Customer tracking card */
+.sfp-phone-sm { width: 196px; height: 322px; }
+
+.sfp-track {
+    padding: 10px 12px 6px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-track > .sfp-mono { display: block; margin-bottom: 4px; font-size: 10px; color: #64748b; }
+
+.sfp-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 14px 1fr auto;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 0;
+    font-size: 11px;
+    color: #334155;
+}
+
+.sfp-step i {
+    position: relative;
+    z-index: 1;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    background: #fff;
+}
+
+.sfp-step::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    height: 100%;
+    width: 2px;
+    background: #22c55e;
+    transform-origin: top;
+}
+
+.sfp-step-end::before { display: none; }
+.sfp-step em { font-style: normal; font-size: 10px; color: #94a3b8; font-variant-numeric: tabular-nums; }
+.sfp-step-end span { font-weight: 700; color: #15803d; }
+
+.sfp-step i { border-color: #22c55e; background: #22c55e; box-shadow: inset 0 0 0 2px #fff; }
+
+.sfp-rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    font-size: 10.5px;
+    color: #475569;
+}
+
+.sfp-rate b { color: #f59e0b; font-size: 13px; letter-spacing: 1px; }
+.sfp-rate i { font-style: normal; display: inline-block; }
+
+/* ---------- Motion (active scene only) ---------- */
+
+/* Scene 2: chat messages arrive, ticket fields check off */
+.is-active .sfp-msg { opacity: 0; animation: sfp-msg 0.35s ease forwards; animation-delay: var(--d); }
+.is-active .sfp-send { animation: sfp-msg 0.35s ease forwards var(--d), sfp-press-line 0.5s ease 1.95s; }
+.is-active .sfp-cursor-send { animation: sfp-cursor 1.6s ease-in-out both 0.9s; }
+.is-active .sfp-field b { opacity: 0; animation: sfx-in 0.3s ease forwards; animation-delay: calc(var(--d) - 0.1s); }
+.is-active .sfp-ok { opacity: 0; animation: sfp-pop 0.35s cubic-bezier(.2, 1.5, .4, 1) forwards; animation-delay: var(--d); }
+.is-active .sfp-meter i { animation: sfp-grow-x 0.9s ease both 2s; }
+.is-active .sfp-link path:first-child { animation: sfp-dash 0.8s linear infinite; }
+.is-active .sfp-link { opacity: 0; animation: sfx-in 0.4s ease forwards 1.9s; }
+
+/* Scene 3: approve, then pick the technician by area */
+.is-active .sfp-cursor-ok { animation: sfp-cursor 1.4s ease-in-out both 0.2s; }
+.is-active .sfp-btn-ok { animation: sfp-press-ok 0.5s ease 0.85s; }
+.is-active .sfp-fh-ok { opacity: 0; animation: sfx-in 0.3s ease forwards 1.1s; }
+.is-active .sfp-zone-on { stroke-opacity: 0; animation: sfp-zone 0.4s ease forwards 1.3s; }
+.is-active .sfp-tech { opacity: 0; animation: sfx-in 0.3s ease forwards 1.3s; }
+.is-active .sfp-pin-ring { transform-box: fill-box; transform-origin: center; animation: sfp-ring 1.6s ease-out infinite; }
+.is-active .sfp-route { animation: sfp-draw 0.5s ease forwards 2.3s; }
+.is-active .sfp-eta { opacity: 0; animation: sfx-in 0.3s ease forwards 2.6s; }
+.is-active .sfp-pick { animation: sfp-pick 0.4s ease forwards 2.4s; }
+.is-active .sfp-notify { opacity: 0; animation: sfp-rise 0.45s ease forwards 2.5s; }
+
+/* Scene 4: board counts up, rows deal in, customer timeline lights up */
+.is-active .sfp-board { opacity: 0; animation: sfp-rise 0.6s ease forwards 0.1s; }
+.is-active .sfp-count { animation: sfp-count 1.2s cubic-bezier(.2, .7, .3, 1) both 0.4s; }
+.is-active .sfp-trow { opacity: 0; animation: sfp-row 0.4s ease forwards; animation-delay: var(--d); }
+.is-active .sfp-step i { animation: sfp-dot 0.35s cubic-bezier(.2, 1.5, .4, 1) both; animation-delay: var(--d); }
+.is-active .sfp-step::before { animation: sfp-grow-y 0.25s ease both; animation-delay: calc(var(--d) + 0.15s); }
+.is-active .sfp-rate i { animation: sfp-pop 0.3s cubic-bezier(.2, 1.5, .4, 1) both; animation-delay: var(--d); }
+
+@keyframes sfp-msg {
+    from { opacity: 0; transform: translateY(8px) scale(0.96); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-pop {
+    from { opacity: 0; transform: scale(0.4); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sfp-press-line {
+    0%, 100% { transform: translateY(0); }
+    40%, 60% { transform: translateY(3px); box-shadow: 0 0 0 #15803d, 0 3px 6px -3px rgba(6, 199, 85, 0.6); }
+}
+
+@keyframes sfp-press-ok {
+    0%, 100% { transform: translateY(0); }
+    40%, 60% { transform: translateY(3px); box-shadow: 0 0 0 #15803d, 0 3px 6px -3px rgba(22, 163, 74, 0.6); }
+}
+
+@keyframes sfp-cursor {
+    0% { transform: translate(80px, 60px); opacity: 0; }
+    15% { opacity: 1; }
+    45% { transform: translate(0, 0) scale(1); opacity: 1; }
+    55% { transform: translate(0, 2px) scale(0.88); }
+    65% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(40px, 36px); opacity: 0; }
+}
+
+@keyframes sfp-dash { to { stroke-dashoffset: -18; } }
+
+@keyframes sfp-grow-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes sfp-grow-y {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+@keyframes sfp-zone { to { stroke-opacity: 1; } }
+
+@keyframes sfp-ring {
+    from { transform: scale(0.6); opacity: 0.45; }
+    to { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes sfp-draw { to { stroke-dashoffset: 0; } }
+
+@keyframes sfp-pick { to { background: #eff6ff; box-shadow: inset 3px 0 0 #2563eb; } }
+
+@keyframes sfp-rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-row {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-count {
+    from { --sfp-n: 0; }
+    to { --sfp-n: var(--to); }
+}
+
+@keyframes sfp-dot {
+    from { border-color: #cbd5e1; background: #fff; transform: scale(0.6); }
+    to { border-color: #22c55e; background: #22c55e; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-cursor-send, .sfp-cursor-ok { display: none; }
+    .is-active .sfp-link path:first-child,
+    .is-active .sfp-pin-ring { animation: none !important; }
+}

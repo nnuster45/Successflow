@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/line-repair-dispatch-workflow.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"LINE Repair Request And Field Dispatch Workflow","url":"https://www.successflow.it.com/portfolio/line-repair-dispatch-workflow/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for a LINE chatbot that receives repair requests, routes them for approval, and assigns onsite jobs to supervisors or technicians automatically."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"LINE Repair Request And Field Dispatch Workflow","item":"https://www.successflow.it.com/portfolio/line-repair-dispatch-workflow/"}]}]}
     </script>
@@ -35,12 +37,202 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-900 relative overflow-hidden">
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: repair requests scattered across chats, queue kept by hand -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="งานแจ้งซ่อมกระจายอยู่ในแชต LINE หลายห้อง ไฟล์คิวช่างที่คัดลอกด้วยมือมีสถานที่ไม่ครบ ยังไม่ได้มอบหมายช่าง และลูกค้าถามซ้ำว่าช่างจะมาเมื่อไร">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:28px;top:86px;width:378px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>คิวงานช่าง_ต.ค.(ล่าสุด2).xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                    <tr><th>1</th><td class="b">อาการ</td><td class="b">สถานที่</td><td class="b">ช่าง</td><td class="b">สถานะ</td></tr>
+                                                    <tr><th>2</th><td>แอร์ไม่เย็น</td><td class="warn">ตึกไหน?</td><td class="muted">—</td><td class="err">ยังไม่ส่ง</td></tr>
+                                                    <tr><th>3</th><td>น้ำรั่วใต้ซิงก์</td><td>ตึก A 504</td><td>ช่างบอย</td><td class="warn">ตามอยู่</td></tr>
+                                                    <tr><th>4</th><td>ไฟดับครึ่งห้อง</td><td class="warn">ไม่มีรูป</td><td class="warn">?</td><td class="err">รออนุมัติ</td></tr>
+                                                    <tr><th>5</th><td>แอร์ไม่เย็น</td><td>ตึก B 1207</td><td class="muted">—</td><td class="err">ซ้ำ?</td></tr>
+                                                    <tr><th>6</th><td colspan="4" class="muted">รอคัดลอกจากแชตอีก 14 เคส…</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfp-rooms sfx-float" style="left:424px;top:44px;--d:.8s;--z:40px">
+                                                <div class="sfp-rooms-head">แชต</div>
+                                                <div class="sfp-room"><span class="sfp-room-ico" style="background:#dcfce7">🔧</span><div><b>กลุ่มแจ้งซ่อม</b><i></i></div><em>23</em></div>
+                                                <div class="sfp-room"><span class="sfp-room-ico" style="background:#e0f2fe">💬</span><div><b>LINE OA</b><i></i></div><em>41</em></div>
+                                                <div class="sfp-room"><span class="sfp-room-ico" style="background:#fef3c7">🧰</span><div><b>ทีมช่าง</b><i></i></div><em>9</em></div>
+                                                <div class="sfp-room"><span class="sfp-room-ico" style="background:#ede9fe">🏢</span><div><b>นิติ ตึก B</b><i></i></div><em>6</em></div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-chat sfx-float" style="left:590px;top:108px;--d:.4s">
+                                            <div class="sfx-chat-head"><span class="sfp-oa-dot">L</span><b>กลุ่มแจ้งซ่อม</b></div>
+                                            <div class="sfx-bubble">แอร์ห้อง 1207 ไม่เย็นค่ะ</div>
+                                            <div class="sfx-bubble">ตึกไหนครับ? ขอรูปด้วย</div>
+                                            <div class="sfx-bubble">ส่งรูปไปแล้วเมื่อวานค่ะ 📷</div>
+                                            <div class="sfx-bubble sfp-bubble-hot">ช่างจะมากี่โมงคะ??</div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:52px;top:342px">🔧 14 เคส ยังไม่มีช่าง</div>
+                                    <div class="sfp-wait sfx-pulse" style="left:292px;top:380px;--d:.6s"><span class="sfp-wait-ico">⏳</span><b>ลูกค้ารอคำตอบ</b><em>2 วัน</em></div>
+                                </div>
+
+                                <!-- Scene 2: customer reports through the LINE chatbot, ticket fills itself -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ลูกค้าแจ้งซ่อมผ่าน LINE chatbot เลือกประเภทงานแอร์ ส่งตำแหน่งตึก B ห้อง 1207 แนบรูป 2 รูป เลือกเวลานัด แล้วกดส่ง ระบบสร้างใบงาน TK-2410 ที่มีข้อมูลครบ 4 จาก 4 ช่อง" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfp-phone" style="left:100px;top:42px;--z:20px">
+                                                <div class="sfp-ph-head"><span class="sfp-oa">SF</span><b>SF Service · แจ้งซ่อม</b></div>
+                                                <div class="sfp-ph-body">
+                                                    <div class="sfp-b sfp-msg" style="--d:.2s">เลือกประเภทงานค่ะ</div>
+                                                    <div class="sfp-qr sfp-msg" style="--d:.45s"><span class="on">❄ แอร์</span><span>💧 ประปา</span><span>⚡ ไฟฟ้า</span></div>
+                                                    <div class="sfp-u sfp-loc sfp-msg" style="--d:.75s"><span class="sfp-loc-map"><i></i></span><b>📍 ตึก B ห้อง 1207</b></div>
+                                                    <div class="sfp-photos sfp-msg" style="--d:1.05s"><span class="sfp-shot sfp-shot-ac"></span><span class="sfp-shot sfp-shot-drip"></span></div>
+                                                    <div class="sfp-qr sfp-msg" style="--d:1.35s"><span class="on">📅 4 ต.ค. 13:00–15:00</span></div>
+                                                    <div class="sfp-send sfp-msg" style="--d:1.55s">ส่งแจ้งซ่อม</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:418px;top:58px;width:338px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>ใบงานใหม่ · สร้างอัตโนมัติ</span></div>
+                                                <div class="sfp-tk-body">
+                                                    <div class="sfp-tk-head"><b>TK-2410</b><span class="sfp-pill sfp-pill-new">ใหม่</span></div>
+                                                    <div class="sfp-field" style="--d:2.05s"><span class="sfp-fi" style="background:#e0f2fe">❄</span><div><em>ประเภทงาน</em><b>แอร์ไม่เย็น</b></div><i class="sfp-ok">✓</i></div>
+                                                    <div class="sfp-field" style="--d:2.25s"><span class="sfp-fi" style="background:#fee2e2">📍</span><div><em>สถานที่</em><b>ลุมพินี อ่อนนุช · ตึก B 1207</b></div><i class="sfp-ok">✓</i></div>
+                                                    <div class="sfp-field" style="--d:2.45s"><span class="sfp-fi" style="background:#f1f5f9">📷</span><div><em>รูปประกอบ</em><b>2 รูป</b></div><i class="sfp-ok">✓</i></div>
+                                                    <div class="sfp-field" style="--d:2.65s"><span class="sfp-fi" style="background:#fef3c7">📅</span><div><em>นัดหมาย</em><b>4 ต.ค. · 13:00–15:00</b></div><i class="sfp-ok">✓</i></div>
+                                                    <div class="sfp-meter"><span>ข้อมูลครบ</span><div><i></i></div><b>4/4</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfp-link" viewBox="0 0 90 40" aria-hidden="true" style="left:330px;top:206px"><path d="M2 20 H80" fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-dasharray="5 4"/><path d="M76 13 L86 20 L76 27" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <svg class="sfx-cursor sfp-cursor-send" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: coordinator approves, system picks the technician by area -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ผู้ประสานงานกดอนุมัติใบงาน TK-2410 ใน LINE จากนั้นระบบเลือกช่างตามพื้นที่ ช่างบอยคิวเต็ม ช่างนัทอยู่นอกพื้นที่ จึงมอบหมายให้ช่างเอกในโซนอ่อนนุช ถึงหน้างานในประมาณ 25 นาที และส่งงานเข้า LINE ช่างกับหัวหน้าช่าง" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfp-flex" style="left:52px;top:100px;--z:30px">
+                                                <div class="sfp-flex-head"><span class="sfp-fh-wait">⏳ รออนุมัติ</span><span class="sfp-fh-ok">✓ อนุมัติแล้ว</span></div>
+                                                <div class="sfp-flex-body">
+                                                    <em class="sfp-mono">TK-2410</em>
+                                                    <b class="sfp-flex-title">แอร์ไม่เย็น</b>
+                                                    <div class="sfp-kv"><span>📍</span>ตึก B · ห้อง 1207</div>
+                                                    <div class="sfp-kv"><span>📅</span>4 ต.ค. · 13:00</div>
+                                                    <div class="sfp-photos sfp-photos-sm"><span class="sfp-shot sfp-shot-ac"></span><span class="sfp-shot sfp-shot-drip"></span></div>
+                                                    <div class="sfp-btns"><span class="sfp-btn">ตีกลับ</span><span class="sfp-btn sfp-btn-ok">✓ อนุมัติ</span></div>
+                                                </div>
+                                                <i class="sfx-stamp" style="--d:1.25s">✓</i>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:296px;top:72px;width:480px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>จ่ายงานช่าง · ตามพื้นที่</span></div>
+                                                <div class="sfp-dispatch">
+                                                    <svg class="sfp-mapsvg" viewBox="0 0 196 236" aria-hidden="true">
+                                                        <rect width="196" height="236" rx="10" fill="#ffffff"/>
+                                                        <rect x="6" y="6" width="88" height="138" rx="6" fill="#ede9fe"/>
+                                                        <rect class="sfp-zone-on" x="102" y="6" width="88" height="138" rx="6" fill="#dbeafe"/>
+                                                        <rect x="6" y="152" width="184" height="78" rx="6" fill="#fef3c7"/>
+                                                        <path d="M6 60 H94 M48 6 V144 M102 92 H190 M146 6 V144 M6 192 H190 M70 152 V230 M140 152 V230" stroke="#fff" stroke-width="3" opacity=".8"/>
+                                                        <text x="12" y="20" class="sfp-zl">พระราม 9</text>
+                                                        <text x="108" y="20" class="sfp-zl sfp-zl-on">อ่อนนุช</text>
+                                                        <text x="12" y="166" class="sfp-zl">บางนา</text>
+                                                        <path class="sfp-route" d="M132 118 C132 98 156 104 156 84" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="44" stroke-dashoffset="44"/>
+                                                        <g class="sfp-eta"><rect x="148" y="112" width="44" height="16" rx="8" fill="#2563eb"/><text x="170" y="123.5" text-anchor="middle">25 นาที</text></g>
+                                                        <circle class="sfp-pin-ring" cx="156" cy="66" r="14" fill="#ef4444" opacity=".18"/>
+                                                        <path d="M156 84 C150 76 145 71 145 65 A11 11 0 0 1 167 65 C167 71 162 76 156 84 Z" fill="#ef4444"/>
+                                                        <circle cx="156" cy="65" r="4" fill="#fff"/>
+                                                        <g class="sfp-tech"><circle cx="46" cy="96" r="10" fill="#8b5cf6" stroke="#fff" stroke-width="2.5"/><text x="46" y="99.5">น</text></g>
+                                                        <g class="sfp-tech"><circle cx="132" cy="124" r="10" fill="#2563eb" stroke="#fff" stroke-width="2.5"/><text x="132" y="127.5">อ</text></g>
+                                                        <g class="sfp-tech"><circle cx="58" cy="210" r="10" fill="#f59e0b" stroke="#fff" stroke-width="2.5"/><text x="58" y="213.5">บ</text></g>
+                                                    </svg>
+                                                    <div class="sfp-techs">
+                                                        <div class="sfx-row head"><span>ช่าง</span><span>โซน</span><span>สถานะ</span></div>
+                                                        <div class="sfx-row" style="--d:1.5s"><span><i class="sfp-ini" style="background:#f59e0b">บ</i>ช่างบอย</span><span>บางนา</span><span class="sfx-st"><em>เช็ก…</em><b class="bad">คิวเต็ม</b></span></div>
+                                                        <div class="sfx-row" style="--d:1.8s"><span><i class="sfp-ini" style="background:#8b5cf6">น</i>ช่างนัท</span><span>พระราม 9</span><span class="sfx-st"><em>เช็ก…</em><b class="sfp-off">นอกพื้นที่</b></span></div>
+                                                        <div class="sfx-row sfp-pick" style="--d:2.1s"><span><i class="sfp-ini" style="background:#2563eb">อ</i>ช่างเอก</span><span>อ่อนนุช</span><span class="sfx-st"><em>เช็ก…</em><b class="ok">✓ มอบหมาย</b></span></div>
+                                                        <div class="sfp-notify"><span class="sfp-oa">L</span><div><b>ส่งงานเข้า LINE แล้ว</b><em>ช่างเอก · หัวหน้าช่าง</em></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor sfp-cursor-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 4: field status board and live tracking for the customer -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="หน้าสถานะงานภาคสนามวันนี้ 24 งาน กำลังซ่อม 5 เสร็จแล้ว 19 ตกหล่น 0 แต่ละใบงานมีช่างรับผิดชอบและสถานะล่าสุด ส่วนลูกค้าเห็นความคืบหน้าใน LINE ตั้งแต่แจ้งเรื่องจนซ่อมเสร็จ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win sfp-board" style="left:34px;top:58px;width:494px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>สถานะงานภาคสนาม · 4 ต.ค.</span></div>
+                                                <div class="sfp-board-body">
+                                                    <div class="sfp-kpis">
+                                                        <div class="sfp-kpi"><span>งานวันนี้</span><b class="sfp-count" style="--to:24"></b></div>
+                                                        <div class="sfp-kpi"><span>กำลังซ่อม</span><b class="sfp-count" style="--to:5"></b></div>
+                                                        <div class="sfp-kpi"><span>เสร็จแล้ว</span><b class="sfp-count" style="--to:19"></b></div>
+                                                        <div class="sfp-kpi sfp-kpi-ok"><span>ตกหล่น</span><b>0</b></div>
+                                                    </div>
+                                                    <div class="sfp-trow" style="--d:.7s"><b>TK-2410</b><span>❄ แอร์ · ตึก B</span><span><i class="sfp-ini" style="background:#2563eb">อ</i>ช่างเอก</span><em class="sfp-s sfp-s-done">✓ ซ่อมเสร็จ</em></div>
+                                                    <div class="sfp-trow" style="--d:.85s"><b>TK-2411</b><span>💧 ประปา · ตึก A</span><span><i class="sfp-ini" style="background:#f59e0b">บ</i>ช่างบอย</span><em class="sfp-s sfp-s-fix">🔧 กำลังซ่อม</em></div>
+                                                    <div class="sfp-trow" style="--d:1s"><b>TK-2412</b><span>⚡ ไฟฟ้า · บ้านเดี่ยว</span><span><i class="sfp-ini" style="background:#8b5cf6">น</i>ช่างนัท</span><em class="sfp-s sfp-s-go">🚗 กำลังเดินทาง</em></div>
+                                                    <div class="sfp-trow" style="--d:1.15s"><b>TK-2413</b><span>❄ แอร์ · ตึก C</span><span><i class="sfp-ini" style="background:#2563eb">อ</i>ช่างเอก</span><em class="sfp-s sfp-s-plan">📅 นัด 16:00</em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfp-phone sfp-phone-sm" style="left:566px;top:44px;--z:30px">
+                                                <div class="sfp-ph-head"><span class="sfp-oa">SF</span><b>SF Service</b></div>
+                                                <div class="sfp-ph-body">
+                                                    <div class="sfp-track">
+                                                        <em class="sfp-mono">TK-2410 · แอร์ไม่เย็น</em>
+                                                        <div class="sfp-step" style="--d:.5s"><i></i><span>แจ้งเรื่อง</span><em>09:12</em></div>
+                                                        <div class="sfp-step" style="--d:.75s"><i></i><span>อนุมัติแล้ว</span><em>09:20</em></div>
+                                                        <div class="sfp-step" style="--d:1s"><i></i><span>ช่างเอกรับงาน</span><em>09:21</em></div>
+                                                        <div class="sfp-step" style="--d:1.25s"><i></i><span>ถึงหน้างาน</span><em>13:05</em></div>
+                                                        <div class="sfp-step sfp-step-end" style="--d:1.5s"><i></i><span>ซ่อมเสร็จ</span><em>14:10</em></div>
+                                                    </div>
+                                                    <div class="sfp-rate"><span>ให้คะแนนช่าง</span><b><i style="--d:1.8s">★</i><i style="--d:1.9s">★</i><i style="--d:2s">★</i><i style="--d:2.1s">★</i><i style="--d:2.2s">★</i></b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-green" style="left:186px;top:384px">✓ ทุกงานมีเจ้าของ · ลูกค้าเห็นสถานะเอง</div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>งานแจ้งซ่อมจมอยู่ในแชตหลายห้อง</h3><p>ข้อมูลไม่ครบ ต้องคัดลอกลงไฟล์และตามช่างเองทุกเคส</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ลูกค้าแจ้งซ่อมผ่าน LINE ได้ครบในแชตเดียว</h3><p>bot ถามประเภทงาน สถานที่ รูป และเวลานัด แล้วออกใบงานให้</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>อนุมัติปุ๊บ ระบบจ่ายงานให้ช่างในพื้นที่</h3><p>เลือกช่างที่ว่างและใกล้ที่สุด แล้วส่งงานเข้า LINE ทันที</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เห็นสถานะงานภาคสนามครบทุกใบ</h3><p>หัวหน้าช่างติดตามได้ ลูกค้ารู้ความคืบหน้าใน LINE</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">แจ้งซ่อม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">จ่ายงาน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">ติดตาม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">
+                            <svg data-sfs-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                            <svg data-sfs-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -135,5 +327,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

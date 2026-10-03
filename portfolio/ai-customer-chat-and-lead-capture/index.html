@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/ai-customer-chat-and-lead-capture.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Order-Taking Chatbot With Automatic Order Recording","url":"https://www.successflow.it.com/portfolio/ai-customer-chat-and-lead-capture/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for an order-taking chatbot that confirms items, receives payment slips, and records orders automatically into an internal workflow."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Order-Taking Chatbot With Automatic Order Recording","item":"https://www.successflow.it.com/portfolio/ai-customer-chat-and-lead-capture/"}]}]}
     </script>
@@ -35,13 +37,208 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Chatbot รับออเดอร์และบันทึกคำสั่งซื้ออัตโนมัติ</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Chatbot รับออเดอร์และบันทึกคำสั่งซื้ออัตโนมัติ</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: chat orders pile up, admin summarises and re-keys everything by hand -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="แชต LINE ของร้านมีข้อความสั่งซื้อค้างตอบ 38 แชต แอดมินต้องคีย์ออเดอร์ลง Excel เองจนมีช่องว่างและยอดผิด และมีสลิปโอนเงินกองอยู่โดยไม่รู้ว่าเป็นของออเดอร์ไหน">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfp-tilt-l">
+                                            <div class="sfp-phone sfx-float" style="left:40px;top:46px;--w:200px;--h:352px;--d:.3s;--z:0px">
+                                                <div class="sfp-screen sfp-screen-white">
+                                                    <div class="sfp-status"><b>14:32</b><span>●●●</span></div>
+                                                    <div class="sfp-list-head"><b>แชต</b><em>38</em></div>
+                                                    <div class="sfp-list-row"><span class="sfp-av" style="--c:#fda4af"></span><div class="sfp-list-txt"><b>คุณนก</b><span>เอากาแฟคั่วกลาง 2 ถุงค่ะ</span></div><em class="sfp-unread">5</em></div>
+                                                    <div class="sfp-list-row"><span class="sfp-av" style="--c:#93c5fd"></span><div class="sfp-list-txt"><b>คุณเอ</b><span>📎 ส่งรูปภาพ</span></div><em class="sfp-unread">2</em></div>
+                                                    <div class="sfp-list-row"><span class="sfp-av" style="--c:#fcd34d"></span><div class="sfp-list-txt"><b>คุณบี</b><span>ขอเปลี่ยนเป็น 3 ถุงได้ไหม</span></div><em class="sfp-unread">9</em></div>
+                                                    <div class="sfp-list-row"><span class="sfp-av" style="--c:#86efac"></span><div class="sfp-list-txt"><b>คุณต้น</b><span>โอนแล้วนะครับ</span></div><em class="sfp-unread">3</em></div>
+                                                    <div class="sfp-list-row"><span class="sfp-av" style="--c:#c4b5fd"></span><div class="sfp-list-txt"><b>คุณดาว</b><span>ของยังไม่ได้เลยค่ะ</span></div><em class="sfp-unread">7</em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:282px;top:76px;width:330px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ออเดอร์LINE_ต.ค.(คีย์มือ).xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                    <tr><th>1</th><td class="b">ลูกค้า</td><td class="b">รายการ</td><td class="b">ยอด</td><td class="b">สลิป</td></tr>
+                                                    <tr><th>2</th><td>คุณนก</td><td>กาแฟ ×2</td><td class="err">#N/A</td><td class="warn">?</td></tr>
+                                                    <tr><th>3</th><td>คุณเอ</td><td class="warn">??</td><td>1,160</td><td>✓</td></tr>
+                                                    <tr><th>4</th><td>คุณบี</td><td>กาแฟ ×2</td><td>560</td><td class="err">ไม่พบ</td></tr>
+                                                    <tr><th>5</th><td>คุณต้น</td><td>ดริป ×1</td><td>290</td><td class="warn">?</td></tr>
+                                                    <tr><th>6</th><td colspan="4" class="muted">รอคีย์อีก 27 ออเดอร์…</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-slips">
+                                        <div class="sfp-slip" style="--r:-10deg;left:-10px;top:40px"><span class="sfp-slip-ok">✓ โอนสำเร็จ</span><b>฿900.00</b><span class="sfx-line w80"></span><span class="sfx-line w60"></span></div>
+                                        <div class="sfp-slip" style="--r:7deg;left:34px;top:0"><span class="sfp-slip-ok">✓ โอนสำเร็จ</span><b>฿780.00</b><span class="sfx-line w80"></span><span class="sfx-line w60"></span></div>
+                                        <div class="sfp-slip" style="--r:-2deg;left:16px;top:70px"><span class="sfp-slip-ok">✓ โอนสำเร็จ</span><b>฿1,160.00</b><span class="sfx-line w80"></span><span class="sfx-line w60"></span></div>
+                                        <span class="sfp-q sfx-pulse" style="--d:.4s">ของออเดอร์ไหน?</span>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:300px;top:370px">💬 38 แชต ยังไม่ได้สรุปออเดอร์</div>
+                                </div>
+
+                                <!-- Scene 2: customer orders in chat, bot summarises and asks to confirm -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ลูกค้าพิมพ์สั่งกาแฟคั่วกลาง 2 ถุงและดริปแบ็ก 1 กล่องในแชต LINE bot สรุปรายการและยอดรวม 900 บาททันที ลูกค้ากดยืนยันออเดอร์ โดย bot ออนไลน์ตอบแชตตลอด 24 ชั่วโมง" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfp-cat" style="left:44px;top:70px;--r:-4deg;--d:.1s"><span class="sfp-bag"></span><div><b>กาแฟคั่วกลาง</b><span>250 g</span><em>฿280</em></div></div>
+                                    <div class="sfp-cat" style="left:66px;top:206px;--r:3deg;--d:.25s"><span class="sfp-bag sfp-bag-box"></span><div><b>ดริปแบ็ก</b><span>10 ซอง</span><em>฿290</em></div></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfp-tilt-m">
+                                            <div class="sfp-phone" style="left:282px;top:22px;--w:236px;--h:396px;--z:0px">
+                                                <div class="sfp-screen">
+                                                    <div class="sfp-status"><b>14:32</b><span>●●●</span></div>
+                                                    <div class="sfp-head"><span class="sfp-back">‹</span><span class="sfp-shop">ค</span><b>ร้านคั่วดี</b><em class="sfp-bot-pill">bot</em></div>
+                                                    <div class="sfp-msgs">
+                                                        <div class="sfp-msg me sfp-in" style="--d:.2s">ขอกาแฟคั่วกลาง 2 ถุง กับดริปแบ็ก 1 กล่องค่ะ</div>
+                                                        <div class="sfp-slot">
+                                                            <span class="sfp-typing"><i></i><i></i><i></i></span>
+                                                            <div class="sfp-flex sfp-in" style="--d:1.3s">
+                                                                <div class="sfp-flex-head"><b>🧾 สรุปออเดอร์</b><span>#A2041</span></div>
+                                                                <div class="sfp-flex-body">
+                                                                    <div class="sfp-li"><span>กาแฟคั่วกลาง <em>×2</em></span><b>560</b></div>
+                                                                    <div class="sfp-li"><span>ดริปแบ็ก <em>×1</em></span><b>290</b></div>
+                                                                    <div class="sfp-li"><span>ค่าส่ง</span><b>50</b></div>
+                                                                    <div class="sfp-total"><span>รวม</span><b>฿900</b></div>
+                                                                    <span class="sfp-btn">ยืนยันออเดอร์</span>
+                                                                    <span class="sfp-tap"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sfp-msg me sfp-in" style="--d:2.7s">✓ ยืนยัน</div>
+                                                    </div>
+                                                    <div class="sfp-input"><span></span><i></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-bot-card" style="left:566px;top:96px">
+                                        <div class="sfp-bot-top"><span class="sfp-live"><i></i>ออนไลน์ 24/7</span></div>
+                                        <div class="sfp-bot-stat"><span>ตอบแล้ววันนี้</span><b><i class="sfp-count" style="--to:38"></i> แชต</b></div>
+                                        <div class="sfp-bot-stat"><span>ตอบเฉลี่ย</span><b>2 วิ</b></div>
+                                    </div>
+                                    <div class="sfx-chip" style="left:586px;top:282px">⚡ สรุปยอดให้ทันที</div>
+                                </div>
+
+                                <!-- Scene 3: slip read, amount matched, order written to the order database -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ลูกค้าส่งสลิปโอนเงิน 900 บาท ระบบอ่านยอดและเทียบกับยอดออเดอร์ A2041 ตรงกัน แล้วบันทึกออเดอร์ลงฐานข้อมูลคำสั่งซื้อพร้อมสถานะชำระแล้ว รายการที่ยอดโอนไม่ตรงถูกแยกให้แอดมินตรวจ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfp-slip-big">
+                                        <span class="sfp-card-tag">📎 สลิปจากแชต</span>
+                                        <span class="sfp-slip-ok">✓ โอนเงินสำเร็จ</span>
+                                        <div class="sfx-ocr-amt"><b>฿900.00</b><span class="sfx-box" style="--d:.5s"></span></div>
+                                        <div class="sfx-ocr-row"><span>เวลา</span><b>14:35</b><span class="sfx-box" style="--d:.8s"></span></div>
+                                        <div class="sfx-ocr-row"><span>ถึง</span><b>ร้านคั่วดี</b><span class="sfx-box" style="--d:1.1s"></span></div>
+                                    </div>
+                                    <div class="sfp-match-card">
+                                        <div><span>ออเดอร์</span><b>฿900</b></div>
+                                        <i>=</i>
+                                        <div><span>สลิป</span><b>฿900</b></div>
+                                        <em>✓ ตรง</em>
+                                    </div>
+                                    <div class="sfx-file sfp-fly"><i style="background:#2563eb">ORDER</i>A2041 · ฿900</div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win sfp-db" style="left:300px;top:46px;width:456px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>ฐานข้อมูลคำสั่งซื้อ · LINE OA</span></div>
+                                                <div class="sfx-match">
+                                                    <div class="sfx-scan"></div>
+                                                    <div class="sfx-row head"><span>Order</span><span>ลูกค้า</span><span>รายการ</span><span>ยอด</span><span>สถานะ</span></div>
+                                                    <div class="sfx-row" style="--d:.4s"><span>A2038</span><span>คุณเอ</span><span>กาแฟ ×4</span><span>1,160</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ชำระแล้ว</b></span></div>
+                                                    <div class="sfx-row" style="--d:.8s"><span>A2039</span><span>คุณต้น</span><span>ดริป ×1</span><span>340</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ชำระแล้ว</b></span></div>
+                                                    <div class="sfx-row" style="--d:1.2s"><span>A2040</span><span>คุณบี</span><span>กาแฟ ×3</span><span>870</span><span class="sfx-st"><em>ตรวจ…</em><b class="bad">! ยอดไม่ตรง</b></span></div>
+                                                    <div class="sfx-row sfp-new" style="--d:2s"><span>A2041</span><span>คุณนก</span><span>กาแฟ ×2 +1</span><span>900</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ชำระแล้ว</b></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-exc" style="right:34px;top:330px">
+                                        <div class="sfx-exc-ico">!</div>
+                                        <div><b>ยอดโอนไม่ตรง 1 รายการ</b><span>A2040 · โอน 780 → แอดมินตรวจ</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: confirmed in chat, orders on a dashboard, packing list handed on -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="bot แจ้งลูกค้าว่าออเดอร์ A2041 ชำระเงินแล้วและกำลังแพ็ก แดชบอร์ดออเดอร์จาก LINE วันนี้ 126 ออเดอร์ ชำระแล้ว 121 รอตรวจ 2 และไฟล์รายการแพ็กส่งต่อทีมจัดส่งแล้ว" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfp-tilt-l">
+                                            <div class="sfp-phone" style="left:40px;top:48px;--w:196px;--h:350px;--z:0px">
+                                                <div class="sfp-screen">
+                                                    <div class="sfp-status"><b>14:36</b><span>●●●</span></div>
+                                                    <div class="sfp-head"><span class="sfp-back">‹</span><span class="sfp-shop">ค</span><b>ร้านคั่วดี</b><em class="sfp-bot-pill">bot</em></div>
+                                                    <div class="sfp-msgs">
+                                                        <div class="sfp-msg me sfp-slipmsg">📎 สลิป ฿900</div>
+                                                        <div class="sfp-flex sfp-in" style="--d:.4s">
+                                                            <div class="sfp-flex-head sfp-flex-ok"><b>✓ ชำระเงินแล้ว</b><span>#A2041</span></div>
+                                                            <div class="sfp-flex-body">
+                                                                <div class="sfp-step" style="--d:.8s"><i>✓</i>รับออเดอร์</div>
+                                                                <div class="sfp-step" style="--d:1.1s"><i>✓</i>ชำระแล้ว</div>
+                                                                <div class="sfp-step sfp-step-now" style="--d:1.4s"><i></i>กำลังแพ็ก</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sfp-msg bot sfp-in" style="--d:1.8s">ส่งเลขพัสดุให้ในแชตนี้ค่ะ 📦</div>
+                                                    </div>
+                                                    <div class="sfp-input"><span></span><i></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win sfp-dash" style="left:262px;top:84px;width:330px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>ออเดอร์จาก LINE · วันนี้</span></div>
+                                                <div class="sfp-dash-body">
+                                                    <div class="sfp-kpis">
+                                                        <div class="sfp-kpi"><span>ออเดอร์</span><b class="sfp-count" style="--to:126"></b></div>
+                                                        <div class="sfp-kpi sfp-kpi-ok"><span>ชำระแล้ว</span><b class="sfp-count" style="--to:121"></b></div>
+                                                        <div class="sfp-kpi sfp-kpi-warn"><span>รอตรวจ</span><b class="sfp-count" style="--to:2"></b></div>
+                                                    </div>
+                                                    <div class="sfp-split-title">ออเดอร์รายชั่วโมง</div>
+                                                    <div class="sfx-bars sfp-bars"><span style="--h:30%"></span><span style="--h:52%"></span><span style="--h:44%"></span><span style="--h:78%"></span><span style="--h:100%"></span><span style="--h:64%"></span><span style="--h:86%"></span><span style="--h:58%"></span></div>
+                                                    <div class="sfp-hours"><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-out" style="left:620px;top:118px;width:150px;min-height:200px;--d:.6s;--r:5deg">
+                                                <div class="sfx-out-head" style="background:#16a34a">XLSX</div>
+                                                <b class="sfx-doc-title">รายการแพ็ก</b>
+                                                <div class="sfx-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                <div class="sfx-doc-total"><span>ออเดอร์</span><b>121</b></div>
+                                                <i class="sfx-stamp" style="--d:1.4s">✓</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>ส่งต่อทีมแพ็กแล้ว</b><span>15:00 · 121 ออเดอร์</span></div></div>
+                                    <div class="sfx-chip sfx-chip-green" style="left:318px;top:384px">✓ แอดมินแค่ตรวจ 2 รายการ</div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>ออเดอร์ทางแชตล้นมือแอดมิน</h3><p>สรุปรายการเอง ตรวจยอดเอง ไล่สลิปเอง แล้วคีย์ซ้ำอีกรอบ</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ลูกค้าสั่งในแชตได้เหมือนเดิม</h3><p>bot สรุปรายการและยอดรวม ให้กดยืนยันได้ทันที</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>รับสลิป ตรวจยอด บันทึกเอง</h3><p>ยอดตรงเข้าฐานข้อมูลทันที ไม่ตรงแยกให้แอดมินดู</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ออเดอร์ครบ พร้อมส่งต่อจัดส่ง</h3><p>ลูกค้าได้รับการยืนยันในแชต ทีมได้รายการแพ็กพร้อมใช้</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">สั่ง</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">บันทึก</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">
+                            <svg data-sfs-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                            <svg data-sfs-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -136,5 +333,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

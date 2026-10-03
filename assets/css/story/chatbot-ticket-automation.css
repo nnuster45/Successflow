@@ -1,0 +1,455 @@
+/* Story demo: RAG chatbot - scattered docs -> knowledge base -> retrieval -> grounded answer */
+
+/* ---------- Scene 1: support queue + conflicting docs ---------- */
+.sfp-queue { padding: 4px 12px 10px; }
+
+.sfp-queue-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 2px;
+    font-size: 13px;
+}
+
+.sfp-queue-top em {
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    background: #ef4444;
+    padding: 2px 9px;
+    border-radius: 999px;
+}
+
+.sfp-qrow {
+    display: grid;
+    grid-template-columns: 8px 1fr 36px 44px;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 2px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 12px;
+    color: #334155;
+}
+
+.sfp-qrow i { width: 8px; height: 8px; border-radius: 50%; background: #f59e0b; }
+.sfp-qrow span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.sfp-qrow b {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #b45309;
+    background: #fef3c7;
+    border-radius: 999px;
+    text-align: center;
+    padding: 1px 0;
+}
+
+.sfp-qrow time { font-size: 10.5px; font-weight: 600; color: #dc2626; text-align: right; }
+
+.sfp-mark {
+    margin: 8px -4px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.sfp-mark.bad { background: #fee2e2; color: #dc2626; box-shadow: inset 0 0 0 1.5px #fca5a5; }
+
+.sfp-neq {
+    position: absolute;
+    left: 590px;
+    top: 152px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 18px -6px rgba(220, 38, 38, 0.55);
+    z-index: 2;
+}
+
+/* ---------- Scene 2: knowledge base ingest ---------- */
+.sfp-kb { display: grid; grid-template-columns: 178px 1fr; gap: 14px; padding: 14px 16px 16px; }
+.sfp-kb .sfx-src { font-size: 12px; padding: 7px 9px; margin-bottom: 8px; }
+.sfp-kb .sfx-src div { line-height: 1.2; }
+.sfp-kb .sfx-src b { display: block; font-weight: 600; }
+.sfp-kb .sfx-src small { font-size: 10px; color: #94a3b8; }
+.sfp-kb .sfx-src-ico { font-size: 11px; font-weight: 800; }
+
+.sfp-kb-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.sfp-kb-head b { font-size: 14px; color: #0f172a; font-variant-numeric: tabular-nums; }
+
+.sfp-tiles {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #eef2f6;
+}
+
+.sfp-tiles i {
+    height: 16px;
+    border-radius: 4px;
+    background: #e2e8f0;
+    border-left: 3px solid #94a3b8;
+}
+
+.sfp-tiles i.pdf { background: #fee2e2; border-left-color: #ef4444; }
+.sfp-tiles i.doc { background: #dbeafe; border-left-color: #2563eb; }
+.sfp-tiles i.xls { background: #dcfce7; border-left-color: #16a34a; }
+.sfp-tiles i.web { background: #ede9fe; border-left-color: #8b5cf6; }
+
+.sfp-kb .sfx-run-wrap { margin-top: 12px; }
+.sfp-kb .sfx-run { font-size: 13px; padding: 8px; }
+
+/* ---------- Phone (scenes 3-4) ---------- */
+.sfp-phone {
+    position: absolute;
+    width: 216px;
+    height: 372px;
+    padding: 7px;
+    border-radius: 32px;
+    background: #0f172a;
+    transform: translateZ(var(--z, 0));
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.1),
+        0 10px 20px -8px rgba(15, 23, 42, 0.25),
+        0 34px 60px -20px rgba(15, 23, 42, 0.45);
+}
+
+.sfp-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 26px;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.sfp-screen::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    width: 58px;
+    height: 14px;
+    margin-left: -29px;
+    border-radius: 999px;
+    background: #0f172a;
+    z-index: 1;
+}
+
+.sfp-ph-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 28px 12px 9px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    line-height: 1.2;
+}
+
+.sfp-ph-head b { display: block; font-size: 12px; }
+.sfp-ph-head small { font-size: 9.5px; color: #16a34a; }
+
+.sfp-bot {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    flex: none;
+}
+
+.sfp-msgs { flex: 1; display: flex; flex-direction: column; gap: 7px; padding: 12px 10px; }
+
+.sfp-q {
+    align-self: flex-end;
+    max-width: 82%;
+    padding: 7px 10px;
+    border-radius: 14px 14px 4px 14px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 11.5px;
+    line-height: 1.4;
+}
+
+.sfp-typing {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 8px 10px;
+    border-radius: 14px 14px 14px 4px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-typing i { width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; }
+.sfp-typing span { margin-left: 5px; font-size: 10px; color: #64748b; }
+
+.sfp-a {
+    align-self: flex-start;
+    max-width: 92%;
+    padding: 9px 10px;
+    border-radius: 14px 14px 14px 4px;
+    background: #fff;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: #334155;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-a b { color: #0f172a; }
+.sfp-a ul { margin: 4px 0 0; padding: 0; list-style: none; }
+.sfp-a li { position: relative; padding-left: 14px; font-size: 11px; }
+.sfp-a li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+
+.sfp-cites { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; padding-top: 7px; border-top: 1px dashed #e2e8f0; }
+
+.sfp-cites span {
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+    font-size: 9.5px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sfp-time { align-self: flex-start; font-size: 9.5px; color: #16a34a; font-weight: 600; padding-left: 4px; }
+
+.sfp-input {
+    margin: 0 8px 12px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    font-size: 10.5px;
+    color: #94a3b8;
+}
+
+/* ---------- Scene 3: retrieval ---------- */
+.sfp-flow {
+    position: absolute;
+    left: 252px;
+    top: 196px;
+    width: 64px;
+    height: 4px;
+    border-radius: 2px;
+    background: repeating-linear-gradient(90deg, #2563eb 0 8px, transparent 8px 14px);
+    opacity: 0.7;
+}
+
+.sfp-flow::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    border: 6px solid transparent;
+    border-left: 8px solid #2563eb;
+    border-right: 0;
+}
+
+.sfp-search { padding: 12px 14px 14px; }
+
+.sfp-sbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1.5px solid #93c5fd;
+    background: #f8fbff;
+    font-size: 12.5px;
+}
+
+.sfp-sbar b { font-weight: 600; color: #0f172a; }
+.sfp-sbar em { margin-left: auto; font-style: normal; font-size: 10.5px; color: #94a3b8; }
+
+.sfp-res-wrap { position: relative; margin-top: 10px; }
+
+.sfp-res {
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px 1fr 62px 66px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sfp-res > i {
+    font-style: normal;
+    font-size: 8.5px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 5px;
+}
+
+.sfp-res > i.doc { background: #2563eb; }
+.sfp-res > i.xls { background: #16a34a; }
+.sfp-res > i.pdf { background: #ef4444; }
+
+.sfp-res-body { min-width: 0; }
+.sfp-res-body b { display: block; font-size: 12px; font-weight: 600; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sfp-res-body p { margin-top: 2px; font-size: 10.5px; color: #64748b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sfp-res-body mark { background: #fef08a; color: #0f172a; font-weight: 600; padding: 0 2px; border-radius: 3px; }
+
+.sfp-score small { display: block; margin-top: 3px; font-size: 10px; color: #64748b; font-variant-numeric: tabular-nums; }
+.sfp-score span { display: block; height: 5px; border-radius: 999px; background: #e2e8f0; overflow: hidden; }
+.sfp-score span b { display: block; height: 100%; width: var(--w); border-radius: inherit; background: #2563eb; transform-origin: left; }
+
+.sfp-res.dim .sfp-res-body,
+.sfp-res.dim > i { opacity: 0.5; }
+.sfp-res.dim .sfp-score span b { background: #94a3b8; }
+
+.sfp-res .sfx-st b.sfp-skip { background: #f1f5f9; color: #64748b; }
+
+.sfp-scan {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 56px;
+    border-radius: 8px;
+    background: rgba(59, 130, 246, 0.07);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    pointer-events: none;
+}
+
+/* ---------- Scene 4: dashboard ---------- */
+.sfp-dash { padding: 14px 16px 16px; }
+.sfp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.sfp-kpi {
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #eef2f6;
+    line-height: 1.15;
+}
+
+.sfp-kpi span { display: block; font-size: 10.5px; color: #64748b; margin-bottom: 4px; }
+.sfp-kpi b { font-size: 22px; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
+.sfp-kpi s { margin-left: 6px; font-size: 10.5px; color: #ef4444; }
+.sfp-kpi.ok { background: #f0fdf4; border-color: #bbf7d0; }
+.sfp-kpi.ok b { color: #15803d; }
+
+.sfp-chart { margin-top: 12px; }
+.sfp-chart-t { font-size: 10.5px; color: #64748b; }
+.sfp-chart .sfx-bars { height: 92px; margin: 6px 0 4px; gap: 12px; }
+.sfp-days { display: flex; gap: 12px; }
+.sfp-days span { flex: 1; text-align: center; font-size: 9.5px; color: #94a3b8; }
+
+/* ---------- Motion ---------- */
+.is-active .sfp-tiles i { opacity: 0; animation: sfp-tile 0.3s ease forwards; animation-delay: calc(var(--i) * 0.025s + 0.5s); }
+.is-active .sfp-kb-head b { animation: sfx-in 0.4s ease both 1.9s; }
+
+.is-active .sfp-typing i { animation: sfp-dot 1s ease-in-out infinite; }
+.is-active .sfp-typing i:nth-child(2) { animation-delay: 0.15s; }
+.is-active .sfp-typing i:nth-child(3) { animation-delay: 0.3s; }
+.is-active .sfp-q { animation: sfp-rise 0.4s ease both 0.1s; }
+.is-active .sfp-flow { animation: sfp-flow 0.8s linear infinite; }
+.is-active .sfp-res { opacity: 0; animation: sfx-row 0.4s ease forwards; animation-delay: var(--d); }
+.is-active .sfp-score span b { animation: sfp-grow-x 0.6s ease both; animation-delay: calc(var(--d) + 0.15s); }
+.is-active .sfp-res .sfx-st em { animation: sfx-out 0.2s ease forwards; animation-delay: calc(var(--d) + 0.55s); }
+.is-active .sfp-res .sfx-st b { animation: sfx-pop 0.35s cubic-bezier(.2, 1.5, .4, 1) forwards; animation-delay: calc(var(--d) + 0.6s); }
+.is-active .sfp-scan { animation: sfp-scan 3s ease-in-out infinite; }
+
+.is-active .sfp-a { animation: sfp-rise 0.5s ease both 0.5s; }
+.is-active .sfp-cites span { opacity: 0; animation: sfx-pop 0.35s cubic-bezier(.2, 1.5, .4, 1) forwards; animation-delay: var(--d); transform: scale(0.6); }
+.is-active .sfp-time { animation: sfx-in 0.4s ease both 1.5s; }
+.is-active .sfp-kpi { opacity: 0; animation: sfp-rise 0.5s ease forwards; animation-delay: var(--d); }
+
+@keyframes sfp-tile {
+    from { opacity: 0; transform: scale(0.4); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-dot {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-3px); opacity: 1; }
+}
+
+@keyframes sfp-rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-flow { to { background-position: 14px 0; } }
+
+@keyframes sfp-grow-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes sfp-scan {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(116px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-scan { display: none; }
+}
+
+/* Scene 2: source document pile the files fly out of */
+.sfp-pile { position: absolute; left: 50px; top: 100px; width: 160px; height: 230px; }
+
+.sfp-pile-doc {
+    position: absolute;
+    inset: 0 0 34px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    transform: rotate(var(--r, 0));
+    box-shadow: 0 10px 24px -12px rgba(15, 23, 42, 0.3);
+}
+
+.sfp-pile-doc i {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sfp-pile b {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+}
