@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# SuccessFlow GitHub Site
+# SuccessFlow
 
-Static website for the SuccessFlow marketing pages.
+Static website for the SuccessFlow marketing pages (https://www.successflow.it.com).
 
 ## Structure
 
@@ -10,13 +9,12 @@ Static website for the SuccessFlow marketing pages.
 - `portfolio/` - portfolio detail pages
 - `assets/css/main.css` - shared styles
 - `assets/js/main.js` - shared JavaScript
+- `assets/js/i18n.js` - TH/EN translations
 - `assets/images/` - images and logo
 
 ## Run locally
 
-Open `index.html` directly in a browser, or serve the folder with any static server.
-
-Example:
+Serve the folder with any static server:
 
 ```bash
 python3 -m http.server 8000
@@ -24,18 +22,15 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
-## Deploy
+## Deploy (Cloudflare Pages)
 
-Upload the full folder contents to GitHub Pages, Netlify, Vercel, or any static hosting.
+The site is plain static files with no build step.
 
-## Update contact links
+1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git → select this repo.
+2. Production branch: `main`, Framework preset: `None`, Build command: empty, Build output directory: `/`.
+3. Add the custom domain `www.successflow.it.com` (canonical URLs, `sitemap.xml` and `robots.txt` all use `www`).
+4. Redirect the apex `successflow.it.com` to `https://www.successflow.it.com` with a 301 Redirect Rule.
 
-Edit these placeholders in `index.html`:
+The contact form posts to an n8n webhook (see `assets/js/main.js`); its CORS settings must allow the site's origin.
 
-- phone: `08XXXXXXXX`
-- line: `@yourdata_expert`
-- email: `contact@yourdomain.com`
-- fastwork: `https://fastwork.co/user/your-profile`
-=======
-# Successflow
->>>>>>> 979654ae369e852e8b9c5411053cfbb32362f9d8
+File names are case-sensitive on the server, so image paths must match the file name exactly.
