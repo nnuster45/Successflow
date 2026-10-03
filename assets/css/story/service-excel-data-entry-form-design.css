@@ -1,0 +1,578 @@
+/* Story demo: Excel UserForm Application service page (page-specific pieces) */
+
+/* ---------- Scene 1: one shared sheet everyone types into ---------- */
+
+.sfp-sheet td { white-space: nowrap; }
+.sfp-sheet td.n { text-align: right; }
+.sfp-sheet td.c { text-align: center; }
+
+.sfp-st {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 600;
+}
+
+.sfp-st.g { background: #dcfce7; color: #15803d; }
+.sfp-st.a { background: #fef3c7; color: #b45309; }
+.sfp-st.r { background: #fee2e2; color: #dc2626; }
+.sfp-st.s { background: #f1f5f9; color: #64748b; }
+.sfp-st.b { background: #dbeafe; color: #1d4ed8; }
+
+.sfp-typed {
+    position: relative;
+    outline: 2px solid #dc2626;
+    outline-offset: -2px;
+}
+
+.sfp-tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 28px;
+    padding: 0 8px;
+    background: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    font-size: 10.5px;
+    white-space: nowrap;
+}
+
+.sfp-tabs span {
+    padding: 5px 10px;
+    border-radius: 0 0 6px 6px;
+    color: #64748b;
+}
+
+.sfp-tabs span.on { background: #fff; color: #16a34a; font-weight: 600; border-bottom: 2px solid #16a34a; }
+.sfp-tabs span.bad { color: #dc2626; font-weight: 600; }
+
+/* Windows-style "file is locked" dialog */
+.sfp-dialog {
+    position: absolute;
+    width: 250px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sfp-dialog-body {
+    display: flex;
+    gap: 10px;
+    padding: 14px 14px 10px;
+}
+
+.sfp-dialog-ico {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fef3c7;
+    color: #b45309;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.sfp-dialog-body b { display: block; font-size: 13.5px; }
+.sfp-dialog-body div span { display: block; margin-top: 2px; font-size: 11px; color: #64748b; }
+
+.sfp-dialog-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    padding: 0 14px 14px;
+}
+
+.sfp-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 11.5px;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    background: #fff;
+    white-space: nowrap;
+}
+
+.sfp-btn.p { background: #2563eb; border-color: #2563eb; color: #fff; }
+.sfp-btn.off { background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0; }
+
+/* ---------- Scene 2: the app home screen ---------- */
+
+.sfp-app {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+}
+
+.sfp-side {
+    padding: 14px 10px;
+    background: #f8fafc;
+    border-right: 1px solid #eef2f6;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.sfp-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.sfp-logo i {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.sfp-nav-i {
+    display: block;
+    padding: 6px 8px;
+    border-radius: 7px;
+    margin-bottom: 3px;
+    white-space: nowrap;
+}
+
+.sfp-nav-i.on { background: #e0ecff; color: #1d4ed8; font-weight: 600; }
+
+.sfp-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #eef2f6;
+    font-size: 10.5px;
+    white-space: nowrap;
+}
+
+.sfp-user i { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+
+.sfp-main { padding: 14px 16px 16px; }
+
+.sfp-main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.sfp-main-head b { font-size: 15px; }
+.sfp-main-head span { font-size: 11px; color: #94a3b8; }
+
+.sfp-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sfp-tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #eef2f6;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 6px 14px -8px rgba(15, 23, 42, 0.18);
+}
+
+.sfp-tile i {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.sfp-tile b { display: block; font-size: 13px; }
+.sfp-tile span { display: block; font-size: 10.5px; color: #94a3b8; }
+.sfp-tile.hit { border-color: #93c5fd; }
+
+.sfp-wide {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px dashed #dbe3ec;
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.sfp-wide em { font-style: normal; font-size: 10.5px; color: #94a3b8; font-weight: 500; }
+
+.sfp-lock {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 10px 22px -10px rgba(15, 23, 42, 0.5);
+}
+
+.sfp-dim { opacity: 0.75; }
+
+/* ---------- Scene 3: guided wizard ---------- */
+
+.sfp-stepper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 11.5px;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.sfp-stepper i {
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    font-style: normal;
+    font-size: 10.5px;
+    font-weight: 700;
+}
+
+.sfp-stepper .done { color: #15803d; }
+.sfp-stepper .done i { background: #dcfce7; color: #15803d; }
+.sfp-stepper .now { color: #0f172a; font-weight: 600; }
+.sfp-stepper .now i { background: #2563eb; color: #fff; }
+.sfp-stepper hr { flex: 1; border: 0; height: 2px; background: #e2e8f0; min-width: 14px; }
+.sfp-stepper hr.done { background: #86efac; }
+
+.sfp-form { position: relative; padding: 12px 16px 14px; }
+
+.sfp-field {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 9px;
+    font-size: 12px;
+    color: #475569;
+}
+
+.sfp-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid #dbe3ec;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 12.5px;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+.sfp-input em { font-style: normal; color: #94a3b8; font-size: 11px; }
+.sfp-input.focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+.sfp-input.ro { background: #f8fafc; color: #475569; border-style: dashed; }
+.sfp-input .ok { color: #16a34a; font-weight: 700; font-size: 12px; }
+
+.sfp-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.sfp-spin { padding: 0 4px; }
+.sfp-spin s {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.sfp-spin b { font-variant-numeric: tabular-nums; }
+
+.sfp-meter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 4px 0 12px 84px;
+    font-size: 11px;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.sfp-meter-track {
+    flex: 1;
+    height: 8px;
+    border-radius: 999px;
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.sfp-meter-track span {
+    display: block;
+    width: 77%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+    transform-origin: left;
+}
+
+.sfp-meter b { color: #0f172a; }
+
+.sfp-form-btns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.sfp-form-btns .sfp-btn { padding: 8px 16px; font-size: 12px; }
+
+/* Combobox dropdown */
+.sfp-drop {
+    position: absolute;
+    left: 100px;
+    right: 16px;
+    top: 90px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #dbe3ec;
+    border-radius: 10px;
+    box-shadow: 0 16px 34px -12px rgba(15, 23, 42, 0.35);
+    transform-origin: top;
+    z-index: 3;
+}
+
+.sfp-opt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 8px;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #334155;
+}
+
+.sfp-opt code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10.5px; color: #64748b; margin-right: 6px; }
+.sfp-opt em { font-style: normal; font-size: 10.5px; color: #94a3b8; }
+.sfp-opt.pick { background: #2563eb; color: #fff; }
+.sfp-opt.pick code, .sfp-opt.pick em { color: #dbeafe; }
+
+/* Rules card */
+.sfp-rules {
+    position: absolute;
+    width: 206px;
+    padding: 14px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    transform: translateZ(var(--z, 0));
+}
+
+.sfp-rules-head { display: block; font-size: 12.5px; font-weight: 700; margin-bottom: 6px; }
+
+.sfp-rule {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-top: 1px solid #f1f5f9;
+    font-size: 12px;
+    color: #334155;
+    white-space: nowrap;
+}
+
+.sfp-rule i {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* ---------- Scene 4: results ---------- */
+
+.sfp-db td { padding: 7px 7px; }
+.sfp-db tr.new td { background: #f0fdf4; color: #14532d; font-weight: 600; }
+
+.sfp-newpill {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #16a34a;
+    color: #fff;
+    font-size: 9.5px;
+    font-weight: 700;
+    vertical-align: 1px;
+}
+
+.sfp-slip-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5px;
+    color: #475569;
+    padding: 5px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.sfp-slip-item b { color: #0f172a; font-weight: 600; }
+
+.sfp-sign {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.sfp-sign span {
+    flex: 1;
+    padding-top: 4px;
+    border-top: 1px solid #cbd5e1;
+    font-size: 9.5px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.sfp-status { padding: 6px 12px 10px; }
+
+.sfp-status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 2px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 11.5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: #334155;
+}
+
+.sfp-status-row:last-child { border-bottom: 0; }
+.sfp-status-row .sfp-st { font-family: 'Prompt', sans-serif; }
+
+.sfp-count {
+    display: flex;
+    gap: 6px;
+    padding: 10px 12px 2px;
+}
+
+.sfp-count div {
+    flex: 1;
+    padding: 6px 6px 5px;
+    border-radius: 9px;
+    background: #f8fafc;
+    border: 1px solid #eef2f6;
+    text-align: center;
+}
+
+.sfp-count b { display: block; font-size: 16px; line-height: 1.2; }
+.sfp-count span { display: block; font-size: 9.5px; color: #94a3b8; white-space: nowrap; }
+
+/* ---------- Motion ---------- */
+
+.is-active .sfp-dialog { opacity: 0; animation: sfx-exc 0.6s cubic-bezier(.2, 1.3, .4, 1) forwards 0.9s; }
+.is-active .sfp-typed { animation: sfp-blink 1.2s ease-in-out infinite; }
+
+.is-active .sfp-tile { animation: sfp-rise 0.45s ease both; animation-delay: var(--d, 0s); }
+.is-active .sfp-tile.hit { animation: sfp-rise 0.45s ease both 0.3s, sfp-hit 0.4s ease forwards 0.85s; }
+.is-active .sfp-lock { animation: sfp-rise 0.5s ease both 0.9s; }
+
+.is-active .sfp-drop { animation: sfp-drop 2s ease forwards 0.2s; }
+.is-active .sfp-opt.pick { animation: sfp-pick 0.3s ease both 0.8s; }
+.is-active .sfp-fill { opacity: 0; animation: sfx-in 0.35s ease forwards; animation-delay: var(--d, 1.6s); }
+.is-active .sfp-meter-track span { animation: sfp-grow-x 0.7s ease both 2s; }
+.is-active .sfp-next { animation: sfp-enable 0.4s ease both 2.5s; }
+.is-active .sfp-rule { opacity: 0; animation: sfx-row 0.35s ease forwards; animation-delay: var(--d); }
+
+.is-active .sfp-db tr.new { opacity: 0; animation: sfp-slide 0.5s ease forwards 0.9s; }
+.is-active .sfp-status-row.new { opacity: 0; animation: sfp-slide 0.5s ease forwards 1.3s; }
+
+@keyframes sfp-blink {
+    0%, 100% { outline-color: #dc2626; }
+    50% { outline-color: rgba(220, 38, 38, 0.25); }
+}
+
+@keyframes sfp-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-hit {
+    to {
+        border-color: #2563eb;
+        background: #eff6ff;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18), 0 10px 20px -10px rgba(37, 99, 235, 0.45);
+    }
+}
+
+/* Opens, stays while an item is picked, then folds away */
+@keyframes sfp-drop {
+    0% { opacity: 0; transform: scaleY(0.6); }
+    12% { opacity: 1; transform: scaleY(1); }
+    70% { opacity: 1; transform: scaleY(1); }
+    100% { opacity: 0; transform: scaleY(0.8); visibility: hidden; }
+}
+
+@keyframes sfp-pick {
+    from { background: transparent; color: #334155; }
+}
+
+@keyframes sfp-grow-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes sfp-enable {
+    from { background: #f1f5f9; border-color: #e2e8f0; color: #94a3b8; }
+    to { background: #2563eb; border-color: #2563eb; color: #fff; }
+}
+
+@keyframes sfp-slide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-drop { display: none; }
+}

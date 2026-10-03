@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/service-power-bi-dashboard.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -86,6 +88,196 @@
                 </div>
                 <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Power BI Dashboard</h1>
                 <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">ออกแบบ Dashboard ที่เชื่อมข้อมูลจาก Excel, ERP, Database หรือระบบอื่น เพื่อให้ผู้บริหารและทีมงานเห็น KPI แบบ Real-time และตัดสินใจได้เร็วขึ้น</p>
+                <div class="mt-8">
+                    <div class="sfs" data-sfs>
+                        <div class="sfs-stage" data-sfs-stage>
+                            <div class="sfs-frame" data-sfs-frame>
+                                <div class="sfs-canvas">
+
+                                    <!-- Scene 1: every team brings its own stale report -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="ก่อนประชุมผู้บริหาร มีสไลด์ยอดขาย ไฟล์ Excel การเงิน และ PDF สต๊อก คนละแหล่ง ข้อมูลคนละวันที่ ยอดขายไม่ตรงกัน และต้องทำรายงานด้วยมือ 3 วัน">
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win sfx-float" style="left:36px;top:58px;width:250px;--d:0s;--z:0px">
+                                                    <div class="sfx-bar sfp-bar-ppt"><i></i><i></i><i></i><span>สรุปยอดขาย_Q3.pptx</span></div>
+                                                    <div class="sfp-slide">
+                                                        <b class="sfp-slide-t">ยอดขาย Q3</b>
+                                                        <div class="sfp-slide-row">
+                                                            <div><span class="sfp-big">฿12.4M</span><span class="sfx-line w80"></span><span class="sfx-line w60"></span></div>
+                                                            <i class="sfp-pie"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sfp-stale">ข้อมูล 30 ก.ย.</div>
+                                                </div>
+                                                <div class="sfx-win sfx-float" style="left:250px;top:200px;width:276px;--d:.6s;--z:40px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>การเงิน_ก.ย._final2.xlsx</span></div>
+                                                    <table class="sfx-sheet">
+                                                        <tr><th></th><th>A</th><th>B</th></tr>
+                                                        <tr><th>1</th><td class="b">รายการ</td><td class="b">ก.ย.</td></tr>
+                                                        <tr><th>2</th><td>ยอดขาย</td><td class="warn">12,870,000</td></tr>
+                                                        <tr><th>3</th><td>ต้นทุนขาย</td><td>8,410,000</td></tr>
+                                                        <tr><th>4</th><td>กำไรขั้นต้น</td><td class="err">#VALUE!</td></tr>
+                                                    </table>
+                                                    <div class="sfp-stale">ข้อมูล 15 ก.ย.</div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfx-doc sfx-float" style="left:556px;top:52px;width:196px;--d:1.1s;--z:0px">
+                                                    <span class="sfx-doc-tag" style="background:#dc2626">PDF</span>
+                                                    <b class="sfx-doc-title">สต๊อกคงเหลือ</b>
+                                                    <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                    <div class="sfx-doc-rows"><span></span><span></span><span></span><span></span></div>
+                                                    <div class="sfp-stale doc">ข้อมูล 1 ก.ย.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfp-ask" style="left:560px;top:300px">
+                                            <span class="sfp-ask-ico">09:00</span>
+                                            <div><b>ประชุมผู้บริหาร</b><span>ยอดขายจริงเท่าไหร่?</span></div>
+                                        </div>
+                                        <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:44px;top:372px">⚠ ตัวเลขไม่ตรง · ทำมือ 3 วัน</div>
+                                    </div>
+
+                                    <!-- Scene 2: connect every source once -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="หน้าเชื่อมแหล่งข้อมูล เลือก Excel ERP SQL Database SharePoint Google Sheets และระบบ POS ทีละแหล่ง ตั้งรีเฟรชอัตโนมัติทุก 1 ชั่วโมง แล้วกดเชื่อมต่อ" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-d">
+                                                <div class="sfx-win" style="left:150px;top:36px;width:500px;--z:0px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>Power BI · เชื่อมแหล่งข้อมูล</span></div>
+                                                    <div class="sfp-gd">
+                                                        <div class="sfp-gd-head"><b>เลือกแหล่งข้อมูล</b><span>6 แหล่ง</span></div>
+                                                        <div class="sfp-gd-grid">
+                                                            <div class="sfp-src" style="--d:.3s"><i style="background:#16a34a">XLS</i><span>Excel</span><em>✓</em></div>
+                                                            <div class="sfp-src" style="--d:.6s"><i style="background:#7c3aed">ERP</i><span>ERP</span><em>✓</em></div>
+                                                            <div class="sfp-src" style="--d:.9s"><i style="background:#2563eb">SQL</i><span>Database</span><em>✓</em></div>
+                                                            <div class="sfp-src" style="--d:1.2s"><i style="background:#0d9488">SP</i><span>SharePoint</span><em>✓</em></div>
+                                                            <div class="sfp-src" style="--d:1.5s"><i style="background:#15803d">GS</i><span>Google Sheets</span><em>✓</em></div>
+                                                            <div class="sfp-src" style="--d:1.8s"><i style="background:#475569">POS</i><span>ระบบหน้าร้าน</span><em>✓</em></div>
+                                                        </div>
+                                                        <div class="sfp-gd-foot">
+                                                            <div class="sfp-sched"><span class="sfp-clock"></span>รีเฟรชอัตโนมัติ · ทุก 1 ชม.</div>
+                                                            <span class="sfx-run sfp-connect">เชื่อมต่อ</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <svg class="sfx-cursor sfp-cur2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                        <div class="sfx-chip sfx-chip-green sfp-linked" style="left:300px;top:380px">✓ เชื่อมแล้ว 6 แหล่ง · 1.2 ล้านแถว</div>
+                                    </div>
+
+                                    <!-- Scene 3: clean, combine and define the numbers once -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="หน้าจัดข้อมูล ระบบตัดช่องว่าง รวมชื่อสาขาที่เขียนต่างกันให้เป็นชื่อเดียว แปลงวันที่และตัวเลขให้เป็นรูปแบบเดียว รวม 3 แหล่งเป็นตารางเดียว และสร้าง Measure กำไรขั้นต้นที่ทุกทีมใช้ร่วมกัน" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win" style="left:28px;top:50px;width:540px;--z:0px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>Power Query · ยอดขายรวม</span></div>
+                                                    <div class="sfp-pq">
+                                                        <ul class="sfp-steps">
+                                                            <li class="t">ขั้นตอน</li>
+                                                            <li style="--d:.3s"><i></i>รวม 3 แหล่ง</li>
+                                                            <li style="--d:.8s"><i></i>ตัดช่องว่าง</li>
+                                                            <li style="--d:1.3s"><i></i>ชื่อสาขาเดียว</li>
+                                                            <li style="--d:1.8s"><i></i>แปลงวันที่</li>
+                                                            <li style="--d:2.3s"><i></i>แปลงตัวเลข</li>
+                                                        </ul>
+                                                        <div class="sfp-tbl">
+                                                            <div class="sfp-tr head"><span><u>ABC</u>สาขา</span><span><u>วันที่</u>วันที่ขาย</span><span><u>1.2</u>ยอดขาย</span></div>
+                                                            <div class="sfp-tr"><span class="sfp-cl" style="--d:1.0s"><s>บางนา␣␣</s><b>บางนา</b></span><span class="sfp-cl" style="--d:1.9s"><s>1/10/24</s><b>01/10/2024</b></span><span class="sfp-cl r" style="--d:2.4s"><s>1,250 บาท</s><b>1,250</b></span></div>
+                                                            <div class="sfp-tr"><span class="sfp-cl" style="--d:1.4s"><s>สาขา บางนา</s><b>บางนา</b></span><span class="sfp-cl" style="--d:2.0s"><s>2024-10-02</s><b>02/10/2024</b></span><span class="sfp-cl r" style="--d:2.5s"><s>980.-</s><b>980</b></span></div>
+                                                            <div class="sfp-tr"><span class="sfp-cl" style="--d:1.5s"><s>BN</s><b>บางนา</b></span><span class="sfp-cl" style="--d:2.1s"><s>3 ต.ค. 67</s><b>03/10/2024</b></span><span class="sfp-cl r" style="--d:2.6s"><s>2.4K</s><b>2,400</b></span></div>
+                                                            <div class="sfp-tr"><span class="sfp-cl" style="--d:1.6s"><s>ลาดพร้าว␣</s><b>ลาดพร้าว</b></span><span class="sfp-cl" style="--d:2.2s"><s>4 Oct 2024</s><b>04/10/2024</b></span><span class="sfp-cl r" style="--d:2.7s"><s>3,120.00</s><b>3,120</b></span></div>
+                                                            <div class="sfp-tr"><span class="sfp-cl" style="--d:1.7s"><s>CM</s><b>เชียงใหม่</b></span><span class="sfp-cl" style="--d:2.3s"><s>05.10.24</s><b>05/10/2024</b></span><span class="sfp-cl r" style="--d:2.8s"><s>฿1,870</s><b>1,870</b></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-plane sfx-tilt-c">
+                                                <div class="sfx-win sfp-rows" style="left:600px;top:62px;width:170px;--z:30px">
+                                                    <span>ตารางเดียว</span>
+                                                    <b>1,248,560</b>
+                                                    <em>แถว · พร้อมใช้</em>
+                                                </div>
+                                                <div class="sfx-win sfp-dax" style="left:592px;top:206px;width:182px;--z:50px">
+                                                    <div class="sfp-dax-h">Measure</div>
+                                                    <code>กำไรขั้นต้น % =<br>DIVIDE([กำไร],<br>&nbsp;&nbsp;[ยอดขาย])</code>
+                                                    <div class="sfp-dax-r"><span>ผลลัพธ์</span><b>32.4%</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Scene 4: one interactive dashboard for every team -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="Dashboard ภาพรวมธุรกิจ มี KPI ยอดขาย กำไรขั้นต้น สต๊อกพอขาย และลูกหนี้ค้าง กราฟยอดขายรายเดือนและสัดส่วนช่องทาง กดตัวกรองภาคเหนือแล้วทุกกราฟเปลี่ยนตาม รีเฟรชอัตโนมัติ และส่งสรุปทางอีเมลทุกเช้า" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win sfp-rep" style="left:28px;top:34px;width:560px;--z:0px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>ภาพรวมธุรกิจ · Power BI</span></div>
+                                                    <div class="sfp-rep-body">
+                                                        <div class="sfp-rep-top">
+                                                            <b>ภาพรวมธุรกิจ</b>
+                                                            <div class="sfp-slicer"><span class="all">ทั้งหมด</span><span>กลาง</span><span class="pick">เหนือ</span><span>ใต้</span></div>
+                                                        </div>
+                                                        <div class="sfp-kpis">
+                                                            <div><span>ยอดขาย</span><b class="sfp-sw"><s>฿48.6M</s><em>฿11.2M</em></b></div>
+                                                            <div><span>กำไรขั้นต้น</span><b class="sfp-sw"><s>32.4%</s><em>35.1%</em></b></div>
+                                                            <div><span>สต๊อกพอขาย</span><b class="sfp-sw"><s>21 วัน</s><em>18 วัน</em></b></div>
+                                                            <div><span>ลูกหนี้ค้าง</span><b class="sfp-sw"><s>฿3.2M</s><em>฿0.7M</em></b></div>
+                                                        </div>
+                                                        <div class="sfp-charts">
+                                                            <div class="sfp-card">
+                                                                <span class="sfp-card-t">ยอดขายรายเดือน</span>
+                                                                <div class="sfp-cols">
+                                                                    <span style="--a:52%;--h:40%"></span><span style="--a:60%;--h:46%"></span><span style="--a:58%;--h:52%"></span><span style="--a:66%;--h:48%"></span><span style="--a:72%;--h:58%"></span><span style="--a:64%;--h:62%"></span><span style="--a:78%;--h:56%"></span><span style="--a:82%;--h:70%"></span><span style="--a:76%;--h:74%"></span><span style="--a:88%;--h:68%"></span><span style="--a:92%;--h:82%"></span><span style="--a:96%;--h:90%"></span>
+                                                                </div>
+                                                                <div class="sfp-axis"><span>ม.ค.</span><span>มิ.ย.</span><span>ธ.ค.</span></div>
+                                                            </div>
+                                                            <div class="sfp-card">
+                                                                <span class="sfp-card-t">ตามช่องทาง</span>
+                                                                <div class="sfp-donut-row">
+                                                                    <i class="sfp-donut"></i>
+                                                                    <ul class="sfp-legend"><li><i style="background:#2563eb"></i>หน้าร้าน<b>46%</b></li><li><i style="background:#60a5fa"></i>ออนไลน์<b>34%</b></li><li><i style="background:#bfdbfe"></i>ตัวแทน<b>20%</b></li></ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sfp-pages"><span class="on">ยอดขาย</span><span>สต๊อก</span><span>การเงิน</span><span>ผู้บริหาร</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <svg class="sfx-cursor sfp-cur4" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                        <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>รีเฟรชอัตโนมัติ</b><span>ล่าสุด 10:00 น.</span></div></div>
+                                        <div class="sfp-sub" style="left:614px;top:250px">
+                                            <span class="sfp-sub-ico"></span>
+                                            <b>ส่งสรุปทุกเช้า</b>
+                                            <span>07:00 · ทีมผู้บริหาร</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sfs-captions">
+                            <div class="sfs-caption" data-sfs-caption><h3>รายงานคนละไฟล์ ตัวเลขคนละชุด</h3><p>ข้อมูลไม่สด · ยอดไม่ตรง · ทำมือหลายวัน</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>เชื่อมทุกแหล่งข้อมูลครั้งเดียว</h3><p>Excel · ERP · Database · รีเฟรชอัตโนมัติ</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>ล้างข้อมูล นิยามตัวเลขเดียวกัน</h3><p>ชื่อ · วันที่ · ตัวเลข เป็นรูปแบบเดียว</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>Dashboard เดียว เห็นภาพเดียวกัน</h3><p>กดกรองได้ทันที · อัปเดตเอง · พร้อมเข้าประชุม</p></div>
+                        </div>
+
+                        <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">เชื่อม</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">จัดข้อมูล</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">ผลลัพธ์</span><span class="sfs-tab-bar"><span></span></span></button>
+                        </div>
+                        <script type="application/json" data-sfs-en>{"ก่อนประชุมผู้บริหาร มีสไลด์ยอดขาย ไฟล์ Excel การเงิน และ PDF สต๊อก คนละแหล่ง ข้อมูลคนละวันที่ ยอดขายไม่ตรงกัน และต้องทำรายงานด้วยมือ 3 วัน":"Before the exec meeting: a sales slide, a finance Excel file and a stock PDF from different sources and dates. Sales figures don't match, and the report takes 3 days by hand.","สรุปยอดขาย_Q3.pptx":"Sales_Q3.pptx","ยอดขาย Q3":"Q3 sales","฿12.4M":"฿12.4M","ข้อมูล 30 ก.ย.":"As of 30 Sep","การเงิน_ก.ย._final2.xlsx":"Finance_Sep_final2.xlsx","รายการ":"Item","ก.ย.":"Sep","ยอดขาย":"Sales","ต้นทุนขาย":"COGS","กำไรขั้นต้น":"Gross profit","ข้อมูล 15 ก.ย.":"As of 15 Sep","สต๊อกคงเหลือ":"Stock on hand","ข้อมูล 1 ก.ย.":"As of 1 Sep","ประชุมผู้บริหาร":"Exec meeting","ยอดขายจริงเท่าไหร่?":"What are real sales?","⚠ ตัวเลขไม่ตรง · ทำมือ 3 วัน":"⚠ Numbers differ · 3 days manual","หน้าเชื่อมแหล่งข้อมูล เลือก Excel ERP SQL Database SharePoint Google Sheets และระบบ POS ทีละแหล่ง ตั้งรีเฟรชอัตโนมัติทุก 1 ชั่วโมง แล้วกดเชื่อมต่อ":"The data source screen: select Excel, ERP, SQL Database, SharePoint, Google Sheets and the POS system one by one, set auto refresh every hour, then click Connect.","Power BI · เชื่อมแหล่งข้อมูล":"Power BI · Data sources","เลือกแหล่งข้อมูล":"Choose sources","6 แหล่ง":"6 sources","ระบบหน้าร้าน":"Store POS","รีเฟรชอัตโนมัติ · ทุก 1 ชม.":"Auto refresh · every 1 hr","เชื่อมต่อ":"Connect","✓ เชื่อมแล้ว 6 แหล่ง · 1.2 ล้านแถว":"✓ 6 sources connected · 1.2M rows","หน้าจัดข้อมูล ระบบตัดช่องว่าง รวมชื่อสาขาที่เขียนต่างกันให้เป็นชื่อเดียว แปลงวันที่และตัวเลขให้เป็นรูปแบบเดียว รวม 3 แหล่งเป็นตารางเดียว และสร้าง Measure กำไรขั้นต้นที่ทุกทีมใช้ร่วมกัน":"The data prep screen: trims spaces, unifies branch names written differently, standardizes dates and numbers, merges 3 sources into one table and creates a shared gross profit measure for every team.","Power Query · ยอดขายรวม":"Power Query · All sales","ขั้นตอน":"Steps","รวม 3 แหล่ง":"Merge 3 sources","ตัดช่องว่าง":"Trim spaces","ชื่อสาขาเดียว":"One branch name","แปลงวันที่":"Fix dates","แปลงตัวเลข":"Fix numbers","สาขา":"Branch","วันที่":"Date","วันที่ขาย":"Sale date","บางนา␣␣":"Bang Na␣␣","บางนา":"Bang Na","1,250 บาท":"1,250 THB","สาขา บางนา":"Br. Bang Na","3 ต.ค. 67":"3 Oct 24","ลาดพร้าว␣":"Lat Phrao␣","ลาดพร้าว":"Lat Phrao","เชียงใหม่":"Chiang Mai","฿1,870":"฿1,870","ตารางเดียว":"One table","แถว · พร้อมใช้":"rows · ready","กำไรขั้นต้น % =":"Gross Margin % =","DIVIDE([กำไร],":"DIVIDE([Profit],","[ยอดขาย])":"[Sales])","ผลลัพธ์":"Result","Dashboard ภาพรวมธุรกิจ มี KPI ยอดขาย กำไรขั้นต้น สต๊อกพอขาย และลูกหนี้ค้าง กราฟยอดขายรายเดือนและสัดส่วนช่องทาง กดตัวกรองภาคเหนือแล้วทุกกราฟเปลี่ยนตาม รีเฟรชอัตโนมัติ และส่งสรุปทางอีเมลทุกเช้า":"A business overview dashboard with KPIs for sales, gross profit, stock cover and receivables, plus monthly sales and channel mix charts. Filtering to the North updates every chart. It refreshes automatically and emails a summary every morning.","ภาพรวมธุรกิจ · Power BI":"Business overview · Power BI","ภาพรวมธุรกิจ":"Business overview","ทั้งหมด":"All","กลาง":"Central","เหนือ":"North","ใต้":"South","฿48.6M":"฿48.6M","฿11.2M":"฿11.2M","สต๊อกพอขาย":"Stock cover","21 วัน":"21 days","18 วัน":"18 days","ลูกหนี้ค้าง":"Receivables","฿3.2M":"฿3.2M","฿0.7M":"฿0.7M","ยอดขายรายเดือน":"Monthly sales","ม.ค.":"Jan","มิ.ย.":"Jun","ธ.ค.":"Dec","ตามช่องทาง":"By channel","หน้าร้าน":"Store","ออนไลน์":"Online","ตัวแทน":"Dealers","สต๊อก":"Stock","การเงิน":"Finance","ผู้บริหาร":"Execs","รีเฟรชอัตโนมัติ":"Auto refresh","ล่าสุด 10:00 น.":"Last 10:00","ส่งสรุปทุกเช้า":"Daily summary","07:00 · ทีมผู้บริหาร":"07:00 · Exec team","รายงานคนละไฟล์ ตัวเลขคนละชุด":"Separate files, different numbers","ข้อมูลไม่สด · ยอดไม่ตรง · ทำมือหลายวัน":"Stale data · totals off · days by hand","เชื่อมทุกแหล่งข้อมูลครั้งเดียว":"Connect every source once","Excel · ERP · Database · รีเฟรชอัตโนมัติ":"Excel · ERP · Database · auto refresh","ล้างข้อมูล นิยามตัวเลขเดียวกัน":"Clean data, one definition","ชื่อ · วันที่ · ตัวเลข เป็นรูปแบบเดียว":"Names · dates · numbers in one format","Dashboard เดียว เห็นภาพเดียวกัน":"One dashboard, one picture","กดกรองได้ทันที · อัปเดตเอง · พร้อมเข้าประชุม":"Instant filters · live · meeting-ready","ก่อน":"Before","เชื่อม":"Connect","จัดข้อมูล":"Clean","หยุด":"Pause"}</script>
+                    </div>
+                </div>
                 <div class="project-carousel-shell" data-project-carousel>
                     <div class="project-carousel-label">โปรเจกต์ตัวอย่าง</div>
                     <button type="button" class="project-carousel-nav project-carousel-nav-prev" aria-label="Previous project" data-project-prev>&#8249;</button>
@@ -126,5 +318,6 @@
     </section>
     <script src="../../assets/js/i18n.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

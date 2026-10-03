@@ -1,0 +1,436 @@
+/* Story demo: Excel VBA & Macro service page (page-specific pieces) */
+
+/* ---------- Shared sheet details ---------- */
+
+.sfp-sheet td { white-space: nowrap; }
+.sfp-sheet td.n { text-align: right; }
+.sfp-sheet td.txt { text-align: left; color: #b45309; background: #fffbeb; }
+.sfp-sheet tr.sfp-copy td { background: rgba(22, 163, 74, 0.07); }
+
+.sfp-wrap { position: relative; }
+
+/* Windows sitting behind the front file: only the title bar and a hint of grid */
+.sfp-back { height: 150px; background: #fbfcfd; }
+.sfp-back .sfp-gridlines {
+    height: 120px;
+    background:
+        linear-gradient(#edf1f5 1px, transparent 1px) 0 0 / 100% 26px,
+        linear-gradient(90deg, #edf1f5 1px, transparent 1px) 0 0 / 70px 100%;
+}
+
+/* Marching-ants copy range */
+.sfp-ants {
+    position: absolute;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, #16a34a 50%, transparent 0) repeat-x 0 0 / 10px 2px,
+        linear-gradient(90deg, #16a34a 50%, transparent 0) repeat-x 0 100% / 10px 2px,
+        linear-gradient(0deg, #16a34a 50%, transparent 0) repeat-y 0 0 / 2px 10px,
+        linear-gradient(0deg, #16a34a 50%, transparent 0) repeat-y 100% 0 / 2px 10px;
+}
+
+/* Keyboard keycaps: the repetitive Ctrl+C / Ctrl+V */
+.sfp-keys {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: rotateX(28deg) rotateZ(-4deg);
+    transform-origin: 50% 100%;
+}
+
+.sfp-key {
+    display: grid;
+    place-items: center;
+    min-width: 50px;
+    height: 46px;
+    padding: 0 12px;
+    border-radius: 10px;
+    background: linear-gradient(#ffffff, #f1f5f9);
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow:
+        0 5px 0 #cbd5e1,
+        0 7px 0 #94a3b8,
+        0 16px 24px -8px rgba(15, 23, 42, 0.35);
+}
+
+.sfp-key.wide { min-width: 70px; font-size: 13px; color: #64748b; }
+.sfp-plus { font-size: 16px; font-weight: 700; color: #94a3b8; }
+.sfp-gap { width: 10px; }
+
+.sfp-repeat {
+    margin-left: 6px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ---------- Scene 2: workbook with a macro button ---------- */
+
+.sfp-ribbon {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 28px;
+    padding: 0 14px;
+    border-bottom: 1px solid #edf1f5;
+    background: #fbfcfd;
+    font-size: 10.5px;
+    color: #94a3b8;
+}
+
+.sfp-ribbon b { color: #16a34a; font-weight: 600; border-bottom: 2px solid #16a34a; padding: 6px 0 4px; }
+
+.sfp-panel { padding: 16px 18px 18px; }
+
+.sfp-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.sfp-panel-head b { font-size: 15px; }
+.sfp-panel-head span { font-size: 11px; color: #94a3b8; }
+
+.sfp-panel .sfx-run { padding: 12px; font-size: 15px; }
+
+.sfp-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.sfp-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 4px 9px;
+    border: 1px solid #eef2f6;
+    border-radius: 10px;
+    background: #fbfcfd;
+    font-size: 11px;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sfp-step i {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    font-style: normal;
+    font-size: 15px;
+}
+
+/* VBA editor peeking behind */
+.sfp-vbe-bar { background: linear-gradient(#f1f5f9, #e2e8f0); }
+
+.sfp-code {
+    margin: 0;
+    padding: 12px 0 14px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    line-height: 22px;
+    color: #334155;
+    counter-reset: ln;
+}
+
+.sfp-code span {
+    display: block;
+    position: relative;
+    padding-left: 38px;
+    white-space: pre;
+}
+
+.sfp-code span::before {
+    counter-increment: ln;
+    content: counter(ln);
+    position: absolute;
+    left: 0;
+    width: 26px;
+    text-align: right;
+    color: #cbd5e1;
+}
+
+.sfp-code .k { color: #2563eb; font-weight: 600; }
+.sfp-code .s { color: #b45309; }
+.sfp-code .c { color: #16a34a; }
+
+/* Small badge pinned to the button window */
+.sfp-badge {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px -10px rgba(15, 23, 42, 0.35);
+}
+
+/* ---------- Scene 3: macro running ---------- */
+
+.sfp-runcard {
+    position: absolute;
+    width: 236px;
+    padding: 14px 14px 12px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    transform: translateZ(var(--z, 0));
+}
+
+.sfp-runcard-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sfp-runcard-head i {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #fff;
+    font-style: normal;
+    font-size: 11px;
+}
+
+.sfp-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 2px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 12px;
+    color: #334155;
+}
+
+.sfp-task > span:first-child { display: flex; align-items: center; gap: 7px; }
+.sfp-task .sfx-st { width: 68px; }
+.sfp-task .sfx-st em, .sfp-task .sfx-st b { left: auto; right: 0; }
+
+.sfp-runcard .sfx-progress span { width: 100%; }
+
+.sfp-sheet3 td { padding: 6px 9px; }
+.sfp-sheet3 tr.h td {
+    font-weight: 600;
+    color: #0f172a;
+    background: #f8fafc;
+    text-align: left;
+}
+
+.sfp-sheet3 tr.tot td {
+    font-weight: 700;
+    color: #0f172a;
+    border-top: 2px solid #2563eb;
+    background: #eff6ff;
+}
+
+.sfp-flag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    background: #f59e0b;
+    color: #fff;
+    font-size: 9.5px;
+    font-weight: 700;
+    vertical-align: 1px;
+}
+
+/* ---------- Scene 4: outputs ---------- */
+
+.sfp-kpis {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 8px;
+    padding: 12px 14px 4px;
+}
+
+.sfp-kpi {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #eef2f6;
+}
+
+.sfp-kpi span { display: block; font-size: 10px; color: #94a3b8; }
+.sfp-kpi b { display: block; margin-top: 2px; font-size: 17px; font-variant-numeric: tabular-nums; }
+.sfp-kpi b.up { color: #059669; }
+
+.sfp-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    height: 132px;
+    margin: 8px 14px 0;
+    padding: 0 6px;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(#f1f5f9 1px, transparent 1px) 0 0 / 100% 33px;
+}
+
+.sfp-chart div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.sfp-chart em {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 3px;
+}
+
+.sfp-chart span {
+    display: block;
+    width: 100%;
+    height: var(--h);
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(#60a5fa, #2563eb);
+    transform-origin: bottom;
+}
+
+.sfp-chart div.top span { background: linear-gradient(#34d399, #059669); }
+
+.sfp-chart-x {
+    display: flex;
+    gap: 14px;
+    margin: 0 14px;
+    padding: 5px 6px 12px;
+}
+
+.sfp-chart-x span { flex: 1; text-align: center; font-size: 10px; color: #64748b; white-space: nowrap; }
+
+.sfp-pdf-table { margin-top: 10px; }
+.sfp-pdf-table div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #475569;
+    padding: 4px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.sfp-pdf-table b { color: #0f172a; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.sfp-mail { width: 190px; min-height: 0; }
+.sfp-mail-to { font-size: 11px; color: #64748b; margin-bottom: 4px; }
+.sfp-mail-to b { color: #0f172a; }
+.sfp-mail-sub { display: block; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+
+.sfp-att {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 8px;
+    margin-top: 6px;
+    border: 1px solid #eef2f6;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #334155;
+}
+
+.sfp-att i {
+    font-style: normal;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.sfp-sent {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #15803d;
+}
+
+.sfp-time {
+    font-size: 14px;
+    padding: 9px 16px;
+}
+
+.sfp-time s { opacity: 0.75; font-weight: 500; }
+
+/* ---------- Motion ---------- */
+
+.is-active .sfp-ants { animation: sfp-ants 0.7s linear infinite; }
+.is-active .sfp-keys .sfp-key.c,
+.is-active .sfp-keys .sfp-key.v { animation: sfp-tap 1.4s ease-in-out infinite; animation-delay: var(--d, 0s); }
+
+.is-active .sfp-step { animation: sfp-rise 0.45s ease both; animation-delay: var(--d, 0s); }
+
+.is-active .sfp-sheet3 tr.r { opacity: 0; animation: sfx-row 0.35s ease forwards; animation-delay: var(--d); }
+.is-active .sfp-sheet3 tr.h td { animation: sfp-head 0.5s ease forwards 1.7s; }
+.is-active .sfp-sheet3 tr.dup td { animation: sfp-dup 0.4s ease forwards 2.1s; }
+.is-active .sfp-flag { opacity: 0; animation: sfx-pop 0.35s cubic-bezier(.2, 1.5, .4, 1) forwards 2.15s; transform: scale(0.6); }
+.is-active .sfp-sheet3 tr.tot { opacity: 0; animation: sfx-row 0.4s ease forwards 2.45s; }
+.is-active .sfp-runcard .sfx-progress span { animation: sfp-fill 2.5s ease-out both 0.3s; }
+.is-active .sfp-exc3 { opacity: 0; animation: sfx-exc 0.6s cubic-bezier(.2, 1.3, .4, 1) forwards 2.3s; }
+
+.is-active .sfp-chart span { animation: sfx-grow 0.8s ease both; animation-delay: var(--d, 0.5s); }
+.is-active .sfp-dash { animation: sfp-rise 0.6s ease both 0.1s; }
+
+@keyframes sfp-ants {
+    to { background-position: 10px 0, -10px 100%, 0 -10px, 100% 10px; }
+}
+
+@keyframes sfp-tap {
+    0%, 30%, 100% { transform: translateY(0); box-shadow: 0 5px 0 #cbd5e1, 0 7px 0 #94a3b8, 0 16px 24px -8px rgba(15, 23, 42, 0.35); }
+    40%, 50% { transform: translateY(5px); box-shadow: 0 0 0 #cbd5e1, 0 2px 0 #94a3b8, 0 8px 14px -8px rgba(15, 23, 42, 0.35); }
+}
+
+@keyframes sfp-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-head {
+    to { background: #2563eb; color: #fff; border-color: #2563eb; }
+}
+
+@keyframes sfp-dup {
+    to { background: #fef3c7; color: #b45309; }
+}
+
+@keyframes sfp-fill {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-ants { background-position: 0 0, 0 100%, 0 0, 100% 0; }
+}

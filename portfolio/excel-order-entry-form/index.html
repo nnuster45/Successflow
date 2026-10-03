@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/excel-order-entry-form.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Excel Order Entry Form","url":"https://www.successflow.it.com/portfolio/excel-order-entry-form/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for an Excel UserForm order entry workflow that validates inputs and stores records in a more structured, usable format."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Excel Order Entry Form","item":"https://www.successflow.it.com/portfolio/excel-order-entry-form/"}]}]}
     </script>
@@ -35,13 +37,154 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 26px 26px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">ฟอร์มบันทึกคำสั่งซื้อใน Excel แบบไม่ต้องพิมพ์ลงชีต</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">ฟอร์มบันทึกคำสั่งซื้อใน Excel แบบไม่ต้องพิมพ์ลงชีต</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: typing straight into the sheet -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="ชีตรับออเดอร์ที่พิมพ์ลงตรง ๆ มีข้อมูลลงผิดคอลัมน์ ช่องว่าง และจำนวนเป็นตัวหนังสือ วางคู่กับใบสั่งซื้อกระดาษ">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:108px;top:58px;width:462px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รับออเดอร์_ตุลาคม.xlsx</span></div>
+                                                <div class="sfp-fx"><em>A7</em><b>fx</b><span>02/1</span></div>
+                                                <table class="sfx-sheet sfp-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+                                                    <tr><th>1</th><td class="b">วันที่</td><td class="b">ลูกค้า</td><td class="b">สินค้า</td><td class="b">จำนวน</td><td class="b">เบอร์โทร</td></tr>
+                                                    <tr><th>2</th><td>01/10</td><td>ร้านสมใจ</td><td>น้ำดื่ม 600ml</td><td class="n">20</td><td>081-234-5678</td></tr>
+                                                    <tr><th>3</th><td>01/10</td><td class="warn"></td><td>กาแฟดริป</td><td class="n">5</td><td>089-115-2040</td></tr>
+                                                    <tr><th>4</th><td class="err">ทองดีมาร์ท</td><td class="err">ชาเขียว</td><td class="err">12</td><td class="warn"></td><td></td></tr>
+                                                    <tr><th>5</th><td>2/10/69</td><td>ป้าแดง</td><td>ชาไทย</td><td class="n err">สิบ</td><td class="warn"></td></tr>
+                                                    <tr><th>6</th><td class="sfp-sel">02/1<i class="sfp-caret"></i></td><td></td><td></td><td></td><td></td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfx-doc sfx-float" style="left:592px;top:44px;width:150px;--d:.7s;--z:40px">
+                                                <div class="sfx-doc-tag" style="background:#64748b">ใบสั่งซื้อ</div>
+                                                <b class="sfx-doc-title">ทองดีมาร์ท</b>
+                                                <span class="sfx-line w80"></span>
+                                                <div class="sfp-slip-item"><span>ชาเขียว</span><b>12 ลัง</b></div>
+                                                <div class="sfp-slip-item"><span>น้ำดื่ม</span><b>30 แพ็ค</b></div>
+                                                <div class="sfp-slip-item"><span>โทร</span><b>08x-xxx…</b></div>
+                                                <div class="sfx-doc-total"><span>ส่ง</span><b>03/10</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-note sfp-note-red" style="left:18px;top:232px;--d:.4s">↔ ลงผิดคอลัมน์</div>
+                                    <div class="sfp-note sfp-note-amber" style="left:590px;top:268px;--d:.9s">○ กรอกไม่ครบ</div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:250px;top:376px;--d:.3s">🔁 ต้องตามแก้ย้อนหลังทุกวัน</div>
+                                </div>
+
+                                <!-- Scene 2: one button opens the form -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="กดปุ่มเพิ่มออเดอร์บนชีต แล้วฟอร์มบันทึกคำสั่งซื้อเด้งขึ้นมา เลือกลูกค้าและสินค้าจากรายการแทนการพิมพ์" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:40px;top:70px;width:380px;--z:-40px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รับออเดอร์_ตุลาคม.xlsx</span></div>
+                                                <div class="sfp-tools"><span class="sfx-run sfx-press">＋ เพิ่มออเดอร์</span><span class="sfp-tool-ghost"></span><span class="sfp-tool-ghost" style="width:36px"></span></div>
+                                                <table class="sfx-sheet sfp-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                    <tr><th>1</th><td class="b">วันที่</td><td class="b">ลูกค้า</td><td class="b">สินค้า</td><td class="b">จำนวน</td></tr>
+                                                    <tr><th>2</th><td>01/10</td><td>ร้านสมใจ</td><td>น้ำดื่ม 600ml</td><td class="n">20</td></tr>
+                                                    <tr><th>3</th><td>01/10</td><td>ร้านกาแฟดี</td><td>กาแฟดริป</td><td class="n">5</td></tr>
+                                                    <tr><th>4</th><td></td><td></td><td></td><td></td></tr>
+                                                    <tr><th>5</th><td></td><td></td><td></td><td></td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfx-win sfp-pop" style="left:400px;top:46px;width:340px;--z:60px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>บันทึกคำสั่งซื้อ</span></div>
+                                                <div class="sfp-form-body">
+                                                    <div class="sfp-field"><label>ลูกค้า</label><span class="sfp-in dd"><span class="sfp-val sfp-type" style="--d:2.05s">ทองดีมาร์ท</span></span>
+                                                        <div class="sfp-list"><span>ร้านสมใจ</span><span class="hl">ทองดีมาร์ท</span><span>ร้านป้าแดง</span></div>
+                                                    </div>
+                                                    <div class="sfp-field"><label>สินค้า</label><span class="sfp-in dd"><span class="sfp-val sfp-type" style="--d:2.25s">ชาเขียว 500ml</span></span></div>
+                                                    <div class="sfp-field"><label>จำนวน</label><span class="sfp-in"><span class="sfp-val sfp-type" style="--d:2.45s">12</span><span class="u">ลัง</span></span></div>
+                                                    <div class="sfp-field"><label>วันที่ส่ง</label><span class="sfp-in"><span class="sfp-val sfp-type" style="--d:2.6s">03/10/2569</span><span class="sfp-cal"></span></span></div>
+                                                    <div class="sfp-field"><label>ช่องทาง</label><span class="sfp-radios"><span class="on">LINE</span><span>โทร</span><span>หน้าร้าน</span></span></div>
+                                                    <div class="sfp-btns"><span class="sfp-btn">ล้าง</span><span class="sfp-btn primary">บันทึก</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor" style="left:118px;top:150px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: validation before saving -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ฟอร์มตรวจทีละช่อง ช่องที่ถูกต้องขึ้นเครื่องหมายถูก จำนวนที่เป็นตัวหนังสือและเบอร์โทรที่ว่างถูกทำเครื่องหมายแดง ปุ่มบันทึกถูกล็อกไว้จนกว่าจะแก้" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win sfp-form-v" style="left:60px;top:40px;width:430px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>บันทึกคำสั่งซื้อ</span></div>
+                                                <div class="sfp-form-body">
+                                                    <div class="sfp-scanf"></div>
+                                                    <div class="sfp-field"><label>ลูกค้า<i>*</i></label><span class="sfp-in dd ok" style="--d:.4s">ร้านป้าแดง</span><span class="sfp-st" style="--d:.4s"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfp-field"><label>สินค้า<i>*</i></label><span class="sfp-in dd ok" style="--d:.8s">ชาไทย 500ml</span><span class="sfp-st" style="--d:.8s"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfp-field"><label>จำนวน<i>*</i></label><span class="sfp-in bad" style="--d:1.2s">สิบ<span class="u">ลัง</span></span><span class="sfp-st" style="--d:1.2s"><em>ตรวจ…</em><b class="bad">✕ ตัวเลขเท่านั้น</b></span></div>
+                                                    <div class="sfp-field"><label>วันที่ส่ง<i>*</i></label><span class="sfp-in ok" style="--d:1.6s">03/10/2569<span class="sfp-cal"></span></span><span class="sfp-st" style="--d:1.6s"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfp-field"><label>เบอร์โทร<i>*</i></label><span class="sfp-in bad" style="--d:2s"><span class="ph">0xx-xxx-xxxx</span></span><span class="sfp-st" style="--d:2s"><em>ตรวจ…</em><b class="bad">✕ ห้ามว่าง</b></span></div>
+                                                    <div class="sfp-btns"><span class="sfp-btn">ล้าง</span><span class="sfp-btn locked">🔒 บันทึก</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-rules sfx-shadow" style="left:560px;top:52px">
+                                        <b>กฎตรวจก่อนบันทึก</b>
+                                        <span>ห้ามว่าง</span><span>ตัวเลขเท่านั้น</span><span>วันที่ถูกรูปแบบ</span><span>เลือกจากรายการ</span>
+                                    </div>
+                                    <div class="sfx-exc" style="right:34px;top:270px;border-left-color:#ef4444">
+                                        <div class="sfx-exc-ico" style="background:#fee2e2;color:#dc2626">!</div>
+                                        <div><b>ยังไม่บันทึกลงตาราง</b><span>แก้ให้ครบ 2 ช่องก่อน</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: clean master table -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="ตารางออเดอร์หลักเรียงเป็นระเบียบ ข้อมูลครบทุกช่อง แถวใหม่ถูกเพิ่มต่อท้ายพร้อมป้ายใหม่ และตัวเลขช่องว่างกับผิดคอลัมน์เป็นศูนย์" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:40px;top:64px;width:500px;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ตารางออเดอร์หลัก · tblOrders</span></div>
+                                                <table class="sfp-tbl">
+                                                    <tr><th>เลขที่</th><th>วันที่</th><th>ลูกค้า</th><th>สินค้า</th><th>จำนวน</th><th>เบอร์โทร</th></tr>
+                                                    <tr><td class="id">OR-0145</td><td>01/10/69</td><td>ร้านสมใจ</td><td>น้ำดื่ม 600ml</td><td class="n">20</td><td>081-234-5678</td></tr>
+                                                    <tr><td class="id">OR-0146</td><td>01/10/69</td><td>ร้านกาแฟดี</td><td>กาแฟดริป</td><td class="n">5</td><td>089-115-2040</td></tr>
+                                                    <tr><td class="id">OR-0147</td><td>02/10/69</td><td>ทองดีมาร์ท</td><td>ชาเขียว 500ml</td><td class="n">12</td><td>086-402-7781</td></tr>
+                                                    <tr><td class="id">OR-0148</td><td>02/10/69</td><td>ร้านป้าแดง</td><td>ชาไทย 500ml</td><td class="n">10</td><td>092-318-4456</td></tr>
+                                                    <tr class="sfp-new"><td class="id">OR-0149<span class="sfp-newtag">ใหม่</span></td><td>03/10/69</td><td>มินิมาร์ทบ้านสวน</td><td>น้ำดื่ม 1.5L</td><td class="n">8</td><td>083-550-1290</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfp-kpi sfx-shadow" style="left:580px;top:112px;--d:1s;--z:40px"><span>ช่องว่าง</span><b class="ok">0</b></div>
+                                            <div class="sfp-kpi sfx-shadow" style="left:580px;top:204px;--d:1.2s;--z:40px"><span>ลงผิดคอลัมน์</span><b class="ok">0</b></div>
+                                            <div class="sfp-kpi sfx-shadow" style="left:580px;top:296px;--d:1.4s;--z:40px"><span>ออเดอร์วันนี้</span><b>23<small>รายการ</small></b></div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>บันทึกลงตารางแล้ว</b><span>OR-0149 · ข้อมูลครบทุกช่อง</span></div></div>
+                                    <div class="sfx-chip sfx-chip-green" style="left:150px;top:378px">✓ ข้อมูลสะอาด พร้อมส่งต่อ</div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>พิมพ์ลงชีตตรง ๆ ข้อมูลเลยเพี้ยน</h3><p>ลงผิดคอลัมน์ · กรอกไม่ครบ · ต้องตามแก้ทีหลัง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>กดปุ่มเดียว ฟอร์มเด้งขึ้นมา</h3><p>เลือกจากรายการแทนการพิมพ์เอง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ฟอร์มตรวจให้ก่อนบันทึก</h3><p>ช่องไหนผิดหรือว่าง ยังบันทึกไม่ได้</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ข้อมูลเข้าตารางหลักครบทุกช่อง</h3><p>เรียงเป็นระเบียบ พร้อมส่งต่อได้ทันที</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">ฟอร์ม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">ตรวจ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">บันทึก</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -52,12 +195,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ทีมต้องพิมพ์ข้อมูลคำสั่งซื้อลง sheet ตรง ๆ ทำให้ลงผิดคอลัมน์ ข้อมูลไม่ครบ และต้องตามแก้ย้อนหลัง</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ออกแบบ user form ให้กรอกข้อมูลง่าย มี validation และบันทึกเข้าตารางหลักแบบเป็นระบบ</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ข้อมูลสะอาดขึ้น, ใช้งานง่ายขึ้น, และลดปัญหาพิมพ์ผิดหรือกรอกไม่ครบก่อนส่งต่อ</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือภาพ mockup ของ user form ได้ตรงนี้ เช่น หน้ากรอกข้อมูล, การ validate field, และผลลัพธ์หลังบันทึกลงตาราง</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -92,5 +229,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

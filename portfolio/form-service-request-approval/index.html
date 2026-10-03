@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/form-service-request-approval.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Form Intake Approval And Work Routing Workflow","url":"https://www.successflow.it.com/portfolio/form-service-request-approval/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for a workflow automation project that collects requests from a form, routes them for approval, and assigns work to the responsible team automatically."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Form Intake Approval And Work Routing Workflow","item":"https://www.successflow.it.com/portfolio/form-service-request-approval/"}]}]}
     </script>
@@ -35,13 +37,170 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-18" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Workflow รับคำขอผ่านฟอร์ม อนุมัติ และกระจายงานต่ออัตโนมัติ</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Workflow รับคำขอผ่านฟอร์ม อนุมัติ และกระจายงานต่ออัตโนมัติ</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: requests arrive everywhere, incomplete -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="คำขอเข้ามาทางแชท อีเมล และไฟล์ติดตามงาน ข้อมูลไม่ครบ และต้องไล่ตามอนุมัติเอง">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:222px;top:40px;width:290px;--d:.3s;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>อีเมล · คำขอ</span></div>
+                                                <div class="sfp-mails">
+                                                    <div class="sfp-mail"><i class="sfp-dot"></i><div><b>RE: RE: FW: แจ้งซ่อมแอร์</b><span>ห้องไหน? แผนกอะไร?</span></div><em class="sfp-pill red">ไม่ครบ</em></div>
+                                                    <div class="sfp-mail"><i class="sfp-dot"></i><div><b>ขอซื้อโน้ตบุ๊ก 1 เครื่อง</b><span>ยังไม่มีผู้อนุมัติ</span></div><em class="sfp-pill amber">รอ 3 วัน</em></div>
+                                                    <div class="sfp-mail"><i class="sfp-dot"></i><div><b>FW: เก้าอี้ชำรุด 6 ตัว</b><span>ส่งต่อให้ใคร?</span></div><em class="sfp-pill red">ไม่ครบ</em></div>
+                                                    <div class="sfp-mail"><i class="sfp-dot off"></i><div><b>ด่วน!! ไฟดับชั้น 2</b><span>ยังไม่มีคนรับ</span></div><em class="sfp-pill amber">ค้าง</em></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-win sfx-float" style="left:482px;top:234px;width:262px;--d:.9s;--z:50px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ติดตามคำขอ_v7_ล่าสุด.xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                    <tr><th>1</th><td class="b">เรื่อง</td><td class="b">ผู้อนุมัติ</td><td class="b">ผู้รับงาน</td></tr>
+                                                    <tr><th>2</th><td>โน้ตบุ๊ก</td><td class="warn">?</td><td class="muted">-</td></tr>
+                                                    <tr><th>3</th><td>เก้าอี้ 6 ตัว</td><td class="err">#N/A</td><td class="err">#N/A</td></tr>
+                                                    <tr><th>4</th><td>แอร์ห้อง 3B</td><td>ผจก.ขาย</td><td class="warn">ใคร?</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-chat sfp-chat sfx-float" style="left:28px;top:62px;--d:0s">
+                                            <div class="sfx-chat-head"><span class="sfp-group">💬</span><b>กลุ่มแจ้งงาน</b><em class="sfp-badge">+18</em></div>
+                                            <div class="sfx-bubble">แอร์ห้อง 3B ไม่เย็นค่ะ</div>
+                                            <div class="sfx-bubble">ขอโน้ตบุ๊กใหม่ด่วน</div>
+                                            <div class="sfx-bubble">อนุมัติหรือยังครับ?</div>
+                                            <div class="sfx-bubble">เรื่องนี้ใครรับ?</div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:52px;top:376px">⚠ ข้อมูลไม่ครบ 6 คำขอ</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:282px;top:380px;--d:.6s">⏱ ตามอนุมัติในแชท</div>
+                                </div>
+
+                                <!-- Scene 2: one central form -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ทุกช่องทางรวมเป็นฟอร์มกลางเดียว กรอกข้อมูลครบทุกช่องแล้วกดส่งคำขอ ได้เลขคำขอทันที" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-file sfx-in-l" style="top:100px;--d:.6s"><i style="background:#22c55e">แชท</i>แจ้งงาน</div>
+                                    <div class="sfx-file sfx-in-l" style="top:200px;--d:.9s"><i style="background:#2563eb">MAIL</i>อีเมล</div>
+                                    <div class="sfx-file sfx-in-l" style="top:300px;--d:1.2s"><i style="background:#f59e0b">โทร</i>โทรแจ้ง</div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                        <div class="sfx-win" style="left:252px;top:30px;width:316px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>ฟอร์มคำขอ · SuccessFlow</span></div>
+                                            <div class="sfp-form">
+                                                <b class="sfp-form-title">แจ้งคำขอ / แจ้งปัญหา</b>
+                                                <div class="sfp-fields">
+                                                    <label class="sfp-field" style="--d:.2s"><span>ประเภท</span><div><em>🛠 แจ้งซ่อม</em><i>✓</i></div></label>
+                                                    <label class="sfp-field" style="--d:.45s"><span>แผนก</span><div><em>ฝ่ายขาย</em><i>✓</i></div></label>
+                                                    <label class="sfp-field" style="--d:.7s"><span>สถานที่</span><div><em>ห้องประชุม 3B</em><i>✓</i></div></label>
+                                                    <label class="sfp-field" style="--d:.95s"><span>งบประมาณ</span><div><em>฿12,500</em><i>✓</i></div></label>
+                                                    <label class="sfp-field wide" style="--d:1.2s"><span>รายละเอียด</span><div><em>แอร์ไม่เย็น มีน้ำหยด</em><i>✓</i></div></label>
+                                                </div>
+                                                <div class="sfp-urg"><span>ปกติ</span><span class="on">ด่วน</span><span>ด่วนมาก</span></div>
+                                                <div class="sfx-run sfx-press sfp-send">ส่งคำขอ</div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-ticket">
+                                        <span class="sfp-ticket-ico">✓</span>
+                                        <div><b>REQ-0418</b><span>ข้อมูลครบ 6/6</span></div>
+                                    </div>
+                                    <svg class="sfx-cursor" style="left:426px;top:332px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: approve and route by rule -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="หน้าจออนุมัติ กดอนุมัติแล้ว ระบบตรวจเงื่อนไขและส่งงานไปทีมอาคารที่รับผิดชอบ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <svg class="sfp-wires" viewBox="0 0 800 440" aria-hidden="true">
+                                        <path class="sfp-wire on" d="M322 222 H380"/>
+                                        <path class="sfp-wire off" d="M476 222 C 500 222, 500 112, 528 112"/>
+                                        <path class="sfp-wire on" d="M476 222 H528"/>
+                                        <path class="sfp-wire off" d="M476 222 C 500 222, 500 332, 528 332"/>
+                                    </svg>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                        <div class="sfx-win sfp-approve" style="left:34px;top:52px;width:290px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>อนุมัติคำขอ · ผจก.ฝ่ายขาย</span></div>
+                                            <div class="sfp-ap-body">
+                                                <div class="sfp-ap-head"><b>REQ-0418</b><span class="sfx-st"><em>รออนุมัติ</em><b class="ok">✓ อนุมัติแล้ว</b></span></div>
+                                                <div class="sfp-ap-title">แจ้งซ่อมแอร์ ห้อง 3B</div>
+                                                <div class="sfp-kv"><span>แผนก</span><b>ฝ่ายขาย</b></div>
+                                                <div class="sfp-kv"><span>งบประมาณ</span><b>฿12,500</b></div>
+                                                <div class="sfp-kv"><span>ความเร่งด่วน</span><b class="sfp-hot">ด่วน</b></div>
+                                                <div class="sfp-ap-btns"><span class="sfp-no">ไม่อนุมัติ</span><span class="sfp-yes">✓ อนุมัติ</span></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-rule">
+                                        <span>เงื่อนไข</span>
+                                        <b>แจ้งซ่อม</b>
+                                    </div>
+                                    <div class="sfp-lane" style="top:76px"><span class="sfp-lane-ico" style="background:#eef2ff;color:#4f46e5">💻</span><div><b>ทีม IT</b><span>คิว 4 งาน</span></div></div>
+                                    <div class="sfp-lane pick" style="top:186px"><span class="sfp-lane-ico" style="background:#eff6ff;color:#2563eb">🛠</span><div><b>ทีมอาคาร</b><span>คิว 2 งาน</span></div><em class="sfp-got">รับงานแล้ว</em></div>
+                                    <div class="sfp-lane" style="top:296px"><span class="sfp-lane-ico" style="background:#fff7ed;color:#ea580c">🛒</span><div><b>ทีมจัดซื้อ</b><span>คิว 6 งาน</span></div></div>
+                                    <div class="sfp-token"></div>
+                                </div>
+
+                                <!-- Scene 4: everyone sees the status -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="บอร์ดคิวงานของทีมอาคารมีคำขอ REQ-0418 อยู่ในช่องกำลังทำ ไทม์ไลน์สถานะครบทุกขั้น และแจ้งเตือนผู้ขอแล้ว" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win" style="left:262px;top:86px;width:480px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>คิวงาน · ทีมอาคาร</span></div>
+                                                <div class="sfp-board">
+                                                    <div class="sfp-col"><div class="sfp-col-h">ใหม่ <em>2</em></div>
+                                                        <div class="sfp-card"><code>REQ-0421</code><b>หลอดไฟชั้น 2</b></div>
+                                                        <div class="sfp-card"><code>REQ-0422</code><b>ล็อกประตูคลัง</b></div>
+                                                    </div>
+                                                    <div class="sfp-col"><div class="sfp-col-h">กำลังทำ <em>2</em></div>
+                                                        <div class="sfp-card hero"><code>REQ-0418</code><b>ซ่อมแอร์ ห้อง 3B</b><div class="sfp-tags"><span class="hot">ด่วน</span><span>หัวหน้าทีม</span></div></div>
+                                                        <div class="sfp-card"><code>REQ-0410</code><b>ทาสีผนังโถง</b></div>
+                                                    </div>
+                                                    <div class="sfp-col"><div class="sfp-col-h">เสร็จ <em>5</em></div>
+                                                        <div class="sfp-card done"><code>REQ-0402</code><b>ก๊อกน้ำรั่ว</b></div>
+                                                        <div class="sfp-card done"><code>REQ-0405</code><b>เปลี่ยนพรม</b></div>
+                                                        <div class="sfp-card done"><code>REQ-0407</code><b>ปลั๊กชำรุด</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-track">
+                                        <b class="sfp-track-h">สถานะ REQ-0418</b>
+                                        <div class="sfp-step" style="--d:.4s"><i>✓</i><span>ส่งคำขอ</span><time>09:02</time></div>
+                                        <div class="sfp-step" style="--d:.7s"><i>✓</i><span>อนุมัติ</span><time>09:15</time></div>
+                                        <div class="sfp-step" style="--d:1s"><i>✓</i><span>มอบหมายทีม</span><time>09:16</time></div>
+                                        <div class="sfp-step" style="--d:1.3s"><i>✓</i><span>แจ้งผู้ขอ</span><time>09:16</time></div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>แจ้งผู้ขอแล้ว</b><span>REQ-0418 · ทีมอาคารรับงาน</span></div></div>
+                                    <div class="sfx-chip sfx-chip-green" style="left:400px;top:384px">✓ ไม่ต้องไล่ถามในแชท</div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>คำขอมาจากทุกทาง ข้อมูลไม่เคยครบ</h3><p>แชท · อีเมล · โทร แล้วต้องไล่ตามอนุมัติเอง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>กรอกฟอร์มกลางเดียว</h3><p>ช่องสำคัญครบก่อนกดส่ง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>อนุมัติแล้ว ระบบส่งต่อให้เอง</h3><p>เลือกทีมที่รับผิดชอบตามเงื่อนไข</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ทุกคนเห็นสถานะงาน</h3><p>ทีมรับงานพร้อมข้อมูลครบ ผู้ขอได้แจ้งเตือนทันที</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">ฟอร์ม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">อนุมัติ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -52,12 +211,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">คำขอเข้ามาหลายช่องทาง รายละเอียดไม่ครบ และคนกลางต้องตามอนุมัติและส่งต่อด้วยมือทุกครั้ง</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ใช้ form เป็นจุดรับข้อมูลกลาง แล้วออกแบบ routing ให้ข้อมูลวิ่งผ่านขั้น approve, assign และ notification ตามเงื่อนไข</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ข้อมูลครบขึ้น process ชัดขึ้น และทีมเห็นสถานะคำขอได้ง่ายขึ้นโดยไม่ต้องไล่ตามจากแชต</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพ form, approval screen, queue งาน หรือ flow diagram ตรงนี้ได้ เช่น ผู้ใช้กรอกคำขอ &gt; ผู้อนุมัติตรวจสอบ &gt; assign ไปทีมปฏิบัติการ &gt; แจ้งสถานะกลับอัตโนมัติ</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -92,5 +245,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

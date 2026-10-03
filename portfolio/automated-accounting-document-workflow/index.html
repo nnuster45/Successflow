@@ -26,6 +26,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Automated Accounting Document Workflow","url":"https://www.successflow.it.com/portfolio/automated-accounting-document-workflow/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for workflow automation in accounting operations, combining OCR slip handling, multi-source data collection, reconciliation checks, and exception routing."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Automated Accounting Document Workflow","item":"https://www.successflow.it.com/portfolio/automated-accounting-document-workflow/"}]}]}
     </script>
@@ -35,13 +36,159 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: scattered files every week -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="ไฟล์ Excel ที่มีช่อง error สลิปโอนเงินในแชท และใบแจ้งหนี้ PDF กระจัดกระจาย">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:48px;top:76px;width:372px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ยอดขายรวม_สัปดาห์40_final(3).xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                    <tr><th>1</th><td class="b">ช่องทาง</td><td class="b">ยอดขาย</td><td class="b">ค่าหัก</td><td class="b">สุทธิ</td></tr>
+                                                    <tr><th>2</th><td>Marketplace</td><td>184,250</td><td>12,480</td><td>171,770</td></tr>
+                                                    <tr><th>3</th><td>หน้าร้าน</td><td>96,400</td><td class="err">#N/A</td><td class="err">#N/A</td></tr>
+                                                    <tr><th>4</th><td>COD</td><td>58,920</td><td>3,410</td><td class="warn">??</td></tr>
+                                                    <tr><th>5</th><td>โอนเงิน</td><td class="err">#REF!</td><td>-</td><td class="err">#REF!</td></tr>
+                                                    <tr><th>6</th><td>Commission</td><td colspan="3" class="muted">รอคำนวณ…</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfx-doc sfx-float" style="left:384px;top:36px;width:168px;--d:.8s;--z:40px">
+                                                <div class="sfx-doc-tag" style="background:#ef4444">PDF</div>
+                                                <b class="sfx-doc-title">ใบแจ้งหนี้ค่าขนส่ง</b>
+                                                <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                <div class="sfx-doc-rows"><span></span><span></span><span></span><span></span></div>
+                                                <div class="sfx-doc-total"><span>รวม</span><b>฿8,640.00</b></div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-chat sfx-float" style="left:566px;top:150px;--d:.4s">
+                                            <div class="sfx-chat-head"><span class="sfx-avatar"></span><b>ลูกค้า (แชท)</b></div>
+                                            <div class="sfx-bubble">ส่งสลิปให้แล้วนะคะ 🙏</div>
+                                            <div class="sfx-slip-mini">
+                                                <div class="sfx-slip-ok">✓ โอนเงินสำเร็จ</div>
+                                                <b>฿12,450.00</b>
+                                                <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                            </div>
+                                            <div class="sfx-bubble">อีก 3 ใบเดี๋ยวส่งตามค่ะ</div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:70px;top:330px">🗂 12 ไฟล์ ยังไม่ได้รวม</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:330px;top:370px;--d:.6s">⏱ ใช้เวลาหลายชั่วโมงต่อรอบ</div>
+                                </div>
+
+                                <!-- Scene 2: one click -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="หน้าแอป SuccessFlow ทุกแหล่งข้อมูลเปิดใช้งาน กดปุ่มรันทั้งหมดครั้งเดียว ไฟล์ทั้งหมดไหลเข้าแอป" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-file sfx-in-l" style="top:90px;--d:.9s"><i style="background:#16a34a">XLSX</i>orders.xlsx</div>
+                                    <div class="sfx-file sfx-in-l" style="top:200px;--d:1.2s"><i style="background:#ef4444">PDF</i>statement.pdf</div>
+                                    <div class="sfx-file sfx-in-l" style="top:310px;--d:1.5s"><i style="background:#64748b">CSV</i>cod_report.csv</div>
+                                    <div class="sfx-file sfx-in-r" style="top:120px;--d:1.05s"><i style="background:#ec4899">JPG</i>slip × 86</div>
+                                    <div class="sfx-file sfx-in-r" style="top:250px;--d:1.35s"><i style="background:#2563eb">API</i>ERP orders</div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-app sfx-tilt-b" style="left:210px;top:46px;width:380px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>SuccessFlow · ปิดยอดรายสัปดาห์</span></div>
+                                            <div class="sfx-app-body">
+                                                <div class="sfx-src"><span class="sfx-src-ico" style="background:#fff7ed;color:#ea580c">🛒</span>E-commerce<em class="sfx-toggle"></em></div>
+                                                <div class="sfx-src"><span class="sfx-src-ico" style="background:#eff6ff;color:#2563eb">🗄</span>ERP / ระบบภายใน<em class="sfx-toggle"></em></div>
+                                                <div class="sfx-src"><span class="sfx-src-ico" style="background:#f0fdf4;color:#16a34a">🚚</span>ขนส่ง &amp; COD<em class="sfx-toggle"></em></div>
+                                                <div class="sfx-src"><span class="sfx-src-ico" style="background:#fdf2f8;color:#db2777">🧾</span>สลิปโอนเงิน<em class="sfx-toggle"></em></div>
+                                                <div class="sfx-run-wrap">
+                                                    <div class="sfx-run sfx-press">▶ รันทั้งหมด</div>
+                                                    <div class="sfx-progress"><span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: the system reads, matches and checks -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ระบบอ่านสลิปด้วย OCR จับคู่รายการทีละแถวจนได้เครื่องหมายถูก รายการที่ยอดไม่ตรงถูกแยกออกมาให้คนตรวจ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-tilt-c" style="left:296px;top:44px;width:392px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>จับคู่ยอดขาย ↔ รับชำระ</span></div>
+                                            <div class="sfx-match">
+                                                <div class="sfx-scan"></div>
+                                                <div class="sfx-row head"><span>Order</span><span>ยอดขาย</span><span>รับชำระ</span><span>สถานะ</span></div>
+                                                <div class="sfx-row" style="--d:.4s"><span>ORD-240918</span><span>12,450</span><span>12,450</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                <div class="sfx-row" style="--d:.9s"><span>ORD-240921</span><span>3,890</span><span>3,890</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                <div class="sfx-row" style="--d:1.4s"><span>ORD-240925</span><span>7,200</span><span>7,180</span><span class="sfx-st"><em>ตรวจ…</em><b class="bad">! ไม่ตรง</b></span></div>
+                                                <div class="sfx-row" style="--d:1.9s"><span>ORD-240930</span><span>1,560</span><span>COD</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                <div class="sfx-row" style="--d:2.4s"><span>ORD-240934</span><span>5,240</span><span>5,240</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-ocr">
+                                        <div class="sfx-slip-ok">✓ โอนเงินสำเร็จ</div>
+                                        <div class="sfx-ocr-amt"><b>฿12,450.00</b><i class="sfx-box" style="--d:.3s"></i></div>
+                                        <div class="sfx-ocr-row">วันที่ <b>02 ต.ค. 14:32</b><i class="sfx-box" style="--d:.6s"></i></div>
+                                        <div class="sfx-ocr-row">อ้างอิง <b>REF-58201947</b><i class="sfx-box" style="--d:.9s"></i></div>
+                                        <div class="sfx-ocr-tag">OCR อ่านอัตโนมัติ</div>
+                                    </div>
+                                    <div class="sfx-exc">
+                                        <div class="sfx-exc-ico">!</div>
+                                        <div><b>ยอดโอนขาด ฿20</b><span>ORD-240925 → ส่งให้ทีมตรวจ</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: ready for accounting -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="ใบกำกับภาษี สรุป Commission และไฟล์ส่งบัญชี พร้อมเครื่องหมายถูก และแจ้งเตือนว่าส่งถึงทีมบัญชีแล้ว" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-out" style="left:112px;top:76px;--d:.15s;--r:-8deg">
+                                                <div class="sfx-out-head" style="background:#1d4ed8">TAX INVOICE</div>
+                                                <b class="sfx-doc-title">ใบกำกับภาษี</b>
+                                                <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                <div class="sfx-doc-rows"><span></span><span></span><span></span></div>
+                                                <div class="sfx-doc-total"><span>รวมทั้งสิ้น</span><b>฿184,250</b></div>
+                                                <i class="sfx-stamp" style="--d:.9s">✓</i>
+                                            </div>
+                                            <div class="sfx-out" style="left:300px;top:46px;--d:.35s;--r:0deg">
+                                                <div class="sfx-out-head" style="background:#059669">COMMISSION</div>
+                                                <b class="sfx-doc-title">สรุป Commission</b>
+                                                <div class="sfx-bars"><span style="--h:62%"></span><span style="--h:88%"></span><span style="--h:46%"></span><span style="--h:74%"></span><span style="--h:56%"></span></div>
+                                                <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                <i class="sfx-stamp" style="--d:1.1s">✓</i>
+                                            </div>
+                                            <div class="sfx-out" style="left:488px;top:76px;--d:.55s;--r:8deg">
+                                                <div class="sfx-out-head" style="background:#16a34a">XLSX</div>
+                                                <b class="sfx-doc-title">ไฟล์ส่งบัญชี</b>
+                                                <div class="sfx-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                <i class="sfx-stamp" style="--d:1.3s">✓</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>ส่งไฟล์ถึงทีมบัญชีแล้ว</b><span>weekly_close_w40.xlsx</span></div></div>
+                                    <div class="sfx-chip sfx-chip-green" style="left:330px;top:380px">⚡ กดรันครั้งเดียว</div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>ทุกสัปดาห์ ไฟล์กระจายอยู่ทุกที่</h3><p>ยอดขาย · ขนส่ง · สลิป · ค่าหัก ต้องรวมเองทีละไฟล์</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>แค่กดรันครั้งเดียว</h3><p>ระบบดึงทุกไฟล์เข้ามาเอง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ระบบอ่าน จับคู่ และเช็กให้</h3><p>อันไหนผิดปกติ แยกให้คนตรวจ</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เอกสารพร้อมส่งบัญชี</h3><p>ใบกำกับภาษี · Commission · ไฟล์ส่งบัญชี</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">กดรัน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">ตรวจให้</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -54,12 +201,6 @@
                     <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-3">Project Story</p>
                         <p class="text-slate-600 leading-relaxed">สถานการณ์ตั้งต้นคือทุกสัปดาห์ทีมขายและทีมบัญชีต้องสรุปรายการเพื่อส่งบัญชี ออกใบกำกับภาษี และคำนวณ commission ให้พนักงานขายแต่ละคนตามเงื่อนไขการจ่าย โดยต้องดึงข้อมูลจากหลายแพลตฟอร์ม e-commerce, ระบบภายใน, ขนส่ง, ยอดเก็บปลายทาง, โปรโมชั่น, ค่าหัก และ slip โอนเงินจากลูกค้า บางส่วนมาในรูปภาพหรือ PDF ทำให้ต้อง reconcile ด้วยมือ ใช้เวลาเทรนงานสูง และเสี่ยงสะดุดทันทีเมื่อคนรับผิดชอบเปลี่ยน</p>
-                    </div>
-                    <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพจำลองหรือ flow ของงานตรงนี้ได้ เช่น ดึงยอดจากหลายแพลตฟอร์ม, อ่าน OCR slip, map commission และค่าหัก, reconcile ยอด และเตรียมไฟล์สำหรับส่งบัญชีโดยไม่เปิดข้อมูลลูกค้าจริง</p>
-                        </div>
                     </div>
                     <div class="mt-10">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-5">Before / After</p>
@@ -120,5 +261,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

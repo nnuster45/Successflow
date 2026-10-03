@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/sales-kpi-dashboard.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -72,13 +74,193 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Sales & KPI Dashboard</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Sales & KPI Dashboard</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: waiting for the month-end report, numbers disagree -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="ปฏิทินเดือนตุลาคมที่ต้องรอรายงานยอดขายถึงวันที่ 31 และไฟล์ยอดขายสองไฟล์ที่ตัวเลขไม่ตรงกัน">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:44px;top:70px;width:300px;--d:0s;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>ปฏิทิน</span></div>
+                                                <div class="sfp-cal">
+                                                    <div class="sfp-cal-head">ตุลาคม 2569<span>วันนี้ 24</span></div>
+                                                    <div class="sfp-cal-grid">
+                                                        <b>จ</b><b>อ</b><b>พ</b><b>พฤ</b><b>ศ</b><b>ส</b><b>อา</b>
+                                                        <span class="x"></span><span class="x"></span><span class="x"></span><span>1</span><span>2</span><span>3</span><span>4</span>
+                                                        <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                                                        <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                                                        <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span class="today">24</span><span class="wait" style="--d:.3s">25</span>
+                                                        <span class="wait" style="--d:.5s">26</span><span class="wait" style="--d:.7s">27</span><span class="wait" style="--d:.9s">28</span><span class="wait" style="--d:1.1s">29</span><span class="wait" style="--d:1.3s">30</span><span class="due">31</span><span class="x"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfp-due-pin" style="left:200px;top:322px">📄 วันส่งรายงาน</div>
+                                            <div class="sfx-win sfx-float" style="left:366px;top:100px;width:236px;--d:.6s;--z:20px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ยอดขาย_ต.ค._ทีมขาย_v4.xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th></tr>
+                                                    <tr><th>1</th><td class="b">ทีม</td><td class="b">ยอดขาย</td></tr>
+                                                    <tr><th>2</th><td>ภาคเหนือ</td><td>6,120,000</td></tr>
+                                                    <tr><th>3</th><td>ภาคกลาง</td><td>9,480,000</td></tr>
+                                                    <tr><th>4</th><td>ภาคใต้</td><td class="err">#REF!</td></tr>
+                                                    <tr><th>5</th><td class="b">รวม</td><td class="warn">21,350,000</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-doc sfx-float" style="left:606px;top:60px;width:166px;--d:.3s;--z:0px">
+                                            <div class="sfx-doc-tag" style="background:#ef4444">PDF</div>
+                                            <b class="sfx-doc-title">สรุปยอดขาย (บัญชี)</b>
+                                            <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                            <div class="sfx-doc-rows"><span></span><span></span><span></span></div>
+                                            <div class="sfx-doc-total"><span>รวม</span><b>฿25,060,000</b></div>
+                                            <span class="sfp-mismatch">≠ ไม่ตรงกับ Excel</span>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:64px;top:360px">⏳ รออีก 7 วัน</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:420px;top:366px;--d:.6s">📉 ไม่เห็นยอดรายวัน</div>
+                                </div>
+
+                                <!-- Scene 2: connect the ERP once -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="เชื่อมต่อฐานข้อมูล ERP ครั้งเดียว ข้อมูลใบขาย ลูกค้า สินค้า และเป้าขาย ซิงก์เข้าระบบ พร้อมตั้งอัปเดตอัตโนมัติทุกเช้า" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfp-server-wrap">
+                                        <div class="sfp-server">
+                                            <div class="sfp-server-label">ERP<em>SQL</em></div>
+                                            <div class="sfp-slot"><i style="--d:0s"></i><i style="--d:.3s"></i><span></span></div>
+                                            <div class="sfp-slot"><i style="--d:.2s"></i><i style="--d:.5s"></i><span></span></div>
+                                            <div class="sfp-slot"><i style="--d:.4s"></i><i style="--d:.1s"></i><span></span></div>
+                                            <div class="sfp-slot"><i style="--d:.6s"></i><i style="--d:.35s"></i><span></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-pipe"><i class="sfp-pkt" style="--d:.9s"></i><i class="sfp-pkt" style="--d:1.35s"></i><i class="sfp-pkt" style="--d:1.8s"></i></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-tilt-b" style="left:318px;top:44px;width:430px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>SuccessFlow · เชื่อมข้อมูลยอดขาย</span></div>
+                                            <div class="sfp-conn">
+                                                <div class="sfp-conn-top">
+                                                    <div class="sfp-conn-src">🗄 <b>ERP</b><span>sales_db</span></div>
+                                                    <div class="sfp-btn">เชื่อมต่อ</div>
+                                                </div>
+                                                <div class="sfp-sync"><span class="sfp-sync-ico" style="background:#eff6ff">🧾</span>ใบขาย<div class="sfp-meter"><span style="--d:.9s"></span></div><small style="--d:.9s">128,450</small><i class="sfp-ok" style="--d:.9s">✓</i></div>
+                                                <div class="sfp-sync"><span class="sfp-sync-ico" style="background:#fdf2f8">👥</span>ลูกค้า<div class="sfp-meter"><span style="--d:1.3s"></span></div><small style="--d:1.3s">8,214</small><i class="sfp-ok" style="--d:1.3s">✓</i></div>
+                                                <div class="sfp-sync"><span class="sfp-sync-ico" style="background:#fff7ed">📦</span>สินค้า<div class="sfp-meter"><span style="--d:1.7s"></span></div><small style="--d:1.7s">1,932</small><i class="sfp-ok" style="--d:1.7s">✓</i></div>
+                                                <div class="sfp-sync"><span class="sfp-sync-ico" style="background:#f0fdf4">🎯</span>เป้าขาย<div class="sfp-meter"><span style="--d:2.1s"></span></div><small style="--d:2.1s">48</small><i class="sfp-ok" style="--d:2.1s">✓</i></div>
+                                                <div class="sfp-sched">🕕 อัปเดตอัตโนมัติ ทุกวัน 06:00<em class="sfx-toggle"></em></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor sfp-cur" style="left:666px;top:104px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: the KPI model computes -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="โมเดลข้อมูลเชื่อมตารางยอดขายกับวันที่ สินค้า ทีมขาย และเป้าขาย แล้วคำนวณ KPI ยอดถึงเป้า 92% อัตราปิดการขาย และยอดเฉลี่ยต่อบิล" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-tilt-c" style="left:40px;top:50px;width:410px">
+                                            <div class="sfx-bar"><i></i><i></i><i></i><span>โมเดล KPI</span></div>
+                                            <div class="sfp-model">
+                                                <svg class="sfp-links" viewBox="0 0 408 262" aria-hidden="true">
+                                                    <path d="M110 52 C 140 52, 140 120, 160 120" style="--d:.5s"/>
+                                                    <path d="M110 206 C 140 206, 140 140, 160 140" style="--d:.7s"/>
+                                                    <path d="M298 52 C 268 52, 268 120, 248 120" style="--d:.9s"/>
+                                                    <path d="M298 206 C 268 206, 268 140, 248 140" style="--d:1.1s"/>
+                                                </svg>
+                                                <div class="sfp-tbl" style="left:14px;top:14px;--d:.1s"><b style="background:#64748b">วันที่</b><span>วัน</span><span>เดือน</span></div>
+                                                <div class="sfp-tbl" style="left:14px;top:168px;--d:.2s"><b style="background:#f97316">สินค้า</b><span>หมวด</span><span>SKU</span></div>
+                                                <div class="sfp-tbl" style="left:294px;top:14px;--d:.3s"><b style="background:#8b5cf6">ทีมขาย</b><span>ภาค</span><span>พนักงาน</span></div>
+                                                <div class="sfp-tbl" style="left:294px;top:168px;--d:.4s"><b style="background:#10b981">เป้าขาย</b><span>รายเดือน</span><span>รายทีม</span></div>
+                                                <div class="sfp-tbl fact" style="left:145px;top:82px;--d:0s"><b style="background:#2563eb">ยอดขาย</b><span>วันที่</span><span>สินค้า</span><span>ทีม</span><span>ยอดเงิน</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-kpi" style="top:58px;--d:1.2s">
+                                        <svg class="sfp-ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="bg" cx="27" cy="27" r="22"/><circle class="fg" cx="27" cy="27" r="22" style="--o:11"/></svg>
+                                        <div><span>ยอดขายถึงเป้า</span><b>92%</b></div>
+                                    </div>
+                                    <div class="sfp-kpi" style="top:166px;--d:1.6s">
+                                        <svg class="sfp-ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="bg" cx="27" cy="27" r="22"/><circle class="fg" cx="27" cy="27" r="22" style="--o:112.8;--c:#10b981"/></svg>
+                                        <div><span>อัตราปิดการขาย</span><b>18.4%</b></div>
+                                    </div>
+                                    <div class="sfp-kpi" style="top:274px;--d:2s">
+                                        <svg class="sfp-spark" viewBox="0 0 54 54" aria-hidden="true"><polyline points="4,40 14,34 22,38 31,24 40,28 50,12"/></svg>
+                                        <div><span>ยอดเฉลี่ยต่อบิล</span><b>฿1,240</b><em>▲ 5.1%</em></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: the daily sales dashboard, on desktop and phone -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="Dashboard ยอดขายรายวัน แสดงยอดขายวันนี้ ยอดสะสม เปอร์เซ็นต์ถึงเป้า กราฟแนวโน้มรายวันเทียบเป้า และยอดตามหมวดสินค้า ทั้งบนคอมพิวเตอร์และมือถือ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win" style="left:34px;top:44px;width:540px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Sales &amp; KPI Dashboard · 24 ต.ค. 2569</span></div>
+                                                <div class="sfp-dash">
+                                                    <div class="sfp-tiles">
+                                                        <div class="sfp-tile" style="--d:.1s"><span>ยอดขายวันนี้</span><b>฿1.28M</b><em>▲ 8.2%</em></div>
+                                                        <div class="sfp-tile" style="--d:.2s"><span>ยอดสะสมเดือนนี้</span><b>฿25.1M</b><em>▲ 6.4%</em></div>
+                                                        <div class="sfp-tile" style="--d:.3s"><span>ถึงเป้า</span><b>92%</b><em>ตามแผน</em></div>
+                                                        <div class="sfp-tile" style="--d:.4s"><span>ออเดอร์วันนี้</span><b>1,034</b><em>▲ 3.9%</em></div>
+                                                    </div>
+                                                    <div class="sfp-panels">
+                                                        <div class="sfp-panel">
+                                                            <h4>ยอดขายรายวัน<span>— เป้า</span></h4>
+                                                            <svg class="sfp-line" viewBox="0 0 300 132" preserveAspectRatio="none" aria-hidden="true">
+                                                                <line class="grid" x1="0" y1="30" x2="300" y2="30"/><line class="grid" x1="0" y1="74" x2="300" y2="74"/><line class="grid" x1="0" y1="118" x2="300" y2="118"/>
+                                                                <line class="target" x1="0" y1="53" x2="300" y2="53"/>
+                                                                <path class="area" d="M12,87 L24,80 36,95 48,69 60,76 72,60 84,84 96,74 108,65 120,78 132,56 144,68 156,75 168,58 180,52 192,69 204,62 216,48 228,59 240,54 252,44 264,57 276,47 288,36 L288,118 L12,118 Z"/>
+                                                                <polyline class="trend" points="12,87 24,80 36,95 48,69 60,76 72,60 84,84 96,74 108,65 120,78 132,56 144,68 156,75 168,58 180,52 192,69 204,62 216,48 228,59 240,54 252,44 264,57 276,47 288,36"/>
+                                                                <circle class="dot" cx="288" cy="36" r="4"/>
+                                                                <text x="12" y="130">1 ต.ค.</text><text x="262" y="130">24 ต.ค.</text>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="sfp-panel">
+                                                            <h4>ยอดตามหมวด</h4>
+                                                            <div class="sfp-cat">เครื่องดื่ม<i style="--w:100%;--d:.8s"></i><b>38%</b></div>
+                                                            <div class="sfp-cat">ขนม<i style="--w:68%;--d:.95s;--c:#60a5fa"></i><b>26%</b></div>
+                                                            <div class="sfp-cat">ของใช้<i style="--w:55%;--d:1.1s;--c:#93c5fd"></i><b>21%</b></div>
+                                                            <div class="sfp-cat">อื่น ๆ<i style="--w:40%;--d:1.25s;--c:#bfdbfe"></i><b>15%</b></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-phone sfx-float" style="left:606px;top:118px;--d:.4s">
+                                        <div class="sfp-phone-notch"></div>
+                                        <div class="sfp-phone-card">
+                                            <span>ยอดขายวันนี้</span><b>฿1.28M</b><em>▲ 8.2%</em>
+                                            <div class="sfp-mini"><i style="--h:52%;--d:.9s"></i><i style="--h:64%;--d:1s"></i><i style="--h:58%;--d:1.1s"></i><i style="--h:76%;--d:1.2s"></i><i style="--h:70%;--d:1.3s"></i><i style="--h:100%;--d:1.4s"></i></div>
+                                        </div>
+                                        <div class="sfp-phone-row">ถึงเป้า<b>92%</b></div>
+                                        <div class="sfp-phone-row">ออเดอร์<b>1,034</b></div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>อัปเดตแล้ว 06:00</b><span>ทั้งทีมเห็นชุดเดียวกัน</span></div></div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>รอรายงานถึงสิ้นเดือน</h3><p>ตัวเลขไม่ตรงกัน ไม่เห็นยอดรายวัน</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เชื่อม ERP ครั้งเดียว</h3><p>ข้อมูลยอดขายซิงก์เข้าเองทุกเช้า</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ระบบคำนวณ KPI ให้</h3><p>เทียบเป้า · อัตราปิดการขาย · ยอดต่อบิล</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>เห็นยอดขายรายวันทันที</h3><p>ทั้งทีมใช้ dashboard ชุดเดียวกัน</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">เชื่อม</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">คำนวณ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -87,12 +269,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">รายงานช้า ข้อมูลหลายแหล่ง และมองแนวโน้มรายวันไม่ชัด</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">เชื่อมข้อมูลอัตโนมัติ สร้างโมเดล KPI และออกแบบ dashboard ตามมุมมองผู้บริหาร</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ตัดสินใจเร็วขึ้น และใช้ข้อมูลชุดเดียวกันทั้งทีม</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพ dashboard, GIF การ drill down หรือ mockup หลายหน้าจอได้ตรงนี้ เช่น overview, KPI trend, category breakdown และ daily performance view</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -127,5 +303,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

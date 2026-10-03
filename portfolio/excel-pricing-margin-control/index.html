@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/excel-pricing-margin-control.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -72,13 +74,177 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: many file versions, broken formulas -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="ไฟล์ใบเสนอราคาหลายเวอร์ชันซ้อนกัน สูตรราคาถูกพิมพ์ตัวเลขทับ ช่อง Margin ผิดและ error และแต่ละเวอร์ชันได้ Margin ไม่เท่ากัน">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win" style="left:56px;top:28px;width:420px;--z:-40px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ใบเสนอราคา_v3.xlsx</span></div>
+                                                <div class="sfp-ghost-rows"><span></span><span></span></div>
+                                            </div>
+                                            <div class="sfx-win" style="left:96px;top:56px;width:420px;--z:-20px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ใบเสนอราคา_v5_final.xlsx</span></div>
+                                                <div class="sfp-ghost-rows"><span></span><span></span></div>
+                                            </div>
+                                            <div class="sfx-win sfx-float" style="left:136px;top:86px;width:430px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ใบเสนอราคา_v7_final_จริง.xlsx</span></div>
+                                                <div class="sfp-fx"><em>fx</em><code>=B3*1.25-500</code></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                    <tr><th>1</th><td class="b">รายการ</td><td class="b">ต้นทุน</td><td class="b">ราคาขาย</td><td class="b">Margin</td></tr>
+                                                    <tr><th>2</th><td>ปั๊มน้ำ 5HP ×2</td><td>68,000</td><td>90,000</td><td>24.4%</td></tr>
+                                                    <tr><th>3</th><td>ตู้ควบคุมปั๊ม</td><td>24,500</td><td class="sel">30,125</td><td class="warn">23.0%</td></tr>
+                                                    <tr><th>4</th><td>ท่อ HDPE 4"</td><td>21,900</td><td>25,000</td><td class="err">#REF!</td></tr>
+                                                    <tr><th>5</th><td>ค่าติดตั้ง</td><td>14,000</td><td>20,000</td><td>30.0%</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="sfp-q sfx-float" style="left:596px;top:104px;--d:.5s;--z:0px">
+                                            <span>Margin รวม</span>
+                                            <b>??%</b>
+                                            <p>v3 <s>21.4%</s></p>
+                                            <p>v5 <s>16.4%</s></p>
+                                            <p>v7 <s>#REF!</s></p>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:70px;top:356px">🗂 7 เวอร์ชัน · สูตรไม่ตรงกัน</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:408px;top:382px;--d:.6s">⏱ เช็ก Margin เองทีละบรรทัด</div>
+                                </div>
+
+                                <!-- Scene 2: one input sheet, one macro button -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="Workbook กลางไฟล์เดียว กรอกลูกค้า ต้นทุน ค่าขนส่ง ส่วนลด และเกณฑ์ Margin ในช่องสีเหลือง สูตรกลางถูกล็อกไว้ แล้วกดปุ่มคำนวณราคา" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:120px;top:36px;width:560px;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>Pricing_Master.xlsm · Input</span></div>
+                                                <div class="sfp-ribbon">
+                                                    <span class="sfx-run sfx-press sfp-late">▶ คำนวณราคา</span>
+                                                    <span class="sfp-btn">ตรวจ Margin</span>
+                                                    <span class="sfp-btn">สร้างใบเสนอราคา</span>
+                                                </div>
+                                                <div class="sfp-input">
+                                                    <div>
+                                                        <div class="sfp-field">ลูกค้า<span class="sfp-cell"><b style="--d:.3s">บจก. สยามวอเตอร์เทค</b></span></div>
+                                                        <div class="sfp-field">ต้นทุนสินค้า<span class="sfp-cell"><b style="--d:.65s">฿128,400</b></span></div>
+                                                        <div class="sfp-field">ค่าขนส่ง<span class="sfp-cell"><b style="--d:.95s">฿3,500</b></span></div>
+                                                        <div class="sfp-field">ส่วนลด<span class="sfp-cell"><b style="--d:1.2s">3%</b></span></div>
+                                                        <div class="sfp-field">เกณฑ์ Margin<span class="sfp-cell"><b style="--d:1.45s">≥ 18%</b></span></div>
+                                                    </div>
+                                                    <div class="sfp-logic">
+                                                        <div class="sfp-logic-h">🔒 สูตรกลาง<em>v2.4</em></div>
+                                                        <code>ราคา = ต้นทุน ÷ (1 − M)</code>
+                                                        <code>สุทธิ = ราคา × (1 − ส่วนลด)</code>
+                                                        <code>Margin = กำไร ÷ สุทธิ</code>
+                                                    </div>
+                                                </div>
+                                                <div class="sfp-prog"><div class="sfx-progress sfp-late"><span></span></div></div>
+                                                <div class="sfp-tabs"><span class="on">Input</span><span>Cost</span><span>Margin</span><span>Quote</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor sfp-late" style="left:212px;top:96px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: price-to-margin bridge and line-by-line check -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="กราฟจากราคาตั้งหักส่วนลด ต้นทุน และค่าขนส่ง เหลือกำไร Margin รวม 18.1% ผ่านเกณฑ์ ตรวจ Margin ทีละรายการ และแยกรายการที่ต่ำกว่าเกณฑ์ส่งให้ผู้จัดการอนุมัติ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win" style="left:34px;top:40px;width:410px;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Margin · ราคา → กำไร</span></div>
+                                                <div class="sfp-wf-head"><b>QT-6910-018</b>เกณฑ์ ≥ 18%<span class="sfp-badge">✓ 18.1%</span></div>
+                                                <div class="sfp-wf">
+                                                    <div class="tot" style="--x:14px;--b:0%;--h:88%;--c:#3b82f6;--d:.2s"><span>166,000</span></div>
+                                                    <div class="neg" style="--x:88px;--b:85.36%;--h:2.64%;--c:#f87171;--d:.6s"><span>−4,980</span></div>
+                                                    <div class="neg" style="--x:162px;--b:17.29%;--h:68.07%;--c:#94a3b8;--d:1s"><span>−128,400</span></div>
+                                                    <div class="neg" style="--x:236px;--b:15.44%;--h:1.86%;--c:#cbd5e1;--d:1.4s"><span>−3,500</span></div>
+                                                    <div class="tot pos" style="--x:310px;--b:0%;--h:15.44%;--c:#10b981;--d:1.8s"><span>29,120</span></div>
+                                                </div>
+                                                <div class="sfp-wf-x"><span style="--x:14px">ราคาตั้ง</span><span style="--x:88px">ส่วนลด</span><span style="--x:162px">ต้นทุน</span><span style="--x:236px">ขนส่ง</span><span style="--x:310px">กำไร</span></div>
+                                            </div>
+                                            <div class="sfx-win" style="left:470px;top:56px;width:296px;--z:30px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>ตรวจ Margin รายบรรทัด</span></div>
+                                                <div class="sfx-match">
+                                                    <div class="sfx-row head sfp-chk-row"><span>รายการ</span><span>Margin</span><span>ผล</span></div>
+                                                    <div class="sfx-row sfp-chk-row" style="--d:.5s"><span>ปั๊มน้ำ 5HP</span><span>24.4%</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfx-row sfp-chk-row" style="--d:.9s"><span>ตู้ควบคุมปั๊ม</span><span>21.0%</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfx-row sfp-chk-row" style="--d:1.3s"><span>ท่อ HDPE 4"</span><span>12.4%</span><span class="sfx-st"><em>ตรวจ…</em><b class="bad">! ต่ำ</b></span></div>
+                                                    <div class="sfx-row sfp-chk-row" style="--d:1.7s"><span>ค่าติดตั้ง</span><span>30.0%</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfx-row sfp-chk-row total" style="--d:2.1s"><span>รวมทั้งใบ</span><span>18.1%</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-exc" style="right:34px;top:326px">
+                                        <div class="sfx-exc-ico">!</div>
+                                        <div><b>ท่อ HDPE ต่ำกว่าเกณฑ์</b><span>12.4% &lt; 18% → ส่งผู้จัดการอนุมัติ</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: approved quotation ready to send -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="ใบเสนอราคา QT-6910-018 ยอดสุทธิ 161,020 บาท ประทับตราอนุมัติแล้ว พร้อมสรุปการอนุมัติ Margin รวม 18.1% และไฟล์ PDF พร้อมส่งลูกค้า" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-doc sfp-quote" style="left:118px;top:26px;--z:0px">
+                                                <div class="sfp-quote-h"><div><b>ใบเสนอราคา</b><span>บจก. สยามวอเตอร์เทค</span></div><em>QT-6910-018</em></div>
+                                                <table>
+                                                    <thead><tr><th>รายการ</th><th>จำนวน</th><th>จำนวนเงิน</th></tr></thead>
+                                                    <tbody>
+                                                        <tr style="--d:.5s"><td>ปั๊มน้ำ 5HP</td><td>2</td><td>90,000</td></tr>
+                                                        <tr style="--d:.65s"><td>ตู้ควบคุมปั๊ม</td><td>1</td><td>31,000</td></tr>
+                                                        <tr style="--d:.8s"><td>ท่อ HDPE 4"</td><td>120 ม.</td><td>25,000</td></tr>
+                                                        <tr style="--d:.95s"><td>ค่าติดตั้ง</td><td>1 งาน</td><td>20,000</td></tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="sfp-quote-t">
+                                                    <p><span>รวม</span><span>166,000</span></p>
+                                                    <p><span>ส่วนลด 3%</span><span>−4,980</span></p>
+                                                    <p class="net"><span>ยอดสุทธิ</span><b>฿161,020</b></p>
+                                                </div>
+                                                <div class="sfp-approved">✓ อนุมัติแล้ว</div>
+                                            </div>
+                                            <div class="sfx-win sfp-sumwin" style="left:490px;top:104px;width:266px;--z:40px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>สรุปก่อนอนุมัติ</span></div>
+                                                <div class="sfp-sum">
+                                                    <div>Margin รวม<b class="ok">18.1% ✓</b></div>
+                                                    <div>ต่ำกว่าเกณฑ์<b>1 รายการ</b></div>
+                                                    <div>ผู้จัดการขาย<b class="ok">อนุมัติ ✓</b></div>
+                                                    <div>สูตรกลาง<b>🔒 v2.4</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>พร้อมส่งลูกค้า</b><span>QT-6910-018.pdf</span></div></div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>ไฟล์ราคาหลายเวอร์ชัน สูตรเพี้ยน</h3><p>Margin แต่ละไฟล์ไม่เท่ากัน ไม่รู้ว่าผ่านเกณฑ์หรือยัง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>กรอกต้นทุนแล้วกดปุ่มเดียว</h3><p>Workbook กลาง สูตรล็อกไว้ ใช้ร่วมกันทั้งทีม</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>คำนวณราคาและตรวจ Margin ให้</h3><p>รายการไหนต่ำกว่าเกณฑ์ แยกส่งผู้อนุมัติ</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ใบเสนอราคาพร้อมส่ง</h3><p>อนุมัติแล้ว · Margin ผ่านเกณฑ์ · ออก PDF ได้ทันที</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">กรอก</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">ตรวจ</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">อนุมัติ</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -87,12 +253,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">สูตรกระจายหลายชีต คนใช้แต่ละคนแก้ไฟล์คนละแบบ ทำให้ราคาคลาดเคลื่อนและเช็ก margin ก่อนอนุมัติได้ยาก</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ออกแบบ workbook พร้อม VBA/Macro สำหรับคำนวณราคา ตรวจ margin และจัดชุดข้อมูลให้พร้อมส่งต่อหรือพิมพ์ใบเสนอราคา</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ทีมเสนอราคาเร็วขึ้น ลดสูตรเพี้ยน และมี logic กลางที่ใช้ร่วมกันได้ก่อนส่งผู้อนุมัติ</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือ mockup ของ pricing workbook ได้ตรงนี้ เช่น หน้า input cost, margin check, approval summary และ quotation output view</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -127,5 +287,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

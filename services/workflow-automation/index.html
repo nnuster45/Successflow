@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/service-workflow-automation.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -92,6 +94,198 @@
                 </div>
                 <h1 class="text-2xl md:text-4xl font-bold text-slate-900" data-i18n="title">Workflow Automation</h1>
                 <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed" data-i18n="desc">ออกแบบ workflow อัตโนมัติสำหรับงานรับข้อมูลจากหลายแหล่ง, OCR document intake, การอนุมัติ, การแจ้งเตือน และการส่งต่องานข้ามระบบ เพื่อให้ทีมทำงานต่อกันได้ลื่นขึ้น</p>
+                <div class="mt-8">
+                    <div class="sfs" data-sfs>
+                        <div class="sfs-stage" data-sfs-stage>
+                            <div class="sfs-frame" data-sfs-frame>
+                                <div class="sfs-canvas">
+
+                                    <!-- Scene 1: every system is an island -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="กล่องอีเมล ไฟล์ติดตามงาน และแชทลูกค้า แยกกันคนละระบบ ไม่เชื่อมต่อกัน ต้องคัดลอกข้อมูลข้ามระบบเอง และงานค้างรออนุมัติ">
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-a">
+                                                <div class="sfx-win sfx-float" style="left:34px;top:70px;width:258px;--d:0s;--z:0px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>กล่องอีเมล · 18 ยังไม่อ่าน</span></div>
+                                                    <div class="sfp-mail">
+                                                        <div class="sfp-mail-row"><span class="sfp-mail-ico" style="background:#fee2e2;color:#dc2626">PDF</span><div><b>ใบแจ้งหนี้ ต.ค.</b><small>ap@supplier.co.th</small></div><i></i></div>
+                                                        <div class="sfp-mail-row"><span class="sfp-mail-ico" style="background:#dbeafe;color:#1d4ed8">PO</span><div><b>ใบสั่งซื้อ #7781</b><small>purchase@client.th</small></div><i></i></div>
+                                                        <div class="sfp-mail-row"><span class="sfp-mail-ico" style="background:#fef3c7;color:#b45309">REQ</span><div><b>ขออนุมัติซื้อ (ด่วน)</b><small>ฝ่ายผลิต</small></div><i></i></div>
+                                                        <div class="sfp-mail-row"><span class="sfp-mail-ico" style="background:#f1f5f9;color:#475569">JPG</span><div><b>สแกนใบเสร็จ 12 ใบ</b><small>branch-03@co.th</small></div><i></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfx-win sfx-float" style="left:318px;top:128px;width:270px;--d:.7s;--z:30px">
+                                                    <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ติดตามงาน_v7(ล่าสุด).xlsx</span></div>
+                                                    <table class="sfx-sheet">
+                                                        <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                        <tr><th>1</th><td class="b">งาน</td><td class="b">ส่งให้</td><td class="b">สถานะ</td></tr>
+                                                        <tr><th>2</th><td>ใบแจ้งหนี้ #812</td><td>บัญชี</td><td class="warn">รออนุมัติ</td></tr>
+                                                        <tr><th>3</th><td>ขอซื้อ #077</td><td class="err">?</td><td class="err">ไม่มีคนรับ</td></tr>
+                                                        <tr><th>4</th><td>ออเดอร์ #3051</td><td>คลัง</td><td class="err">คีย์ซ้ำ</td></tr>
+                                                        <tr><th>5</th><td>ใบเสร็จสแกน</td><td colspan="2" class="muted">ยังไม่ได้บันทึก…</td></tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-chat sfx-float sfp-chat" style="left:592px;top:72px;--d:.4s">
+                                                <div class="sfx-chat-head"><span class="sfp-chat-ico">LINE</span><b>แชทลูกค้า</b></div>
+                                                <div class="sfx-bubble">ส่งใบสั่งซื้อแล้วค่ะ</div>
+                                                <div class="sfp-chat-file"><i>JPG</i>PO_7781.jpg</div>
+                                                <div class="sfx-bubble">ได้รับหรือยังคะ?</div>
+                                            </div>
+                                        </div>
+                                        <span class="sfp-break" style="left:290px;top:176px"><i>✕</i></span>
+                                        <span class="sfp-break" style="left:578px;top:156px;--d:.5s"><i>✕</i></span>
+                                        <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:52px;top:372px">⇄ คัดลอกข้ามระบบ 40 ครั้ง/วัน</div>
+                                        <div class="sfx-chip sfx-pulse" style="left:418px;top:372px;--d:.6s">⏳ งานค้างรออนุมัติ 3 วัน</div>
+                                    </div>
+
+                                    <!-- Scene 2: connect every channel into one workflow -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="หน้าออกแบบ workflow เชื่อมอีเมล แชท LINE ฟอร์ม และไฟล์สแกน เข้าจุดรับงานเดียว ต่อไปยังขั้นอ่านข้อมูลด้วย OCR และส่งต่องาน กดเปิดใช้งานแล้วข้อมูลเริ่มไหลผ่านเส้นเชื่อม" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win" style="left:142px;top:34px;width:516px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>Workflow · รับงานทุกช่องทาง</span></div>
+                                                    <div class="sfp-flow-head">
+                                                        <b>รับเอกสาร &amp; คำขอ</b>
+                                                        <span class="sfp-live"><i></i>ทำงานอยู่</span>
+                                                        <span class="sfp-switch-wrap">เปิดใช้งาน<em class="sfp-switch"></em>
+                                                            <svg class="sfp-cur" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="sfp-flow">
+                                                        <svg class="sfp-wires" viewBox="0 0 492 236" aria-hidden="true">
+                                                            <path style="--d:1.0s" d="M138 33 C162 33 162 118 186 118"/>
+                                                            <path style="--d:1.15s" d="M138 87 C162 87 162 118 186 118"/>
+                                                            <path style="--d:1.3s" d="M138 141 C162 141 162 118 186 118"/>
+                                                            <path style="--d:1.45s" d="M138 195 C162 195 162 118 186 118"/>
+                                                            <path style="--d:1.7s" d="M306 118 C330 118 326 65 350 65"/>
+                                                            <path style="--d:1.9s" d="M412 84 L412 150"/>
+                                                        </svg>
+                                                        <span class="sfp-dot" style="--d:2.3s;offset-path:path('M138 33 C162 33 162 118 186 118 L306 118 C330 118 326 65 350 65')"></span>
+                                                        <span class="sfp-dot" style="--d:2.9s;offset-path:path('M138 141 C162 141 162 118 186 118 L306 118 C330 118 326 65 350 65')"></span>
+                                                        <span class="sfp-dot" style="--d:3.4s;offset-path:path('M138 195 C162 195 162 118 186 118 L306 118 C330 118 326 65 350 65')"></span>
+                                                        <div class="sfp-node" style="left:12px;top:14px;--d:.2s"><span class="sfp-node-ico" style="background:#fee2e2;color:#dc2626">@</span>อีเมล</div>
+                                                        <div class="sfp-node" style="left:12px;top:68px;--d:.3s"><span class="sfp-node-ico" style="background:#dcfce7;color:#15803d">L</span>แชท LINE</div>
+                                                        <div class="sfp-node" style="left:12px;top:122px;--d:.4s"><span class="sfp-node-ico" style="background:#ede9fe;color:#6d28d9">▤</span>ฟอร์มคำขอ</div>
+                                                        <div class="sfp-node" style="left:12px;top:176px;--d:.5s"><span class="sfp-node-ico" style="background:#f1f5f9;color:#475569">⎙</span>ไฟล์สแกน</div>
+                                                        <div class="sfp-node sfp-node-hub" style="left:186px;top:94px;--d:.6s"><span class="sfp-node-ico" style="background:#2563eb;color:#fff">⚡</span>รับงานเข้า</div>
+                                                        <div class="sfp-node" style="left:350px;top:46px;--d:.7s"><span class="sfp-node-ico" style="background:#e0f2fe;color:#0369a1">⌕</span>อ่าน · OCR</div>
+                                                        <div class="sfp-node" style="left:350px;top:150px;--d:.8s"><span class="sfp-node-ico" style="background:#fef3c7;color:#b45309">⇆</span>ส่งต่องาน</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-chip sfp-chip-in" style="left:300px;top:380px">🔗 4 ช่องทาง → 1 workflow</div>
+                                    </div>
+
+                                    <!-- Scene 3: rules route each job to the right team -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ระบบอ่านใบขอซื้อยอด 48,500 บาท ตรวจกฎส่งต่อ ยอดเกิน 20,000 บาทจึงส่งให้ผู้จัดการอนุมัติ งานอื่นถูกส่งไปทีมบัญชีและคลังสินค้า งานที่ข้อมูลไม่ครบถูกตีกลับผู้ส่งอัตโนมัติ" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfp-tilt-route">
+                                                <svg class="sfp-links" viewBox="0 0 800 440" aria-hidden="true">
+                                                    <path d="M226 168 C244 168 244 150 262 150"/>
+                                                    <path class="hit" d="M474 132 C490 132 482 86 500 86"/>
+                                                    <path d="M474 150 C490 150 482 186 500 186"/>
+                                                    <path d="M474 168 C490 168 482 286 500 286"/>
+                                                </svg>
+                                                <div class="sfx-doc sfp-docin" style="left:30px;top:66px;width:196px">
+                                                    <div class="sfx-doc-tag" style="background:#ef4444">PDF</div>
+                                                    <b class="sfx-doc-title">ใบขอซื้อ PR-0921</b>
+                                                    <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                    <div class="sfx-ocr-row">ประเภท <b>ขอซื้อ</b><i class="sfx-box" style="--d:.3s"></i></div>
+                                                    <div class="sfx-ocr-row">แผนก <b>ฝ่ายผลิต</b><i class="sfx-box" style="--d:.55s"></i></div>
+                                                    <div class="sfx-ocr-row">ยอดรวม <b>฿48,500</b><i class="sfx-box" style="--d:.8s"></i></div>
+                                                    <div class="sfx-ocr-tag">อ่านอัตโนมัติ</div>
+                                                </div>
+                                                <div class="sfx-win" style="left:262px;top:96px;width:212px;--z:20px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>กฎส่งต่อ</span></div>
+                                                    <div class="sfp-rules">
+                                                        <div class="sfp-rule sfp-rule-hit"><span>ยอด &gt; ฿20,000</span><i>→</i><b>ผู้จัดการ</b></div>
+                                                        <div class="sfp-rule"><span>ใบแจ้งหนี้</span><i>→</i><b>บัญชี</b></div>
+                                                        <div class="sfp-rule"><span>ออเดอร์</span><i>→</i><b>คลัง</b></div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfp-lane" style="left:500px;top:40px">
+                                                    <div class="sfp-lane-head"><span class="sfp-lane-ico" style="background:#fef3c7;color:#b45309">✎</span><b>ผู้จัดการ · อนุมัติ</b><em class="sfp-count" style="--from:3;--to:4;--d:1.3s"></em></div>
+                                                    <div class="sfp-approve">
+                                                        <span>PR-0921 · <b>฿48,500</b></span>
+                                                        <span class="sfp-approve-btn"><em>อนุมัติ</em><b>✓ อนุมัติแล้ว</b></span>
+                                                    </div>
+                                                </div>
+                                                <div class="sfp-lane" style="left:500px;top:140px">
+                                                    <div class="sfp-lane-head"><span class="sfp-lane-ico" style="background:#dbeafe;color:#1d4ed8">฿</span><b>บัญชี</b><em class="sfp-count" style="--from:11;--to:12;--d:1.9s"></em></div>
+                                                    <div class="sfp-slabs"><span></span><span></span><span></span><span class="sfp-slab-new" style="--d:1.8s"></span></div>
+                                                </div>
+                                                <div class="sfp-lane" style="left:500px;top:240px">
+                                                    <div class="sfp-lane-head"><span class="sfp-lane-ico" style="background:#dcfce7;color:#15803d">▦</span><b>คลังสินค้า</b><em class="sfp-count" style="--from:8;--to:9;--d:2.3s"></em></div>
+                                                    <div class="sfp-slabs"><span></span><span></span><span class="sfp-slab-new" style="--d:2.2s"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-exc sfp-exc" style="left:40px;right:auto;top:340px">
+                                            <div class="sfx-exc-ico">!</div>
+                                            <div><b>ข้อมูลไม่ครบ 1 งาน</b><span>ตีกลับผู้ส่งอัตโนมัติ</span></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Scene 4: every system in sync -->
+                                    <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="แดชบอร์ด workflow วันนี้ งานเข้า 128 งาน ส่งต่ออัตโนมัติ 96 เปอร์เซ็นต์ เวลาเฉลี่ย 4 นาทีจากเดิม 2 วัน ข้อมูลอัปเดตใน ERP Google Sheets LINE และอีเมล พร้อมไทม์ไลน์งาน PR-0921 ครบทุกขั้น และแจ้งทีมจัดซื้อแล้ว" hidden>
+                                        <div class="sfx-floor"></div>
+                                        <div class="sfx-world">
+                                            <div class="sfx-plane sfx-tilt-b">
+                                                <div class="sfx-win" style="left:34px;top:46px;width:486px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>ภาพรวม Workflow · วันนี้</span></div>
+                                                    <div class="sfp-dash">
+                                                        <div class="sfp-kpis">
+                                                            <div class="sfp-kpi"><small>งานเข้า</small><b class="sfp-count" style="--from:0;--to:128;--d:.3s"></b></div>
+                                                            <div class="sfp-kpi sfp-kpi-ok"><small>ส่งต่ออัตโนมัติ</small><b><span class="sfp-count" style="--from:0;--to:96;--d:.4s"></span>%</b></div>
+                                                            <div class="sfp-kpi"><small>เวลาเฉลี่ย / งาน</small><b>4 นาที</b><s>เดิม 2 วัน</s></div>
+                                                        </div>
+                                                        <p class="sfp-dash-title">งานแยกตามช่องทาง</p>
+                                                        <div class="sfp-hbar"><span>อีเมล</span><i><em style="--w:100%;--d:.6s"></em></i><b>46</b></div>
+                                                        <div class="sfp-hbar"><span>แชท LINE</span><i><em style="--w:83%;--d:.7s"></em></i><b>38</b></div>
+                                                        <div class="sfp-hbar"><span>ฟอร์ม</span><i><em style="--w:63%;--d:.8s"></em></i><b>29</b></div>
+                                                        <div class="sfp-hbar"><span>ไฟล์สแกน</span><i><em style="--w:33%;--d:.9s"></em></i><b>15</b></div>
+                                                        <div class="sfp-synced">
+                                                            <span style="--d:1.2s">ERP ✓</span><span style="--d:1.35s">Google Sheets ✓</span><span style="--d:1.5s">LINE ✓</span><span style="--d:1.65s">อีเมล ✓</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfp-tl sfx-float" style="left:552px;top:90px;--d:.3s;--z:0px">
+                                                <div class="sfp-tl-head"><b>PR-0921</b><span>฿48,500</span></div>
+                                                <div class="sfp-tl-step" style="--d:.5s"><i>✓</i><b>รับเข้า</b><small>09:02</small></div>
+                                                <div class="sfp-tl-step" style="--d:.8s"><i>✓</i><b>อ่านข้อมูล</b><small>09:02</small></div>
+                                                <div class="sfp-tl-step" style="--d:1.1s"><i>✓</i><b>อนุมัติ</b><small>09:15</small></div>
+                                                <div class="sfp-tl-step" style="--d:1.4s"><i>✓</i><b>บันทึก ERP</b><small>09:15</small></div>
+                                                <div class="sfp-tl-step" style="--d:1.7s"><i>✓</i><b>แจ้งทีม</b><small>09:16</small></div>
+                                            </div>
+                                        </div>
+                                        <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>แจ้งทีมจัดซื้อแล้ว</b><span>LINE · อีเมล · 09:16</span></div></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sfs-captions">
+                            <div class="sfs-caption" data-sfs-caption><h3>งานกระจายอยู่หลายระบบ ไม่ต่อกัน</h3><p>อีเมล · แชท · Excel ต้องคัดลอกและตามงานเอง</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>เชื่อมทุกช่องทางเข้า workflow เดียว</h3><p>เปิดใช้ครั้งเดียว งานไหลเข้ามาเอง</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>อ่านข้อมูล แล้วส่งต่อตามกฎ</h3><p>อนุมัติ · บัญชี · คลัง ไปถึงคนที่ใช่ทันที</p></div>
+                            <div class="sfs-caption" data-sfs-caption hidden><h3>ทุกระบบอัปเดตตรงกัน</h3><p>เห็นสถานะทุกงาน ทีมได้แจ้งเตือนอัตโนมัติ</p></div>
+                        </div>
+
+                        <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">เชื่อม</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">ส่งต่อ</span><span class="sfs-tab-bar"><span></span></span></button>
+                            <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">ผลลัพธ์</span><span class="sfs-tab-bar"><span></span></span></button>
+                        </div>
+                        <script type="application/json" data-sfs-en>{"กล่องอีเมล ไฟล์ติดตามงาน และแชทลูกค้า แยกกันคนละระบบ ไม่เชื่อมต่อกัน ต้องคัดลอกข้อมูลข้ามระบบเอง และงานค้างรออนุมัติ":"The inbox, job-tracking file and customer chat sit in separate, unconnected systems, so data is copied across by hand and jobs wait for approval","กล่องอีเมล · 18 ยังไม่อ่าน":"Inbox · 18 unread","ใบแจ้งหนี้ ต.ค.":"Oct invoice","ใบสั่งซื้อ #7781":"Purchase order #7781","ขออนุมัติซื้อ (ด่วน)":"Purchase approval (urgent)","ฝ่ายผลิต":"Production","สแกนใบเสร็จ 12 ใบ":"12 scanned receipts","ติดตามงาน_v7(ล่าสุด).xlsx":"job_tracker_v7(latest).xlsx","งาน":"Job","ส่งให้":"Owner","สถานะ":"Status","ใบแจ้งหนี้ #812":"Invoice #812","บัญชี":"Accounts","รออนุมัติ":"Pending","ขอซื้อ #077":"Request #077","ไม่มีคนรับ":"Unassigned","ออเดอร์ #3051":"Order #3051","คลัง":"Stock","คีย์ซ้ำ":"Duplicate","ใบเสร็จสแกน":"Receipts","ยังไม่ได้บันทึก…":"Not recorded…","แชทลูกค้า":"Customer chat","ส่งใบสั่งซื้อแล้วค่ะ":"I've sent the PO","ได้รับหรือยังคะ?":"Did you get it?","⇄ คัดลอกข้ามระบบ 40 ครั้ง/วัน":"⇄ 40 copy-pastes/day","⏳ งานค้างรออนุมัติ 3 วัน":"⏳ Approvals stuck 3 days","หน้าออกแบบ workflow เชื่อมอีเมล แชท LINE ฟอร์ม และไฟล์สแกน เข้าจุดรับงานเดียว ต่อไปยังขั้นอ่านข้อมูลด้วย OCR และส่งต่องาน กดเปิดใช้งานแล้วข้อมูลเริ่มไหลผ่านเส้นเชื่อม":"A workflow designer connects email, LINE chat, forms and scanned files to a single intake, then to OCR data reading and job routing; once activated, data starts flowing along the connections","Workflow · รับงานทุกช่องทาง":"Workflow · All-channel intake","รับเอกสาร & คำขอ":"Documents & requests","ทำงานอยู่":"Running","เปิดใช้งาน":"Activate","อีเมล":"Email","แชท LINE":"LINE chat","ฟอร์มคำขอ":"Request form","ไฟล์สแกน":"Scanned file","รับงานเข้า":"Intake","อ่าน · OCR":"Read · OCR","ส่งต่องาน":"Route job","🔗 4 ช่องทาง → 1 workflow":"🔗 4 channels → 1 workflow","ระบบอ่านใบขอซื้อยอด 48,500 บาท ตรวจกฎส่งต่อ ยอดเกิน 20,000 บาทจึงส่งให้ผู้จัดการอนุมัติ งานอื่นถูกส่งไปทีมบัญชีและคลังสินค้า งานที่ข้อมูลไม่ครบถูกตีกลับผู้ส่งอัตโนมัติ":"The system reads a purchase request for 48,500 baht and checks routing rules; over 20,000 baht goes to a manager for approval, other jobs go to accounting and the warehouse, and incomplete jobs are returned to the sender automatically","ใบขอซื้อ PR-0921":"Request PR-0921","ประเภท":"Type","ขอซื้อ":"Purchase","แผนก":"Dept","ยอดรวม":"Total","฿48,500":"฿48,500","อ่านอัตโนมัติ":"Auto-read","กฎส่งต่อ":"Routing rule","ยอด > ฿20,000":"Total > ฿20,000","ผู้จัดการ":"Manager","ใบแจ้งหนี้":"Invoice","ออเดอร์":"Order","ผู้จัดการ · อนุมัติ":"Manager · Approval","อนุมัติ":"Approve","✓ อนุมัติแล้ว":"✓ Approved","฿":"฿","คลังสินค้า":"Stock","ข้อมูลไม่ครบ 1 งาน":"1 job incomplete","ตีกลับผู้ส่งอัตโนมัติ":"Auto-returned to sender","แดชบอร์ด workflow วันนี้ งานเข้า 128 งาน ส่งต่ออัตโนมัติ 96 เปอร์เซ็นต์ เวลาเฉลี่ย 4 นาทีจากเดิม 2 วัน ข้อมูลอัปเดตใน ERP Google Sheets LINE และอีเมล พร้อมไทม์ไลน์งาน PR-0921 ครบทุกขั้น และแจ้งทีมจัดซื้อแล้ว":"Today's workflow dashboard: 128 jobs in, 96 percent routed automatically, 4 minutes on average instead of 2 days, data updated in ERP, Google Sheets, LINE and email, with the full PR-0921 timeline and the purchasing team notified","ภาพรวม Workflow · วันนี้":"Workflow overview · Today","งานเข้า":"Jobs in","ส่งต่ออัตโนมัติ":"Auto-routed","เวลาเฉลี่ย / งาน":"Avg time / job","4 นาที":"4 min","เดิม 2 วัน":"Was 2 days","งานแยกตามช่องทาง":"Jobs by channel","ฟอร์ม":"Form","อีเมล ✓":"Email ✓","รับเข้า":"Received","อ่านข้อมูล":"Read data","บันทึก ERP":"Saved to ERP","แจ้งทีม":"Team notified","แจ้งทีมจัดซื้อแล้ว":"Purchasing notified","LINE · อีเมล · 09:16":"LINE · Email · 09:16","งานกระจายอยู่หลายระบบ ไม่ต่อกัน":"Work scattered across systems","อีเมล · แชท · Excel ต้องคัดลอกและตามงานเอง":"Email · chat · Excel, all by hand","เชื่อมทุกช่องทางเข้า workflow เดียว":"Every channel into one workflow","เปิดใช้ครั้งเดียว งานไหลเข้ามาเอง":"Turn on once, jobs flow in","อ่านข้อมูล แล้วส่งต่อตามกฎ":"Read, then route by rules","อนุมัติ · บัญชี · คลัง ไปถึงคนที่ใช่ทันที":"To approver · accounts · stock","ทุกระบบอัปเดตตรงกัน":"Every system stays in sync","เห็นสถานะทุกงาน ทีมได้แจ้งเตือนอัตโนมัติ":"Live job status, auto team alerts","ขั้นตอน":"Steps","ก่อน":"Before","เชื่อม":"Connect","ส่งต่อ":"Route","ผลลัพธ์":"Result","หยุด":"Pause"}</script>
+                    </div>
+                </div>
                 <div class="project-carousel-shell" data-project-carousel>
                     <div class="project-carousel-label">โปรเจกต์ตัวอย่าง</div>
                     <button type="button" class="project-carousel-nav project-carousel-nav-prev" aria-label="Previous project" data-project-prev>&#8249;</button>
@@ -248,5 +442,6 @@
     </section>
     <script src="../../assets/js/i18n.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

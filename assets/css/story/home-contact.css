@@ -1,0 +1,559 @@
+/* Home page vignette: contact section
+   Story: type the problem into the form -> it arrives in a chat thread ->
+   a first assessment comes back (current process + approaches) -> a plan strip. */
+
+#vig-contact .sfs-canvas { color: #0f172a; }
+
+/* Faint dot grid so the white cards have a surface to float over */
+.sfp-contact-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(100, 116, 139, 0.2) 1px, transparent 1.3px);
+    background-size: 22px 22px;
+    -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 46%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 60% 62% at 50% 46%, #000 30%, transparent 100%);
+}
+
+.sfp-contact-floor { left: 60px; right: 60px; bottom: 6px; height: 46px; }
+
+/* 3D placement: each card turns gently toward the middle of the canvas */
+.sfp-contact-tf { transform-origin: 157px 140px; transform: rotateX(7deg) rotateY(16deg); }
+.sfp-contact-tp { transform-origin: 400px 140px; transform: rotateX(7deg); }
+.sfp-contact-td { transform-origin: 637px 140px; transform: rotateX(7deg) rotateY(-16deg); }
+.sfp-contact-tr { transform-origin: 400px 307px; transform: rotateX(22deg); }
+
+.sfp-contact-form,
+.sfp-contact-phone,
+.sfp-contact-doc,
+.sfp-contact-road,
+.sfp-contact-fly {
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.06),
+        0 8px 16px -6px rgba(15, 23, 42, 0.12),
+        0 28px 56px -18px rgba(15, 23, 42, 0.26);
+}
+
+/* Brand mark (letter, not a person) */
+.sfp-contact-mark {
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    background: linear-gradient(#3b82f6, #2563eb);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ---------- 1. Form ---------- */
+
+.sfp-contact-form {
+    position: absolute;
+    left: 32px;
+    top: 26px;
+    width: 250px;
+    padding: 14px 14px 16px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.sfp-contact-form-h {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 12px;
+}
+
+.sfp-contact-input,
+.sfp-contact-area {
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #fff;
+    font-size: 15px;
+    color: #334155;
+}
+
+.sfp-contact-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 38px;
+    padding: 0 11px;
+    margin-bottom: 9px;
+    white-space: nowrap;
+}
+
+.sfp-contact-input svg { width: 17px; height: 17px; flex: none; }
+
+.sfp-contact-area {
+    height: 70px;
+    padding: 8px 11px;
+    line-height: 26px;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.16);
+}
+
+.sfp-contact-ty { display: block; white-space: nowrap; }
+
+.sfp-contact-caret {
+    display: inline-block;
+    width: 2px;
+    height: 17px;
+    margin-left: 2px;
+    vertical-align: -3px;
+    background: #2563eb;
+    opacity: 0;
+}
+
+.sfp-contact-btn {
+    margin-top: 12px;
+    padding: 9px;
+    border-radius: 10px;
+    background: linear-gradient(#3b82f6, #2563eb);
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 0 #1e40af, 0 10px 18px -6px rgba(37, 99, 235, 0.55);
+}
+
+/* ---------- 2. Chat thread on a phone ---------- */
+
+.sfp-contact-phone {
+    position: absolute;
+    left: 302px;
+    top: 20px;
+    width: 196px;
+    height: 230px;
+    border-radius: 24px;
+    border: 6px solid #0f172a;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.sfp-contact-ph-h {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 40px;
+    padding: 0 10px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13.5px;
+}
+
+.sfp-contact-ph-b {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 9px 9px 0;
+}
+
+.sfp-contact-me,
+.sfp-contact-re {
+    max-width: 166px;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-contact-me {
+    align-self: flex-end;
+    border-radius: 13px 13px 4px 13px;
+    background: #2563eb;
+    color: #fff;
+}
+
+.sfp-contact-re {
+    margin-top: 9px;
+    border-radius: 13px 13px 13px 4px;
+    background: #fff;
+    color: #334155;
+}
+
+.sfp-contact-typing {
+    position: absolute;
+    left: 9px;
+    top: 80px;
+    display: flex;
+    gap: 4px;
+    padding: 10px 12px;
+    border-radius: 13px 13px 13px 4px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    opacity: 0;
+}
+
+.sfp-contact-typing i { width: 6px; height: 6px; border-radius: 50%; background: #94a3b8; }
+
+.sfp-contact-att {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 160px;
+    margin-top: 6px;
+    padding: 7px 8px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    font-size: 13.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-contact-att i {
+    flex: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background: #2563eb;
+    color: #fff;
+    font-style: normal;
+    font-size: 9.5px;
+    font-weight: 700;
+}
+
+.sfp-contact-att em,
+.sfp-contact-step em {
+    margin-left: auto;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #15803d;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ---------- 3. Assessment doc ---------- */
+
+.sfp-contact-doc {
+    position: absolute;
+    left: 510px;
+    top: 12px;
+    width: 254px;
+    padding: 11px 14px 11px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.sfp-contact-doc-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sfp-contact-lbl {
+    display: block;
+    margin: 6px 0 3px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.sfp-contact-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 6px 6px 4px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px dashed #e2e8f0;
+}
+
+.sfp-contact-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: 58px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sfp-contact-ico {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    font-size: 16px;
+}
+
+.sfp-contact-ico img { width: 20px; height: 20px; object-fit: contain; }
+
+.sfp-contact-hand { color: #dc2626; }
+.sfp-contact-hand .sfp-contact-ico { background: #fee2e2; border-color: #fecaca; color: #dc2626; }
+
+.sfp-contact-rep { display: flex; align-items: flex-end; justify-content: center; gap: 3px; padding-bottom: 7px; }
+.sfp-contact-rep i { width: 4px; border-radius: 1px; background: #94a3b8; }
+.sfp-contact-rep i:nth-child(1) { height: 7px; }
+.sfp-contact-rep i:nth-child(2) { height: 13px; }
+.sfp-contact-rep i:nth-child(3) { height: 10px; }
+
+.sfp-contact-arr {
+    position: relative;
+    flex: 1;
+    height: 2px;
+    margin: 15px 2px 0;
+    background: #cbd5e1;
+}
+
+.sfp-contact-arr::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -3px;
+    border: 4px solid transparent;
+    border-left: 6px solid #cbd5e1;
+    border-right: 0;
+}
+
+.sfp-contact-way {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 30px;
+    padding: 0 8px;
+    margin-top: 4px;
+    border-radius: 9px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.sfp-contact-way img { width: 20px; height: 20px; object-fit: contain; }
+
+.sfp-contact-way b {
+    margin-left: auto;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 11px;
+}
+
+/* ---------- 4. Plan strip ---------- */
+
+.sfp-contact-road {
+    position: absolute;
+    left: 70px;
+    top: 284px;
+    width: 660px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 22px 0 18px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.sfp-contact-road-h {
+    flex: none;
+    font-size: 15px;
+    font-weight: 700;
+    padding-right: 18px;
+    border-right: 1px solid #e2e8f0;
+}
+
+.sfp-contact-track {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sfp-contact-line {
+    position: absolute;
+    left: 8px;
+    right: 60px;
+    top: 50%;
+    height: 3px;
+    margin-top: -1.5px;
+    border-radius: 2px;
+    background: #e2e8f0;
+}
+
+.sfp-contact-line i { display: block; height: 100%; border-radius: inherit; background: #2563eb; }
+
+.sfp-contact-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-right: 8px;
+    background: #fff;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+    white-space: nowrap;
+}
+
+.sfp-contact-step i {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2563eb;
+    border: 3px solid #dbeafe;
+    box-sizing: border-box;
+}
+
+.sfp-contact-step em { margin-left: 2px; }
+
+/* ---------- Flying message + cursor ---------- */
+
+.sfp-contact-fly {
+    position: absolute;
+    left: 138px;
+    top: 220px;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: #2563eb;
+    opacity: 0;
+    z-index: 4;
+}
+
+.sfp-contact-fly svg { width: 22px; height: 22px; }
+
+.sfp-contact-cur { left: 182px; top: 226px; z-index: 5; }
+
+/* ---------- Motion ---------- */
+
+.is-active .sfp-contact-form { animation: sfp-contact-rise 0.6s ease both 0.1s; }
+.is-active .sfp-contact-ty1 { animation: sfp-contact-type 0.9s steps(8, end) both 0.6s; }
+.is-active .sfp-contact-ty2 { animation: sfp-contact-type 1s steps(9, end) both 1.5s; }
+.is-active .sfp-contact-caret { animation: sfp-contact-caret 2.5s step-end both 0.6s; }
+.is-active .sfp-contact-cur { animation: sfp-contact-cur 1.6s ease-in-out both 2.1s; }
+.is-active .sfp-contact-btn { animation: sfp-contact-press 0.5s ease both 2.75s; }
+.is-active .sfp-contact-fly { animation: sfp-contact-fly 0.85s cubic-bezier(.45, 0, .35, 1) both 3s; }
+
+.is-active .sfp-contact-phone { animation: sfp-contact-rise 0.6s ease both 2.6s; }
+.is-active .sfp-contact-me { animation: sfp-contact-pop 0.4s cubic-bezier(.2, 1.4, .4, 1) both 3.75s; transform-origin: right bottom; }
+.is-active .sfp-contact-typing { animation: sfp-contact-blip 0.8s ease both 4.05s; }
+.is-active .sfp-contact-typing i { animation: sfp-contact-dot 0.6s ease-in-out infinite; }
+.is-active .sfp-contact-typing i:nth-child(2) { animation-delay: 0.15s; }
+.is-active .sfp-contact-typing i:nth-child(3) { animation-delay: 0.3s; }
+.is-active .sfp-contact-re { animation: sfp-contact-pop 0.4s cubic-bezier(.2, 1.4, .4, 1) both 4.85s; transform-origin: left bottom; }
+.is-active .sfp-contact-att { animation: sfp-contact-pop 0.4s cubic-bezier(.2, 1.4, .4, 1) both 5.1s; transform-origin: left bottom; }
+
+.is-active .sfp-contact-doc { animation: sfp-contact-doc 0.7s cubic-bezier(.2, 1.1, .4, 1) both 5.25s; }
+.is-active .sfp-contact-node,
+.is-active .sfp-contact-arr { animation: sfp-contact-fade 0.35s ease both; animation-delay: calc(var(--d) + 0.2s); }
+.is-active .sfp-contact-way { animation: sfp-contact-slide 0.4s ease both; animation-delay: var(--d); }
+.is-active .sfp-contact-way b { animation: sfx-stamp 0.4s cubic-bezier(.2, 1.6, .4, 1) both; animation-delay: calc(var(--d) + 0.25s); }
+
+.is-active .sfp-contact-road { animation: sfp-contact-rise 0.6s ease both 6.6s; }
+.is-active .sfp-contact-line i { animation: sfp-contact-line 1.05s linear both 6.95s; }
+.is-active .sfp-contact-step { animation: sfp-contact-fade 0.3s ease both; animation-delay: calc(var(--d) - 0.15s); }
+.is-active .sfp-contact-step i { animation: sfx-stamp 0.4s cubic-bezier(.2, 1.6, .4, 1) both; animation-delay: var(--d); }
+.is-active .sfp-contact-step em { animation: sfx-stamp 0.4s cubic-bezier(.2, 1.6, .4, 1) both; animation-delay: calc(var(--d) + 0.3s); }
+
+@keyframes sfp-contact-rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-contact-type {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes sfp-contact-caret {
+    0% { opacity: 1; }
+    20% { opacity: 0; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes sfp-contact-cur {
+    0% { opacity: 0; transform: translate(80px, 70px); }
+    15% { opacity: 1; }
+    40% { transform: translate(0, 0) scale(1); }
+    48% { transform: translate(0, 2px) scale(0.88); }
+    56% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(40px, 60px); }
+}
+
+@keyframes sfp-contact-press {
+    0%, 100% { transform: none; box-shadow: 0 4px 0 #1e40af, 0 10px 18px -6px rgba(37, 99, 235, 0.55); }
+    35%, 55% { transform: translateY(4px); box-shadow: 0 0 0 #1e40af, 0 4px 8px -4px rgba(37, 99, 235, 0.55); }
+}
+
+@keyframes sfp-contact-fly {
+    0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+    15% { opacity: 1; transform: translate(20px, -30px) scale(1); }
+    85% { opacity: 1; transform: translate(290px, -150px) scale(0.85) rotate(8deg); }
+    100% { opacity: 0; transform: translate(305px, -152px) scale(0.5) rotate(8deg); }
+}
+
+@keyframes sfp-contact-pop {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-contact-blip {
+    0% { opacity: 0; transform: scale(0.7); }
+    20%, 80% { opacity: 1; transform: none; }
+    100% { opacity: 0; }
+}
+
+@keyframes sfp-contact-dot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes sfp-contact-doc {
+    from { opacity: 0; transform: translateX(-60px) scale(0.85); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-contact-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes sfp-contact-slide {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-contact-line {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-contact-cur,
+    .sfp-contact-fly,
+    .sfp-contact-typing,
+    .sfp-contact-caret { display: none; }
+}

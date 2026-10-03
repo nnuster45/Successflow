@@ -1,0 +1,590 @@
+/* Story demo pieces for: Workflow Automation service page */
+
+@property --sfp-wn {
+    syntax: '<integer>';
+    inherits: false;
+    initial-value: 0;
+}
+
+.sfp-lane,
+.sfp-tl {
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.06),
+        0 8px 16px -6px rgba(15, 23, 42, 0.12),
+        0 26px 50px -18px rgba(15, 23, 42, 0.28);
+}
+
+/* Animated integer: counts from --from to --to */
+.sfp-count { --sfp-wn: var(--to); counter-reset: sfpw var(--sfp-wn); font-variant-numeric: tabular-nums; }
+.sfp-count::after { content: counter(sfpw); }
+
+/* ---------- Scene 1: disconnected tools ---------- */
+.sfp-mail { padding: 6px 10px 8px; }
+
+.sfp-mail-row {
+    display: grid;
+    grid-template-columns: 32px 1fr 8px;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 2px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sfp-mail-row:last-child { border-bottom: 0; }
+.sfp-mail-row div { min-width: 0; line-height: 1.25; }
+.sfp-mail-row b { display: block; font-size: 12px; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sfp-mail-row small { display: block; font-size: 10px; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sfp-mail-row > i { width: 8px; height: 8px; border-radius: 50%; background: #2563eb; }
+
+.sfp-mail-ico {
+    display: grid;
+    place-items: center;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.sfp-chat { width: 172px; }
+
+.sfp-chat-ico {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 20px;
+    border-radius: 6px;
+    background: #16a34a;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.sfp-chat-file {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 4px 0;
+    padding: 8px;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 11px;
+    color: #334155;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.sfp-chat-file i {
+    font-style: normal;
+    font-size: 8.5px;
+    font-weight: 700;
+    color: #fff;
+    background: #ec4899;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+/* Broken link between two tools */
+.sfp-break {
+    position: absolute;
+    width: 46px;
+    height: 0;
+    border-top: 2px dashed #fca5a5;
+    z-index: 3;
+}
+
+.sfp-break i {
+    position: absolute;
+    left: 50%;
+    top: -13px;
+    margin-left: -12px;
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ef4444;
+    color: #ef4444;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 800;
+    box-shadow: 0 6px 14px -6px rgba(239, 68, 68, 0.6);
+}
+
+/* ---------- Scene 2: workflow builder ---------- */
+.sfp-flow-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 12px;
+}
+
+.sfp-flow-head > b { font-size: 13px; color: #0f172a; }
+
+.sfp-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 10.5px;
+    font-weight: 700;
+}
+
+.sfp-live i { width: 6px; height: 6px; border-radius: 50%; background: #16a34a; }
+
+.sfp-switch-wrap {
+    position: relative;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.sfp-switch {
+    position: relative;
+    width: 34px;
+    height: 19px;
+    border-radius: 999px;
+    background: #2563eb;
+}
+
+.sfp-switch::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.3);
+}
+
+.sfp-cur {
+    position: absolute;
+    right: -8px;
+    top: 8px;
+    width: 26px;
+    height: 26px;
+    opacity: 0;
+    z-index: 4;
+    filter: drop-shadow(0 4px 6px rgba(15, 23, 42, 0.3));
+}
+
+.sfp-flow {
+    position: relative;
+    height: 236px;
+    margin: 0;
+    background-color: #fbfcfe;
+    background-image: radial-gradient(#dbe3ee 1px, transparent 1px);
+    background-size: 14px 14px;
+}
+
+.sfp-wires { position: absolute; left: 0; top: 0; width: 492px; height: 236px; overflow: visible; }
+
+.sfp-wires path {
+    fill: none;
+    stroke: #93c5fd;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.sfp-node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 126px;
+    height: 38px;
+    padding: 0 10px 0 6px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e293b;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 6px 14px -8px rgba(15, 23, 42, 0.25);
+    z-index: 2;
+}
+
+.sfp-node-ico {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sfp-node-hub {
+    width: 120px;
+    height: 48px;
+    border: 2px solid #2563eb;
+    font-size: 13px;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1), 0 10px 20px -10px rgba(37, 99, 235, 0.5);
+}
+
+.sfp-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2563eb;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.35);
+    offset-rotate: 0deg;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* ---------- Scene 3: routing rules ---------- */
+.sfp-tilt-route { transform: rotateX(12deg) rotateY(-7deg); }
+
+.sfp-links { position: absolute; left: 0; top: 0; width: 800px; height: 440px; overflow: visible; }
+
+.sfp-links path {
+    fill: none;
+    stroke: #cbd5e1;
+    stroke-width: 2;
+    stroke-dasharray: 4 6;
+    stroke-linecap: round;
+}
+
+.sfp-links path.hit { stroke: #2563eb; stroke-width: 2.5; }
+
+.sfp-docin { transform: rotate(-3deg) translateZ(10px); }
+.sfp-docin .sfx-ocr-row { margin-top: 2px; }
+
+.sfp-rules { padding: 8px 10px 10px; }
+
+.sfp-rule {
+    display: grid;
+    grid-template-columns: 1fr 14px auto;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 8px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 1px solid #eef2f6;
+    font-size: 11.5px;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sfp-rule:last-child { margin-bottom: 0; }
+.sfp-rule i { font-style: normal; color: #94a3b8; text-align: center; }
+.sfp-rule b { font-size: 11px; padding: 2px 7px; border-radius: 6px; background: #f1f5f9; color: #334155; }
+
+.sfp-rule-hit { border-color: #93c5fd; background: #eff6ff; }
+.sfp-rule-hit b { background: #2563eb; color: #fff; }
+
+.sfp-lane {
+    position: absolute;
+    width: 256px;
+    height: 88px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    transform: translateZ(30px);
+}
+
+.sfp-lane-head { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+.sfp-lane-head b { color: #0f172a; }
+
+.sfp-lane-ico {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sfp-lane-head .sfp-count {
+    margin-left: auto;
+    min-width: 30px;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #334155;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sfp-slabs { display: flex; gap: 6px; margin-top: 12px; }
+
+.sfp-slabs span {
+    width: 46px;
+    height: 28px;
+    border-radius: 7px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.sfp-slabs span::before,
+.sfp-slabs span::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    height: 4px;
+    border-radius: 2px;
+    background: #e2e8f0;
+}
+
+.sfp-slabs span::before { top: 8px; width: 28px; }
+.sfp-slabs span::after { top: 16px; width: 18px; }
+.sfp-slabs .sfp-slab-new { background: #eff6ff; border-color: #93c5fd; }
+.sfp-slabs .sfp-slab-new::before, .sfp-slabs .sfp-slab-new::after { background: #bfdbfe; }
+
+.sfp-approve {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 6px 6px 6px 10px;
+    border-radius: 9px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    font-size: 11.5px;
+    color: #475569;
+}
+
+.sfp-approve b { color: #0f172a; }
+
+.sfp-approve-btn { position: relative; display: block; width: 92px; height: 24px; }
+
+.sfp-approve-btn em,
+.sfp-approve-btn b {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sfp-approve-btn em { background: #2563eb; color: #fff; }
+.sfp-approve-btn b { background: #dcfce7; color: #15803d; }
+
+/* ---------- Scene 4: dashboard ---------- */
+.sfp-dash { padding: 14px 16px 16px; }
+
+.sfp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.sfp-kpi {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #eef2f6;
+    line-height: 1.2;
+}
+
+.sfp-kpi small { display: block; font-size: 10.5px; color: #64748b; white-space: nowrap; }
+.sfp-kpi b { display: block; margin-top: 4px; font-size: 22px; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
+.sfp-kpi s { display: block; margin-top: 2px; font-size: 10px; color: #94a3b8; }
+.sfp-kpi-ok b { color: #15803d; }
+
+.sfp-dash-title { margin: 14px 0 6px; font-size: 11px; font-weight: 600; color: #94a3b8; letter-spacing: 0.04em; }
+
+.sfp-hbar {
+    display: grid;
+    grid-template-columns: 72px 1fr 28px;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0;
+    font-size: 11.5px;
+    color: #475569;
+}
+
+.sfp-hbar i { display: block; height: 10px; border-radius: 999px; background: #f1f5f9; overflow: hidden; }
+.sfp-hbar em { display: block; height: 100%; width: var(--w); border-radius: inherit; background: linear-gradient(90deg, #60a5fa, #2563eb); transform-origin: left; }
+.sfp-hbar b { text-align: right; color: #0f172a; font-variant-numeric: tabular-nums; }
+
+.sfp-synced { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+
+.sfp-synced span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sfp-tl {
+    position: absolute;
+    width: 214px;
+    padding: 14px 16px 10px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.sfp-tl-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+.sfp-tl-head b { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+.sfp-tl-head span { font-size: 12px; font-weight: 600; color: #64748b; }
+
+.sfp-tl-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    align-items: center;
+    gap: 9px;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+.sfp-tl-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 26px;
+    bottom: -8px;
+    width: 2px;
+    background: #bbf7d0;
+}
+
+.sfp-tl-step i {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #16a34a;
+    color: #fff;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sfp-tl-step b { color: #0f172a; font-weight: 600; }
+.sfp-tl-step small { font-size: 10.5px; color: #94a3b8; font-variant-numeric: tabular-nums; }
+
+/* ---------- Motion ---------- */
+.is-active .sfp-break i { animation: sfp-blink 1.6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+
+.is-active .sfp-node { animation: sfp-pop-in 0.45s cubic-bezier(.2, 1.4, .4, 1) both; animation-delay: var(--d); }
+.is-active .sfp-switch { animation: sfp-switch-bg 0.25s ease both 0.85s; }
+.is-active .sfp-switch::after { animation: sfp-switch-knob 0.25s ease both 0.85s; }
+.is-active .sfp-live { animation: sfp-fade-in 0.4s ease both 1.0s; }
+.is-active .sfp-cur { animation: sfp-cur 1.6s ease-in-out both 0.1s; }
+.is-active .sfp-wires path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sfp-draw 0.45s ease forwards; animation-delay: var(--d); }
+.is-active .sfp-dot { animation: sfp-travel 1.8s ease-in-out infinite; animation-delay: var(--d); }
+.is-active .sfp-chip-in { animation: sfp-rise 0.5s ease both 2.2s; }
+
+.is-active .sfp-docin { animation: sfp-slide-doc 0.6s ease both; }
+.is-active .sfp-links path { animation: sfp-dash 1.2s linear infinite; }
+.is-active .sfp-rule-hit { animation: sfp-hit 0.4s ease both 1.0s; }
+.is-active .sfp-rule-hit b { animation: sfp-hit-pill 0.4s ease both 1.0s; }
+.is-active .sfp-links path.hit { animation: sfp-dash 1.2s linear infinite, sfp-fade-in 0.3s ease both 1.0s; }
+.is-active .sfp-approve { animation: sfp-rise 0.5s cubic-bezier(.2, 1.3, .4, 1) both 1.3s; }
+.is-active .sfp-approve-btn b { animation: sfp-pop-b 0.35s cubic-bezier(.2, 1.5, .4, 1) both 2.3s; }
+.is-active .sfp-slab-new { animation: sfp-pop-in 0.45s cubic-bezier(.2, 1.4, .4, 1) both; animation-delay: var(--d); }
+.is-active .sfp-lane .sfp-count { animation: sfp-count 0.3s linear both; animation-delay: var(--d); }
+.is-active .sfp-exc { opacity: 0; animation: sfx-exc 0.6s cubic-bezier(.2, 1.3, .4, 1) forwards 2.6s; }
+
+.is-active .sfp-kpi .sfp-count { animation: sfp-count 1.2s ease-out both; animation-delay: var(--d); }
+.is-active .sfp-hbar em { animation: sfp-grow-x 0.8s ease both; animation-delay: var(--d); }
+.is-active .sfp-synced span { animation: sfp-pop-in 0.4s cubic-bezier(.2, 1.4, .4, 1) both; animation-delay: var(--d); }
+.is-active .sfp-tl-step { animation: sfp-row-in 0.35s ease both; animation-delay: var(--d); }
+.is-active .sfp-tl-step i { animation: sfp-pop-b 0.35s cubic-bezier(.2, 1.6, .4, 1) both; animation-delay: calc(var(--d) + 0.15s); }
+
+@keyframes sfp-blink {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes sfp-pop-in {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-pop-b {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes sfp-rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-row-in {
+    from { opacity: 0; transform: translateX(-8px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-switch-bg { from { background: #cbd5e1; } to { background: #2563eb; } }
+@keyframes sfp-switch-knob { from { left: 2px; } to { left: 17px; } }
+
+@keyframes sfp-cur {
+    0% { opacity: 0; transform: translate(50px, 70px); }
+    15% { opacity: 1; }
+    45% { transform: translate(0, 0); }
+    52% { transform: translate(0, 1px) scale(0.88); }
+    60% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(26px, 40px); }
+}
+
+@keyframes sfp-draw { to { stroke-dashoffset: 0; } }
+
+@keyframes sfp-travel {
+    0% { offset-distance: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { offset-distance: 100%; opacity: 0; }
+}
+
+@keyframes sfp-slide-doc {
+    from { opacity: 0; transform: rotate(-3deg) translate(-30px, 0) translateZ(10px); }
+    to { opacity: 1; transform: rotate(-3deg) translateZ(10px); }
+}
+
+@keyframes sfp-dash { to { stroke-dashoffset: -20; } }
+
+@keyframes sfp-hit {
+    from { border-color: #eef2f6; background: #fff; }
+    to { border-color: #93c5fd; background: #eff6ff; }
+}
+
+@keyframes sfp-hit-pill {
+    from { background: #f1f5f9; color: #334155; }
+    to { background: #2563eb; color: #fff; }
+}
+
+@keyframes sfp-count {
+    from { --sfp-wn: var(--from); }
+    to { --sfp-wn: var(--to); }
+}
+
+@keyframes sfp-grow-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-cur, .sfp-dot { display: none; }
+    .is-active .sfp-links path { animation: none !important; }
+}

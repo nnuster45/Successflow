@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/po-mail-production-planning.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -72,13 +74,171 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 28px 28px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: PO emails pile up, retyped by hand -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="กล่องอีเมลมี PO ยังไม่ได้อ่าน 27 ฉบับ ใบสั่งซื้อ PDF และไฟล์แผนผลิตที่คีย์มือจนมีช่องผิด">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:36px;top:48px;width:404px;--d:0s;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Inbox · po@company.co.th</span></div>
+                                                <div class="sfp-inbox">
+                                                    <div class="sfp-inbox-top"><b>PO จากลูกค้า</b><em>ยังไม่อ่าน 27</em></div>
+                                                    <div class="sfp-mrow"><i></i><b>สยามแพ็ค</b><span>PO-66-10412</span><em class="pdf">PDF</em><time>07:02</time></div>
+                                                    <div class="sfp-mrow"><i></i><b>Thai Auto Parts</b><span>PO#TAP-2291</span><em class="xls">XLSX</em><time>06:48</time></div>
+                                                    <div class="sfp-mrow"><i></i><b>นครพลาสติก</b><span>RE: แก้จำนวน PO</span><em class="pdf">PDF</em><time>06:15</time></div>
+                                                    <div class="sfp-mrow"><i></i><b>สยามแพ็ค</b><span>PO-66-10409 ด่วน</span><em class="pdf">PDF</em><time>เมื่อวาน</time></div>
+                                                    <div class="sfp-mrow"><i></i><b>ไทยฟู้ดแพค</b><span>PO_Oct_W1</span><em class="xls">XLSX</em><time>เมื่อวาน</time></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-doc sfx-float" style="left:584px;top:60px;width:150px;--d:.7s;--z:60px">
+                                                <div class="sfx-doc-tag" style="background:#ef4444">PDF</div>
+                                                <b class="sfx-doc-title">ใบสั่งซื้อ 10412</b>
+                                                <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                <div class="sfx-doc-rows"><span></span><span></span><span></span></div>
+                                                <div class="sfx-doc-total"><span>จำนวน</span><b>4,200 ชิ้น</b></div>
+                                            </div>
+                                            <div class="sfx-win sfx-float" style="left:448px;top:232px;width:250px;--d:1.1s;--z:40px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>แผนผลิต_ต.ค._แก้(5).xlsx</span></div>
+                                                <table class="sfx-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                    <tr><th>1</th><td class="b">สินค้า</td><td class="b">PO</td><td class="b">จำนวน</td></tr>
+                                                    <tr><th>2</th><td>FG-10233</td><td>10412</td><td>4,200</td></tr>
+                                                    <tr><th>3</th><td>FG-10871</td><td>2291</td><td class="warn">8,600?</td></tr>
+                                                    <tr><th>4</th><td class="err">?</td><td>10398</td><td class="err">#REF!</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:52px;top:372px">📥 PO ใหม่ทุกวัน 27 ฉบับ</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:296px;top:384px;--d:.6s">⌨ คีย์ซ้ำ 3 ระบบ</div>
+                                </div>
+
+                                <!-- Scene 2: scheduled pull, attachments parsed -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ทุกเช้า 07:00 ระบบดึงไฟล์แนบ PO จากอีเมลเอง อ่านชื่อลูกค้า เลขที่ PO วันส่ง และรายการสินค้าออกมาเป็นข้อมูล" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfp-clock"><span class="sfp-clock-face"><i></i></span><div><b>07:00</b><span>รันเองทุกวัน</span></div></div>
+                                    <div class="sfp-stack">
+                                        <div class="sfp-env" style="--r:-6deg"></div>
+                                        <div class="sfp-env" style="--r:4deg"></div>
+                                        <div class="sfp-env top"><b>✉ PO-66-10412</b><span>📎 1 ไฟล์แนบ</span></div>
+                                    </div>
+                                    <div class="sfx-file sfx-in-l" style="top:168px;--d:.5s"><i style="background:#ef4444">PDF</i>PO-66-10412</div>
+                                    <div class="sfx-file sfx-in-l" style="top:228px;--d:.9s"><i style="background:#16a34a">XLSX</i>TAP-2291</div>
+                                    <div class="sfx-file sfx-in-l" style="top:288px;--d:1.3s"><i style="background:#ef4444">PDF</i>PO-66-10409</div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win" style="left:304px;top:44px;width:452px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>PO Reader · อ่านไฟล์แนบ</span></div>
+                                                <div class="sfp-parse">
+                                                    <div class="sfp-paper">
+                                                        <div class="sfp-paper-h">PURCHASE ORDER</div>
+                                                        <div class="sfp-hl" style="--d:.6s"><span class="sfx-line w80"></span><i class="sfx-box" style="--d:.6s"></i></div>
+                                                        <div class="sfp-hl" style="--d:.9s"><span class="sfx-line w60"></span><i class="sfx-box" style="--d:.9s"></i></div>
+                                                        <span class="sfx-line"></span>
+                                                        <div class="sfp-hl"><div class="sfx-doc-rows"><span></span><span></span><span></span></div><i class="sfx-box" style="--d:1.5s"></i></div>
+                                                    </div>
+                                                    <div class="sfp-fields">
+                                                        <div class="sfp-kv" style="--d:.7s"><span>ลูกค้า</span><b>สยามแพ็ค</b></div>
+                                                        <div class="sfp-kv" style="--d:1s"><span>เลขที่ PO</span><b>66-10412</b></div>
+                                                        <div class="sfp-kv" style="--d:1.3s"><span>วันส่งมอบ</span><b>18 ต.ค. 69</b></div>
+                                                        <div class="sfp-items" style="--d:1.6s">
+                                                            <div><code>SP-A120</code><b>4,200</b></div>
+                                                            <div><code>SP-B045</code><b>860</b></div>
+                                                            <div><code>SP-C310</code><b>1,500</b></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfp-pull"><span>ดึงแล้ว</span><div class="sfp-pull-bar"><i></i></div><b>27/27</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 3: SQL + ERP matching -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ระบบรัน SQL ดึงข้อมูลจาก ERP จับคู่รหัสสินค้าของลูกค้ากับรหัสในระบบและสต็อกทีละแถว รหัสที่ไม่พบถูกแยกให้ทีมตรวจ" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win sfp-sql" style="left:30px;top:70px;width:300px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>match_po.sql</span></div>
+                                                <pre class="sfp-code"><code style="--d:.1s"><i>1</i><b class="k">SELECT</b> p.code, m.erp_sku,</code><code style="--d:.35s"><i>2</i>       s.on_hand</code><code style="--d:.6s"><i>3</i><b class="k">FROM</b> po_lines p</code><code style="--d:.85s"><i>4</i><b class="k">JOIN</b> item_master m</code><code style="--d:1.1s"><i>5</i>  <b class="k">ON</b> m.cust_code = p.code</code><code style="--d:1.35s"><i>6</i><b class="k">LEFT JOIN</b> erp_stock s</code><code style="--d:1.6s"><i>7</i>  <b class="k">ON</b> s.sku = m.erp_sku<b class="p">;</b></code></pre>
+                                                <div class="sfp-run-ok"><b>▶ Run</b><span>27 แถว · 0.4 วิ</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win" style="left:352px;top:36px;width:418px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>จับคู่ PO ↔ ERP</span></div>
+                                                <div class="sfx-match sfp-map">
+                                                    <div class="sfx-scan"></div>
+                                                    <div class="sfx-row head"><span>รหัสลูกค้า</span><span>รหัส ERP</span><span>สต็อก</span><span>สถานะ</span></div>
+                                                    <div class="sfx-row" style="--d:.5s"><span>SP-A120</span><span>FG-10233</span><span>5,400</span><span class="sfx-st"><em>ค้นหา…</em><b class="ok">✓ พบ</b></span></div>
+                                                    <div class="sfx-row" style="--d:.9s"><span>SP-B045</span><span>FG-10871</span><span>920</span><span class="sfx-st"><em>ค้นหา…</em><b class="ok">✓ พบ</b></span></div>
+                                                    <div class="sfx-row" style="--d:1.3s"><span>TAP-77X</span><span class="sfp-miss">—</span><span class="sfp-miss">—</span><span class="sfx-st"><em>ค้นหา…</em><b class="bad">! ไม่พบ</b></span></div>
+                                                    <div class="sfx-row" style="--d:1.7s"><span>NK-3301</span><span>FG-20410</span><span>12,000</span><span class="sfx-st"><em>ค้นหา…</em><b class="ok">✓ พบ</b></span></div>
+                                                    <div class="sfx-row" style="--d:2.1s"><span>SP-C310</span><span>FG-10455</span><span>1,800</span><span class="sfx-st"><em>ค้นหา…</em><b class="ok">✓ พบ</b></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-exc" style="top:316px">
+                                        <div class="sfx-exc-ico">!</div>
+                                        <div><b>ไม่พบรหัส TAP-77X</b><span>ส่งให้ทีมตรวจ master</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: production planning file ready -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="ไฟล์ Excel แผนการผลิตพร้อมแถบตารางผลิตรายวันแยกไลน์ สรุป PO วันนี้ 27 ฉบับ จับคู่ได้ 26 และแจ้งว่าส่งไฟล์ให้ทีมวางแผนแล้ว" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win" style="left:40px;top:84px;width:548px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>production_plan_06-10.xlsx</span></div>
+                                                <div class="sfp-plan">
+                                                    <div class="sfp-prow head"><span>สินค้า</span><span>จำนวน</span><span>ไลน์</span><div class="sfp-days"><span>จ.</span><span>อ.</span><span>พ.</span><span>พฤ.</span><span>ศ.</span></div></div>
+                                                    <div class="sfp-prow"><span>FG-10233</span><span>4,200</span><span>L1</span><div class="sfp-days"><b class="l1" style="--s:1;--e:3;--d:.5s"></b></div></div>
+                                                    <div class="sfp-prow"><span>FG-10871</span><span>860</span><span>L2</span><div class="sfp-days"><b class="l2" style="--s:1;--e:2;--d:.7s"></b></div></div>
+                                                    <div class="sfp-prow"><span>FG-10455</span><span>1,500</span><span>L3</span><div class="sfp-days"><b class="l3" style="--s:2;--e:4;--d:.9s"></b></div></div>
+                                                    <div class="sfp-prow"><span>FG-20410</span><span>12,000</span><span>L1</span><div class="sfp-days"><b class="l1" style="--s:3;--e:6;--d:1.1s"></b></div></div>
+                                                    <div class="sfp-prow"><span>FG-30122</span><span>2,400</span><span>L2</span><div class="sfp-days"><b class="l2" style="--s:4;--e:6;--d:1.3s"></b></div></div>
+                                                </div>
+                                            </div>
+                                            <i class="sfx-stamp" style="--d:1.6s;left:562px;right:auto;top:68px">✓</i>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-kpis">
+                                        <div class="sfp-kpi" style="--d:.6s"><span>PO วันนี้</span><b>27</b><em>ฉบับ</em></div>
+                                        <div class="sfp-kpi ok" style="--d:.8s"><span>จับคู่ ERP</span><b>26<small>/27</small></b><em>อีก 1 รอตรวจ</em></div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>ส่งไฟล์ให้ทีมวางแผนแล้ว</b><span>07:08 · ก่อนเริ่มกะเช้า</span></div></div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>ทุกเช้า PO ล้นกล่องอีเมล</h3><p>เปิดทีละฉบับ แล้วคีย์ซ้ำลงหลายระบบ</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ระบบดึง PO จากอีเมลเอง</h3><p>อ่านไฟล์แนบเป็นข้อมูลทุกเช้า 07:00</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>จับคู่กับ ERP ด้วย SQL</h3><p>รหัสที่ไม่พบ แยกให้ทีมตรวจ</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ไฟล์วางแผนผลิตพร้อมใช้</h3><p>ทีมผลิตได้ข้อมูลชุดเดียวกันทุกวัน</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">ดึงเมล</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">จับคู่</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -87,12 +247,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ทีมต้องเปิดอีเมลเช็ก PO ทุกวัน คีย์ข้อมูลซ้ำหลายระบบ และเสียเวลารวมข้อมูลเพื่อทำ production planning file ก่อนเริ่มวางแผนจริง</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ดึงไฟล์ PO จากอีเมล, parse ข้อมูล, query ฐานข้อมูลด้วย SQL, map กับ ERP/internal master และ transform เป็นโครงข้อมูลสำหรับ Excel planning</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ข้อมูลพร้อมใช้เร็วขึ้น ลดการคีย์ซ้ำ และทำให้ทีมผลิตใช้ planning file ที่สม่ำเสมอจากข้อมูลชุดเดียวกัน</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพ mockup หรือ GIF ของ flow ได้ตรงนี้ เช่น email intake, PO parsing, SQL mapping, ERP enrichment และ output ไฟล์ Excel สำหรับ production planning</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -134,5 +288,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

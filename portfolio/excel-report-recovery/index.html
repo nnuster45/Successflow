@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/excel-report-recovery.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Excel Report Recovery","url":"https://www.successflow.it.com/portfolio/excel-report-recovery/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for recovering a broken Excel reporting file by fixing formulas, references, and logic without rebuilding the workbook from scratch."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Excel Report Recovery","item":"https://www.successflow.it.com/portfolio/excel-report-recovery/"}]}]}
     </script>
@@ -35,13 +37,164 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 32px 32px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: the report is broken and the deadline is close -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="รายงานยอดขายรายภาคเต็มไปด้วย #REF! และ #N/A กล่องแจ้งเตือนว่า PivotTable รีเฟรชไม่ได้ และนาฬิกาบอกว่าเหลือเวลาไม่ถึงสองชั่วโมงก่อนต้องส่ง">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:52px;top:62px;width:440px;--d:0s;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รายงานยอดขาย_ต.ค._v7.xlsx</span></div>
+                                                <table class="sfx-sheet sfp-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                    <tr><th>1</th><td class="b">ภาค</td><td class="b">เป้า</td><td class="b">ยอดขาย</td><td class="b">% เป้า</td></tr>
+                                                    <tr><th>2</th><td>กรุงเทพฯ</td><td>1,800,000</td><td class="err">#REF!</td><td class="err">#REF!</td></tr>
+                                                    <tr><th>3</th><td>ภาคกลาง</td><td>950,000</td><td class="err">#N/A</td><td class="err">#N/A</td></tr>
+                                                    <tr><th>4</th><td>ภาคเหนือ</td><td>720,000</td><td class="err">#REF!</td><td class="err">#DIV/0!</td></tr>
+                                                    <tr><th>5</th><td>ภาคอีสาน</td><td>860,000</td><td class="warn">0</td><td class="err">#VALUE!</td></tr>
+                                                    <tr><th>6</th><td>ภาคใต้</td><td>640,000</td><td class="err">#N/A</td><td class="err">#N/A</td></tr>
+                                                    <tr><th>7</th><td class="b">รวม</td><td class="b" style="text-align:right">4,970,000</td><td class="err">#REF!</td><td class="err">#REF!</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfp-alert sfx-shadow" style="left:356px;top:262px;--z:70px">
+                                                <div class="sfp-alert-body"><span class="sfp-alert-ico">!</span><div><b>PivotTable รีเฟรชไม่ได้</b><span>แหล่งข้อมูลไม่ถูกต้อง</span></div></div>
+                                                <div class="sfp-alert-foot"><span>ตกลง</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-clock sfx-shadow sfx-float" style="left:556px;top:60px;--d:.5s">
+                                        <span class="sfp-dial"><i class="h" style="--a:90deg"></i><i class="m" style="--a:0deg"></i></span>
+                                        <div><span>ต้องส่งผู้บริหาร</span><b>17:00</b><em>เหลือ 2 ชม.</em></div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:120px;top:378px">⚠ ไม่รู้ว่าพังตั้งแต่จุดไหน</div>
+                                </div>
+
+                                <!-- Scene 2: trace the error back to its source -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="แถบสูตรแสดง VLOOKUP ที่ขอคอลัมน์ที่ 6 ลูกศรไล่สูตรลากจากเซลล์ #REF! ในชีตสรุป ไปยังชีตข้อมูลที่คอลัมน์ F ถูกลบไป" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfp-fxbar sfx-shadow" style="left:92px;top:30px;--z:40px">
+                                                <span class="ref">C2</span><span class="fx">fx</span>
+                                                <span class="sfp-code">=<span class="fn">VLOOKUP</span>(A2,<span class="rg">ข้อมูล!A:E</span>,<span class="bad">6</span>,0)</span>
+                                            </div>
+                                            <div class="sfx-win" style="left:40px;top:118px;width:320px;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ชีต: สรุป</span></div>
+                                                <table class="sfx-sheet sfp-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                    <tr><th>1</th><td class="b">ภาค</td><td class="b">เป้า</td><td class="b">ยอดขาย</td></tr>
+                                                    <tr><th>2</th><td>กรุงเทพฯ</td><td>1,800,000</td><td class="err sel">#REF!</td></tr>
+                                                    <tr><th>3</th><td>ภาคกลาง</td><td>950,000</td><td class="err">#N/A</td></tr>
+                                                    <tr><th>4</th><td>ภาคเหนือ</td><td>720,000</td><td class="err">#REF!</td></tr>
+                                                    <tr><th>5</th><td>ภาคอีสาน</td><td>860,000</td><td class="warn">0</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class="sfx-win" style="left:440px;top:118px;width:320px;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ชีต: ข้อมูล</span></div>
+                                                <table class="sfx-sheet sfp-sheet">
+                                                    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th class="gone">F</th></tr>
+                                                    <tr><th>1</th><td class="b">รหัส</td><td class="b">ภาค</td><td class="b">เดือน</td><td class="b">ชิ้น</td><td class="b">ลด</td><td class="gone">ถูกลบ</td></tr>
+                                                    <tr><th>2</th><td>BK</td><td>กทม.</td><td>ต.ค.</td><td>812</td><td>5%</td><td class="gone"></td></tr>
+                                                    <tr><th>3</th><td>CT</td><td>กลาง</td><td>ต.ค.</td><td>436</td><td>3%</td><td class="gone"></td></tr>
+                                                    <tr><th>4</th><td>NT</td><td>เหนือ</td><td>ต.ค.</td><td>301</td><td>0%</td><td class="gone"></td></tr>
+                                                    <tr><th>5</th><td>NE</td><td>อีสาน</td><td>ต.ค.</td><td>395</td><td>4%</td><td class="gone"></td></tr>
+                                                </table>
+                                            </div>
+                                            <svg class="sfp-trace" viewBox="0 0 800 440" aria-hidden="true">
+                                                <g class="draw" style="--d:.5s">
+                                                    <circle class="dot" cx="728" cy="262" r="5"/>
+                                                    <path d="M728 262 C 728 372, 400 372, 400 280 C 400 236, 384 216, 362 214"/>
+                                                    <path class="tip" d="M350 214 l13 -7 l0 14 z" style="stroke:none"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-tag" style="left:500px;top:372px;--d:1.1s">✕ คอลัมน์ F ถูกลบ → สูตรหาไม่เจอ</div>
+                                </div>
+
+                                <!-- Scene 3: fix the formula, values come back -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="การ์ดแก้สูตรเปลี่ยน VLOOKUP เดิมเป็น XLOOKUP ที่อ้างชื่อคอลัมน์ แล้วเซลล์ error ในรายงานกลายเป็นตัวเลขทีละแถว พร้อมรีเฟรช Pivot" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-win sfx-tilt-c" style="left:380px;top:52px;width:384px">
+                                            <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รายงานยอดขาย_ต.ค.xlsx · สรุป</span></div>
+                                            <div class="sfx-match sfp-fix">
+                                                <div class="sfx-scan"></div>
+                                                <div class="sfx-row head"><span>ภาค</span><span>เป้า</span><span>ยอดขาย</span><span>% เป้า</span></div>
+                                                <div class="sfx-row" style="--d:.7s"><span>กรุงเทพฯ</span><span>1,800,000</span><span class="sfx-st"><em>#REF!</em><b class="ok">1,872,400</b></span><span class="sfx-st"><em>#REF!</em><b class="pct">104%</b></span></div>
+                                                <div class="sfx-row" style="--d:1.1s"><span>ภาคกลาง</span><span>950,000</span><span class="sfx-st"><em>#N/A</em><b class="ok">982,300</b></span><span class="sfx-st"><em>#N/A</em><b class="pct">103%</b></span></div>
+                                                <div class="sfx-row" style="--d:1.5s"><span>ภาคเหนือ</span><span>720,000</span><span class="sfx-st"><em>#REF!</em><b class="ok">684,900</b></span><span class="sfx-st"><em>#DIV/0!</em><b class="low">95%</b></span></div>
+                                                <div class="sfx-row" style="--d:1.9s"><span>ภาคอีสาน</span><span>860,000</span><span class="sfx-st"><em>0</em><b class="ok">901,250</b></span><span class="sfx-st"><em>#VALUE!</em><b class="pct">105%</b></span></div>
+                                                <div class="sfx-row" style="--d:2.3s"><span>ภาคใต้</span><span>640,000</span><span class="sfx-st"><em>#N/A</em><b class="ok">655,800</b></span><span class="sfx-st"><em>#N/A</em><b class="pct">102%</b></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-diff sfx-shadow" style="left:36px;top:86px">
+                                        <div class="sfp-diff-head"><b>แก้สูตร C2:C6</b><span>ใช้ไฟล์เดิม</span></div>
+                                        <div class="sfp-dl del"><i>−</i><span class="sfp-code">=VLOOKUP(A2,ข้อมูล!A:E,6,0)</span></div>
+                                        <div class="sfp-dl add"><i>+</i><span class="sfp-code">=XLOOKUP(A2,tbl[รหัส],tbl[ยอดขาย])</span></div>
+                                        <div class="sfp-refresh"><span class="spin">↻</span>Refresh Pivot<span class="sfx-progress"><span></span></span></div>
+                                    </div>
+                                    <div class="sfx-chip" style="left:70px;top:300px">🔗 อ้างชื่อคอลัมน์ ลบ/แทรกได้ไม่พัง</div>
+                                </div>
+
+                                <!-- Scene 4: the report is back and sent on time -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="แดชบอร์ดรายงานยอดขายกลับมาครบ ยอดรวมและกราฟรายภาคแสดงตัวเลขถูกต้อง นาฬิกาสีเขียวบอกว่าส่งแล้ว 16:20 ก่อนกำหนด" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:52px;top:46px;width:470px;--z:0px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รายงานยอดขาย · ตุลาคม 2569</span></div>
+                                                <div class="sfp-dash">
+                                                    <div class="sfp-kpis">
+                                                        <div class="sfp-kpi" style="--d:.2s"><span>ยอดขายรวม</span><b>฿5.10M</b></div>
+                                                        <div class="sfp-kpi" style="--d:.35s"><span>เทียบเป้า</span><b class="up">102.5%</b></div>
+                                                        <div class="sfp-kpi" style="--d:.5s"><span>ภาคที่ถึงเป้า</span><b>4/5</b></div>
+                                                    </div>
+                                                    <div class="sfp-chart">
+                                                        <span class="bar hi" style="--h:88%;--d:.5s"><em>104%</em></span>
+                                                        <span class="bar hi" style="--h:46%;--d:.6s"><em>103%</em></span>
+                                                        <span class="bar" style="--h:32%;--d:.7s"><em>95%</em></span>
+                                                        <span class="bar hi" style="--h:42%;--d:.8s"><em>105%</em></span>
+                                                        <span class="bar hi" style="--h:31%;--d:.9s"><em>102%</em></span>
+                                                    </div>
+                                                    <div class="sfp-axis"><span>กทม.</span><span>กลาง</span><span>เหนือ</span><span>อีสาน</span><span>ใต้</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>ส่งรายงานให้ผู้บริหารแล้ว</b><span>sales_report_oct.xlsx</span></div></div>
+                                    <div class="sfp-clock ok sfx-shadow" style="left:566px;top:150px">
+                                        <span class="sfp-dial"><i class="h" style="--a:130deg"></i><i class="m" style="--a:120deg"></i></span>
+                                        <div><span>ส่งแล้วเวลา</span><b>16:20</b><em>ก่อนกำหนด 40 นาที</em></div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-green" style="left:200px;top:380px">✓ ไฟล์เดิมกลับมาใช้ได้ ไม่ต้องรื้อใหม่</div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>รายงานพังทั้งเล่ม ใกล้เวลาส่งแล้ว</h3><p>#REF! · #N/A · Pivot รีเฟรชไม่ได้</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ไล่สูตรย้อนจนเจอต้นเหตุ</h3><p>ไม่เดาสุ่ม ตามลูกศรไปถึงจุดที่พังจริง</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>แก้สูตรตรงจุด ตัวเลขกลับมา</h3><p>เปลี่ยนเป็นสูตรที่ทนต่อการแก้ชีต แล้วรีเฟรช Pivot</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>รายงานกลับมา ส่งทันเวลา</h3><p>ใช้ไฟล์เดิมต่อได้ โดยไม่ต้องรื้อทำใหม่</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">ไล่หา</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">แก้สูตร</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">ส่งทัน</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -52,12 +205,6 @@
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ปัญหา</h2><p class="text-slate-600">ไฟล์หลักมีจุดพังเฉพาะหน้า ทำให้ทีมส่งรายงานยอดขายหรือปิดรอบงานไม่ได้ตามเวลา</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">แนวทาง</h2><p class="text-slate-600">ไล่ logic, ตรวจสูตร, แก้ reference, และจัดโครงให้ไฟล์กลับมาเสถียรโดยเร็วโดยไม่ต้องรื้อใหม่ทั้งเล่ม</p></div>
                         <div class="bg-slate-50 rounded-xl p-6"><h2 class="font-bold mb-2">ผลลัพธ์</h2><p class="text-slate-600">ทีมกลับมาใช้ไฟล์ต่อได้เร็วขึ้น ลดเวลาหาสาเหตุ และลดความเสี่ยงจากการแก้แบบเดาสุ่ม</p></div>
-                    </div>
-                    <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วาง GIF หรือภาพ before/after ได้ตรงนี้ เช่น เซลล์ error ก่อนแก้, สูตรใหม่, pivot ที่กลับมาทำงานได้ และรายงานที่พร้อมส่งตามเวลา</p>
-                        </div>
                     </div>
                     <div class="mt-10 grid md:grid-cols-2 gap-6">
                         <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
@@ -92,5 +239,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

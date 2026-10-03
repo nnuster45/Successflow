@@ -26,6 +26,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/story-demo.css">
+    <link rel="stylesheet" href="../../assets/css/story/rpa-web-portal-reporting.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"RPA Web Portal Reporting","url":"https://www.successflow.it.com/portfolio/rpa-web-portal-reporting/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for using RPA to log in to web portals, export files, combine reports, and deliver daily reporting automatically."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"RPA Web Portal Reporting","item":"https://www.successflow.it.com/portfolio/rpa-web-portal-reporting/"}]}]}
     </script>
@@ -35,13 +37,178 @@
         <div class="max-w-4xl mx-auto">
             <a href="../../index.html#portfolio" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition duration-300">กลับไปหน้าหลัก</a>
             <div class="mt-6 md:mt-8 bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                <div class="h-56 md:h-72 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-700 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 28px 28px;"></div>
-                    <div class="relative z-10 h-full flex items-end p-6 md:p-10">
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200 mb-3">Project Overview</p>
-                            <h1 class="text-2xl md:text-4xl font-bold text-white">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h1>
+                <div class="px-6 md:px-12 pt-7 md:pt-10 pb-5 md:pb-7">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-2">Project Overview</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-slate-900">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h1>
+                </div>
+                <div class="sfs sfs-cover" data-sfs>
+                    <div class="sfs-stage" data-sfs-stage>
+                        <div class="sfs-frame" data-sfs-frame>
+                            <div class="sfs-canvas">
+
+                                <!-- Scene 1: logging into portals and downloading files by hand -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#fff7ed" role="img" aria-label="พนักงานต้องเปิด web portal 4 แห่งทุกเช้า เจอ session หมดอายุต้อง login ใหม่ และโฟลเดอร์ Downloads เต็มไปด้วยไฟล์ชื่อซ้ำ จนเก้าโมงกว่ารายงานยังไม่เสร็จ">
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-a">
+                                            <div class="sfx-win sfx-float" style="left:34px;top:44px;width:410px;--d:0s;--z:0px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span class="sfp-addr">seller.portal.co.th/login</span></div>
+                                                <div class="sfp-tabs"><span class="on">Seller Center</span><span>e-Banking</span><span>Logistics</span><span>Supplier</span></div>
+                                                <div class="sfp-login">
+                                                    <div class="sfp-brand"><i></i><b>Seller Center</b><span class="sfx-line w80"></span><span class="sfx-line w60"></span></div>
+                                                    <div class="sfp-form">
+                                                        <div class="sfp-alert">Session หมดอายุ · login ใหม่</div>
+                                                        <label>ผู้ใช้</label><div class="sfp-field">ops.team01</div>
+                                                        <label>รหัสผ่าน</label><div class="sfp-field sfp-empty"></div>
+                                                        <div class="sfp-btn">เข้าสู่ระบบ</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-win sfx-float" style="left:478px;top:70px;width:282px;--d:.8s;--z:60px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>Downloads</span></div>
+                                                <div class="sfp-files">
+                                                    <div class="sfp-f"><i class="csv">CSV</i><b>report (3).csv</b><time>09:12</time></div>
+                                                    <div class="sfp-f dup"><i class="csv">CSV</i><b>report (2).csv</b><time>09:10</time></div>
+                                                    <div class="sfp-f"><i class="xls">XLSX</i><b>export_final_แก้.xlsx</b><time>09:04</time></div>
+                                                    <div class="sfp-f dup"><i class="csv">CSV</i><b>report.csv</b><time>08:57</time></div>
+                                                    <div class="sfp-f"><i class="xls">XLSX</i><b>export (1).xlsx</b><time>08:41</time></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:44px;top:376px">🕘 09:40 รายงานยังไม่เสร็จ</div>
+                                    <div class="sfx-chip sfx-pulse" style="left:300px;top:386px;--d:.6s">เข้า 4 portal · โหลด 12 ไฟล์</div>
+                                </div>
+
+                                <!-- Scene 2: scheduled bot logs into each portal -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="ทุกเช้า 06:00 bot เปิด browser และ login เข้า web portal ให้เองทีละแห่ง ครบทั้ง 4 portal" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfp-clock"><span class="sfp-clock-face"><i></i></span><div><b>06:00</b><span>bot รันเองทุกวัน</span></div></div>
+                                    <div class="sfp-queue">
+                                        <div class="sfp-q-h">Portal วันนี้</div>
+                                        <div class="sfp-q" style="--d:.4s"><i style="background:#f97316">S</i><b>Seller Center</b><span class="sfx-st"><em>รอ</em><b class="ok">✓</b></span></div>
+                                        <div class="sfp-q" style="--d:1.1s"><i style="background:#2563eb">B</i><b>e-Banking</b><span class="sfx-st"><em>รอ</em><b class="ok">✓</b></span></div>
+                                        <div class="sfp-q" style="--d:1.8s"><i style="background:#7c3aed">L</i><b>Logistics</b><span class="sfx-st"><em>รอ</em><b class="ok">✓</b></span></div>
+                                        <div class="sfp-q" style="--d:2.5s"><i style="background:#0d9488">P</i><b>Supplier</b><span class="sfx-st"><em>รอ</em><b class="ok">✓</b></span></div>
+                                    </div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win" style="left:276px;top:52px;width:484px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span class="sfp-addr">seller.portal.co.th/login</span><em class="sfp-bot">BOT</em></div>
+                                                <div class="sfp-login big">
+                                                    <div class="sfp-brand"><i></i><b>Seller Center</b><span class="sfx-line w80"></span><span class="sfx-line w60"></span><span class="sfx-line w80"></span></div>
+                                                    <div class="sfp-form">
+                                                        <label>ผู้ใช้</label><div class="sfp-field"><span class="sfp-type" style="--d:.2s">rpa.report</span></div>
+                                                        <label>รหัสผ่าน</label><div class="sfp-field"><span class="sfp-type" style="--d:.8s">●●●●●●●●●●</span></div>
+                                                        <div class="sfx-run-wrap">
+                                                            <div class="sfx-run sfx-press">เข้าสู่ระบบ</div>
+                                                            <div class="sfx-progress"><span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="sfx-cursor" style="left:590px;top:300px" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                </div>
+
+                                <!-- Scene 3: export, rename, merge and check files -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="bot เลือกช่วงวันที่และกด Export ไฟล์จากแต่ละ portal ตั้งชื่อไฟล์ใหม่ รวมไฟล์ และตรวจ format ทีละไฟล์ รายการผิดปกติถูกบันทึกลง log" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-b">
+                                            <div class="sfx-win" style="left:30px;top:56px;width:318px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span class="sfp-addr">seller.portal.co.th/reports</span></div>
+                                                <div class="sfp-rep">
+                                                    <b class="sfp-rep-h">รายงานคำสั่งซื้อ</b>
+                                                    <div class="sfp-filter"><span>📅 02/10/69 – 02/10/69</span><em class="sfp-export">⬇ Export</em></div>
+                                                    <div class="sfp-mini">
+                                                        <div class="h"><span>ออเดอร์</span><span>ยอด</span></div>
+                                                        <div><span>SO-88214</span><span>1,290</span></div>
+                                                        <div><span>SO-88215</span><span>3,450</span></div>
+                                                        <div><span>SO-88216</span><span>780</span></div>
+                                                        <div><span>SO-88217</span><span>2,115</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-file sfx-in-l" style="left:150px;top:150px;--d:.3s"><i style="background:#0ea5e9">CSV</i>orders</div>
+                                    <div class="sfx-file sfx-in-l" style="left:150px;top:210px;--d:.8s"><i style="background:#16a34a">XLSX</i>settle</div>
+                                    <div class="sfx-file sfx-in-l" style="left:150px;top:270px;--d:1.3s"><i style="background:#0ea5e9">CSV</i>ship</div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-c">
+                                            <div class="sfx-win" style="left:376px;top:36px;width:396px">
+                                                <div class="sfx-bar"><i></i><i></i><i></i><span>รวมไฟล์ · ตรวจ format</span></div>
+                                                <div class="sfx-match sfp-merge">
+                                                    <div class="sfx-scan"></div>
+                                                    <div class="sfx-row head"><span>ไฟล์ (ชื่อใหม่)</span><span>แหล่ง</span><span>แถว</span><span>สถานะ</span></div>
+                                                    <div class="sfx-row" style="--d:.5s"><span>orders_0210.csv</span><span>Seller</span><span>1,284</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfx-row" style="--d:.9s"><span>settle_0210.xlsx</span><span>Bank</span><span>312</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfx-row" style="--d:1.3s"><span>ship_0210.csv</span><span>Logistics</span><span>1,236</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ผ่าน</b></span></div>
+                                                    <div class="sfx-row" style="--d:1.7s"><span>stock_0210.csv</span><span>Supplier</span><span>4,580</span><span class="sfx-st"><em>ตรวจ…</em><b class="bad">! 2 แถว</b></span></div>
+                                                    <div class="sfp-merged"><span>รวมแล้ว</span><div class="sfp-pull-bar"><i></i></div><b>4/4 ไฟล์</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sfx-exc" style="top:320px;right:36px">
+                                        <div class="sfx-exc-ico">!</div>
+                                        <div><b>stock ติดลบ 2 รายการ</b><span>บันทึกลง log ให้ทีมตรวจ</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Scene 4: daily report ready in the shared folder -->
+                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="รายงานประจำวันพร้อมใช้ มียอดขาย จำนวนออเดอร์ อัตราจัดส่ง และกราฟยอดขาย 7 วัน ไฟล์ถูกบันทึกใน shared folder และส่งให้ทีมแล้วตั้งแต่ 06:12" hidden>
+                                    <div class="sfx-floor"></div>
+                                    <div class="sfx-world">
+                                        <div class="sfx-plane sfx-tilt-d">
+                                            <div class="sfx-win" style="left:36px;top:84px;width:520px">
+                                                <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>Daily_Report_03-10-69.xlsx</span></div>
+                                                <div class="sfp-dash">
+                                                    <div class="sfp-tiles">
+                                                        <div class="sfp-tile" style="--d:.4s"><span>ยอดขายเมื่อวาน</span><b>฿486,250</b><em>▲ 8.4%</em></div>
+                                                        <div class="sfp-tile" style="--d:.55s"><span>ออเดอร์</span><b>1,284</b><em>▲ 112</em></div>
+                                                        <div class="sfp-tile" style="--d:.7s"><span>จัดส่งแล้ว</span><b>96.3%</b><em>1,236 ชิ้น</em></div>
+                                                    </div>
+                                                    <div class="sfp-chart">
+                                                        <span class="sfp-chart-h">ยอดขาย 7 วัน</span>
+                                                        <div class="sfx-bars">
+                                                            <span style="--h:52%"></span><span style="--h:61%"></span><span style="--h:48%"></span><span style="--h:70%"></span><span style="--h:66%"></span><span style="--h:78%"></span><span class="today" style="--h:92%"></span>
+                                                        </div>
+                                                        <div class="sfp-days7"><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>1</span><span>2</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class="sfx-stamp" style="--d:1.4s;left:530px;right:auto;top:68px">✓</i>
+                                        </div>
+                                    </div>
+                                    <div class="sfp-folder">
+                                        <div class="sfp-folder-h"><i></i><b>Shared · Daily Report</b></div>
+                                        <div class="sfp-ff new" style="--d:1s"><i class="xls">XLSX</i><b>Daily_Report_03-10</b></div>
+                                        <div class="sfp-ff" style="--d:1.15s"><i class="csv">CSV</i><b>orders_0210</b></div>
+                                        <div class="sfp-ff" style="--d:1.3s"><i class="csv">CSV</i><b>ship_0210</b></div>
+                                        <div class="sfp-ff" style="--d:1.45s"><i class="log">LOG</i><b>run_log_0310</b></div>
+                                    </div>
+                                    <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>ส่งรายงานให้ทีมแล้ว</b><span>06:12 · ก่อนเริ่มงาน</span></div></div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="sfs-captions">
+                        <div class="sfs-caption" data-sfs-caption><h3>ทุกเช้าต้องไล่ login หลาย portal</h3><p>โหลดไฟล์ซ้ำ ๆ จนรายงานเสร็จช้า</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>Bot login ให้เองตอน 06:00</h3><p>login ครบทุกระบบก่อนทีมเข้างาน</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>ดึงไฟล์ รวม และตรวจให้เอง</h3><p>ตั้งชื่อไฟล์ ตรวจ format รายการผิดปกติลง log</p></div>
+                        <div class="sfs-caption" data-sfs-caption hidden><h3>รายงานประจำวันรออยู่แล้ว</h3><p>ไฟล์อยู่ใน shared folder พร้อมใช้ทันที</p></div>
+                    </div>
+
+                    <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">ล็อกอิน</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">รวมไฟล์</span><span class="sfs-tab-bar"><span></span></span></button>
+                        <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
                     </div>
                 </div>
                 <div class="p-6 md:p-12">
@@ -135,5 +302,6 @@
 </div>
 
 <script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/story-demo.js"></script>
 </body>
 </html>

@@ -1,0 +1,369 @@
+/* Story demo: multi-channel stock dashboard (page-specific pieces) */
+
+/* ---------- Shared bits ---------- */
+.sfp-bar-orange { background: linear-gradient(#f97316, #ea580c); color: #ffedd5; border-bottom-color: #c2410c; }
+.sfp-bar-slate { background: linear-gradient(#334155, #1e293b); color: #e2e8f0; border-bottom-color: #0f172a; }
+.sfp-bar-orange i, .sfp-bar-slate i { opacity: 0.9; }
+
+.sfp-pad { padding: 10px 12px 12px; }
+
+.sfp-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sfp-pill.on { background: #2563eb; border-color: #2563eb; color: #fff; }
+.sfp-pills { display: flex; gap: 6px; align-items: center; }
+.sfp-pills .sfp-spacer { flex: 1; }
+
+/* ---------- Scene 1: three sources, three numbers ---------- */
+.sfp-list { font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.sfp-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+.sfp-list div:last-child { border-bottom: 0; }
+.sfp-list .k { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10.5px; color: #64748b; }
+.sfp-list .hl { background: #fef2f2; }
+.sfp-list b { font-weight: 700; color: #0f172a; }
+.sfp-list b.err { color: #dc2626; }
+.sfp-list b.warn { color: #b45309; }
+
+.sfp-tag {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.sfp-ask {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: #fff;
+    font-weight: 800;
+    font-size: 17px;
+    border: 3px solid #fff;
+    box-shadow: 0 6px 14px -4px rgba(239, 68, 68, 0.6);
+    transform: translateZ(60px);
+}
+
+/* ---------- Scene 2: sources flow into one data model ---------- */
+.sfp-src {
+    position: absolute;
+    left: 34px;
+    width: 196px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 26px -12px rgba(15, 23, 42, 0.3);
+    z-index: 2;
+}
+
+.sfp-src-ico {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.sfp-src b { display: block; font-size: 12.5px; line-height: 1.2; }
+.sfp-src div span { font-size: 10.5px; color: #64748b; }
+
+.sfp-src-ok {
+    margin-left: auto;
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.sfp-flow {
+    position: absolute;
+    inset: 0;
+    width: 800px;
+    height: 440px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sfp-flow path {
+    fill: none;
+    stroke: #93c5fd;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 2 9;
+}
+
+.sfp-model {
+    position: relative;
+    height: 292px;
+    background-color: #f8fafc;
+    background-image: radial-gradient(#dbe3ee 1px, transparent 1px);
+    background-size: 14px 14px;
+}
+
+.sfp-model svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sfp-model svg path { fill: none; stroke: #94a3b8; stroke-width: 1.6; }
+
+.sfp-tbl {
+    position: absolute;
+    width: 118px;
+    background: #fff;
+    border-radius: 9px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 18px -10px rgba(15, 23, 42, 0.35);
+    overflow: hidden;
+    font-size: 10.5px;
+}
+
+.sfp-tbl-h {
+    padding: 5px 9px;
+    font-weight: 700;
+    font-size: 11px;
+    color: #fff;
+}
+
+.sfp-tbl-f { padding: 4px 9px 6px; }
+.sfp-tbl-f span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 0;
+    color: #475569;
+    white-space: nowrap;
+}
+.sfp-tbl-f span::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: #cbd5e1;
+    flex: none;
+}
+.sfp-tbl-f span.key::before { background: #f59e0b; }
+
+.sfp-tbl.fact { width: 132px; border-color: #bfdbfe; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12), 0 10px 22px -10px rgba(15, 23, 42, 0.4); }
+
+.sfp-refresh {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 14px 8px 8px;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px -10px rgba(15, 23, 42, 0.35);
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    white-space: nowrap;
+    z-index: 3;
+}
+
+.sfp-refresh svg {
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+}
+
+.sfp-refresh em { font-style: normal; color: #2563eb; }
+
+/* ---------- Scene 3: days of cover, alerts, aging ---------- */
+.sfp-cover-row { grid-template-columns: 70px 1fr 112px 86px; gap: 6px; padding: 7px 4px; }
+.sfp-cover-row span:nth-child(2) { font-family: inherit; }
+
+.sfp-cov {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    color: #64748b;
+}
+
+.sfp-cov i {
+    display: block;
+    flex: none;
+    width: 64px;
+    height: 7px;
+    border-radius: 999px;
+    background: #eef2f6;
+    overflow: hidden;
+}
+
+.sfp-cov i::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: var(--w);
+    border-radius: inherit;
+    background: var(--c, #10b981);
+}
+
+.sfx-st b.red { background: #fee2e2; color: #dc2626; }
+.sfx-st b.old { background: #ede9fe; color: #6d28d9; }
+
+.sfp-age {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    height: 120px;
+    padding: 0 6px 4px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sfp-age div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.sfp-age div span {
+    display: block;
+    width: 100%;
+    height: var(--h);
+    margin-top: 4px;
+    border-radius: 5px 5px 0 0;
+    background: var(--c);
+}
+
+.sfp-age-x {
+    display: flex;
+    gap: 14px;
+    padding: 5px 6px 0;
+    font-size: 9.5px;
+    color: #94a3b8;
+    text-align: center;
+}
+.sfp-age-x span { flex: 1; }
+
+.sfp-card-t { display: block; font-size: 12px; font-weight: 700; margin-bottom: 10px; color: #0f172a; }
+
+/* ---------- Scene 4: the dashboard ---------- */
+.sfp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+
+.sfp-kpi {
+    padding: 9px 11px;
+    border-radius: 10px;
+    border: 1px solid #eef2f6;
+    background: #fff;
+}
+
+.sfp-kpi span { display: block; font-size: 10px; color: #64748b; }
+.sfp-kpi b { display: block; font-size: 19px; line-height: 1.25; font-variant-numeric: tabular-nums; color: #0f172a; }
+.sfp-kpi em { font-style: normal; font-size: 10px; font-weight: 700; color: #16a34a; }
+.sfp-kpi.alert { background: #fef2f2; border-color: #fecaca; }
+.sfp-kpi.alert b { color: #dc2626; }
+.sfp-kpi.alert em { color: #dc2626; }
+
+.sfp-dash-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 8px; }
+
+.sfp-panel {
+    padding: 9px 11px;
+    border-radius: 10px;
+    border: 1px solid #eef2f6;
+}
+
+.sfp-panel-t { display: flex; justify-content: space-between; font-size: 10.5px; font-weight: 700; color: #334155; margin-bottom: 4px; }
+.sfp-panel-t span { font-weight: 500; color: #94a3b8; }
+
+.sfp-area { display: block; width: 100%; height: 118px; }
+.sfp-area .grid { stroke: #f1f5f9; stroke-width: 1; }
+.sfp-area .line { fill: none; stroke: #2563eb; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+.sfp-area .fill { fill: url(#sfpAreaFill); }
+.sfp-area .dot { fill: #2563eb; stroke: #fff; stroke-width: 2; }
+
+.sfp-movers div { margin: 7px 0 0; font-size: 10.5px; color: #334155; }
+.sfp-movers p { display: flex; justify-content: space-between; margin-bottom: 3px; }
+.sfp-movers p b { font-variant-numeric: tabular-nums; }
+.sfp-movers i { display: block; height: 7px; border-radius: 999px; background: #eef2f6; overflow: hidden; }
+.sfp-movers i::after { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: linear-gradient(90deg, #60a5fa, #2563eb); }
+
+.sfp-restock .sfp-list div { padding: 6px 10px; }
+
+/* ---------- Motion (active scene only) ---------- */
+.is-active .sfp-ask { animation: sfp-pop 0.45s cubic-bezier(.2, 1.6, .4, 1) both; animation-delay: var(--d, 0s); }
+
+.is-active .sfp-src { animation: sfp-slide 0.5s ease both; animation-delay: var(--d, 0s); }
+.is-active .sfp-src-ok { animation: sfp-pop 0.4s cubic-bezier(.2, 1.6, .4, 1) both; animation-delay: var(--d, 0s); }
+.is-active .sfp-flow path { animation: sfp-flow 0.9s linear infinite; }
+.is-active .sfp-tbl { animation: sfp-deal 0.5s cubic-bezier(.2, 1.2, .4, 1) both; animation-delay: var(--d, 0s); }
+.is-active .sfp-model svg path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sfp-draw 0.6s ease forwards; animation-delay: var(--d, 0s); }
+.is-active .sfp-refresh svg { animation: sfp-spin 1.4s linear 2; }
+.is-active .sfp-refresh { animation: sfp-drop 0.5s ease both; }
+
+.is-active .sfp-cov i::after { animation: sfp-fill 0.7s ease both; animation-delay: calc(var(--d, 0s) - 0.1s); }
+.is-active .sfp-age div span { transform-origin: bottom; animation: sfx-grow 0.7s ease both; animation-delay: var(--d, 0s); }
+
+.is-active .sfp-kpi { animation: sfp-deal 0.5s cubic-bezier(.2, 1.2, .4, 1) both; animation-delay: var(--d, 0s); }
+.is-active .sfp-area .line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sfp-draw 1.2s ease forwards 0.5s; }
+.is-active .sfp-area .fill,
+.is-active .sfp-area .dot { animation: sfx-in 0.5s ease both 1.5s; }
+.is-active .sfp-movers i::after { animation: sfp-fill 0.8s ease both; animation-delay: var(--d, 0s); }
+.is-active .sfp-restock { animation: sfp-slide-l 0.6s ease both 1.1s; }
+
+@keyframes sfp-pop { from { opacity: 0; transform: translateZ(60px) scale(0.3); } to { opacity: 1; transform: translateZ(60px) scale(1); } }
+@keyframes sfp-slide { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+@keyframes sfp-slide-l { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes sfp-flow { to { stroke-dashoffset: -11; } }
+@keyframes sfp-deal { from { opacity: 0; transform: translateY(14px) scale(0.94); } to { opacity: 1; transform: none; } }
+@keyframes sfp-draw { to { stroke-dashoffset: 0; } }
+@keyframes sfp-spin { to { transform: rotate(360deg); } }
+@keyframes sfp-drop { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+@keyframes sfp-fill { from { width: 0; } to { width: var(--w); } }
+
+.is-active .sfp-src-ok { animation-name: sfp-pop-flat; }
+@keyframes sfp-pop-flat { from { opacity: 0; transform: scale(0.3); } to { opacity: 1; transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-flow path { stroke-dasharray: none; }
+    .is-active .sfp-model svg path,
+    .is-active .sfp-area .line { animation: none !important; stroke-dasharray: none; stroke-dashoffset: 0; }
+}
