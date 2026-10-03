@@ -41,6 +41,11 @@
     <link rel="stylesheet" href="assets/css/story/home-problem.css">
     <link rel="stylesheet" href="assets/css/story/home-why.css">
     <link rel="stylesheet" href="assets/css/story/home-contact.css">
+    <link rel="stylesheet" href="assets/css/story/home-portfolio.css">
+    <link rel="stylesheet" href="assets/css/story/home-portfolio-a.css">
+    <link rel="stylesheet" href="assets/css/story/home-portfolio-b.css">
+    <link rel="stylesheet" href="assets/css/story/home-portfolio-c.css">
+    <link rel="stylesheet" href="assets/css/story/home-portfolio-d.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -991,10 +996,51 @@
             <div id="portfolio-slider" class="services-scrollbar-hidden flex gap-4 md:gap-8 overflow-x-auto pb-4 text-slate-800 snap-x snap-mandatory scroll-smooth">
                 <!-- Case Study 1: Dashboard -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-right" data-filter-item="portfolio" data-category="dashboard">
-                    <div class="overflow-hidden relative h-52 md:h-64 bg-slate-100">
-                        <!-- เปลี่ยนเป็นรูป Dashboard -->
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Power BI Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded" data-i18n="case1_badge">เพิ่มยอดขาย 20%</div>
+                    <div id="pfc-sales-kpi-dashboard" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded" data-i18n="case1_badge">เพิ่มยอดขาย 20%</div>
+                        <!-- pfcover:sales-kpi-dashboard -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#eaf2fd" role="img" aria-label="ข้อมูลยอดขายจาก ERP ไหลเข้า Dashboard อัตโนมัติ ยอดขายวันนี้ เปอร์เซ็นต์ถึงเป้า และกราฟยอดรายวันเติมขึ้นแบบ Real-time">
+                                            <div class="sfx-floor sfp-pc-kpi-floor"></div>
+                                            <div class="sfp-pc-kpi-erp sfx-shadow">
+                                                <div class="sfp-pc-kpi-erp-head"><b>ERP</b><span>ยอดขาย</span></div>
+                                                <div class="sfp-pc-kpi-slot"><i style="--d:.2s"></i><i style="--d:.5s"></i><span></span></div>
+                                                <div class="sfp-pc-kpi-slot"><i style="--d:.4s"></i><i style="--d:.1s"></i><span></span></div>
+                                                <div class="sfp-pc-kpi-slot"><i style="--d:.6s"></i><i style="--d:.3s"></i><span></span></div>
+                                            </div>
+                                            <div class="sfp-pc-kpi-pipe" aria-hidden="true"><i style="--d:.7s"></i><i style="--d:1.2s"></i><i style="--d:1.7s"></i><i style="--d:2.2s"></i></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-kpi-tilt">
+                                                    <div class="sfx-win sfp-pc-kpi-win">
+                                                        <div class="sfx-bar"><i></i><i></i><i></i><span>Sales Dashboard</span></div>
+                                                        <div class="sfp-pc-kpi-body">
+                                                            <div class="sfp-pc-kpi-tiles">
+                                                                <div class="sfp-pc-kpi-tile" style="--d:2s"><span>ยอดขายวันนี้</span><b>฿1.28M</b><em>▲ 8.2%</em></div>
+                                                                <div class="sfp-pc-kpi-tile sfp-pc-kpi-tile-ring" style="--d:2.5s">
+                                                                    <svg class="sfp-pc-kpi-ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="bg" cx="30" cy="30" r="24"/><circle class="fg" cx="30" cy="30" r="24"/></svg>
+                                                                    <div><span>ถึงเป้า</span><b>92%</b></div>
+                                                                </div>
+                                                                <div class="sfp-pc-kpi-tile" style="--d:3s"><span>ออเดอร์</span><b>1,034</b><em>▲ 3.9%</em></div>
+                                                            </div>
+                                                            <div class="sfp-pc-kpi-chart">
+                                                                <div class="sfp-pc-kpi-target"><span>เป้า</span></div>
+                                                                <i style="--h:46%;--d:3.3s"></i><i style="--h:58%;--d:3.45s"></i><i style="--h:40%;--d:3.6s"></i><i style="--h:64%;--d:3.75s"></i><i style="--h:55%;--d:3.9s"></i><i style="--h:70%;--d:4.05s"></i><i style="--h:62%;--d:4.2s"></i><i style="--h:76%;--d:4.35s"></i><i style="--h:68%;--d:4.5s"></i><i class="today" style="--h:92%;--d:4.65s"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-chip sfp-pc-kpi-live"><i>✓</i>อัปเดตอัตโนมัติทุกวัน</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ข้อมูลยอดขายจาก ERP ไหลเข้า Dashboard อัตโนมัติ ยอดขายวันนี้ เปอร์เซ็นต์ถึงเป้า และกราฟยอดรายวันเติมขึ้นแบบ Real-time": "Sales data flows from the ERP into the dashboard automatically: today's sales, percent of target and the daily chart fill in real time", "ยอดขาย": "Sales", "฿1.28M": "฿1.28M", "ยอดขายวันนี้": "Sales today", "ถึงเป้า": "Of target", "ออเดอร์": "Orders", "เป้า": "Target", "อัปเดตอัตโนมัติทุกวัน": "Auto-updated daily"}</script>
+                        </div>
+                        <!-- /pfcover:sales-kpi-dashboard -->
                     </div>
                     <div class="p-6 md:p-8">
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case1_title">Sales & KPI Dashboard</h3>
@@ -1009,10 +1055,56 @@
 
                 <!-- Case Study 2: RPA/VBA -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation excel">
-                    <div class="overflow-hidden relative h-52 md:h-64 bg-slate-100">
-                        <!-- เปลี่ยนเป็นรูประบบ/โค้ด -->
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Excel VBA Automation" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded" data-i18n="case2_badge">ลดเวลาจาก 3 วัน เหลือ 10 นาที</div>
+                    <div id="pfc-automated-accounting-document-workflow" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded" data-i18n="case2_badge">ลดเวลาจาก 3 วัน เหลือ 10 นาที</div>
+                        <!-- pfcover:automated-accounting-document-workflow -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#fdf4ea" role="img" aria-label="Statement อินวอยซ์ และสลิปจากหลายแหล่งไหลเข้าไฟล์ Reconcile กดรันครั้งเดียว ระบบจับคู่ยอดให้ทีละแถว และแยกรายการผิดปกติให้ทีมตรวจ">
+                                            <div class="sfx-floor sfp-pc-pdf-floor"></div>
+                                            <div class="sfp-pc-pdf-stack">
+                                                <div class="sfp-pc-pdf-paper sfx-shadow" style="--r:-6deg;--x:-12px;--y:-62px;--c:#db2777"><b>SLIP</b></div>
+                                                <div class="sfp-pc-pdf-paper sfx-shadow" style="--r:-3deg;--x:-6px;--y:-31px;--c:#0891b2"><b>INVOICE</b></div>
+                                                <div class="sfp-pc-pdf-paper sfx-shadow" style="--r:2deg;--x:0px;--y:0px;--c:#2563eb">
+                                                    <b>STATEMENT</b>
+                                                    <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                    <div class="sfp-pc-pdf-amt"><i></i><em>12,450</em></div>
+                                                    <div class="sfp-pc-pdf-amt"><i></i><em>3,890</em></div>
+                                                    <div class="sfp-pc-pdf-amt"><i></i><em>7,180</em></div>
+                                                </div>
+                                            </div>
+                                            <div class="sfp-pc-pdf-fly" aria-hidden="true"><i style="--d:1.7s;--c:#2563eb"></i><i style="--d:2.05s;--c:#0891b2"></i><i style="--d:2.4s;--c:#db2777"></i></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-pdf-tilt">
+                                                    <div class="sfx-win sfp-pc-pdf-win">
+                                                        <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>Reconcile.xlsx</span></div>
+                                                        <div class="sfp-pc-pdf-tool">
+                                                            <span class="sfp-pc-pdf-run">▶ รันทั้งหมด</span>
+                                                            <span class="sfp-pc-pdf-prog"><span></span></span>
+                                                        </div>
+                                                        <div class="sfp-pc-pdf-row head"><span>อินวอยซ์</span><span>ยอด</span><span>สถานะ</span></div>
+                                                        <div class="sfp-pc-pdf-row" style="--d:2.6s"><span>INV-1041</span><span>12,450</span><span class="sfp-pc-pdf-st"><em>…</em><b class="ok">✓ ตรง</b></span></div>
+                                                        <div class="sfp-pc-pdf-row" style="--d:3.2s"><span>INV-1042</span><span>3,890</span><span class="sfp-pc-pdf-st"><em>…</em><b class="ok">✓ ตรง</b></span></div>
+                                                        <div class="sfp-pc-pdf-row is-bad" style="--d:3.8s"><span>INV-1043</span><span>7,200</span><span class="sfp-pc-pdf-st"><em>…</em><b class="bad">! ไม่ตรง</b></span></div>
+                                                        <div class="sfp-pc-pdf-row" style="--d:4.4s"><span>INV-1044</span><span>5,240</span><span class="sfp-pc-pdf-st"><em>…</em><b class="ok">✓ ตรง</b></span></div>
+                                                        <div class="sfp-pc-pdf-scan"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfp-pc-pdf-exc sfx-shadow">
+                                                <span class="sfp-pc-pdf-exc-ico">!</span>
+                                                <div><span>รายการผิดปกติ</span><b>1</b><em>INV-1043</em></div>
+                                            </div>
+                                            <svg class="sfx-cursor sfp-pc-pdf-cur" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"Statement อินวอยซ์ และสลิปจากหลายแหล่งไหลเข้าไฟล์ Reconcile กดรันครั้งเดียว ระบบจับคู่ยอดให้ทีละแถว และแยกรายการผิดปกติให้ทีมตรวจ": "Statements, invoices and slips from many sources flow into the reconcile file; one run matches amounts row by row and sets exceptions aside for review", "▶ รันทั้งหมด": "▶ Run all", "อินวอยซ์": "Invoice", "ยอด": "Amount", "สถานะ": "Status", "✓ ตรง": "✓ Match", "! ไม่ตรง": "! Mismatch", "รายการผิดปกติ": "Exceptions"}</script>
+                        </div>
+                        <!-- /pfcover:automated-accounting-document-workflow -->
                     </div>
                     <div class="p-6 md:p-8">
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case2_title">ระบบจัดการเอกสารบัญชีอัตโนมัติ</h3>
@@ -1028,18 +1120,61 @@
 
                 <!-- Case Study 3: Order Chatbot Mockup -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case3_badge">Order Automation</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-blue-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Process Demonstration</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Chatbot รับออเดอร์และบันทึกคำสั่งซื้ออัตโนมัติ</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">ใช้กับงานรับออเดอร์ สรุปรายการ ยืนยันยอด รับสลิป และบันทึกคำสั่งซื้อเข้าระบบแบบเป็น flow เดียว</p>
+                    <div id="pfc-ai-customer-chat-and-lead-capture" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case3_badge">Order Automation</div>
+                        <!-- pfcover:ai-customer-chat-and-lead-capture -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#fdf3e7" role="img" aria-label="ลูกค้าสั่งกาแฟในแชต LINE บอตสรุปออเดอร์ยอด 900 บาท ลูกค้ากดยืนยันและส่งสลิป แล้วออเดอร์ A2041 ถูกบันทึกลงตารางคำสั่งซื้อพร้อมสถานะชำระแล้วโดยอัตโนมัติ">
+                                            <div class="sfx-floor sfp-pc-chat-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-chat-pl-sheet">
+                                                    <div class="sfx-win sfp-pc-chat-sheet">
+                                                        <div class="sfx-bar sfp-pc-chat-bar"><i></i><i></i><i></i><span class="sfp-pc-chat-line">L</span><b>ออเดอร์วันนี้</b><span class="sfp-pc-chat-auto">✓ บันทึกอัตโนมัติ</span></div>
+                                                        <div class="sfp-pc-chat-tr sfp-pc-chat-th"><span>เลขที่</span><span>ยอด</span><span>สถานะ</span></div>
+                                                        <div class="sfp-pc-chat-tr sfp-pc-chat-new"><span>A2041</span><span>900</span><span class="sfp-pc-chat-st"><em>รอโอน</em><b>ชำระแล้ว</b></span></div>
+                                                        <div class="sfp-pc-chat-tr"><span>A2040</span><span>450</span><span class="sfp-pc-chat-st"><b>ชำระแล้ว</b></span></div>
+                                                        <div class="sfp-pc-chat-tr"><span>A2039</span><span>1,280</span><span class="sfp-pc-chat-st"><b>ชำระแล้ว</b></span></div>
+                                                        <div class="sfp-pc-chat-tr"><span>A2038</span><span>320</span><span class="sfp-pc-chat-st"><b>ชำระแล้ว</b></span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfx-plane sfp-pc-chat-pl-phone">
+                                                    <div class="sfp-pc-chat-phone">
+                                                        <div class="sfp-pc-chat-screen">
+                                                            <div class="sfp-pc-chat-status"></div>
+                                                            <div class="sfp-pc-chat-head"><span class="sfp-pc-chat-shop">C</span><b>ร้านกาแฟ</b><em>bot</em></div>
+                                                            <div class="sfp-pc-chat-msgs">
+                                                                <div class="sfp-pc-chat-me sfp-pc-chat-in" style="--d:.4s">คั่วกลาง 2 ถุง</div>
+                                                                <div class="sfp-pc-chat-slot">
+                                                                    <div class="sfp-pc-chat-typing"><i></i><i></i><i></i></div>
+                                                                    <div class="sfp-pc-chat-card sfp-pc-chat-in" style="--d:1.8s">
+                                                                        <b class="sfp-pc-chat-card-t">สรุปออเดอร์</b>
+                                                                        <div class="sfp-pc-chat-li"><span>คั่วกลาง ×2</span><span>640</span></div>
+                                                                        <div class="sfp-pc-chat-li"><span>ดริปแบ็ก ×1</span><span>260</span></div>
+                                                                        <div class="sfp-pc-chat-total"><span>รวม</span><b>900 ฿</b></div>
+                                                                        <div class="sfp-pc-chat-btn"><span class="sfp-pc-chat-btn-a">ยืนยัน</span><span class="sfp-pc-chat-btn-b">ยืนยันแล้ว ✓</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="sfp-pc-chat-me sfp-pc-chat-slip sfp-pc-chat-in" style="--d:3.5s"><span class="sfp-pc-chat-slip-ico">฿</span><span>สลิป 900</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="sfp-pc-chat-fly">A2041</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ลูกค้าสั่งกาแฟในแชต LINE บอตสรุปออเดอร์ยอด 900 บาท ลูกค้ากดยืนยันและส่งสลิป แล้วออเดอร์ A2041 ถูกบันทึกลงตารางคำสั่งซื้อพร้อมสถานะชำระแล้วโดยอัตโนมัติ": "A customer orders coffee in LINE chat, the bot sums up a 900 baht order, the customer confirms and sends a payment slip, and order A2041 is saved to the order sheet as paid automatically", "ออเดอร์วันนี้": "Today's orders", "เลขที่": "Order", "ยอด": "Total", "สถานะ": "Status", "รอโอน": "Unpaid", "ชำระแล้ว": "Paid", "ร้านกาแฟ": "Coffee shop", "คั่วกลาง 2 ถุง": "2 bags medium roast", "สรุปออเดอร์": "Order summary", "คั่วกลาง ×2": "Medium ×2", "ดริปแบ็ก ×1": "Drip bag ×1", "รวม": "Total", "ยืนยัน": "Confirm", "ยืนยันแล้ว ✓": "Confirmed ✓", "สลิป 900": "Slip 900", "✓ บันทึกอัตโนมัติ": "✓ Auto-saved"}</script>
                         </div>
+                        <!-- /pfcover:ai-customer-chat-and-lead-capture -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Chatbot รับออเดอร์และบันทึกคำสั่งซื้ออัตโนมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">กรณีศึกษาจำลองสำหรับ chatbot ที่รับออเดอร์ผ่านแชต สรุปรายการ ยืนยันการสั่ง รับสลิปโอนเงิน และบันทึกข้อมูลคำสั่งซื้อเข้าระบบต่อโดยอัตโนมัติ</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case3_title">Chatbot รับออเดอร์และบันทึกคำสั่งซื้ออัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case3_body">กรณีศึกษาจำลองสำหรับ chatbot ที่รับออเดอร์ผ่านแชต สรุปรายการ ยืนยันการสั่ง รับสลิปโอนเงิน และบันทึกข้อมูลคำสั่งซื้อเข้าระบบต่อโดยอัตโนมัติ</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Chatbot</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">OrderFlow</span>
@@ -1051,14 +1186,54 @@
 
                 <!-- Case Study 4: Excel Fast Solve Mockup -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="excel">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 32px 32px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case4_badge">Formula Recovery</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-emerald-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Formula / Fix</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight" data-i18n="case4_visual_title">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h3>
-                            <p class="text-slate-300 mt-3 max-w-md" data-i18n="case4_visual_desc">ตัวอย่างเคสแก้สูตร, lookup และ pivot ที่ผิดพลาดในไฟล์รายงานสำคัญแบบเร่งด่วน</p>
+                    <div id="pfc-excel-report-recovery" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case4_badge">Formula Recovery</div>
+                        <!-- pfcover:excel-report-recovery -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#eaf6ef" role="img" aria-label="รายงานยอดขายใน Excel ที่เต็มไปด้วย #REF! และ #N/A แก้สูตร VLOOKUP เป็น XLOOKUP แล้วตัวเลขกลับมาเป็นสีเขียวทีละแถว กราฟรายภาคกลับมาครบ พร้อมส่ง">
+                                            <div class="sfx-floor sfp-pc-xls-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-xls-tilt">
+                                                    <div class="sfp-pc-xls-fx sfx-shadow">
+                                                        <span class="sfp-pc-xls-ref">C2</span><span class="sfp-pc-xls-fxi">fx</span>
+                                                        <span class="sfp-pc-xls-code">
+                                                            <span class="old">=<span class="fn">VLOOKUP</span>(A2,A:E,<span class="bad">6</span>,0)</span>
+                                                            <span class="new">=<span class="fn">XLOOKUP</span>(A2,<span class="rg">รหัส</span>,<span class="rg">ยอดขาย</span>)</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-xls-win">
+                                                        <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>รายงานยอดขาย.xlsx</span></div>
+                                                        <table class="sfp-pc-xls-sheet">
+                                                            <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                            <tr><th>1</th><td class="h">ภาค</td><td class="h">ยอดขาย</td><td class="h">% เป้า</td></tr>
+                                                            <tr style="--d:3.2s"><th>2</th><td>กรุงเทพฯ</td><td class="fix"><em>#REF!</em><b>1,872,400</b></td><td class="fix"><em>#REF!</em><b>104%</b></td></tr>
+                                                            <tr style="--d:3.55s"><th>3</th><td>ภาคกลาง</td><td class="fix"><em>#N/A</em><b>982,300</b></td><td class="fix"><em>#N/A</em><b>103%</b></td></tr>
+                                                            <tr style="--d:3.9s"><th>4</th><td>ภาคเหนือ</td><td class="fix"><em>#REF!</em><b>684,900</b></td><td class="fix"><em>#DIV/0!</em><b>95%</b></td></tr>
+                                                            <tr style="--d:4.25s"><th>5</th><td>ภาคใต้</td><td class="fix"><em>#N/A</em><b>655,800</b></td><td class="fix"><em>#N/A</em><b>102%</b></td></tr>
+                                                            <tr class="sum" style="--d:4.7s"><th>6</th><td class="h">รวม</td><td class="fix"><em>#REF!</em><b>4,195,400</b></td><td class="fix"><em>#REF!</em><b>102%</b></td></tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="sfp-pc-xls-card sfx-shadow">
+                                                        <span class="sfp-pc-xls-card-t">ยอดตามภาค</span>
+                                                        <div class="sfp-pc-xls-bars">
+                                                            <i style="--h:100%;--d:5s"></i><i style="--h:56%;--d:5.12s"></i><i style="--h:40%;--d:5.24s"></i><i style="--h:38%;--d:5.36s"></i>
+                                                            <em>#REF!</em>
+                                                        </div>
+                                                        <div class="sfp-pc-xls-axis"><span>กทม.</span><span>กลาง</span><span>เหนือ</span><span>ใต้</span></div>
+                                                        <span class="sfp-pc-xls-ok">✓ พร้อมส่ง</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"รายงานยอดขายใน Excel ที่เต็มไปด้วย #REF! และ #N/A แก้สูตร VLOOKUP เป็น XLOOKUP แล้วตัวเลขกลับมาเป็นสีเขียวทีละแถว กราฟรายภาคกลับมาครบ พร้อมส่ง": "An Excel sales report full of #REF! and #N/A: VLOOKUP is fixed to XLOOKUP, numbers come back green row by row and the regional chart is whole again, ready to send", "รหัส": "ID", "ยอดขาย": "Sales", "รายงานยอดขาย.xlsx": "sales_report.xlsx", "ภาค": "Region", "% เป้า": "% target", "กรุงเทพฯ": "Bangkok", "ภาคกลาง": "Central", "ภาคเหนือ": "North", "ภาคใต้": "South", "รวม": "Total", "ยอดตามภาค": "By region", "กทม.": "BKK", "กลาง": "Cen.", "เหนือ": "North", "ใต้": "South", "✓ พร้อมส่ง": "✓ Ready to send"}</script>
                         </div>
+                        <!-- /pfcover:excel-report-recovery -->
                     </div>
                     <div class="p-6 md:p-8">
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case4_title">แก้สูตรรายงานยอดขายที่พังให้กลับมาใช้ได้</h3>
@@ -1074,14 +1249,48 @@
 
                 <!-- Case Study 5: Excel UserForm Mockup -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="excel">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 26px 26px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case5_badge">Structured Input</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-cyan-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Form / Input</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight" data-i18n="case5_visual_title">ฟอร์มบันทึกคำสั่งซื้อใน Excel แบบไม่ต้องพิมพ์ลงชีต</h3>
-                            <p class="text-slate-300 mt-3 max-w-md" data-i18n="case5_visual_desc">ตัวอย่างหน้าจอสำหรับการกรอกข้อมูลผ่าน user form และการบันทึกลงตารางอัตโนมัติอย่างเป็นระบบ</p>
+                    <div id="pfc-excel-order-entry-form" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case5_badge">Structured Input</div>
+                        <!-- pfcover:excel-order-entry-form -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene sfp-pc-oef-root" data-sfs-scene data-bg="#eef4ff" role="img" aria-label="ฟอร์มบันทึกคำสั่งซื้อใน Excel เลือกลูกค้าและสินค้าจากรายการ กรอกจำนวน ตรวจครบทุกช่องแล้วกดบันทึก ออเดอร์ใหม่เข้าแถวในตารางอย่างเป็นระเบียบ">
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-oef-tilt">
+                                                    <div class="sfx-win sfp-pc-oef-sheet" style="left:392px;top:104px;width:384px;--z:-30px">
+                                                        <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>tblOrders.xlsx</span></div>
+                                                        <div class="sfp-pc-oef-tr sfp-pc-oef-th"><span></span><span>ลูกค้า</span><span>สินค้า</span><span>จำนวน</span></div>
+                                                        <div class="sfp-pc-oef-tr"><span>2</span><span>ร้านสมใจ</span><span>น้ำดื่ม</span><span>20</span></div>
+                                                        <div class="sfp-pc-oef-tr"><span>3</span><span>ร้านกาแฟดี</span><span>กาแฟ</span><span>5</span></div>
+                                                        <div class="sfp-pc-oef-tr sfp-pc-oef-new"><span>4</span><span>ทองดีมาร์ท</span><span>ชาเขียว</span><span>12</span></div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-oef-form" style="left:30px;top:34px;width:344px;--z:50px">
+                                                        <div class="sfx-bar"><i></i><i></i><i></i><span>บันทึกคำสั่งซื้อ</span></div>
+                                                        <div class="sfp-pc-oef-body">
+                                                            <div class="sfp-pc-oef-f" style="--d:1.3s">
+                                                                <label>ลูกค้า</label><span class="sfp-pc-oef-in sfp-pc-oef-dd"><b>ทองดีมาร์ท</b></span><i class="sfp-pc-oef-ok">✓</i>
+                                                                <div class="sfp-pc-oef-list"><span>ร้านสมใจ</span><span class="sfp-pc-oef-hl">ทองดีมาร์ท</span><span>ร้านป้าแดง</span></div>
+                                                            </div>
+                                                            <div class="sfp-pc-oef-f" style="--d:2s"><label>สินค้า</label><span class="sfp-pc-oef-in sfp-pc-oef-dd"><b>ชาเขียว</b></span><i class="sfp-pc-oef-ok">✓</i></div>
+                                                            <div class="sfp-pc-oef-f" style="--d:2.7s"><label>จำนวน</label><span class="sfp-pc-oef-in"><b>12</b><em>ลัง</em></span><i class="sfp-pc-oef-ok">✓</i></div>
+                                                            <div class="sfp-pc-oef-btns"><span class="sfp-pc-oef-save">บันทึก<span class="sfp-pc-oef-lock"><i></i>บันทึก</span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfp-pc-oef-fly" aria-hidden="true"><i></i><i></i><i></i></div>
+                                            <svg class="sfp-pc-oef-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                            <div class="sfx-chip sfp-pc-oef-done"><i>✓</i>ข้อมูลครบ บันทึกแล้ว</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ฟอร์มบันทึกคำสั่งซื้อใน Excel เลือกลูกค้าและสินค้าจากรายการ กรอกจำนวน ตรวจครบทุกช่องแล้วกดบันทึก ออเดอร์ใหม่เข้าแถวในตารางอย่างเป็นระเบียบ": "An Excel order form: pick the customer and product from lists, enter the quantity, every field is checked, then Save adds the new order as a tidy row in the table", "ลูกค้า": "Customer", "สินค้า": "Product", "จำนวน": "Qty", "ร้านสมใจ": "Somjai", "น้ำดื่ม": "Water", "ร้านกาแฟดี": "Cafe Dee", "กาแฟ": "Coffee", "ทองดีมาร์ท": "Thongdee", "ชาเขียว": "Green tea", "บันทึกคำสั่งซื้อ": "New order", "ร้านป้าแดง": "Pa Daeng", "ลัง": "cases", "บันทึก": "Save", "ข้อมูลครบ บันทึกแล้ว": "Complete, saved"}</script>
                         </div>
+                        <!-- /pfcover:excel-order-entry-form -->
                     </div>
                     <div class="p-6 md:p-8">
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case5_title">ฟอร์มบันทึกคำสั่งซื้อใน Excel แบบไม่ต้องพิมพ์ลงชีต</h3>
@@ -1089,7 +1298,6 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">UserForm</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Excel</span>
-                            <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">UserForm</span>
                         </div>
                         <a href="portfolio/excel-order-entry-form/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
@@ -1097,158 +1305,469 @@
 
                 <!-- Case Study 6: RPA Web Portal Mockup -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-700 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 28px 28px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">ส่งรายงานได้ตรงเวลาขึ้น</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-indigo-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Portal / Report</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานที่ต้อง login, export, รวมไฟล์ และส่งรายงานซ้ำทุกวันโดยไม่อยากให้ทีมมานั่งทำเอง</p>
+                    <div id="pfc-rpa-web-portal-reporting" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case6_badge">ส่งรายงานได้ตรงเวลาขึ้น</div>
+                        <!-- pfcover:rpa-web-portal-reporting -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene sfp-pc-rpa-root" data-sfs-scene data-bg="#fdf5ea" role="img" aria-label="ตอน 06:00 bot เข้า web portal ทีละแห่ง ดาวน์โหลดไฟล์มารวมเป็นรายงานประจำวัน ยอดขาย ออเดอร์ และกราฟ 7 วัน แล้วส่งรายงานให้ทีมก่อนเริ่มงาน">
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfp-pc-rpa-clock sfx-shadow"><span class="sfp-pc-rpa-face"><i></i></span><b>06:00</b><span>bot เริ่มงาน</span></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-rpa-tilt">
+                                                    <div class="sfx-win sfp-pc-rpa-queue" style="left:28px;top:100px;width:300px;--z:30px">
+                                                        <div class="sfx-bar"><i></i><i></i><i></i><span>Web Portal</span><em class="sfp-pc-rpa-bot">BOT</em></div>
+                                                        <div class="sfp-pc-rpa-list">
+                                                            <div class="sfp-pc-rpa-q" style="--d:1s"><i style="background:#f97316">S</i><b>Seller Center</b><span class="sfp-pc-rpa-st"><em></em><u>✓</u></span></div>
+                                                            <div class="sfp-pc-rpa-q" style="--d:1.8s"><i style="background:#2563eb">B</i><b>e-Banking</b><span class="sfp-pc-rpa-st"><em></em><u>✓</u></span></div>
+                                                            <div class="sfp-pc-rpa-q" style="--d:2.6s"><i style="background:#7c3aed">L</i><b>Logistics</b><span class="sfp-pc-rpa-st"><em></em><u>✓</u></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-rpa-report" style="left:358px;top:100px;width:396px;--z:0px">
+                                                        <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>Daily_Report.xlsx</span></div>
+                                                        <div class="sfp-pc-rpa-body">
+                                                            <div class="sfp-pc-rpa-tiles">
+                                                                <div class="sfp-pc-rpa-tile" style="--d:3.6s"><span>ยอดขาย</span><b>฿486,250</b></div>
+                                                                <div class="sfp-pc-rpa-tile" style="--d:3.8s"><span>ออเดอร์</span><b>1,284</b></div>
+                                                            </div>
+                                                            <div class="sfp-pc-rpa-bars">
+                                                                <span style="--h:52%;--d:4.1s"></span><span style="--h:61%;--d:4.2s"></span><span style="--h:48%;--d:4.3s"></span><span style="--h:70%;--d:4.4s"></span><span style="--h:66%;--d:4.5s"></span><span style="--h:78%;--d:4.6s"></span><span class="sfp-pc-rpa-today" style="--h:94%;--d:4.7s"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfp-pc-rpa-file" style="top:182px;--d:1.25s" aria-hidden="true"><i>CSV</i></div>
+                                            <div class="sfp-pc-rpa-file" style="top:240px;--d:2.05s" aria-hidden="true"><i class="sfp-pc-rpa-xls">XLSX</i></div>
+                                            <div class="sfp-pc-rpa-file" style="top:298px;--d:2.85s" aria-hidden="true"><i>CSV</i></div>
+                                            <div class="sfp-pc-rpa-toast"><span class="sfp-pc-rpa-ok">✓</span><b>ส่งให้ทีมแล้ว</b><span>06:12</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ตอน 06:00 bot เข้า web portal ทีละแห่ง ดาวน์โหลดไฟล์มารวมเป็นรายงานประจำวัน ยอดขาย ออเดอร์ และกราฟ 7 วัน แล้วส่งรายงานให้ทีมก่อนเริ่มงาน": "At 06:00 a bot visits each web portal, downloads the files and merges them into a daily report with sales, orders and a 7-day chart, then sends it to the team before work starts", "bot เริ่มงาน": "bot starts", "฿486,250": "฿486,250", "ยอดขาย": "Sales", "ออเดอร์": "Orders", "ส่งให้ทีมแล้ว": "Sent to team"}</script>
                         </div>
+                        <!-- /pfcover:rpa-web-portal-reporting -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับ bot เข้า web portal, ดาวน์โหลดข้อมูล, รวมไฟล์ และจัดรูปแบบรายงานพร้อมส่งให้ทีมทุกเช้า</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case6_title">RPA ดึงข้อมูลจาก Web Portal และออกรายงานประจำวันอัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case6_body">ตัวอย่างโปรเจกต์สำหรับ bot เข้า web portal, ดาวน์โหลดข้อมูล, รวมไฟล์ และจัดรูปแบบรายงานพร้อมส่งให้ทีมทุกเช้า</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">RPA</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">WebPortal</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">DailyReport</span>
                         </div>
-                        <a href="portfolio/rpa-web-portal-reporting/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/rpa-web-portal-reporting/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
 
 
                 <!-- Case Study 8: RAG Chatbot Mockup -->
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-sky-900 via-cyan-800 to-slate-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 26px 26px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">ค้นคำตอบได้เร็วขึ้น</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-cyan-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Knowledge / RAG</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">RAG Chatbot ตอบคำถามจากฐานข้อมูลความรู้</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงาน FAQ, คู่มือ, policy หรือเอกสารภายในที่อยากให้ค้นตอบได้เร็วขึ้นพร้อมอ้างอิงข้อมูล</p>
+                    <div id="pfc-chatbot-ticket-automation" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case7_badge">ค้นคำตอบได้เร็วขึ้น</div>
+                        <!-- pfcover:chatbot-ticket-automation -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#eef3fd" role="img" aria-label="ลูกค้าถามแชตบอตว่าคืนสินค้าได้กี่วัน ระบบค้นในเอกสารนโยบาย FAQ และคู่มือ แล้วตอบว่าคืนได้ภายใน 14 วัน พร้อมแสดงแหล่งอ้างอิงนโยบายข้อ 3.1 และ FAQ ข้อ 12">
+                                            <div class="sfx-floor sfp-pc-kb-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-kb-pl-docs">
+                                                    <div class="sfp-pc-kb-doc sfp-pc-kb-d3"></div>
+                                                    <div class="sfp-pc-kb-doc sfp-pc-kb-d2">
+                                                        <span class="sfp-pc-kb-tag" style="background:#d97706">FAQ</span><span class="sfp-pc-kb-sub">ข้อ 12</span>
+                                                        <span class="sfp-pc-kb-ok">✓</span>
+                                                    </div>
+                                                    <div class="sfp-pc-kb-doc sfp-pc-kb-d1">
+                                                        <span class="sfp-pc-kb-tag" style="background:#dc2626">PDF</span>
+                                                        <b class="sfp-pc-kb-t">นโยบายคืนสินค้า</b>
+                                                        <span class="sfp-pc-kb-sub">ข้อ 3.1</span>
+                                                        <span class="sfp-pc-kb-l w85"></span>
+                                                        <div class="sfp-pc-kb-hl"><span class="sfp-pc-kb-mark"></span><span>คืนได้ภายใน 14 วัน</span></div>
+                                                        <span class="sfp-pc-kb-l"></span>
+                                                        <span class="sfp-pc-kb-l w70"></span>
+                                                        <span class="sfp-pc-kb-l w85"></span>
+                                                        <span class="sfp-pc-kb-l w55"></span>
+                                                        <span class="sfp-pc-kb-scan"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="sfx-plane sfp-pc-kb-pl-chat">
+                                                    <div class="sfx-win sfp-pc-kb-chat">
+                                                        <div class="sfp-pc-kb-head"><span class="sfp-pc-kb-logo">AI</span><b>ผู้ช่วยตอบคำถาม</b><em><i></i>ออนไลน์</em></div>
+                                                        <div class="sfp-pc-kb-body">
+                                                            <div class="sfp-pc-kb-q sfp-pc-kb-in" style="--d:.4s">คืนสินค้าได้กี่วัน?</div>
+                                                            <div class="sfp-pc-kb-slot">
+                                                                <div class="sfp-pc-kb-typing"><i></i><i></i><i></i></div>
+                                                                <div class="sfp-pc-kb-a sfp-pc-kb-in" style="--d:3.8s">
+                                                                    <span>คืนได้ภายใน</span><b>14 วัน</b>
+                                                                    <div class="sfp-pc-kb-src"><span>อ้างอิง</span><span class="sfp-pc-kb-chip sfp-pc-kb-in" style="--c:#dc2626;--d:4.5s"><i></i>นโยบาย 3.1</span><span class="sfp-pc-kb-chip sfp-pc-kb-in" style="--c:#d97706;--d:4.9s"><i></i>FAQ 12</span></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sfp-pc-kb-time sfp-pc-kb-in" style="--d:5.6s">✓ ตอบใน 3 วินาที</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ลูกค้าถามแชตบอตว่าคืนสินค้าได้กี่วัน ระบบค้นในเอกสารนโยบาย FAQ และคู่มือ แล้วตอบว่าคืนได้ภายใน 14 วัน พร้อมแสดงแหล่งอ้างอิงนโยบายข้อ 3.1 และ FAQ ข้อ 12": "A customer asks the chatbot how many days they have to return an item; it searches the policy, FAQ and manual, answers within 14 days, and cites policy 3.1 and FAQ 12 as sources", "นโยบายคืนสินค้า": "Return policy", "ข้อ 3.1": "Section 3.1", "ข้อ 12": "No. 12", "คืนได้ภายใน 14 วัน": "Returns within 14 days", "ผู้ช่วยตอบคำถาม": "Help assistant", "ออนไลน์": "Online", "คืนสินค้าได้กี่วัน?": "How long to return?", "คืนได้ภายใน": "Returns within", "14 วัน": "14 days", "อ้างอิง": "Sources", "นโยบาย 3.1": "Policy 3.1", "✓ ตอบใน 3 วินาที": "✓ Answered in 3 s"}</script>
                         </div>
+                        <!-- /pfcover:chatbot-ticket-automation -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">RAG Chatbot ตอบคำถามจากฐานข้อมูลความรู้</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับ chatbot ที่ดึงคำตอบจาก knowledge base หรือชุดเอกสารภายใน เพื่อตอบคำถามได้เร็วขึ้นและลดเวลาการค้นข้อมูลซ้ำของทีมงาน</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case7_title">RAG Chatbot ตอบคำถามจากฐานข้อมูลความรู้</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case7_body">ตัวอย่างโปรเจกต์สำหรับ chatbot ที่ดึงคำตอบจาก knowledge base หรือชุดเอกสารภายใน เพื่อตอบคำถามได้เร็วขึ้นและลดเวลาการค้นข้อมูลซ้ำของทีมงาน</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">RAG</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">KnowledgeBase</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Support</span>
                         </div>
-                        <a href="portfolio/chatbot-ticket-automation/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/chatbot-ticket-automation/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-900 overflow-hidden">
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">dispatch งานได้เร็วขึ้น</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-cyan-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Dispatch / Approval</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานรับแจ้งปัญหาผ่าน LINE แล้วต้องส่ง approve ก่อน assign งานให้หัวหน้าช่างหรือช่างพื้นที่</p>
+                    <div id="pfc-line-repair-dispatch-workflow" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case8_badge">dispatch งานได้เร็วขึ้น</div>
+                        <!-- pfcover:line-repair-dispatch-workflow -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#ecf7f0" role="img" aria-label="ลูกค้าแจ้งซ่อมแอร์ผ่าน LINE พร้อมรูปและตำแหน่งตึก B ห้อง 1207 ระบบสร้างใบงาน TK-2410 ผู้ประสานงานอนุมัติ แล้วเลือกช่างเอกที่อยู่ในโซนอ่อนนุช ถึงหน้างานใน 25 นาที และแจ้งลูกค้าใน LINE">
+                                            <div class="sfx-floor sfp-pc-fix-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-fix-pl-board">
+                                                    <div class="sfx-win sfp-pc-fix-board">
+                                                        <div class="sfx-bar sfp-pc-fix-bar"><i></i><i></i><i></i><b>จ่ายงานช่าง</b></div>
+                                                        <div class="sfp-pc-fix-body">
+                                                            <div class="sfp-pc-fix-map">
+                                                                <svg viewBox="0 0 206 222" aria-hidden="true">
+                                                                    <rect x="120" y="128" width="70" height="52" rx="8" fill="#d4ead6"/>
+                                                                    <path d="M-10 196 C 50 176, 110 214, 216 186" fill="none" stroke="#cfe3f6" stroke-width="14"/>
+                                                                    <g fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round">
+                                                                        <path d="M0 104 H206"/>
+                                                                        <path d="M64 0 V222"/>
+                                                                        <path d="M150 0 V222"/>
+                                                                        <path d="M0 52 H206"/>
+                                                                    </g>
+                                                                    <g fill="none" stroke="#e2e8e2" stroke-width="1">
+                                                                        <path d="M0 98 H206 M0 110 H206 M58 0 V222 M70 0 V222 M144 0 V222 M156 0 V222 M0 46 H206 M0 58 H206"/>
+                                                                    </g>
+                                                                    <path class="sfp-pc-fix-route" d="M64 160 V104 H150 V64"/>
+                                                                    <circle cx="186" cy="150" r="8" fill="#f59e0b" stroke="#fff" stroke-width="3"/>
+                                                                    <circle cx="30" cy="206" r="8" fill="#94a3b8" stroke="#fff" stroke-width="3"/>
+                                                                    <circle cx="64" cy="160" r="9" fill="#16a34a" stroke="#fff" stroke-width="3"/>
+                                                                    <path d="M150 64 c-11 -12 -15 -18 -15 -25 a15 15 0 0 1 30 0 c0 7 -4 13 -15 25 z" fill="#ef4444" stroke="#fff" stroke-width="2.5"/>
+                                                                    <circle cx="150" cy="39" r="5.5" fill="#fff"/>
+                                                                </svg>
+                                                                <span class="sfp-pc-fix-zone">อ่อนนุช</span>
+                                                            </div>
+                                                            <div class="sfp-pc-fix-list">
+                                                                <div class="sfp-pc-fix-tk"><span>TK-2410</span><span class="sfp-pc-fix-ap"><em>รออนุมัติ</em><b>อนุมัติแล้ว</b></span></div>
+                                                                <div class="sfp-pc-fix-row sfp-pc-fix-off" style="--c:#f59e0b;--t:#b45309;--d:3.2s"><i></i><div><b>ช่างบอย</b><span>คิวเต็ม</span></div></div>
+                                                                <div class="sfp-pc-fix-row sfp-pc-fix-off" style="--c:#94a3b8;--d:3.6s"><i></i><div><b>ช่างนัท</b><span>นอกพื้นที่</span></div></div>
+                                                                <div class="sfp-pc-fix-row sfp-pc-fix-pick" style="--c:#16a34a;--t:#15803d"><i></i><div><b>ช่างเอก</b><span>ถึงใน 25 นาที</span></div><em class="sfp-pc-fix-check">✓</em></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfx-plane sfp-pc-fix-pl-phone">
+                                                    <div class="sfp-pc-fix-phone">
+                                                        <div class="sfp-pc-fix-screen">
+                                                            <div class="sfp-pc-fix-head"><span>‹</span>แจ้งซ่อม</div>
+                                                            <div class="sfp-pc-fix-msgs">
+                                                                <div class="sfp-pc-fix-card sfp-pc-fix-in" style="--d:.4s">
+                                                                    <div class="sfp-pc-fix-photos"><span></span><span></span></div>
+                                                                    <div class="sfp-pc-fix-card-b"><b>แอร์ไม่เย็น</b><span class="sfp-pc-fix-loc"><i></i>ตึก B · 1207</span></div>
+                                                                </div>
+                                                                <div class="sfp-pc-fix-bot sfp-pc-fix-in" style="--d:1.1s">รับเรื่อง TK-2410</div>
+                                                                <div class="sfp-pc-fix-bot sfp-pc-fix-go sfp-pc-fix-in" style="--d:6.0s">ช่างถึงใน 25 นาที</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="sfp-pc-fix-fly">TK-2410</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ลูกค้าแจ้งซ่อมแอร์ผ่าน LINE พร้อมรูปและตำแหน่งตึก B ห้อง 1207 ระบบสร้างใบงาน TK-2410 ผู้ประสานงานอนุมัติ แล้วเลือกช่างเอกที่อยู่ในโซนอ่อนนุช ถึงหน้างานใน 25 นาที และแจ้งลูกค้าใน LINE": "A customer reports a broken air-con in LINE with photos and the location Building B, room 1207; job TK-2410 is created and approved, Ek, the technician in the On Nut zone, is assigned with a 25-minute ETA, and the customer is updated in LINE", "จ่ายงานช่าง": "Dispatch", "อ่อนนุช": "On Nut", "รออนุมัติ": "Pending", "อนุมัติแล้ว": "Approved", "ช่างบอย": "Boy", "คิวเต็ม": "Fully booked", "ช่างนัท": "Nat", "นอกพื้นที่": "Out of zone", "ช่างเอก": "Ek", "ถึงใน 25 นาที": "ETA 25 min", "แจ้งซ่อม": "Repair request", "แอร์ไม่เย็น": "A/C not cooling", "ตึก B · 1207": "Bldg B · 1207", "รับเรื่อง TK-2410": "Logged TK-2410", "ช่างถึงใน 25 นาที": "Tech arrives in 25 min"}</script>
                         </div>
+                        <!-- /pfcover:line-repair-dispatch-workflow -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับการรับแจ้งซ่อมผ่าน LINE เก็บข้อมูลหน้างาน ส่งให้คนกลางอนุมัติ และกระจายงานต่อให้ทีมช่าง onsite ตามพื้นที่</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case8_title">LINE Chatbot แจ้งซ่อมและกระจายงานช่างภาคสนาม</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case8_body">ตัวอย่างโปรเจกต์สำหรับการรับแจ้งซ่อมผ่าน LINE เก็บข้อมูลหน้างาน ส่งให้คนกลางอนุมัติ และกระจายงานต่อให้ทีมช่าง onsite ตามพื้นที่</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Chatbot</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Dispatch</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Approval</span>
                         </div>
-                        <a href="portfolio/line-repair-dispatch-workflow/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/line-repair-dispatch-workflow/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">ส่งต่องานเป็นระบบขึ้น</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-indigo-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Form / Routing</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Workflow รับคำขอผ่านฟอร์ม อนุมัติ และกระจายงานต่ออัตโนมัติ</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานที่ต้องเริ่มจาก form กลาง แล้วส่งต่อ approve และ assign งานตามขั้นตอนโดยไม่พึ่งแชต</p>
+                    <div id="pfc-form-service-request-approval" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case9_badge">ส่งต่องานเป็นระบบขึ้น</div>
+                        <!-- pfcover:form-service-request-approval -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#eef4ff" role="img" aria-label="คำขอที่กรอกผ่านฟอร์มส่งถึงผู้อนุมัติ อนุมัติแล้วระบบส่งต่อให้ทีมอาคารรับงานเอง">
+                                            <div class="sfx-floor sfp-pc-fsr-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-fsr-tilt">
+                                                    <svg class="sfp-pc-fsr-links" viewBox="0 0 800 400" aria-hidden="true">
+                                                        <path class="sfp-pc-fsr-send-link" d="M290 232 H318" pathLength="1"/>
+                                                        <path class="sfp-pc-fsr-faint" d="M528 232 C552 232 548 140 572 140"/>
+                                                        <path class="sfp-pc-fsr-faint" d="M528 232 C552 232 548 318 572 318"/>
+                                                        <path class="sfp-pc-fsr-route" d="M528 232 C548 232 552 229 572 229" pathLength="1"/>
+                                                    </svg>
+                                                    <div class="sfx-win sfp-pc-fsr-form" style="left:28px;top:58px;width:262px;--z:0px">
+                                                        <div class="sfx-bar sfp-pc-fsr-bar"><i></i><i></i><i></i><span>ฟอร์มคำขอ</span></div>
+                                                        <div class="sfp-pc-fsr-body">
+                                                            <div class="sfp-pc-fsr-field" style="--d:.5s"><span>แจ้งซ่อมแอร์</span><i></i></div>
+                                                            <div class="sfp-pc-fsr-field" style="--d:1.1s"><span>ห้องประชุม 3B</span><i></i></div>
+                                                            <div class="sfp-pc-fsr-field" style="--d:1.7s"><span>฿12,500</span><i></i></div>
+                                                            <div class="sfp-pc-fsr-send">ส่งคำขอ</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-fsr-appr" style="left:318px;top:128px;width:210px;--z:30px">
+                                                        <div class="sfp-pc-fsr-req">REQ-0418</div>
+                                                        <b class="sfp-pc-fsr-title">แจ้งซ่อมแอร์</b>
+                                                        <div class="sfp-pc-fsr-status"><em>รออนุมัติ</em><strong>อนุมัติแล้ว</strong></div>
+                                                        <div class="sfp-pc-fsr-approve">อนุมัติ</div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-fsr-team" style="left:572px;top:104px;--z:10px">
+                                                        <i class="sfp-pc-fsr-ico" style="--c:#e0e7ff;--f:#4f46e5"></i>
+                                                        <div><b>ทีม IT</b><span>คิว 4 งาน</span></div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-fsr-team sfp-pc-fsr-pick" style="left:572px;top:193px;--z:10px">
+                                                        <i class="sfp-pc-fsr-ico" style="--c:#dbeafe;--f:#2563eb"></i>
+                                                        <div><b>ทีมอาคาร</b><span>คิว 2 งาน</span><em class="sfp-pc-fsr-got">รับงานแล้ว</em></div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-fsr-team" style="left:572px;top:282px;--z:10px">
+                                                        <i class="sfp-pc-fsr-ico" style="--c:#fef3c7;--f:#d97706"></i>
+                                                        <div><b>ทีมจัดซื้อ</b><span>คิว 6 งาน</span></div>
+                                                    </div>
+                                                    <svg class="sfx-cursor sfp-pc-fsr-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8-6 1.6L10 19z" fill="#0f172a" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"คำขอที่กรอกผ่านฟอร์มส่งถึงผู้อนุมัติ อนุมัติแล้วระบบส่งต่อให้ทีมอาคารรับงานเอง": "A request filled in a form goes to the approver; once approved it is routed to the facilities team automatically", "ฟอร์มคำขอ": "Request form", "แจ้งซ่อมแอร์": "AC repair", "ห้องประชุม 3B": "Meeting room 3B", "฿12,500": "฿12,500", "ส่งคำขอ": "Submit", "รออนุมัติ": "Pending", "อนุมัติแล้ว": "Approved", "อนุมัติ": "Approve", "ทีม IT": "IT team", "ทีมอาคาร": "Facilities", "ทีมจัดซื้อ": "Purchasing", "คิว 4 งาน": "4 in queue", "คิว 2 งาน": "2 in queue", "คิว 6 งาน": "6 in queue", "รับงานแล้ว": "Accepted"}</script>
                         </div>
+                        <!-- /pfcover:form-service-request-approval -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Workflow รับคำขอผ่านฟอร์ม อนุมัติ และกระจายงานต่ออัตโนมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับการรับคำขอผ่าน form แล้วส่งต่อให้ผู้อนุมัติ ตรวจสอบ และกระจายงานต่อให้ทีมที่รับผิดชอบอย่างมีลำดับ</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case9_title">Workflow รับคำขอผ่านฟอร์ม อนุมัติ และกระจายงานต่ออัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case9_body">ตัวอย่างโปรเจกต์สำหรับการรับคำขอผ่าน form แล้วส่งต่อให้ผู้อนุมัติ ตรวจสอบ และกระจายงานต่อให้ทีมที่รับผิดชอบอย่างมีลำดับ</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Workflow</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">FormIntake</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Approval</span>
                         </div>
-                        <a href="portfolio/form-service-request-approval/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/form-service-request-approval/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.16) 1px, transparent 1px); background-size: 28px 28px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">ลด bottleneck ก่อนปิดรอบ</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-indigo-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Order / Shipping</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Workflow รวมออเดอร์ จัดส่ง และปิดรอบประจำวันอัตโนมัติ</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานรวมออเดอร์จากหลายแหล่ง ตรวจรายการให้ถูกต้อง แยก shipment และเตรียมยอดก่อน cut-off ในแต่ละวัน</p>
+                    <div id="pfc-order-routing-and-shipping-allocation" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case10_badge">ลด bottleneck ก่อนปิดรอบ</div>
+                        <!-- pfcover:order-routing-and-shipping-allocation -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#fff6ec" role="img" aria-label="ออเดอร์จากหลายช่องทางรวมเป็นรายการเดียว ออเดอร์หนักแยกเป็น 2 shipment และส่งคลังทันก่อนปิดรอบ">
+                                            <div class="sfx-floor sfp-pc-ord-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-ord-tilt">
+                                                    <div class="sfx-win sfp-pc-ord-list" style="left:24px;top:50px;width:284px;--z:0px">
+                                                        <div class="sfx-bar sfp-pc-ord-bar"><i></i><i></i><i></i><span>ออเดอร์รวม</span></div>
+                                                        <div class="sfp-pc-ord-rows">
+                                                            <div class="sfp-pc-ord-row" style="--d:.3s;--t:4.3s;--c:#22c55e"><i></i><b>ORD-1041</b><span>1.2 กก.</span><u></u></div>
+                                                            <div class="sfp-pc-ord-row" style="--d:.55s;--t:4.6s;--c:#3b82f6"><i></i><b>ORD-1042</b><span>3.8 กก.</span><u></u></div>
+                                                            <div class="sfp-pc-ord-row" style="--d:.8s;--t:4.9s;--c:#ec4899"><i></i><b>ORD-1043</b><span>2.4 กก.</span><u></u></div>
+                                                            <div class="sfp-pc-ord-row sfp-pc-ord-heavy" style="--d:1.05s;--t:5.2s;--c:#6366f1"><i></i><b>ORD-1044</b><span>24 กก.</span><u></u></div>
+                                                            <div class="sfp-pc-ord-row" style="--d:1.3s;--t:5.5s;--c:#f59e0b"><i></i><b>ORD-1045</b><span>0.8 กก.</span><u></u></div>
+                                                        </div>
+                                                    </div>
+                                                    <svg class="sfp-pc-ord-links" viewBox="0 0 800 400" aria-hidden="true">
+                                                        <path class="sfp-pc-ord-feed" d="M308 262 C326 262 326 178 344 178" pathLength="1"/>
+                                                        <path class="sfp-pc-ord-link" d="M520 178 C544 178 544 134 568 134" pathLength="1"/>
+                                                        <path class="sfp-pc-ord-link" d="M520 178 C544 178 544 234 568 234" pathLength="1"/>
+                                                    </svg>
+                                                    <div class="sfx-win sfp-pc-ord-box sfp-pc-ord-parent" style="left:344px;top:138px;width:176px;--z:30px">
+                                                        <i class="sfp-pc-ord-crate"></i>
+                                                        <div><b>ORD-1044</b><span>24 กก.</span></div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-ord-box sfp-pc-ord-child" style="left:568px;top:96px;width:196px;--z:20px;--d:3.45s;--y:38px">
+                                                        <i class="sfp-pc-ord-crate"></i>
+                                                        <div><b>SHP-1044-1</b><span>12 กก.</span></div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-ord-box sfp-pc-ord-child" style="left:568px;top:196px;width:196px;--z:20px;--d:3.7s;--y:-38px">
+                                                        <i class="sfp-pc-ord-crate"></i>
+                                                        <div><b>SHP-1044-2</b><span>12 กก.</span></div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-ord-cut" style="left:344px;top:298px;width:420px;--z:10px">
+                                                        <i class="sfp-pc-ord-clock"><s></s></i>
+                                                        <div class="sfp-pc-ord-cutmain">
+                                                            <b>ปิดรอบ 11:00</b>
+                                                            <div class="sfp-pc-ord-track"><span></span></div>
+                                                        </div>
+                                                        <div class="sfp-pc-ord-state"><em>กำลังจัด</em><strong>ส่งคลังแล้ว</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"ออเดอร์จากหลายช่องทางรวมเป็นรายการเดียว ออเดอร์หนักแยกเป็น 2 shipment และส่งคลังทันก่อนปิดรอบ": "Orders from many channels merge into one list, a heavy order splits into 2 shipments, and everything reaches the warehouse before cut-off", "ออเดอร์รวม": "All orders", "1.2 กก.": "1.2 kg", "3.8 กก.": "3.8 kg", "2.4 กก.": "2.4 kg", "24 กก.": "24 kg", "0.8 กก.": "0.8 kg", "12 กก.": "12 kg", "ปิดรอบ 11:00": "Cut-off 11:00", "กำลังจัด": "Packing", "ส่งคลังแล้ว": "Sent to WH"}</script>
                         </div>
+                        <!-- /pfcover:order-routing-and-shipping-allocation -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Workflow รวมออเดอร์ จัดส่ง และปิดรอบประจำวันอัตโนมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับการรวมออเดอร์จากหลายแอดมิน หลายเพจ และหลายแพลตฟอร์ม เพื่อตรวจราคา map สินค้า แยก shipment และสรุปยอดก่อนปิดรอบส่งคลัง</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case10_title">Workflow รวมออเดอร์ จัดส่ง และปิดรอบประจำวันอัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case10_body">ตัวอย่างโปรเจกต์สำหรับการรวมออเดอร์จากหลายแอดมิน หลายเพจ และหลายแพลตฟอร์ม เพื่อตรวจราคา map สินค้า แยก shipment และสรุปยอดก่อนปิดรอบส่งคลัง</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Workflow</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">OrderOps</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Shipping</span>
                         </div>
-                        <a href="portfolio/order-routing-and-shipping-allocation/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/order-routing-and-shipping-allocation/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
 
 
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="excel">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">คุมราคาและ margin ง่ายขึ้น</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-emerald-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Pricing / Approval</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับทีมเสนอราคาที่ต้องคุมสูตร ส่วนลด และ margin ให้ใช้งานต่อได้จริงในไฟล์เดียว</p>
+                    <div id="pfc-excel-pricing-margin-control" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case11_badge">คุมราคาและ margin ง่ายขึ้น</div>
+                        <!-- pfcover:excel-pricing-margin-control -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene sfp-pc-pmc-root" data-sfs-scene data-bg="#eefaf3" role="img" aria-label="Workbook คำนวณราคา กดปุ่มคำนวณแล้ว Margin ของแต่ละรายการขึ้นทีละบรรทัด รายการที่ต่ำกว่าเกณฑ์ถูกทำเครื่องหมาย และ Margin รวม 18.1% ผ่านเกณฑ์ พร้อมออกใบเสนอราคา">
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-pmc-tilt">
+                                                    <div class="sfx-win sfp-pc-pmc-sheet" style="left:46px;top:46px;width:430px;--z:0px">
+                                                        <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>Pricing_Master.xlsm</span></div>
+                                                        <div class="sfp-pc-pmc-ribbon"><span class="sfp-pc-pmc-run">▶ คำนวณราคา</span><span class="sfp-pc-pmc-ghost"></span><span class="sfp-pc-pmc-ghost"></span></div>
+                                                        <div class="sfp-pc-pmc-grid">
+                                                            <div class="sfp-pc-pmc-scan"></div>
+                                                            <div class="sfp-pc-pmc-tr sfp-pc-pmc-th"><span>รายการ</span><span>ราคา</span><span>Margin</span></div>
+                                                            <div class="sfp-pc-pmc-tr" style="--d:1.5s"><span>ปั๊มน้ำ 5HP</span><span>90,000</span><span class="sfp-pc-pmc-m"><em>–</em><b class="sfp-pc-pmc-ok">24.4%</b></span></div>
+                                                            <div class="sfp-pc-pmc-tr" style="--d:2.1s"><span>ตู้ควบคุม</span><span>31,000</span><span class="sfp-pc-pmc-m"><em>–</em><b class="sfp-pc-pmc-ok">21.0%</b></span></div>
+                                                            <div class="sfp-pc-pmc-tr" style="--d:2.7s"><span>ท่อ HDPE</span><span>25,000</span><span class="sfp-pc-pmc-m"><em>–</em><b class="sfp-pc-pmc-low">! 12.4%</b></span></div>
+                                                            <div class="sfp-pc-pmc-tr" style="--d:3.3s"><span>ค่าติดตั้ง</span><span>20,000</span><span class="sfp-pc-pmc-m"><em>–</em><b class="sfp-pc-pmc-ok">30.0%</b></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-pmc-sum" style="left:504px;top:100px;width:268px;--z:40px">
+                                                        <div class="sfx-bar"><i></i><i></i><i></i><span>Margin รวม</span></div>
+                                                        <div class="sfp-pc-pmc-sum-body">
+                                                            <div class="sfp-pc-pmc-head"><b class="sfp-pc-pmc-big">18.1%</b><span class="sfp-pc-pmc-pass">✓ ผ่าน</span></div>
+                                                            <div class="sfp-pc-pmc-chart">
+                                                                <i class="sfp-pc-pmc-goal"><span>18%</span></i>
+                                                                <span style="--h:81%;--d:1.5s"></span><span style="--h:70%;--d:2.1s"></span><span class="sfp-pc-pmc-lowbar" style="--h:41%;--d:2.7s"></span><span style="--h:100%;--d:3.3s"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <svg class="sfp-pc-pmc-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                            <div class="sfx-chip sfp-pc-pmc-done"><i></i>ใบเสนอราคาพร้อมส่ง</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"Workbook คำนวณราคา กดปุ่มคำนวณแล้ว Margin ของแต่ละรายการขึ้นทีละบรรทัด รายการที่ต่ำกว่าเกณฑ์ถูกทำเครื่องหมาย และ Margin รวม 18.1% ผ่านเกณฑ์ พร้อมออกใบเสนอราคา": "A pricing workbook: one click calculates the margin line by line, flags the item below target, and shows a total margin of 18.1% that passes, ready for the quotation", "▶ คำนวณราคา": "▶ Calculate", "รายการ": "Item", "ราคา": "Price", "ปั๊มน้ำ 5HP": "Pump 5HP", "ตู้ควบคุม": "Control box", "ท่อ HDPE": "HDPE pipe", "ค่าติดตั้ง": "Installation", "Margin รวม": "Total margin", "✓ ผ่าน": "✓ Pass", "ใบเสนอราคาพร้อมส่ง": "Quote ready to send"}</script>
                         </div>
+                        <!-- /pfcover:excel-pricing-margin-control -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับ pricing workbook ที่ช่วยคำนวณราคา ตรวจ margin และจัดข้อมูลให้พร้อมส่งต่ออนุมัติหรือออกใบเสนอราคา</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case11_title">Excel คำนวณราคา เสนอราคา และตรวจ Margin ก่อนอนุมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case11_body">ตัวอย่างโปรเจกต์สำหรับ pricing workbook ที่ช่วยคำนวณราคา ตรวจ margin และจัดข้อมูลให้พร้อมส่งต่ออนุมัติหรือออกใบเสนอราคา</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Excel</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Pricing</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Margin</span>
                         </div>
-                        <a href="portfolio/excel-pricing-margin-control/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/excel-pricing-margin-control/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card w-[calc(100vw-2rem)] sm:w-[420px] md:w-[520px] bg-white rounded-xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-blue-500/20 group snap-start shrink-0" data-aos="fade-left" data-filter-item="portfolio" data-category="automation excel">
-                    <div class="relative h-52 md:h-64 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 overflow-hidden">
-                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 28px 28px;"></div>
-                        <div class="absolute top-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded">เตรียมไฟล์วางแผนได้เร็วขึ้น</div>
-                        <div class="relative z-10 h-full flex flex-col justify-center px-8">
-                            <p class="text-blue-200 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Mail / DB / ERP</p>
-                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ</h3>
-                            <p class="text-slate-300 mt-3 max-w-md">เหมาะกับงานที่ต้องดึง PO จากเมลทุกวัน แล้ว map ข้อมูลกับ DB, ERP และ calculation logic ก่อนส่งต่อทีมวางแผน</p>
+                    <div id="pfc-po-mail-production-planning" class="pf-cover relative overflow-hidden bg-slate-50">
+                        <div class="absolute top-4 right-4 z-10 bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded" data-i18n="case12_badge">เตรียมไฟล์วางแผนได้เร็วขึ้น</div>
+                        <!-- pfcover:po-mail-production-planning -->
+                        <div class="sfs sfs-vignette pf-cover-demo" data-sfs data-sfs-ms="9000" style="--sfs-h:400">
+                            <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#ecfaf3" role="img" aria-label="อีเมล PO เข้ามา ระบบจับคู่รหัสสินค้ากับ ERP แล้วเติมไฟล์วางแผนการผลิตให้ทีมผลิต">
+                                            <div class="sfx-floor sfp-pc-po-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfp-pc-po-tilt">
+                                                    <div class="sfx-win sfp-pc-po-mail" style="left:28px;top:40px;width:300px;--z:0px">
+                                                        <div class="sfx-bar sfp-pc-po-bar"><i></i><i></i><i></i><span>อีเมล · PO</span></div>
+                                                        <div class="sfp-pc-po-mails">
+                                                            <div class="sfp-pc-po-mrow" style="--d:.3s;--t:2.15s"><i class="sfp-pc-po-dot"></i><i class="sfp-pc-po-env"></i><b>PO-2241</b><em>PDF</em></div>
+                                                            <div class="sfp-pc-po-mrow" style="--d:.65s;--t:2.65s"><i class="sfp-pc-po-dot"></i><i class="sfp-pc-po-env"></i><b>PO-2242</b><em>PDF</em></div>
+                                                            <div class="sfp-pc-po-mrow" style="--d:1s;--t:3.15s"><i class="sfp-pc-po-dot"></i><i class="sfp-pc-po-env"></i><b>PO-2243</b><em>XLSX</em></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sfx-win sfp-pc-po-match" style="left:64px;top:214px;width:330px;--z:40px">
+                                                        <div class="sfp-pc-po-mhead"><i class="sfp-pc-po-db"></i><b>จับคู่ ERP</b></div>
+                                                        <div class="sfp-pc-po-xrow" style="--d:1.7s"><span>SP-A120</span><i></i><b>FG-10233</b><u></u></div>
+                                                        <div class="sfp-pc-po-xrow" style="--d:2.2s"><span>SP-B045</span><i></i><b>FG-10871</b><u></u></div>
+                                                        <div class="sfp-pc-po-xrow" style="--d:2.7s"><span>NK-3301</span><i></i><b>FG-20410</b><u></u></div>
+                                                    </div>
+                                                    <svg class="sfp-pc-po-links" viewBox="0 0 800 400" aria-hidden="true">
+                                                        <path class="sfp-pc-po-link" d="M394 300 C414 300 412 258 432 258" pathLength="1"/>
+                                                    </svg>
+                                                    <div class="sfx-win sfp-pc-po-sheet" style="left:432px;top:104px;width:344px;--z:10px">
+                                                        <div class="sfx-bar sfx-bar-green sfp-pc-po-bar"><i></i><i></i><i></i><span>production_plan.xlsx</span></div>
+                                                        <div class="sfp-pc-po-grid sfp-pc-po-ghead"><span>สินค้า</span><span>จ.</span><span>อ.</span><span>พ.</span><span>พฤ.</span><span>ศ.</span></div>
+                                                        <div class="sfp-pc-po-grid sfp-pc-po-grow" style="--d:3.7s;--s:0;--w:2;--c:#3b82f6"><span>FG-10233</span><span></span><span></span><span></span><span></span><span></span><i></i></div>
+                                                        <div class="sfp-pc-po-grid sfp-pc-po-grow" style="--d:4.05s;--s:1;--w:1.5;--c:#10b981"><span>FG-10871</span><span></span><span></span><span></span><span></span><span></span><i></i></div>
+                                                        <div class="sfp-pc-po-grid sfp-pc-po-grow" style="--d:4.4s;--s:2;--w:2;--c:#f59e0b"><span>FG-20410</span><span></span><span></span><span></span><span></span><span></span><i></i></div>
+                                                        <div class="sfp-pc-po-grid sfp-pc-po-grow" style="--d:4.75s;--s:3;--w:2;--c:#3b82f6"><span>FG-10455</span><span></span><span></span><span></span><span></span><span></span><i></i></div>
+                                                        <div class="sfp-pc-po-foot"><strong>พร้อมให้ทีมผลิต</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="application/json" data-sfs-en>{"อีเมล PO เข้ามา ระบบจับคู่รหัสสินค้ากับ ERP แล้วเติมไฟล์วางแผนการผลิตให้ทีมผลิต": "PO emails come in, item codes are matched with the ERP, and the production planning file fills itself for the production team", "อีเมล · PO": "Email · PO", "จับคู่ ERP": "ERP match", "สินค้า": "Item", "จ.": "Mon", "อ.": "Tue", "พ.": "Wed", "พฤ.": "Thu", "ศ.": "Fri", "พร้อมให้ทีมผลิต": "Ready for production"}</script>
                         </div>
+                        <!-- /pfcover:po-mail-production-planning -->
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition">ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ</h3>
-                        <p class="text-slate-600 mb-5 leading-relaxed">ตัวอย่างโปรเจกต์สำหรับ flow รับ PO ทางอีเมล, ดึงข้อมูลด้วย SQL, match กับ ERP/internal master และ transform ออกเป็น Excel planning file สำหรับทีมผลิต</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition" data-i18n="case12_title">ดึง PO จากอีเมล จับคู่ฐานข้อมูล และเตรียมไฟล์วางแผนการผลิตอัตโนมัติ</h3>
+                        <p class="text-slate-600 mb-5 leading-relaxed" data-i18n="case12_body">ตัวอย่างโปรเจกต์สำหรับ flow รับ PO ทางอีเมล, ดึงข้อมูลด้วย SQL, match กับ ERP/internal master และ transform ออกเป็น Excel planning file สำหรับทีมผลิต</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">RPA</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">Workflow</span>
                             <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-sm">ProductionPlanning</span>
                         </div>
-                        <a href="portfolio/po-mail-production-planning/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300">รายละเอียด</a>
+                        <a href="portfolio/po-mail-production-planning/index.html" class="inline-flex items-center mt-6 text-blue-600 font-semibold hover:text-blue-700 transition duration-300" data-i18n="portfolio_more">รายละเอียด</a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,4 @@
+/* Home page portfolio cards: an animated cover in place of the photo */
+
+.pf-cover .sfs-vignette { border-radius: 0; }
+.pf-cover > .absolute { box-shadow: 0 4px 12px -4px rgba(15, 23, 42, 0.25); }
