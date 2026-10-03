@@ -1,0 +1,549 @@
+/* Home page vignette: why section
+   One BPMN canvas walks the four cards below it: spot the real bottleneck (Business First),
+   draw the flow across lanes (Process Design), swap the manual step for an automation node
+   with a handoff doc (Maintainable), then time per order drops (Impact). */
+
+@property --sfp-why-n {
+    syntax: '<integer>';
+    inherits: false;
+    initial-value: 12;
+}
+
+/* ---------- Step pills (tie the picture to the four cards) ---------- */
+
+.sfp-why-steps {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 4;
+}
+
+.sfp-why-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 13px 5px 5px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    color: #94a3b8;
+    font-size: 12.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.sfp-why-pill i {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sfp-why-link {
+    position: relative;
+    flex: 0 1 46px;
+    height: 2px;
+    border-radius: 2px;
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.sfp-why-link b {
+    position: absolute;
+    inset: 0;
+    background: #2563eb;
+    transform-origin: left;
+}
+
+/* ---------- Tilted planes ---------- */
+
+.sfp-why-tilt-l { transform: rotateX(7deg) rotateY(9deg); }
+.sfp-why-tilt-r { transform: rotateX(7deg) rotateY(-12deg); }
+
+/* ---------- BPMN modeller window ---------- */
+
+.sfp-why-mode {
+    position: relative;
+    margin-left: auto;
+    width: 46px;
+    height: 18px;
+    font-style: normal;
+}
+
+.sfp-why-mode s,
+.sfp-why-mode u {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sfp-why-mode s { background: #fee2e2; color: #b91c1c; }
+.sfp-why-mode u { background: #dcfce7; color: #15803d; }
+
+.sfp-why-body {
+    position: relative;
+    height: 198px;
+    background-color: #fff;
+    background-image: radial-gradient(rgba(148, 163, 184, 0.28) 1px, transparent 1.2px);
+    background-size: 14px 14px;
+}
+
+/* Element palette down the left edge, like a real modeller */
+.sfp-why-pal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding-top: 12px;
+    background: #f8fafc;
+    border-right: 1px solid #e8edf3;
+}
+
+.sfp-why-pal span { display: block; flex: none; }
+.sfp-why-ico-ev { width: 14px; height: 14px; border-radius: 50%; border: 1.6px solid #94a3b8; }
+.sfp-why-ico-task { width: 18px; height: 13px; border-radius: 3px; border: 1.6px solid #94a3b8; }
+.sfp-why-ico-gw { width: 11px; height: 11px; margin: 2px 0; border: 1.6px solid #94a3b8; transform: rotate(45deg); }
+.sfp-why-ico-flow { width: 18px; height: 2px; margin: 5px 0; background: #94a3b8; position: relative; }
+.sfp-why-ico-flow::after { content: ""; position: absolute; right: -1px; top: -3px; border: 4px solid transparent; border-left: 5px solid #94a3b8; border-right: 0; }
+
+.sfp-why-ico-bot,
+.sfp-why-fly,
+.sfp-why-auto em {
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: linear-gradient(#3b82f6, #2563eb);
+    box-shadow: 0 2px 4px -1px rgba(37, 99, 235, 0.45);
+}
+
+.sfp-why-ico-bot { width: 22px; height: 22px; margin-top: 4px; }
+.sfp-why-ico-bot svg,
+.sfp-why-fly svg { width: 13px; height: 13px; }
+
+.sfp-why-pool {
+    position: absolute;
+    left: 40px;
+    top: 6px;
+    width: 20px;
+    height: 186px;
+    border: 1px solid #cbd5e1;
+    border-right: 0;
+    border-radius: 6px 0 0 6px;
+    background: #f8fafc;
+}
+
+.sfp-why-pool span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 10px;
+    font-weight: 600;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.sfp-why-lanes {
+    position: absolute;
+    left: 60px;
+    right: 6px;
+    top: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 0 6px 6px 0;
+    overflow: hidden;
+}
+
+.sfp-why-lane {
+    position: relative;
+    height: 62px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.sfp-why-lane:first-child { border-top: 0; height: 61px; }
+.sfp-why-lane:last-child { height: 61px; }
+
+.sfp-why-lane b {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 52px;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid #e2e8f0;
+    background: rgba(248, 250, 252, 0.9);
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.sfp-why-wires {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 554px;
+    height: 198px;
+    overflow: visible;
+}
+
+.sfp-why-wires path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.sfp-why-gray path { stroke: #94a3b8; stroke-width: 1.6; }
+.sfp-why-green path { stroke: #16a34a; stroke-width: 2.2; }
+.sfp-why-heads path { fill: #94a3b8; stroke: none; }
+.sfp-why-gheads path { fill: #16a34a; stroke: none; }
+
+/* BPMN elements */
+.sfp-why-ev {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #22c55e;
+    box-shadow: 0 2px 5px -2px rgba(15, 23, 42, 0.25);
+}
+
+.sfp-why-end { border: 3.5px solid #334155; }
+
+.sfp-why-task {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 34px;
+    padding: 0 6px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1.5px solid #64748b;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #1e293b;
+    white-space: nowrap;
+    box-shadow: 0 1px 1px rgba(15, 23, 42, 0.05), 0 4px 8px -3px rgba(15, 23, 42, 0.18);
+}
+
+.sfp-why-manual svg { width: 14px; height: 14px; flex: none; }
+
+/* Reached by the end of the run: the bottleneck is flagged red */
+.sfp-why-manual { border-color: #ef4444; background: #fef2f2; color: #b91c1c; }
+
+.sfp-why-auto {
+    gap: 6px;
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1e3a8a;
+    font-size: 11px;
+    font-weight: 600;
+    box-shadow: 0 1px 1px rgba(15, 23, 42, 0.05), 0 6px 12px -4px rgba(37, 99, 235, 0.35);
+}
+
+.sfp-why-auto em { width: 18px; height: 18px; border-radius: 5px; flex: none; }
+.sfp-why-auto em svg { width: 11px; height: 11px; }
+
+.sfp-why-flag {
+    position: absolute;
+    left: 388px;
+    top: 128px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px 2px 5px;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px -3px rgba(239, 68, 68, 0.55);
+    z-index: 2;
+}
+
+.sfp-why-flag svg { width: 12px; height: 12px; }
+
+/* Token running the finished flow, sits under the boxes */
+.sfp-why-token {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2563eb;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3);
+    offset-path: path("M138 37 H206 V99 H290 V161 H466 V37 H532");
+    offset-rotate: 0deg;
+    offset-distance: 0%;
+    opacity: 0;
+}
+
+/* Automation node dragged from the palette */
+.sfp-why-fly {
+    position: absolute;
+    left: 6px;
+    top: 140px;
+    width: 22px;
+    height: 22px;
+    opacity: 0;
+    z-index: 3;
+}
+
+.sfp-why-cur {
+    left: 20px;
+    top: 152px;
+    width: 22px;
+    height: 22px;
+    opacity: 0;
+    z-index: 4;
+}
+
+/* ---------- Handoff doc + KPI tile ---------- */
+
+.sfp-why-doc { padding: 12px 13px 10px; }
+
+.sfp-why-doc-h { display: flex; align-items: center; gap: 7px; margin-bottom: 9px; }
+.sfp-why-doc-h .sfx-doc-tag { margin: 0; font-size: 9.5px; }
+.sfp-why-doc-h b { font-size: 11.5px; font-weight: 700; white-space: nowrap; }
+
+.sfp-why-mini { display: flex; align-items: center; margin-bottom: 8px; }
+.sfp-why-mini i { width: 22px; height: 16px; border-radius: 4px; border: 1px solid; flex: none; }
+.sfp-why-mini u { flex: 1; height: 1.5px; background: #94a3b8; }
+
+.sfp-why-kpi { padding: 12px 14px 12px; }
+
+.sfp-why-kpi-h { font-size: 11px; font-weight: 600; color: #64748b; }
+
+.sfp-why-kpi-v {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.sfp-why-num {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #0f172a;
+    font-variant-numeric: tabular-nums;
+}
+
+.sfp-why-num { counter-reset: sfpwhy var(--sfp-why-n); }
+.sfp-why-num::before { content: counter(sfpwhy); }
+
+.sfp-why-kpi-v span { font-size: 12px; color: #64748b; }
+
+.sfp-why-kpi-v em {
+    margin-left: auto;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #15803d;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sfp-why-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 42px;
+    margin-top: 8px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sfp-why-bars span {
+    flex: 1;
+    height: var(--h);
+    border-radius: 3px 3px 0 0;
+    background: #cbd5e1;
+    transform-origin: bottom;
+}
+
+.sfp-why-bars span.g { background: linear-gradient(#34d399, #059669); }
+
+/* ---------- Final state of the lit pills (also the reduced-motion picture) ---------- */
+
+.sfp-why-pill { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+.sfp-why-pill i { background: #2563eb; color: #fff; }
+.sfp-why-mode s { opacity: 0; }
+.sfp-why-manual, .sfp-why-flag { opacity: 0; }
+
+/* ---------- Motion ---------- */
+
+.is-active .sfp-why-pill { animation: sfp-why-pill 0.45s ease both; animation-delay: var(--d); }
+.is-active .sfp-why-pill i { animation: sfp-why-pill-i 0.45s ease both; animation-delay: var(--d); }
+.is-active .sfp-why-link b { animation: sfp-why-grow-x 0.4s ease both; animation-delay: var(--d); }
+
+.is-active .sfp-why-win { animation: sfp-why-rise 0.6s cubic-bezier(.2, .9, .3, 1) both; }
+.is-active .sfp-why-lanes,
+.is-active .sfp-why-pool { animation: sfp-why-fade 0.5s ease both 0.15s; }
+.is-active .sfp-why-ev,
+.is-active .sfp-why-task:not(.sfp-why-auto) { animation: sfp-why-pop 0.4s cubic-bezier(.2, 1.4, .4, 1) both; animation-delay: var(--d); }
+
+.is-active .sfp-why-task.sfp-why-manual {
+    animation:
+        sfp-why-pop 0.4s cubic-bezier(.2, 1.4, .4, 1) both var(--d),
+        sfp-why-redden 0.4s ease both 1.4s,
+        sfp-why-nudge 0.45s ease 1.85s,
+        sfp-why-off 0.3s ease forwards 4.9s;
+}
+
+.is-active .sfp-why-flag {
+    animation:
+        sfp-why-flag-in 0.4s cubic-bezier(.2, 1.5, .4, 1) both 1.6s,
+        sfp-why-off 0.3s ease forwards 4.9s;
+}
+
+.is-active .sfp-why-gray path,
+.is-active .sfp-why-green path { stroke-dasharray: 1; animation: sfp-why-draw 0.38s ease-out both; animation-delay: var(--d); }
+.is-active .sfp-why-heads path,
+.is-active .sfp-why-gheads path { animation: sfp-why-fade 0.2s ease both; animation-delay: var(--d); }
+
+.is-active .sfp-why-mode s { animation: sfp-why-swap-out 5.2s steps(1, end) both; }
+.is-active .sfp-why-mode u { animation: sfp-why-fade 0.3s ease both 5.2s; }
+
+.is-active .sfp-why-fly { animation: sfp-why-fly 0.9s cubic-bezier(.5, 0, .3, 1) both 4.05s; }
+.is-active .sfp-why-cur { animation: sfp-why-cur 1.3s cubic-bezier(.5, 0, .3, 1) both 3.85s; }
+.is-active .sfp-why-auto { animation: sfp-why-pop 0.45s cubic-bezier(.2, 1.5, .4, 1) both 4.9s; }
+
+.is-active .sfp-why-token { animation: sfp-why-run 1.4s cubic-bezier(.45, 0, .55, 1) both 6s; }
+
+.is-active .sfp-why-doc { animation: sfp-why-deal 0.6s cubic-bezier(.2, 1.1, .4, 1) both 5.35s; }
+.is-active .sfp-why-kpi { animation: sfp-why-deal 0.65s cubic-bezier(.2, 1.1, .4, 1) both 6.2s; }
+.is-active .sfp-why-bars span { animation: sfx-grow 0.7s ease both 6.55s; }
+.is-active .sfp-why-num { animation: sfp-why-count 1.1s cubic-bezier(.3, 0, .3, 1) both 6.65s; }
+.is-active .sfp-why-kpi-v em { animation: sfp-why-pop 0.4s cubic-bezier(.2, 1.6, .4, 1) both 7.6s; }
+
+@keyframes sfp-why-pill {
+    from { background: #fff; border-color: #e2e8f0; color: #94a3b8; }
+}
+
+@keyframes sfp-why-pill-i {
+    0% { background: #f1f5f9; color: #94a3b8; transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes sfp-why-grow-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes sfp-why-rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-why-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes sfp-why-pop {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sfp-why-redden {
+    from { border-color: #64748b; background: #fff; color: #1e293b; }
+    to { border-color: #ef4444; background: #fef2f2; color: #b91c1c; }
+}
+
+@keyframes sfp-why-nudge {
+    0%, 100% { translate: 0 0; }
+    25% { translate: -3px 0; }
+    50% { translate: 3px 0; }
+    75% { translate: -2px 0; }
+}
+
+@keyframes sfp-why-off {
+    to { opacity: 0; transform: scale(0.85); }
+}
+
+@keyframes sfp-why-flag-in {
+    from { opacity: 0; transform: translateY(6px) scale(0.6); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-why-draw {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes sfp-why-swap-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes sfp-why-fly {
+    0% { opacity: 0; transform: translate(0, 0) scale(0.8); }
+    15% { opacity: 1; transform: translate(0, 0) scale(1.1); }
+    85% { opacity: 1; transform: translate(357px, 10px) scale(1.1); }
+    100% { opacity: 0; transform: translate(357px, 10px) scale(0.6); }
+}
+
+@keyframes sfp-why-cur {
+    0% { opacity: 0; transform: translate(-30px, 40px); }
+    15% { opacity: 1; transform: translate(0, 0); }
+    25% { transform: translate(0, 0) scale(0.9); }
+    78% { opacity: 1; transform: translate(357px, 10px) scale(0.9); }
+    88% { opacity: 1; transform: translate(357px, 10px) scale(1); }
+    100% { opacity: 0; transform: translate(390px, 40px); }
+}
+
+@keyframes sfp-why-run {
+    0% { opacity: 0; offset-distance: 0%; }
+    8% { opacity: 1; }
+    92% { opacity: 1; }
+    100% { opacity: 0; offset-distance: 100%; }
+}
+
+@keyframes sfp-why-deal {
+    from { opacity: 0; transform: translateY(40px) translateZ(-60px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes sfp-why-count {
+    from { --sfp-why-n: 45; }
+    to { --sfp-why-n: 12; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sfp-why-fly, .sfp-why-cur, .sfp-why-token { display: none; }
+}
+
+/* Tighter deep shadow so nothing reaches the bottom edge of the frame */
+.sfp-why-win,
+.sfp-why-kpi,
+.sfp-why-doc {
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.06),
+        0 8px 16px -6px rgba(15, 23, 42, 0.12),
+        0 22px 36px -16px rgba(15, 23, 42, 0.26);
+}
