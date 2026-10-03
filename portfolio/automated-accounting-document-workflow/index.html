@@ -59,229 +59,152 @@
                     <div class="mt-10">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
                         <div class="sfs" data-sfs>
-                            <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-                                <defs>
-                                    <symbol id="sfs-doc" viewBox="-2 -2 64 80">
-                                        <path d="M6 0h36l18 18v52a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                        <path d="M42 0v12a6 6 0 0 0 6 6h12" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2.5" stroke-linejoin="round"/>
-                                        <path d="M12 40h36M12 50h36M12 60h22" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round"/>
-                                    </symbol>
-                                    <symbol id="sfs-slip" viewBox="-2 -2 52 74">
-                                        <rect width="48" height="70" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                        <circle cx="24" cy="19" r="9" fill="#22c55e"/>
-                                        <path d="M19.5 19l3 3 6-6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M11 38h26M11 48h26M11 58h16" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round"/>
-                                    </symbol>
-                                </defs>
-                            </svg>
-
                             <div class="sfs-stage" data-sfs-stage>
+                                <div class="sfs-frame" data-sfs-frame>
+                                    <div class="sfs-canvas">
 
-                                <!-- Scene 1: the weekly pile-up -->
-                                <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2">
-                                    <svg class="sfs-art" viewBox="0 0 800 400" role="img" aria-label="เอกสาร ไฟล์ Excel และหน้าเว็บหลายหน้าต่างกองซ้อนกัน มีจุดผิดสีแดง นาฬิกาหมุนเร็ว">
-                                        <ellipse cx="400" cy="372" rx="320" ry="12" fill="#0f172a" opacity=".06"/>
+                                        <!-- Scene 1: scattered files every week -->
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#fff1f2" role="img" aria-label="ไฟล์ Excel ที่มีช่อง error สลิปโอนเงินในแชท และใบแจ้งหนี้ PDF กระจัดกระจาย">
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfx-tilt-a">
+                                                    <div class="sfx-win sfx-float" style="left:48px;top:76px;width:372px;--d:0s;--z:0px">
+                                                        <div class="sfx-bar sfx-bar-green"><i></i><i></i><i></i><span>ยอดขายรวม_สัปดาห์40_final(3).xlsx</span></div>
+                                                        <table class="sfx-sheet">
+                                                            <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+                                                            <tr><th>1</th><td class="b">ช่องทาง</td><td class="b">ยอดขาย</td><td class="b">ค่าหัก</td><td class="b">สุทธิ</td></tr>
+                                                            <tr><th>2</th><td>Marketplace</td><td>184,250</td><td>12,480</td><td>171,770</td></tr>
+                                                            <tr><th>3</th><td>หน้าร้าน</td><td>96,400</td><td class="err">#N/A</td><td class="err">#N/A</td></tr>
+                                                            <tr><th>4</th><td>COD</td><td>58,920</td><td>3,410</td><td class="warn">??</td></tr>
+                                                            <tr><th>5</th><td>โอนเงิน</td><td class="err">#REF!</td><td>-</td><td class="err">#REF!</td></tr>
+                                                            <tr><th>6</th><td>Commission</td><td colspan="3" class="muted">รอคำนวณ…</td></tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="sfx-doc sfx-float" style="left:384px;top:36px;width:168px;--d:.8s;--z:40px">
+                                                        <div class="sfx-doc-tag" style="background:#ef4444">PDF</div>
+                                                        <b class="sfx-doc-title">ใบแจ้งหนี้ค่าขนส่ง</b>
+                                                        <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                        <div class="sfx-doc-rows"><span></span><span></span><span></span><span></span></div>
+                                                        <div class="sfx-doc-total"><span>รวม</span><b>฿8,640.00</b></div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfx-chat sfx-float" style="left:566px;top:150px;--d:.4s">
+                                                    <div class="sfx-chat-head"><span class="sfx-avatar"></span><b>ลูกค้า (แชท)</b></div>
+                                                    <div class="sfx-bubble">ส่งสลิปให้แล้วนะคะ 🙏</div>
+                                                    <div class="sfx-slip-mini">
+                                                        <div class="sfx-slip-ok">✓ โอนเงินสำเร็จ</div>
+                                                        <b>฿12,450.00</b>
+                                                        <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                    </div>
+                                                    <div class="sfx-bubble">อีก 3 ใบเดี๋ยวส่งตามค่ะ</div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-chip sfx-chip-red sfx-pulse" style="left:70px;top:330px">🗂 12 ไฟล์ ยังไม่ได้รวม</div>
+                                            <div class="sfx-chip sfx-pulse" style="left:330px;top:370px;--d:.6s">⏱ ใช้เวลาหลายชั่วโมงต่อรอบ</div>
+                                        </div>
 
-                                        <g class="sfs-wobble">
-                                            <rect x="86" y="334" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="94" y="318" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="82" y="302" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="98" y="286" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="88" y="270" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="102" y="254" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="90" y="238" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="106" y="222" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect x="94" y="206" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect class="sfs-sheet" style="--d:.3s" x="110" y="190" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect class="sfs-sheet" style="--d:.7s" x="96" y="174" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <rect class="sfs-sheet" style="--d:1.1s" x="114" y="158" width="120" height="16" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                        </g>
+                                        <!-- Scene 2: one click -->
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" role="img" aria-label="หน้าแอป SuccessFlow ทุกแหล่งข้อมูลเปิดใช้งาน กดปุ่มรันทั้งหมดครั้งเดียว ไฟล์ทั้งหมดไหลเข้าแอป" hidden>
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfx-file sfx-in-l" style="top:90px;--d:.9s"><i style="background:#16a34a">XLSX</i>orders.xlsx</div>
+                                            <div class="sfx-file sfx-in-l" style="top:200px;--d:1.2s"><i style="background:#ef4444">PDF</i>statement.pdf</div>
+                                            <div class="sfx-file sfx-in-l" style="top:310px;--d:1.5s"><i style="background:#64748b">CSV</i>cod_report.csv</div>
+                                            <div class="sfx-file sfx-in-r" style="top:120px;--d:1.05s"><i style="background:#ec4899">JPG</i>slip × 86</div>
+                                            <div class="sfx-file sfx-in-r" style="top:250px;--d:1.35s"><i style="background:#2563eb">API</i>ERP orders</div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-win sfx-app sfx-tilt-b" style="left:210px;top:46px;width:380px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>SuccessFlow · ปิดยอดรายสัปดาห์</span></div>
+                                                    <div class="sfx-app-body">
+                                                        <div class="sfx-src"><span class="sfx-src-ico" style="background:#fff7ed;color:#ea580c">🛒</span>E-commerce<em class="sfx-toggle"></em></div>
+                                                        <div class="sfx-src"><span class="sfx-src-ico" style="background:#eff6ff;color:#2563eb">🗄</span>ERP / ระบบภายใน<em class="sfx-toggle"></em></div>
+                                                        <div class="sfx-src"><span class="sfx-src-ico" style="background:#f0fdf4;color:#16a34a">🚚</span>ขนส่ง &amp; COD<em class="sfx-toggle"></em></div>
+                                                        <div class="sfx-src"><span class="sfx-src-ico" style="background:#fdf2f8;color:#db2777">🧾</span>สลิปโอนเงิน<em class="sfx-toggle"></em></div>
+                                                        <div class="sfx-run-wrap">
+                                                            <div class="sfx-run sfx-press">▶ รันทั้งหมด</div>
+                                                            <div class="sfx-progress"><span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <svg class="sfx-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v18l5-4.5 3.5 7 3-1.5-3.5-6.5H18z" fill="#fff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                                        </div>
 
-                                        <g transform="rotate(-4 400 170)">
-                                            <rect x="262" y="64" width="300" height="206" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <path d="M262 78a14 14 0 0 1 14-14h272a14 14 0 0 1 14 14v16H262z" fill="#16a34a"/>
-                                            <circle cx="282" cy="80" r="4" fill="#bbf7d0"/><circle cx="296" cy="80" r="4" fill="#bbf7d0"/><circle cx="310" cy="80" r="4" fill="#bbf7d0"/>
-                                            <path d="M262 124h300M262 154h300M262 184h300M262 214h300M262 244h300M322 94v176M402 94v176M482 94v176" stroke="#e2e8f0" stroke-width="2"/>
-                                            <rect x="403" y="125" width="78" height="28" fill="#fecaca"/>
-                                            <rect x="323" y="185" width="78" height="28" fill="#fecaca"/>
-                                            <rect x="483" y="215" width="78" height="28" fill="#fde68a"/>
-                                            <text x="442" y="145" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">#REF!</text>
-                                            <text x="362" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">???</text>
-                                        </g>
+                                        <!-- Scene 3: the system reads, matches and checks -->
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" role="img" aria-label="ระบบอ่านสลิปด้วย OCR จับคู่รายการทีละแถวจนได้เครื่องหมายถูก รายการที่ยอดไม่ตรงถูกแยกออกมาให้คนตรวจ" hidden>
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-win sfx-tilt-c" style="left:296px;top:44px;width:392px">
+                                                    <div class="sfx-bar"><i></i><i></i><i></i><span>จับคู่ยอดขาย ↔ รับชำระ</span></div>
+                                                    <div class="sfx-match">
+                                                        <div class="sfx-scan"></div>
+                                                        <div class="sfx-row head"><span>Order</span><span>ยอดขาย</span><span>รับชำระ</span><span>สถานะ</span></div>
+                                                        <div class="sfx-row" style="--d:.4s"><span>ORD-240918</span><span>12,450</span><span>12,450</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                        <div class="sfx-row" style="--d:.9s"><span>ORD-240921</span><span>3,890</span><span>3,890</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                        <div class="sfx-row" style="--d:1.4s"><span>ORD-240925</span><span>7,200</span><span>7,180</span><span class="sfx-st"><em>ตรวจ…</em><b class="bad">! ไม่ตรง</b></span></div>
+                                                        <div class="sfx-row" style="--d:1.9s"><span>ORD-240930</span><span>1,560</span><span>COD</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                        <div class="sfx-row" style="--d:2.4s"><span>ORD-240934</span><span>5,240</span><span>5,240</span><span class="sfx-st"><em>ตรวจ…</em><b class="ok">✓ ตรงกัน</b></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-ocr">
+                                                <div class="sfx-slip-ok">✓ โอนเงินสำเร็จ</div>
+                                                <div class="sfx-ocr-amt"><b>฿12,450.00</b><i class="sfx-box" style="--d:.3s"></i></div>
+                                                <div class="sfx-ocr-row">วันที่ <b>02 ต.ค. 14:32</b><i class="sfx-box" style="--d:.6s"></i></div>
+                                                <div class="sfx-ocr-row">อ้างอิง <b>REF-58201947</b><i class="sfx-box" style="--d:.9s"></i></div>
+                                                <div class="sfx-ocr-tag">OCR อ่านอัตโนมัติ</div>
+                                            </div>
+                                            <div class="sfx-exc">
+                                                <div class="sfx-exc-ico">!</div>
+                                                <div><b>ยอดโอนขาด ฿20</b><span>ORD-240925 → ส่งให้ทีมตรวจ</span></div>
+                                            </div>
+                                        </div>
 
-                                        <g transform="rotate(5 500 240)">
-                                            <rect x="380" y="150" width="260" height="176" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
-                                            <path d="M380 164a14 14 0 0 1 14-14h232a14 14 0 0 1 14 14v18H380z" fill="#f1f5f9"/>
-                                            <rect x="392" y="158" width="44" height="18" rx="5" fill="#fff"/>
-                                            <rect x="442" y="158" width="44" height="18" rx="5" fill="#e2e8f0"/>
-                                            <rect x="492" y="158" width="44" height="18" rx="5" fill="#e2e8f0"/>
-                                            <rect x="542" y="158" width="44" height="18" rx="5" fill="#e2e8f0"/>
-                                            <rect x="400" y="200" width="70" height="56" rx="8" fill="#ffedd5"/>
-                                            <rect x="480" y="200" width="70" height="56" rx="8" fill="#dbeafe"/>
-                                            <rect x="560" y="200" width="62" height="56" rx="8" fill="#f3e8ff"/>
-                                            <path d="M400 276h180M400 296h120" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
-                                        </g>
+                                        <!-- Scene 4: ready for accounting -->
+                                        <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" role="img" aria-label="ใบกำกับภาษี สรุป Commission และไฟล์ส่งบัญชี พร้อมเครื่องหมายถูก และแจ้งเตือนว่าส่งถึงทีมบัญชีแล้ว" hidden>
+                                            <div class="sfx-floor"></div>
+                                            <div class="sfx-world">
+                                                <div class="sfx-plane sfx-tilt-d">
+                                                    <div class="sfx-out" style="left:112px;top:76px;--d:.15s;--r:-8deg">
+                                                        <div class="sfx-out-head" style="background:#1d4ed8">TAX INVOICE</div>
+                                                        <b class="sfx-doc-title">ใบกำกับภาษี</b>
+                                                        <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                        <div class="sfx-doc-rows"><span></span><span></span><span></span></div>
+                                                        <div class="sfx-doc-total"><span>รวมทั้งสิ้น</span><b>฿184,250</b></div>
+                                                        <i class="sfx-stamp" style="--d:.9s">✓</i>
+                                                    </div>
+                                                    <div class="sfx-out" style="left:300px;top:46px;--d:.35s;--r:0deg">
+                                                        <div class="sfx-out-head" style="background:#059669">COMMISSION</div>
+                                                        <b class="sfx-doc-title">สรุป Commission</b>
+                                                        <div class="sfx-bars"><span style="--h:62%"></span><span style="--h:88%"></span><span style="--h:46%"></span><span style="--h:74%"></span><span style="--h:56%"></span></div>
+                                                        <span class="sfx-line w80"></span><span class="sfx-line w60"></span>
+                                                        <i class="sfx-stamp" style="--d:1.1s">✓</i>
+                                                    </div>
+                                                    <div class="sfx-out" style="left:488px;top:76px;--d:.55s;--r:8deg">
+                                                        <div class="sfx-out-head" style="background:#16a34a">XLSX</div>
+                                                        <b class="sfx-doc-title">ไฟล์ส่งบัญชี</b>
+                                                        <div class="sfx-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                        <i class="sfx-stamp" style="--d:1.3s">✓</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfx-toast"><span class="sfx-toast-ico">✓</span><div><b>ส่งไฟล์ถึงทีมบัญชีแล้ว</b><span>weekly_close_w40.xlsx</span></div></div>
+                                            <div class="sfx-chip sfx-chip-green" style="left:330px;top:380px">⚡ กดรันครั้งเดียว</div>
+                                        </div>
 
-                                        <g class="sfs-blink" style="--d:0s"><circle cx="556" cy="70" r="16" fill="#ef4444"/><text x="556" y="77" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">!</text></g>
-                                        <g class="sfs-blink" style="--d:.6s"><circle cx="640" cy="160" r="16" fill="#ef4444"/><text x="640" y="167" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">!</text></g>
-
-                                        <g transform="translate(700 90)">
-                                            <circle r="40" fill="#fff" stroke="#334155" stroke-width="5"/>
-                                            <line class="sfs-hand" x1="0" y1="0" x2="0" y2="-27" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
-                                            <line class="sfs-hand slow" x1="0" y1="0" x2="0" y2="-18" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
-                                            <circle r="5" fill="#334155"/>
-                                        </g>
-
-                                        <g transform="translate(40 40) rotate(-12)"><g class="sfs-float" style="--d:0s"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#f97316"/><text x="16" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">%</text></g></g>
-                                        <g transform="translate(176 40) rotate(-6)"><g class="sfs-float" style="--d:1.1s"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#ef4444"/><text x="16" y="21.5" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff">PDF</text></g></g>
-                                        <g transform="translate(674 240) rotate(-9)"><g class="sfs-float" style="--d:1.4s"><use href="#sfs-slip" width="48" height="70"/></g></g>
-                                        <g transform="translate(246 290) rotate(10)"><g class="sfs-float" style="--d:.5s"><use href="#sfs-slip" width="48" height="70"/></g></g>
-                                        <g transform="translate(600 300) rotate(8)"><g class="sfs-float" style="--d:.8s"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#2563eb"/><text x="16" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">฿</text></g></g>
-                                    </svg>
-                                    <div class="sfs-caption">
-                                        <h3>ทุกสัปดาห์ เอกสารกองท่วม</h3>
-                                        <p>ยอดขาย · ขนส่ง · สลิป · ค่าหัก ต้องรวมเองทีละไฟล์</p>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!-- Scene 2: one click -->
-                                <div class="sfs-scene" data-sfs-scene data-bg="#eff6ff" hidden>
-                                    <svg class="sfs-art" viewBox="0 0 800 400" role="img" aria-label="กดปุ่มเริ่มครั้งเดียว เอกสารทั้งหมดลอยเข้าเครื่อง SuccessFlow">
-                                        <ellipse cx="650" cy="350" rx="110" ry="10" fill="#0f172a" opacity=".06"/>
-                                        <ellipse cx="170" cy="350" rx="120" ry="10" fill="#0f172a" opacity=".06"/>
-                                        <g transform="translate(70 250) rotate(-14)"><use href="#sfs-doc" width="60" height="76"/></g>
-                                        <g transform="translate(200 256) rotate(12)"><use href="#sfs-slip" width="48" height="70"/></g>
-                                        <g transform="translate(120 228) rotate(4)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#16a34a"/><text x="16" y="23" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">X</text></g>
-                                        <g transform="translate(160 262) rotate(-6)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#2563eb"/><text x="16" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">฿</text></g>
-
-                                        <g class="sfs-fly" style="--d:.85s"><g transform="translate(140 220)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#f97316"/></g></g>
-                                        <g class="sfs-fly" style="--d:1.15s"><g transform="translate(170 230)"><use href="#sfs-slip" width="48" height="70"/></g></g>
-                                        <g class="sfs-fly" style="--d:1.45s"><g transform="translate(150 240)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#ef4444"/></g></g>
-
-                                        <g class="sfs-shake">
-                                            <rect x="560" y="176" width="180" height="168" rx="24" fill="#fff" stroke="#2563eb" stroke-width="5"/>
-                                            <rect x="600" y="166" width="100" height="18" rx="9" fill="#1e3a8a"/>
-                                            <circle class="sfs-spin" cx="650" cy="238" r="24" fill="none" stroke="#93c5fd" stroke-width="12" stroke-dasharray="8 7"/>
-                                            <circle cx="650" cy="238" r="9" fill="#2563eb"/>
-                                            <text x="650" y="306" text-anchor="middle" font-size="21" font-weight="700" fill="#1e3a8a">SuccessFlow</text>
-                                        </g>
-
-                                        <rect x="322" y="300" width="156" height="62" rx="31" fill="#1e40af"/>
-                                        <g class="sfs-press">
-                                            <rect x="322" y="292" width="156" height="62" rx="31" fill="#2563eb"/>
-                                            <path d="M366 309v28l22-14z" fill="#fff"/>
-                                            <text x="430" y="332" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">เริ่ม</text>
-                                        </g>
-                                        <circle class="sfs-ripple" cx="452" cy="322" r="16" fill="none" stroke="#2563eb" stroke-width="4"/>
-                                        <g class="sfs-cursor">
-                                            <path d="M452 322v34l9-8 7 15 6-3-7-14h12z" fill="#fff" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
-                                        </g>
-                                    </svg>
-                                    <div class="sfs-caption">
-                                        <h3>แค่กดเริ่มครั้งเดียว</h3>
-                                        <p>ระบบดึงทุกไฟล์เข้ามาเอง</p>
-                                    </div>
-                                </div>
-
-                                <!-- Scene 3: the system checks everything -->
-                                <div class="sfs-scene" data-sfs-scene data-bg="#f0f9ff" hidden>
-                                    <svg class="sfs-art" viewBox="0 0 800 400" role="img" aria-label="เอกสารวิ่งบนสายพานผ่านเครื่องสแกน ได้เครื่องหมายถูก ใบที่ผิดปกติถูกแยกลงถาดให้คนตรวจ">
-                                        <rect x="360" y="92" width="80" height="34" rx="10" fill="#1e3a8a"/>
-                                        <circle class="sfs-blink" cx="380" cy="109" r="6" fill="#4ade80" style="--d:0s"/>
-                                        <circle class="sfs-blink" cx="400" cy="109" r="6" fill="#4ade80" style="--d:.4s"/>
-                                        <circle class="sfs-blink" cx="420" cy="109" r="6" fill="#4ade80" style="--d:.8s"/>
-
-                                        <g class="sfs-ride" style="--d:0s;--x:40px"><g transform="translate(40 212)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#16a34a"/><text x="16" y="23" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">X</text><g class="sfs-ok" style="--d:0s"><circle cx="54" cy="6" r="15" fill="#22c55e"/><path d="M47 6l5 5 9-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
-                                        <g class="sfs-ride" style="--d:-1.5s;--x:220px"><g transform="translate(40 218)"><use href="#sfs-slip" width="48" height="70"/><g class="sfs-ok" style="--d:-1.5s"><circle cx="46" cy="2" r="15" fill="#22c55e"/><path d="M39 2l5 5 9-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
-                                        <g class="sfs-ride" style="--d:-4.5s;--x:600px"><g transform="translate(40 212)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#f97316"/><text x="16" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">%</text><g class="sfs-ok" style="--d:-4.5s"><circle cx="54" cy="6" r="15" fill="#22c55e"/><path d="M47 6l5 5 9-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
-
-                                        <path d="M330 290V154a22 22 0 0 1 22-22h96a22 22 0 0 1 22 22v136" fill="none" stroke="#2563eb" stroke-width="16" stroke-linejoin="round"/>
-                                        <rect class="sfs-scanbar" x="346" y="150" width="108" height="8" rx="4" fill="#60a5fa"/>
-
-                                        <rect x="40" y="288" width="720" height="26" rx="13" fill="#334155"/>
-                                        <line class="sfs-belt" x1="58" y1="301" x2="742" y2="301" stroke="#64748b" stroke-width="5" stroke-dasharray="14 14"/>
-                                        <rect x="90" y="314" width="14" height="56" fill="#64748b"/>
-                                        <rect x="696" y="314" width="14" height="56" fill="#64748b"/>
-
-                                        <g class="sfs-ride-bad" style="--d:-3s"><g transform="translate(40 212)"><use href="#sfs-doc" width="60" height="76"/><circle cx="16" cy="18" r="11" fill="#2563eb"/><text x="16" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">฿</text><g class="sfs-ok" style="--d:-3s"><circle cx="54" cy="6" r="15" fill="#f59e0b"/><text x="54" y="13" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">!</text></g></g></g>
-                                        <rect x="500" y="352" width="150" height="34" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
-                                        <g transform="translate(676 360)">
-                                            <circle r="22" fill="#fff" stroke="#f59e0b" stroke-width="3"/>
-                                            <circle cx="-3" cy="-3" r="8" fill="none" stroke="#b45309" stroke-width="3.5"/>
-                                            <path d="M3 3l7 7" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
-                                        </g>
-                                    </svg>
-                                    <div class="sfs-caption">
-                                        <h3>ระบบอ่าน จับคู่ และเช็กให้</h3>
-                                        <p>อันไหนผิดปกติ แยกให้คนตรวจ</p>
-                                    </div>
-                                </div>
-
-                                <!-- Scene 4: done, ready for accounting -->
-                                <div class="sfs-scene" data-sfs-scene data-bg="#ecfdf5" hidden>
-                                    <svg class="sfs-art" viewBox="0 0 800 400" role="img" aria-label="หน้าจอแสดงใบกำกับภาษี Commission และไฟล์ส่งบัญชี ติ๊กถูกครบ เครื่องบินกระดาษส่งไฟล์ออกไป">
-                                        <rect class="sfs-confetti" style="--d:0s" x="250" y="10" width="10" height="16" rx="2" fill="#2563eb"/>
-                                        <rect class="sfs-confetti" style="--d:.8s" x="360" y="0" width="10" height="16" rx="2" fill="#f59e0b"/>
-                                        <rect class="sfs-confetti" style="--d:1.6s" x="470" y="14" width="10" height="16" rx="2" fill="#22c55e"/>
-                                        <rect class="sfs-confetti" style="--d:2.3s" x="540" y="4" width="10" height="16" rx="2" fill="#ef4444"/>
-                                        <rect class="sfs-confetti" style="--d:1.2s" x="300" y="6" width="10" height="16" rx="2" fill="#a855f7"/>
-
-                                        <g transform="translate(110 110)">
-                                            <circle r="40" fill="#fff" stroke="#334155" stroke-width="5"/>
-                                            <line class="sfs-hand calm" x1="0" y1="0" x2="0" y2="-27" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
-                                            <line class="sfs-hand calm slow" x1="0" y1="0" x2="0" y2="-18" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
-                                            <circle r="5" fill="#334155"/>
-                                        </g>
-                                        <g class="sfs-pop" style="--d:1.6s">
-                                            <rect x="64" y="172" width="92" height="34" rx="17" fill="#dcfce7"/>
-                                            <text x="110" y="195" text-anchor="middle" font-size="16" font-weight="700" fill="#15803d">✓ เสร็จ</text>
-                                        </g>
-
-                                        <ellipse cx="400" cy="334" rx="230" ry="12" fill="#0f172a" opacity=".07"/>
-                                        <rect x="214" y="56" width="372" height="248" rx="18" fill="#334155"/>
-                                        <rect x="228" y="70" width="344" height="220" rx="8" fill="#fff"/>
-                                        <path d="M184 304h432a8 8 0 0 1-8 14H192a8 8 0 0 1-8-14z" fill="#94a3b8"/>
-                                        <rect x="370" y="304" width="60" height="5" rx="2.5" fill="#64748b"/>
-                                        <rect x="228" y="70" width="344" height="36" fill="#2563eb"/>
-                                        <circle cx="246" cy="88" r="5" fill="#93c5fd"/><circle cx="262" cy="88" r="5" fill="#93c5fd"/><circle cx="278" cy="88" r="5" fill="#93c5fd"/>
-
-                                        <g class="sfs-pop" style="--d:.2s">
-                                            <rect x="246" y="122" width="308" height="44" rx="10" fill="#eff6ff"/>
-                                            <rect x="258" y="132" width="24" height="24" rx="6" fill="#3b82f6"/>
-                                            <text x="296" y="150" font-size="17" font-weight="600" fill="#1e293b">ใบกำกับภาษี</text>
-                                        </g>
-                                        <g class="sfs-pop" style="--d:.45s">
-                                            <rect x="246" y="174" width="308" height="44" rx="10" fill="#ecfdf5"/>
-                                            <rect x="258" y="184" width="24" height="24" rx="6" fill="#10b981"/>
-                                            <text x="296" y="202" font-size="17" font-weight="600" fill="#1e293b">Commission</text>
-                                        </g>
-                                        <g class="sfs-pop" style="--d:.7s">
-                                            <rect x="246" y="226" width="308" height="44" rx="10" fill="#fffbeb"/>
-                                            <rect x="258" y="236" width="24" height="24" rx="6" fill="#f59e0b"/>
-                                            <text x="296" y="254" font-size="17" font-weight="600" fill="#1e293b">ไฟล์ส่งบัญชี</text>
-                                        </g>
-                                        <g class="sfs-pop" style="--d:1s"><circle cx="528" cy="144" r="13" fill="#22c55e"/><path d="M522 144l4.5 4.5 8-9" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
-                                        <g class="sfs-pop" style="--d:1.2s"><circle cx="528" cy="196" r="13" fill="#22c55e"/><path d="M522 196l4.5 4.5 8-9" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
-                                        <g class="sfs-pop" style="--d:1.4s"><circle cx="528" cy="248" r="13" fill="#22c55e"/><path d="M522 248l4.5 4.5 8-9" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
-
-                                        <path d="M600 210q60-30 90-110" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6 9" stroke-linecap="round"/>
-                                        <g class="sfs-plane">
-                                            <path d="M676 112l70-34-22 74-18-20-14 18-2-26z" fill="#fff" stroke="#2563eb" stroke-width="3.5" stroke-linejoin="round"/>
-                                            <path d="M706 132l40-54" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
-                                        </g>
-                                        <text x="712" y="190" text-anchor="middle" font-size="16" font-weight="600" fill="#2563eb">ส่งถึงบัญชี</text>
-                                    </svg>
-                                    <div class="sfs-caption">
-                                        <h3>เสร็จ พร้อมส่งบัญชี</h3>
-                                        <p>ใบกำกับภาษี · Commission · ไฟล์ส่งบัญชี</p>
-                                    </div>
-                                </div>
-
+                            <div class="sfs-captions">
+                                <div class="sfs-caption" data-sfs-caption><h3>ทุกสัปดาห์ ไฟล์กระจายอยู่ทุกที่</h3><p>ยอดขาย · ขนส่ง · สลิป · ค่าหัก ต้องรวมเองทีละไฟล์</p></div>
+                                <div class="sfs-caption" data-sfs-caption hidden><h3>แค่กดรันครั้งเดียว</h3><p>ระบบดึงทุกไฟล์เข้ามาเอง</p></div>
+                                <div class="sfs-caption" data-sfs-caption hidden><h3>ระบบอ่าน จับคู่ และเช็กให้</h3><p>อันไหนผิดปกติ แยกให้คนตรวจ</p></div>
+                                <div class="sfs-caption" data-sfs-caption hidden><h3>เอกสารพร้อมส่งบัญชี</h3><p>ใบกำกับภาษี · Commission · ไฟล์ส่งบัญชี</p></div>
                             </div>
 
                             <div class="sfs-nav" role="tablist" aria-label="ขั้นตอน">
                                 <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">1</span><span class="sfs-tab-label">ก่อน</span><span class="sfs-tab-bar"><span></span></span></button>
-                                <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">กดเริ่ม</span><span class="sfs-tab-bar"><span></span></span></button>
+                                <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">2</span><span class="sfs-tab-label">กดรัน</span><span class="sfs-tab-bar"><span></span></span></button>
                                 <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">3</span><span class="sfs-tab-label">ตรวจให้</span><span class="sfs-tab-bar"><span></span></span></button>
                                 <button type="button" class="sfs-tab" role="tab" data-sfs-tab><span class="sfs-tab-num">4</span><span class="sfs-tab-label">เสร็จ</span><span class="sfs-tab-bar"><span></span></span></button>
                                 <button type="button" class="sfs-play" data-sfs-play aria-pressed="true" aria-label="หยุด">

@@ -6,7 +6,9 @@
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const SCENE_MS = 5500;
     const stage = root.querySelector('[data-sfs-stage]');
+    const frame = root.querySelector('[data-sfs-frame]');
     const scenes = Array.from(root.querySelectorAll('[data-sfs-scene]'));
+    const captions = Array.from(root.querySelectorAll('[data-sfs-caption]'));
     const tabs = Array.from(root.querySelectorAll('[data-sfs-tab]'));
     const playButton = root.querySelector('[data-sfs-play]');
     const iconPause = root.querySelector('[data-sfs-icon-pause]');
@@ -24,6 +26,7 @@
             const active = i === current;
             scene.classList.toggle('is-active', active);
             scene.hidden = !active;
+            if (captions[i]) captions[i].hidden = !active;
         });
         tabs.forEach((tab, i) => {
             tab.classList.toggle('is-active', i === current);
@@ -87,6 +90,14 @@
     if (reduceMotion.addEventListener) {
         reduceMotion.addEventListener('change', () => setPlaying(!reduceMotion.matches));
     }
+
+    // The illustration is drawn on a fixed 800px canvas; scale it to the card width.
+    function fit() {
+        frame.style.setProperty('--s', String(frame.clientWidth / 800));
+    }
+    if ('ResizeObserver' in window) new ResizeObserver(fit).observe(frame);
+    else window.addEventListener('resize', fit);
+    fit();
 
     setPlaying(playing);
     show(0);
