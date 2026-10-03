@@ -26,6 +26,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/accounting-demo.css">
     <script type="application/ld+json">
         {"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Automated Accounting Document Workflow","url":"https://www.successflow.it.com/portfolio/automated-accounting-document-workflow/","creator":{"@type":"Organization","name":"SuccessFlow"},"description":"Case study for workflow automation in accounting operations, combining OCR slip handling, multi-source data collection, reconciliation checks, and exception routing."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.successflow.it.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.successflow.it.com/#portfolio"},{"@type":"ListItem","position":3,"name":"Automated Accounting Document Workflow","item":"https://www.successflow.it.com/portfolio/automated-accounting-document-workflow/"}]}]}
     </script>
@@ -55,11 +56,153 @@
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-3">Project Story</p>
                         <p class="text-slate-600 leading-relaxed">สถานการณ์ตั้งต้นคือทุกสัปดาห์ทีมขายและทีมบัญชีต้องสรุปรายการเพื่อส่งบัญชี ออกใบกำกับภาษี และคำนวณ commission ให้พนักงานขายแต่ละคนตามเงื่อนไขการจ่าย โดยต้องดึงข้อมูลจากหลายแพลตฟอร์ม e-commerce, ระบบภายใน, ขนส่ง, ยอดเก็บปลายทาง, โปรโมชั่น, ค่าหัก และ slip โอนเงินจากลูกค้า บางส่วนมาในรูปภาพหรือ PDF ทำให้ต้อง reconcile ด้วยมือ ใช้เวลาเทรนงานสูง และเสี่ยงสะดุดทันทีเมื่อคนรับผิดชอบเปลี่ยน</p>
                     </div>
-                    <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                    <div class="mt-6">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">Process Demonstration</p>
-                        <div class="rounded-xl border border-dashed border-slate-300 bg-white p-6 min-h-[280px] md:min-h-[360px] flex items-center justify-center text-center">
-                            <p class="text-slate-500 leading-relaxed max-w-2xl">วางภาพจำลองหรือ flow ของงานตรงนี้ได้ เช่น ดึงยอดจากหลายแพลตฟอร์ม, อ่าน OCR slip, map commission และค่าหัก, reconcile ยอด และเตรียมไฟล์สำหรับส่งบัญชีโดยไม่เปิดข้อมูลลูกค้าจริง</p>
-                        </div>
+                        <section class="afd" data-afd aria-label="ภาพจำลองการทำงานของระบบจัดการเอกสารบัญชีอัตโนมัติ">
+                            <span class="afd-eyebrow"><span class="afd-live-dot" aria-hidden="true"></span>Live Workflow Simulation</span>
+                            <h2 class="afd-title">จากเอกสารกระจัดกระจาย สู่ <span class="afd-title-grad">ไฟล์พร้อมส่งบัญชี</span> ในการกดครั้งเดียว</h2>
+                            <p class="afd-sub">ดูว่าระบบรวบรวมข้อมูลจากทุกแหล่ง อ่านสลิปด้วย OCR จับคู่ยอด และส่งเฉพาะรายการผิดปกติให้ทีมตรวจ ก่อนออกเอกสารให้ทีมบัญชีได้อย่างไร</p>
+
+                            <div class="afd-flow" data-afd-flow>
+                                <svg class="afd-wires" data-afd-wires aria-hidden="true"></svg>
+                                <div class="afd-col" aria-label="แหล่งข้อมูล">
+                                    <div class="afd-node" data-afd-source="ecom"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></span><span>E-commerce<small>หลายแพลตฟอร์ม</small></span></div>
+                                    <div class="afd-node" data-afd-source="erp"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span><span>ERP / ระบบภายใน<small>ออเดอร์ & สินค้า</small></span></div>
+                                    <div class="afd-node" data-afd-source="ship"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></span><span>ขนส่ง & COD<small>ยอดเก็บปลายทาง</small></span></div>
+                                    <div class="afd-node" data-afd-source="slip"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></span><span>Slip โอนเงิน<small>รูปภาพ / PDF</small></span></div>
+                                    <div class="afd-node" data-afd-source="bank"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg></span><span>Statement ธนาคาร<small>รายการรับชำระ</small></span></div>
+                                    <div class="afd-node" data-afd-source="promo"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20l-8-8V4h8z"/><circle cx="8.5" cy="8.5" r="1.4"/></svg></span><span>โปรโมชั่น & ค่าหัก<small>เงื่อนไข commission</small></span></div>
+                                </div>
+
+                                <div class="afd-core" data-afd-core aria-hidden="true">
+                                    <span class="afd-core-ring"></span>
+                                    <span class="afd-core-ring r2"></span>
+                                    <span class="afd-core-glow"></span>
+                                    <div class="afd-core-chip"><div><b>SuccessFlow</b><span>Engine</span></div></div>
+                                    <span class="afd-core-label">OCR · Mapping · Rules</span>
+                                </div>
+
+                                <div class="afd-col" aria-label="ผลลัพธ์">
+                                    <div class="afd-node is-green" data-afd-output="invoice"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 12h7M9 16h7"/></svg></span><span>ใบกำกับภาษี<small>พร้อมออกเอกสาร</small></span></div>
+                                    <div class="afd-node is-green" data-afd-output="commission"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M18 8v6M15 11h6"/></svg></span><span>สรุป Commission<small>รายพนักงานขาย</small></span></div>
+                                    <div class="afd-node is-green" data-afd-output="ledger"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span><span>ไฟล์ส่งบัญชี<small>สรุปรายสัปดาห์</small></span></div>
+                                    <div class="afd-node is-amber" data-afd-output="exception"><span class="afd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17v.01"/></svg></span><span>Exception Queue<small>ส่งให้ทีมตรวจ</small></span></div>
+                                </div>
+                            </div>
+
+                            <div class="afd-steps" role="tablist" aria-label="ขั้นตอนการทำงาน">
+                                <button type="button" class="afd-step" role="tab" data-afd-step data-afd-path="successflow / weekly-close / 01-collect"><span class="afd-step-num">STEP 01</span><span class="afd-step-name">รวบรวมข้อมูล</span><span class="afd-step-bar"></span></button>
+                                <button type="button" class="afd-step" role="tab" data-afd-step data-afd-path="successflow / weekly-close / 02-ocr"><span class="afd-step-num">STEP 02</span><span class="afd-step-name">อ่านสลิป OCR</span><span class="afd-step-bar"></span></button>
+                                <button type="button" class="afd-step" role="tab" data-afd-step data-afd-path="successflow / weekly-close / 03-reconcile"><span class="afd-step-num">STEP 03</span><span class="afd-step-name">จับคู่ & Reconcile</span><span class="afd-step-bar"></span></button>
+                                <button type="button" class="afd-step" role="tab" data-afd-step data-afd-path="successflow / weekly-close / 04-exceptions"><span class="afd-step-num">STEP 04</span><span class="afd-step-name">คัดรายการผิดปกติ</span><span class="afd-step-bar"></span></button>
+                                <button type="button" class="afd-step" role="tab" data-afd-step data-afd-path="successflow / weekly-close / 05-output"><span class="afd-step-num">STEP 05</span><span class="afd-step-name">ออกเอกสารส่งบัญชี</span><span class="afd-step-bar"></span></button>
+                            </div>
+
+                            <div class="afd-screen">
+                                <div class="afd-screen-bar">
+                                    <i></i><i></i><i></i>
+                                    <span class="afd-screen-path" data-afd-pathbar>successflow / weekly-close / 01-collect</span>
+                                    <button type="button" class="afd-ctrl" data-afd-toggle aria-pressed="true">
+                                        <svg data-afd-icon-pause viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                                        <svg data-afd-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4v16l14-8z"/></svg>
+                                        <span data-afd-toggle-label>หยุด</span>
+                                    </button>
+                                </div>
+                                <div class="afd-screen-body" aria-live="polite">
+
+                                    <div class="afd-panel" data-afd-panel role="tabpanel">
+                                        <div class="afd-panel-head">
+                                            <div><h3>ดึงข้อมูลทุกแหล่งเข้ามาในที่เดียว</h3><p>ไม่ต้องเปิดทีละระบบ ไม่ต้อง export ทีละไฟล์</p></div>
+                                            <div class="afd-stat"><b data-afd-count="1284">0</b><span>รายการที่ดึงเข้า</span></div>
+                                        </div>
+                                        <div class="afd-files">
+                                            <div class="afd-file" style="--i:0"><span class="afd-file-tag" style="background:rgba(52,211,153,.15);color:#34d399">XLSX</span><span class="afd-file-name">orders_marketplace_w40.xlsx</span><span class="afd-file-bar"></span></div>
+                                            <div class="afd-file" style="--i:1"><span class="afd-file-tag" style="background:rgba(96,165,250,.15);color:#60a5fa">API</span><span class="afd-file-name">erp_sales_orders</span><span class="afd-file-bar"></span></div>
+                                            <div class="afd-file" style="--i:2"><span class="afd-file-tag" style="background:rgba(52,211,153,.15);color:#34d399">CSV</span><span class="afd-file-name">shipping_cod_report.csv</span><span class="afd-file-bar"></span></div>
+                                            <div class="afd-file" style="--i:3"><span class="afd-file-tag" style="background:rgba(244,114,182,.15);color:#f472b6">JPG</span><span class="afd-file-name">slip_transfer × 86 ไฟล์</span><span class="afd-file-bar"></span></div>
+                                            <div class="afd-file" style="--i:4"><span class="afd-file-tag" style="background:rgba(248,113,113,.15);color:#f87171">PDF</span><span class="afd-file-name">bank_statement_w40.pdf</span><span class="afd-file-bar"></span></div>
+                                            <div class="afd-file" style="--i:5"><span class="afd-file-tag" style="background:rgba(52,211,153,.15);color:#34d399">XLSX</span><span class="afd-file-name">promo_deduction_rules.xlsx</span><span class="afd-file-bar"></span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="afd-panel" data-afd-panel role="tabpanel" hidden>
+                                        <div class="afd-panel-head">
+                                            <div><h3>อ่านสลิปด้วย OCR อัตโนมัติ</h3><p>ดึงยอดเงิน วันที่ และเลขอ้างอิง จากรูปภาพหรือ PDF</p></div>
+                                            <div class="afd-stat"><b data-afd-count="86" data-afd-duration="2600">0</b><span>สลิปที่อ่านแล้ว</span></div>
+                                        </div>
+                                        <div class="afd-ocr">
+                                            <div class="afd-slip" aria-hidden="true">
+                                                <div class="afd-slip-top">โอนเงินสำเร็จ</div>
+                                                <div class="afd-slip-amt"><span class="afd-hl" style="--d:.5s">฿12,450.00</span></div>
+                                                <div class="afd-slip-row">วันที่ <b class="afd-hl" style="--d:.9s">02 ต.ค. 2026 14:32</b></div>
+                                                <div class="afd-slip-row">จาก <b>บจก. ลูกค้าตัวอย่าง</b></div>
+                                                <div class="afd-slip-row">ธนาคาร <b class="afd-hl" style="--d:1.3s">ธนาคารตัวอย่าง</b></div>
+                                                <div class="afd-slip-row">เลขอ้างอิง <b class="afd-hl" style="--d:1.7s">REF-58201947</b></div>
+                                                <span class="afd-scan"></span>
+                                            </div>
+                                            <div class="afd-fields">
+                                                <div class="afd-field" style="--d:.6s"><span>ยอดเงิน</span><b>12,450.00</b><em>99.6%</em></div>
+                                                <div class="afd-field" style="--d:1s"><span>วันที่โอน</span><b>2026-10-02 14:32</b><em>99.1%</em></div>
+                                                <div class="afd-field" style="--d:1.4s"><span>ธนาคาร</span><b>BANK-DEMO</b><em>98.7%</em></div>
+                                                <div class="afd-field" style="--d:1.8s"><span>เลขอ้างอิง</span><b>REF-58201947</b><em>99.8%</em></div>
+                                                <div class="afd-field" style="--d:2.2s"><span>จับคู่กับ</span><b>ORD-240918</b><em>matched</em></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="afd-panel" data-afd-panel role="tabpanel" hidden>
+                                        <div class="afd-panel-head">
+                                            <div><h3>จับคู่ยอดขายกับรับชำระตาม rule</h3><p>รวม commission, ค่าหัก, โปรโมชั่น และ COD ให้อัตโนมัติ</p></div>
+                                            <div class="afd-stat"><b data-afd-count="1281" data-afd-duration="3000">0</b><span>จาก 1,284 รายการตรงกัน</span></div>
+                                        </div>
+                                        <table class="afd-table">
+                                            <thead><tr><th>Order</th><th>ยอดขาย</th><th class="afd-hide-sm">รับชำระ</th><th class="afd-hide-sm">Commission</th><th>สถานะ</th></tr></thead>
+                                            <tbody>
+                                                <tr style="--i:0"><td>ORD-240918</td><td>12,450</td><td class="afd-hide-sm">12,450</td><td class="afd-hide-sm">373.50</td><td><span class="afd-badge ok">✓ ตรงกัน</span></td></tr>
+                                                <tr style="--i:1"><td>ORD-240921</td><td>3,890</td><td class="afd-hide-sm">3,890</td><td class="afd-hide-sm">116.70</td><td><span class="afd-badge ok">✓ ตรงกัน</span></td></tr>
+                                                <tr style="--i:2"><td>ORD-240925</td><td>7,200</td><td class="afd-hide-sm">7,180</td><td class="afd-hide-sm">216.00</td><td><span class="afd-badge warn">! ยอดต่าง ฿20</span></td></tr>
+                                                <tr style="--i:3"><td>ORD-240930</td><td>1,560</td><td class="afd-hide-sm">COD</td><td class="afd-hide-sm">46.80</td><td><span class="afd-badge ok">✓ ตรงกัน</span></td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="afd-meter" aria-hidden="true"></div>
+                                    </div>
+
+                                    <div class="afd-panel" data-afd-panel role="tabpanel" hidden>
+                                        <div class="afd-panel-head">
+                                            <div><h3>ส่งเฉพาะรายการที่ต้องตัดสินใจ</h3><p>ระบบ flag exception พร้อมเหตุผล และส่งต่อให้ผู้รับผิดชอบ</p></div>
+                                            <div class="afd-stat"><b data-afd-count="3" data-afd-duration="1200">0</b><span>รายการต้องตรวจ</span></div>
+                                        </div>
+                                        <div class="afd-exc">
+                                            <div class="afd-exc-card" style="--i:0"><b>ยอดโอนไม่ตรงออเดอร์</b><p>ORD-240925 โอนขาด ฿20 จากยอดขาย ฿7,200</p><span class="afd-assign">→ ทีมบัญชี</span></div>
+                                            <div class="afd-exc-card" style="--i:1"><b>สลิปซ้ำ</b><p>REF-58190033 ถูกใช้กับ 2 ออเดอร์</p><span class="afd-assign">→ ทีมขาย</span></div>
+                                            <div class="afd-exc-card" style="--i:2"><b>COD ยังไม่เข้าบัญชี</b><p>ขนส่งยืนยันส่งแล้ว แต่ยังไม่พบยอดใน statement</p><span class="afd-assign">→ ทีมการเงิน</span></div>
+                                        </div>
+                                        <div class="afd-callout"><span aria-hidden="true">💡</span><span>ทีมตรวจแค่ <strong>3 รายการ</strong> แทนการไล่ดูทั้ง <strong>1,284 รายการ</strong> ด้วยตา</span></div>
+                                    </div>
+
+                                    <div class="afd-panel" data-afd-panel role="tabpanel" hidden>
+                                        <div class="afd-panel-head">
+                                            <div><h3>ได้เอกสารพร้อมส่งบัญชีทันที</h3><p>output เดียวกันใช้ได้ทั้งทีมบัญชี ทีมขาย และผู้บริหาร</p></div>
+                                            <div class="afd-stat"><b data-afd-count="248" data-afd-duration="1800">0</b><span>เอกสารที่สร้างอัตโนมัติ</span></div>
+                                        </div>
+                                        <div class="afd-docs">
+                                            <div class="afd-doc" style="--i:0"><div class="afd-doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 12h7M9 16h7"/></svg></div><b>ใบกำกับภาษี</b><span>235 ฉบับ พร้อมออก</span></div>
+                                            <div class="afd-doc" style="--i:1"><div class="afd-doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M18 8v6M15 11h6"/></svg></div><b>สรุป Commission</b><span>12 พนักงานขาย</span></div>
+                                            <div class="afd-doc" style="--i:2"><div class="afd-doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><b>ไฟล์ส่งบัญชี</b><span>weekly_close_w40.xlsx</span></div>
+                                        </div>
+                                        <div class="afd-compare" aria-label="เปรียบเทียบก่อนและหลัง">
+                                            <div class="afd-cmp-row"><span>ก่อน</span><div class="afd-cmp-track"><div class="afd-cmp-fill before">ทำมือ หลายชั่วโมงถึงหลายวันต่อรอบ</div></div></div>
+                                            <div class="afd-cmp-row"><span>หลังใช้ระบบ</span><div class="afd-cmp-track"><div class="afd-cmp-fill after">กดรันครั้งเดียว + ตรวจเฉพาะ exception</div></div></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="afd-foot">
+                                <span>คลิกแต่ละขั้นตอนเพื่อดูรายละเอียด</span>
+                                <span>ตัวเลขและชื่อในภาพจำลองเป็นข้อมูลตัวอย่าง ไม่ใช่ข้อมูลลูกค้าจริง</span>
+                            </div>
+                        </section>
                     </div>
                     <div class="mt-10">
                         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mb-5">Before / After</p>
@@ -120,5 +263,6 @@
         </div>
     </section>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/accounting-demo.js"></script>
 </body>
 </html>
