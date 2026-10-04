@@ -646,11 +646,6 @@ body.modal-open {
     color: #64748b;
 }
 
-.contact-inline-hint.is-copied {
-    color: #15803d;
-    font-weight: 600;
-}
-
 @media (min-width: 1024px) {
     .contact-inline-list--stack {
         grid-template-columns: 1fr;
