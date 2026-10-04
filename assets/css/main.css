@@ -639,6 +639,24 @@ body.modal-open {
     }
 }
 
+.contact-inline-hint {
+    margin-top: 0.15rem;
+    font-size: 0.72rem;
+    line-height: 1rem;
+    color: #64748b;
+}
+
+.contact-inline-hint.is-copied {
+    color: #15803d;
+    font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+    .contact-inline-list--stack {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-modal {
     position: fixed;
     inset: 0;
