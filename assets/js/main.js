@@ -421,23 +421,6 @@ const closeGifModal = () => {
     document.getElementById("gif-modal")?.classList.add("hidden");
 };
 
-// LINE card: copy the number on tap (the link then opens LINE's add-friend screen)
-const setupCopyLinks = () => {
-    document.querySelectorAll('[data-copy-text]').forEach((link) => {
-        link.addEventListener('click', () => {
-            const hint = link.querySelector('[data-copy-hint]');
-            const done = () => {
-                if (!hint) return;
-                hint.textContent = document.documentElement.lang === 'en' ? 'Number copied' : 'คัดลอกเบอร์แล้ว';
-                hint.classList.add('is-copied');
-            };
-            if (navigator.clipboard?.writeText) navigator.clipboard.writeText(link.dataset.copyText).then(done).catch(() => {});
-        });
-    });
-};
-
-document.addEventListener('DOMContentLoaded', setupCopyLinks);
-
 setupSliderControls('problem-slider', 'problem-prev', 'problem-next', 20, 320);
 setupSliderControls('services-slider', 'services-prev', 'services-next', 24, 320);
 setupSliderControls('portfolio-slider', 'portfolio-prev', 'portfolio-next', 32, 520);

@@ -150,7 +150,7 @@ const translations = {
     contact_desc: { th: 'ทักมาปรึกษาเพื่อหาแนวทางปรับปรุง (Process Improvement) ได้ฟรี', en: 'If manual entry errors happen too often, get in touch for a free consultation on process improvement.' },
     phone_label: { th: 'โทรศัพท์', en: 'Phone' },
     line_label: { th: 'LINE', en: 'LINE' },
-    line_hint: { th: 'แตะเพื่อคัดลอกเบอร์ แล้วเพิ่มเพื่อนใน LINE', en: 'Tap to copy the number, then add us on LINE' },
+    line_hint: { th: 'แตะเพื่อเพิ่มเพื่อนใน LINE', en: 'Tap to add us on LINE' },
     email_label: { th: 'Email', en: 'Email' },
     fastwork_label: { th: 'Fastwork', en: 'Fastwork' },
     fastwork_text: { th: 'โปรไฟล์บน Fastwork', en: 'View Fastwork Profile' },
